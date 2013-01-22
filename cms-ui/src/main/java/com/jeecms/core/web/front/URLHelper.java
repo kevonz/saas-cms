@@ -5,6 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.util.UrlPathHelper;
 
+import com.jeecms.cms.entity.main.CmsSite;
+import com.jeecms.cms.web.CmsUtils;
+
 /**
  * URI帮助类
  * 
@@ -47,6 +50,8 @@ public class URLHelper {
 		String uri = helper.getOriginatingRequestUri(request);
 		String ctx = helper.getOriginatingContextPath(request);
 		if (!StringUtils.isBlank(ctx)) {
+			CmsSite site = CmsUtils.getSite(request);
+		//	site.getConfig().getContextPath()
 			return uri.substring(ctx.length());
 		} else {
 			return uri;
@@ -61,11 +66,12 @@ public class URLHelper {
 	 */
 	public static PageInfo getPageInfo(HttpServletRequest request) {
 		UrlPathHelper helper = new UrlPathHelper();
-		String uri = helper.getOriginatingRequestUri(request);
+		//String uri = helper.getOriginatingRequestUri(request);
+		String uri = getURI(request);
 		String queryString = helper.getOriginatingQueryString(request);
 		return getPageInfo(uri, queryString);
 	}
-
+	
 	/**
 	 * 获得页号
 	 * 
@@ -80,6 +86,8 @@ public class URLHelper {
 		if (!uri.startsWith("/")) {
 			throw new IllegalArgumentException("URI must start width '/'");
 		}
+		
+		
 		int pageNo = 1;
 		int bi = uri.indexOf("_");
 		int mi = uri.indexOf("-");
