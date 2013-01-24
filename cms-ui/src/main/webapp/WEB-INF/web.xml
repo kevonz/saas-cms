@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>JeeCms2012</display-name>
+	<display-name>YUNKUO-CMS</display-name>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
@@ -88,7 +88,7 @@
 		<url-pattern>*.jsp</url-pattern>
 	</filter-mapping>
 	<servlet>
-		<servlet-name>JeeCmsAdmin</servlet-name>
+		<servlet-name>Admin</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
@@ -97,7 +97,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet>
-		<servlet-name>JeeCmsFront</servlet-name>
+		<servlet-name>CmsFront</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
@@ -118,23 +118,23 @@
 		<servlet-class>com.jeecms.core.action.front.DbFileServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>JeeCmsAdmin</servlet-name>
-		<url-pattern>/jeeadmin/jeecms/*</url-pattern>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin/cms/*</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>JeeCmsFront</servlet-name>
+		<servlet-name>CmsFront</servlet-name>
 		<url-pattern>*.jhtml</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>JeeCmsFront</servlet-name>
+		<servlet-name>CmsFront</servlet-name>
 		<url-pattern>*.jspx</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>JeeCmsFront</servlet-name>
+		<servlet-name>CmsFront</servlet-name>
 		<url-pattern>*.jsp</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>JeeCmsFront</servlet-name>
+		<servlet-name>CmsFront</servlet-name>
 		<url-pattern>*.htm</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
