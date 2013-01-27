@@ -212,7 +212,7 @@
 		<!-- ======================================== -->
 		<!-- Jetty嵌入启动依赖 -->
 		<!-- ======================================== -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.mortbay.jetty</groupId>
 			<artifactId>jetty-embedded</artifactId>
 			<version>6.1.26</version>
@@ -229,7 +229,7 @@
 					<artifactId>ant</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 		<!-- ======================================== -->
 		<!-- FreeMarker依赖 -->
 		<!-- ======================================== -->
@@ -334,7 +334,7 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.26</version>
@@ -363,11 +363,35 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin> -->
+			<plugin>
+			<groupId>org.mortbay.jetty</groupId>  
+            <artifactId>jetty-maven-plugin</artifactId>  
+            <version>8.1.8.v20121106</version>  
+            <configuration>  
+                <stopKey>stop</stopKey>  
+                <stopPort>5599</stopPort>  
+                <webAppConfig>  
+                    <contextPath>/</contextPath>  
+                    <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>  
+                </webAppConfig>  
+                <scanIntervalSeconds>0</scanIntervalSeconds>  
+                <connectors>  
+                    <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">  
+                        <port>8080</port>  
+                        <maxIdleTime>60000</maxIdleTime>  
+                    </connector>  
+                </connectors>  
+            </configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<repositories>
+		<repository>
+			<id>jetty</id>
+			<url>http://download.eclipse.org/jetty/updates/jetty-bundles-8.x</url>
+		</repository>
 		<repository>
 			<id>mvnrepository.com</id>
 			<url>http://mvnrepository.com/</url>
