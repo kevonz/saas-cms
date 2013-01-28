@@ -39,7 +39,7 @@ import com.octo.captcha.service.image.ImageCaptchaService;
 @Controller
 public class IndexController {
 
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	@RequestMapping(value = "/index/test", method = RequestMethod.GET)
 	public ModelAndView test(){
 		ModelAndView mav=new ModelAndView();		
 		return mav;
