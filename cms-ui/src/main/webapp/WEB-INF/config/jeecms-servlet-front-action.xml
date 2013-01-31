@@ -2,12 +2,24 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+            http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
 	default-lazy-init="true">
-	<context:component-scan base-package="com.yunkuo.cms.web" />
 	
-	<bean id="dynamicAct" class="com.jeecms.cms.action.front.DynamicPageAct"/>
+	<!--注解说明 -->
+<!-- 	<context:annotation-config />
+	<context:component-scan base-package="com.yunkuo.cms.web.site.controller" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+ -->	
+	<!-- 配置允许访问静态文件 -->
+	<!-- <mvc:annotation-driven/>
+	<mvc:resources mapping="/static/**" location="/static/"/>    
+    <mvc:default-servlet-handler />
+	 -->
+	<!-- <bean id="dynamicAct" class="com.jeecms.cms.action.front.DynamicPageAct"/> -->
 	<bean id="tagAct" class="com.jeecms.cms.action.front.TagAct"/>
 	<bean id="topicAct" class="com.jeecms.cms.action.front.TopicAct"/>
 	<bean id="searchAct" class="com.jeecms.cms.action.front.SearchAct"/>
