@@ -1,6 +1,6 @@
-package com.jeecms.cms.service;
+package com.yunkuo.cms.service;
 
-import com.jeecms.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsSite;
 
 /**
  * 站点流量缓存接口

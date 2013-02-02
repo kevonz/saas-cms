@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -49,7 +49,7 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 	 */
 	public BaseCmsVoteTopic (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String title,
 		java.lang.Integer totalCount,
 		java.lang.Integer multiSelect,
@@ -96,10 +96,10 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 	private java.lang.Boolean def;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 
 	// collections
-	private java.util.Set<com.jeecms.cms.entity.assist.CmsVoteItem> items;
+	private java.util.Set<com.yunkuo.cms.entity.assist.CmsVoteItem> items;
 
 
 
@@ -320,7 +320,7 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -328,7 +328,7 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -336,7 +336,7 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 	/**
 	 * Return the value associated with the column: items
 	 */
-	public java.util.Set<com.jeecms.cms.entity.assist.CmsVoteItem> getItems () {
+	public java.util.Set<com.yunkuo.cms.entity.assist.CmsVoteItem> getItems () {
 		return items;
 	}
 
@@ -344,7 +344,7 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 	 * Set the value related to the column: items
 	 * @param items the items value
 	 */
-	public void setItems (java.util.Set<com.jeecms.cms.entity.assist.CmsVoteItem> items) {
+	public void setItems (java.util.Set<com.yunkuo.cms.entity.assist.CmsVoteItem> items) {
 		this.items = items;
 	}
 
@@ -352,9 +352,9 @@ public abstract class BaseCmsVoteTopic  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsVoteTopic)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsVoteTopic)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsVoteTopic cmsVoteTopic = (com.jeecms.cms.entity.assist.CmsVoteTopic) obj;
+			com.yunkuo.cms.entity.assist.CmsVoteTopic cmsVoteTopic = (com.yunkuo.cms.entity.assist.CmsVoteTopic) obj;
 			if (null == this.getId() || null == cmsVoteTopic.getId()) return false;
 			else return (this.getId().equals(cmsVoteTopic.getId()));
 		}

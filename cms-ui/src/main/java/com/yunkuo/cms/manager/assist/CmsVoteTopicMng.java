@@ -1,12 +1,12 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.util.Collection;
 import java.util.List;
 
-import com.jeecms.cms.entity.assist.CmsVoteItem;
-import com.jeecms.cms.entity.assist.CmsVoteTopic;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.assist.CmsVoteItem;
+import com.yunkuo.cms.entity.assist.CmsVoteTopic;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsVoteTopicMng {
 	public Pagination getPage(Integer siteId, int pageNo, int pageSize);

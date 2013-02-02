@@ -1,9 +1,9 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import net.sf.ehcache.Ehcache;
 
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentCount;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentCount;
 
 /**
  * 内容计数Manager接口

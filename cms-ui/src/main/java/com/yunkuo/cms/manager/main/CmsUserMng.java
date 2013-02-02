@@ -1,16 +1,16 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.mail.MessagingException;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserExt;
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserExt;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsUserMng {
 	public Pagination getPage(String username, String email, Integer siteId,

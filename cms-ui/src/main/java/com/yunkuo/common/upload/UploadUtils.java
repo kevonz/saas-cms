@@ -1,4 +1,4 @@
-package com.jeecms.common.upload;
+package com.yunkuo.common.upload;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -10,7 +10,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.common.util.Num62;
+import com.yunkuo.common.util.Num62;
 
 public class UploadUtils {
 	/**

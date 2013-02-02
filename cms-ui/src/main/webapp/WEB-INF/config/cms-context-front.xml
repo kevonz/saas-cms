@@ -21,7 +21,7 @@
 	
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="webBindingInitializer">
-			<bean class="com.jeecms.common.web.springmvc.BindingInitializer"/>
+			<bean class="com.yunkuo.common.web.springmvc.BindingInitializer"/>
 		</property>
 	</bean>
 	
@@ -33,8 +33,8 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="frontContextInterceptor" class="com.jeecms.cms.web.FrontContextInterceptor"/>
-	<bean id="frontLocaleInterceptor" class="com.jeecms.cms.web.FrontLocaleInterceptor"/>
+	<bean id="frontContextInterceptor" class="com.yunkuo.cms.web.FrontContextInterceptor"/>
+	<bean id="frontLocaleInterceptor" class="com.yunkuo.cms.web.FrontLocaleInterceptor"/>
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
 		<property name="cookieName" value="clientlanguage"/>
 		<property name="cookieMaxAge" value="-1"/>
@@ -50,7 +50,7 @@
 		</property>
 	</bean>
 
-	<bean id="freemarkerViewResolver" class="com.jeecms.common.web.springmvc.SimpleFreeMarkerViewResolver">
+	<bean id="freemarkerViewResolver" class="com.yunkuo.common.web.springmvc.SimpleFreeMarkerViewResolver">
 		<property name="contentType" value="text/html; charset=UTF-8"/>
 		<property name="exposeRequestAttributes" value="false"/>
 		<property name="exposeSessionAttributes" value="false"/>
@@ -114,7 +114,7 @@
 		</property>
 	</bean>
 	<context:annotation-config/>
-	
-	<import resource="jeecms-servlet-front-action.xml"/>
+	<context:component-scan base-package="com.yunkuo.cms.action.front,com.yunkuo.cms.action.member" />
+	<!-- <import resource="jeecms-servlet-front-action.xml"/> -->
 
 </beans>

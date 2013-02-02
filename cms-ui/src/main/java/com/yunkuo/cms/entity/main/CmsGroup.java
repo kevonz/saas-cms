@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,9 +9,9 @@ import java.util.TreeSet;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseCmsGroup;
-import com.jeecms.common.hibernate3.PriorityComparator;
-import com.jeecms.common.hibernate3.PriorityInterface;
+import com.yunkuo.cms.entity.main.base.BaseCmsGroup;
+import com.yunkuo.common.hibernate3.PriorityComparator;
+import com.yunkuo.common.hibernate3.PriorityInterface;
 
 public class CmsGroup extends BaseCmsGroup implements PriorityInterface {
 	private static final long serialVersionUID = 1L;

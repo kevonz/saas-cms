@@ -1,9 +1,9 @@
-package com.jeecms.cms.dao.main;
+package com.yunkuo.cms.dao.main;
 
 import java.util.Date;
 
-import com.jeecms.cms.entity.main.CmsLog;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.CmsLog;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsLogDao {
 	public Pagination getPage(Integer category, Integer siteId, Integer userId,

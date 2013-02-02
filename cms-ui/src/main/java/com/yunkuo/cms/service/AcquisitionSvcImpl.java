@@ -1,4 +1,4 @@
-package com.jeecms.cms.service;
+package com.yunkuo.cms.service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -22,15 +22,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jeecms.cms.entity.assist.CmsAcquisition;
-import com.jeecms.cms.entity.assist.CmsAcquisitionHistory;
-import com.jeecms.cms.entity.assist.CmsAcquisitionTemp;
-import com.jeecms.cms.entity.assist.CmsAcquisition.AcquisitionResultType;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.manager.assist.CmsAcquisitionHistoryMng;
-import com.jeecms.cms.manager.assist.CmsAcquisitionMng;
-import com.jeecms.cms.manager.assist.CmsAcquisitionTempMng;
+import com.yunkuo.cms.entity.assist.CmsAcquisition;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionHistory;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionTemp;
+import com.yunkuo.cms.entity.assist.CmsAcquisition.AcquisitionResultType;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionHistoryMng;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionMng;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionTempMng;
 
 @Service
 public class AcquisitionSvcImpl implements AcquisitionSvc {

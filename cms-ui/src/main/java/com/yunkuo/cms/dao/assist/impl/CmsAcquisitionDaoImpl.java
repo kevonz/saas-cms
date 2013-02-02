@@ -1,4 +1,4 @@
-package com.jeecms.cms.dao.assist.impl;
+package com.yunkuo.cms.dao.assist.impl;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.assist.CmsAcquisitionDao;
-import com.jeecms.cms.entity.assist.CmsAcquisition;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.cms.dao.assist.CmsAcquisitionDao;
+import com.yunkuo.cms.entity.assist.CmsAcquisition;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
 
 @Repository
 public class CmsAcquisitionDaoImpl extends

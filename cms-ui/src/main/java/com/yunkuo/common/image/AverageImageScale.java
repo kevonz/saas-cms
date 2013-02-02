@@ -1,4 +1,4 @@
-package com.jeecms.common.image;
+package com.yunkuo.common.image;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 
-import com.jeecms.common.image.ImageUtils.Position;
+import com.yunkuo.common.image.ImageUtils.Position;
 
 /**
  * 图片缩小类。使用方型区域颜色平均算法

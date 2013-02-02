@@ -1,8 +1,8 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.CmsModelItem;
+import com.yunkuo.cms.entity.main.CmsModelItem;
 
 public interface CmsModelItemMng {
 	public List<CmsModelItem> getList(Integer modelId, boolean isChannel,

@@ -1,9 +1,9 @@
-package com.jeecms.core.dao;
+package com.yunkuo.core.dao;
 
 import java.util.List;
 
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.core.entity.Ftp;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.core.entity.Ftp;
 
 public interface FtpDao {
 	public List<Ftp> getList();

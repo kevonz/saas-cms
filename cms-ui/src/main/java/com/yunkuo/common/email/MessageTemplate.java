@@ -1,4 +1,4 @@
-package com.jeecms.common.email;
+package com.yunkuo.common.email;
 
 /**
  * 邮件模板

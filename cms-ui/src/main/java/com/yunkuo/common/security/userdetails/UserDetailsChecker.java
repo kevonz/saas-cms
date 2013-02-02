@@ -1,6 +1,6 @@
-package com.jeecms.common.security.userdetails;
+package com.yunkuo.common.security.userdetails;
 
-import com.jeecms.common.security.AccountStatusException;
+import com.yunkuo.common.security.AccountStatusException;
 
 /**
  * Called by classes which make use of a {@link UserDetailsService} to check the

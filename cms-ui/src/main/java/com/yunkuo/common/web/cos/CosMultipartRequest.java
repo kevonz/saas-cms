@@ -1,4 +1,4 @@
-package com.jeecms.common.web.cos;
+package com.yunkuo.common.web.cos;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import com.jeecms.common.web.RequestUtils;
+import com.yunkuo.common.web.RequestUtils;
 
 /** 
  * A utility class to handle <code>multipart/form-data</code> requests,

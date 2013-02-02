@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -51,7 +51,7 @@ public abstract class BaseContent  implements Serializable {
 	 */
 	public BaseContent (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.util.Date sortDate,
 		java.lang.Byte topLevel,
 		java.lang.Boolean hasTitleImg,
@@ -97,28 +97,28 @@ public abstract class BaseContent  implements Serializable {
 	private java.lang.Short upsDay;
 
 	// one to one
-	private com.jeecms.cms.entity.main.ContentExt contentExt;
-	private com.jeecms.cms.entity.main.ContentCount contentCount;
+	private com.yunkuo.cms.entity.main.ContentExt contentExt;
+	private com.yunkuo.cms.entity.main.ContentCount contentCount;
 
 	// many to one
-	private com.jeecms.cms.entity.main.ContentType type;
-	private com.jeecms.cms.entity.main.CmsSite site;
-	private com.jeecms.cms.entity.main.CmsUser user;
-	private com.jeecms.cms.entity.main.Channel channel;
+	private com.yunkuo.cms.entity.main.ContentType type;
+	private com.yunkuo.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsUser user;
+	private com.yunkuo.cms.entity.main.Channel channel;
 
 	// collections
-	private java.util.Set<com.jeecms.cms.entity.main.Channel> channels;
-	private java.util.Set<com.jeecms.cms.entity.main.CmsTopic> topics;
-	private java.util.Set<com.jeecms.cms.entity.main.CmsGroup> viewGroups;
-	private java.util.List<com.jeecms.cms.entity.main.ContentTag> tags;
-	private java.util.List<com.jeecms.cms.entity.main.ContentPicture> pictures;
-	private java.util.List<com.jeecms.cms.entity.main.ContentAttachment> attachments;
-	private java.util.Set<com.jeecms.cms.entity.main.ContentTxt> contentTxtSet;
-	private java.util.Set<com.jeecms.cms.entity.main.ContentCheck> contentCheckSet;
+	private java.util.Set<com.yunkuo.cms.entity.main.Channel> channels;
+	private java.util.Set<com.yunkuo.cms.entity.main.CmsTopic> topics;
+	private java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> viewGroups;
+	private java.util.List<com.yunkuo.cms.entity.main.ContentTag> tags;
+	private java.util.List<com.yunkuo.cms.entity.main.ContentPicture> pictures;
+	private java.util.List<com.yunkuo.cms.entity.main.ContentAttachment> attachments;
+	private java.util.Set<com.yunkuo.cms.entity.main.ContentTxt> contentTxtSet;
+	private java.util.Set<com.yunkuo.cms.entity.main.ContentCheck> contentCheckSet;
 	private java.util.Map<java.lang.String, java.lang.String> attr;
-	private java.util.Set<com.jeecms.cms.entity.main.CmsUser> collectUsers;
-	private java.util.Set<com.jeecms.cms.entity.assist.CmsComment> comments;
-	private java.util.Set<com.jeecms.cms.entity.assist.CmsFile> files;
+	private java.util.Set<com.yunkuo.cms.entity.main.CmsUser> collectUsers;
+	private java.util.Set<com.yunkuo.cms.entity.assist.CmsComment> comments;
+	private java.util.Set<com.yunkuo.cms.entity.assist.CmsFile> files;
 
 
 
@@ -257,11 +257,11 @@ public abstract class BaseContent  implements Serializable {
 	
 
 
-	public java.util.Set<com.jeecms.cms.entity.assist.CmsFile> getFiles() {
+	public java.util.Set<com.yunkuo.cms.entity.assist.CmsFile> getFiles() {
 		return files;
 	}
 
-	public void setFiles(java.util.Set<com.jeecms.cms.entity.assist.CmsFile> files) {
+	public void setFiles(java.util.Set<com.yunkuo.cms.entity.assist.CmsFile> files) {
 		this.files = files;
 	}
 
@@ -300,7 +300,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: contentExt
 	 */
-	public com.jeecms.cms.entity.main.ContentExt getContentExt () {
+	public com.yunkuo.cms.entity.main.ContentExt getContentExt () {
 		return contentExt;
 	}
 
@@ -308,7 +308,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: contentExt
 	 * @param contentExt the contentExt value
 	 */
-	public void setContentExt (com.jeecms.cms.entity.main.ContentExt contentExt) {
+	public void setContentExt (com.yunkuo.cms.entity.main.ContentExt contentExt) {
 		this.contentExt = contentExt;
 	}
 
@@ -316,7 +316,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: contentCount
 	 */
-	public com.jeecms.cms.entity.main.ContentCount getContentCount () {
+	public com.yunkuo.cms.entity.main.ContentCount getContentCount () {
 		return contentCount;
 	}
 
@@ -324,7 +324,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: contentCount
 	 * @param contentCount the contentCount value
 	 */
-	public void setContentCount (com.jeecms.cms.entity.main.ContentCount contentCount) {
+	public void setContentCount (com.yunkuo.cms.entity.main.ContentCount contentCount) {
 		this.contentCount = contentCount;
 	}
 
@@ -332,7 +332,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: type_id
 	 */
-	public com.jeecms.cms.entity.main.ContentType getType () {
+	public com.yunkuo.cms.entity.main.ContentType getType () {
 		return type;
 	}
 
@@ -340,7 +340,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: type_id
 	 * @param type the type_id value
 	 */
-	public void setType (com.jeecms.cms.entity.main.ContentType type) {
+	public void setType (com.yunkuo.cms.entity.main.ContentType type) {
 		this.type = type;
 	}
 
@@ -348,7 +348,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -356,7 +356,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -364,7 +364,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: user_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getUser () {
 		return user;
 	}
 
@@ -372,7 +372,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: user_id
 	 * @param user the user_id value
 	 */
-	public void setUser (com.jeecms.cms.entity.main.CmsUser user) {
+	public void setUser (com.yunkuo.cms.entity.main.CmsUser user) {
 		this.user = user;
 	}
 
@@ -380,7 +380,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: channel_id
 	 */
-	public com.jeecms.cms.entity.main.Channel getChannel () {
+	public com.yunkuo.cms.entity.main.Channel getChannel () {
 		return channel;
 	}
 
@@ -388,7 +388,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: channel_id
 	 * @param channel the channel_id value
 	 */
-	public void setChannel (com.jeecms.cms.entity.main.Channel channel) {
+	public void setChannel (com.yunkuo.cms.entity.main.Channel channel) {
 		this.channel = channel;
 	}
 
@@ -396,7 +396,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: channels
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.Channel> getChannels () {
+	public java.util.Set<com.yunkuo.cms.entity.main.Channel> getChannels () {
 		return channels;
 	}
 
@@ -404,7 +404,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: channels
 	 * @param channels the channels value
 	 */
-	public void setChannels (java.util.Set<com.jeecms.cms.entity.main.Channel> channels) {
+	public void setChannels (java.util.Set<com.yunkuo.cms.entity.main.Channel> channels) {
 		this.channels = channels;
 	}
 
@@ -412,7 +412,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: topics
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.CmsTopic> getTopics () {
+	public java.util.Set<com.yunkuo.cms.entity.main.CmsTopic> getTopics () {
 		return topics;
 	}
 
@@ -420,7 +420,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: topics
 	 * @param topics the topics value
 	 */
-	public void setTopics (java.util.Set<com.jeecms.cms.entity.main.CmsTopic> topics) {
+	public void setTopics (java.util.Set<com.yunkuo.cms.entity.main.CmsTopic> topics) {
 		this.topics = topics;
 	}
 
@@ -428,7 +428,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: viewGroups
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.CmsGroup> getViewGroups () {
+	public java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> getViewGroups () {
 		return viewGroups;
 	}
 
@@ -436,7 +436,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: viewGroups
 	 * @param viewGroups the viewGroups value
 	 */
-	public void setViewGroups (java.util.Set<com.jeecms.cms.entity.main.CmsGroup> viewGroups) {
+	public void setViewGroups (java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> viewGroups) {
 		this.viewGroups = viewGroups;
 	}
 
@@ -444,7 +444,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: tags
 	 */
-	public java.util.List<com.jeecms.cms.entity.main.ContentTag> getTags () {
+	public java.util.List<com.yunkuo.cms.entity.main.ContentTag> getTags () {
 		return tags;
 	}
 
@@ -452,7 +452,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: tags
 	 * @param tags the tags value
 	 */
-	public void setTags (java.util.List<com.jeecms.cms.entity.main.ContentTag> tags) {
+	public void setTags (java.util.List<com.yunkuo.cms.entity.main.ContentTag> tags) {
 		this.tags = tags;
 	}
 
@@ -460,7 +460,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: pictures
 	 */
-	public java.util.List<com.jeecms.cms.entity.main.ContentPicture> getPictures () {
+	public java.util.List<com.yunkuo.cms.entity.main.ContentPicture> getPictures () {
 		return pictures;
 	}
 
@@ -468,7 +468,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: pictures
 	 * @param pictures the pictures value
 	 */
-	public void setPictures (java.util.List<com.jeecms.cms.entity.main.ContentPicture> pictures) {
+	public void setPictures (java.util.List<com.yunkuo.cms.entity.main.ContentPicture> pictures) {
 		this.pictures = pictures;
 	}
 
@@ -476,7 +476,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: attachments
 	 */
-	public java.util.List<com.jeecms.cms.entity.main.ContentAttachment> getAttachments () {
+	public java.util.List<com.yunkuo.cms.entity.main.ContentAttachment> getAttachments () {
 		return attachments;
 	}
 
@@ -484,7 +484,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: attachments
 	 * @param attachments the attachments value
 	 */
-	public void setAttachments (java.util.List<com.jeecms.cms.entity.main.ContentAttachment> attachments) {
+	public void setAttachments (java.util.List<com.yunkuo.cms.entity.main.ContentAttachment> attachments) {
 		this.attachments = attachments;
 	}
 
@@ -492,7 +492,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: contentTxtSet
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.ContentTxt> getContentTxtSet () {
+	public java.util.Set<com.yunkuo.cms.entity.main.ContentTxt> getContentTxtSet () {
 		return contentTxtSet;
 	}
 
@@ -500,7 +500,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: contentTxtSet
 	 * @param contentTxtSet the contentTxtSet value
 	 */
-	public void setContentTxtSet (java.util.Set<com.jeecms.cms.entity.main.ContentTxt> contentTxtSet) {
+	public void setContentTxtSet (java.util.Set<com.yunkuo.cms.entity.main.ContentTxt> contentTxtSet) {
 		this.contentTxtSet = contentTxtSet;
 	}
 
@@ -508,7 +508,7 @@ public abstract class BaseContent  implements Serializable {
 	/**
 	 * Return the value associated with the column: contentCheckSet
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.ContentCheck> getContentCheckSet () {
+	public java.util.Set<com.yunkuo.cms.entity.main.ContentCheck> getContentCheckSet () {
 		return contentCheckSet;
 	}
 
@@ -516,7 +516,7 @@ public abstract class BaseContent  implements Serializable {
 	 * Set the value related to the column: contentCheckSet
 	 * @param contentCheckSet the contentCheckSet value
 	 */
-	public void setContentCheckSet (java.util.Set<com.jeecms.cms.entity.main.ContentCheck> contentCheckSet) {
+	public void setContentCheckSet (java.util.Set<com.yunkuo.cms.entity.main.ContentCheck> contentCheckSet) {
 		this.contentCheckSet = contentCheckSet;
 	}
 
@@ -529,22 +529,22 @@ public abstract class BaseContent  implements Serializable {
 	}
 	
 
-	public java.util.Set<com.jeecms.cms.entity.main.CmsUser> getCollectUsers() {
+	public java.util.Set<com.yunkuo.cms.entity.main.CmsUser> getCollectUsers() {
 		return collectUsers;
 	}
 
 	public void setCollectUsers(
-			java.util.Set<com.jeecms.cms.entity.main.CmsUser> collectUsers) {
+			java.util.Set<com.yunkuo.cms.entity.main.CmsUser> collectUsers) {
 		this.collectUsers = collectUsers;
 	}
 	
 
-	public java.util.Set<com.jeecms.cms.entity.assist.CmsComment> getComments() {
+	public java.util.Set<com.yunkuo.cms.entity.assist.CmsComment> getComments() {
 		return comments;
 	}
 
 	public void setComments(
-			java.util.Set<com.jeecms.cms.entity.assist.CmsComment> comments) {
+			java.util.Set<com.yunkuo.cms.entity.assist.CmsComment> comments) {
 		this.comments = comments;
 	}
 
@@ -560,9 +560,9 @@ public abstract class BaseContent  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.Content)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.Content)) return false;
 		else {
-			com.jeecms.cms.entity.main.Content content = (com.jeecms.cms.entity.main.Content) obj;
+			com.yunkuo.cms.entity.main.Content content = (com.yunkuo.cms.entity.main.Content) obj;
 			if (null == this.getId() || null == content.getId()) return false;
 			else return (this.getId().equals(content.getId()));
 		}

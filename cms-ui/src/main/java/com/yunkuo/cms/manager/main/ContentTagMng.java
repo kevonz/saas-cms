@@ -1,10 +1,10 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.Collection;
 import java.util.List;
 
-import com.jeecms.cms.entity.main.ContentTag;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.ContentTag;
+import com.yunkuo.common.page.Pagination;
 
 public interface ContentTagMng {
 

@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.manager.main.ContentCountMng;
-import com.jeecms.cms.service.ContentCountCache;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.manager.main.ContentCountMng;
+import com.yunkuo.cms.service.ContentCountCache;
+import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class ContentCountAct {

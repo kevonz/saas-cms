@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
-import static com.jeecms.cms.Constants.TPLDIR_TOPIC;
+import static com.yunkuo.cms.Constants.TPLDIR_TOPIC;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsTopic;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsTopicMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsTopic;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsTopicMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
 
 @Controller
 public class TopicAct {

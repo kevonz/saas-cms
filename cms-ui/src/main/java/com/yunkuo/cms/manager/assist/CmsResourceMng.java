@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.common.file.FileWrap;
-import com.jeecms.common.util.Zipper.FileEntry;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.common.file.FileWrap;
+import com.yunkuo.common.util.Zipper.FileEntry;
 
 /**
  * 模板资源管理接口

@@ -1,8 +1,8 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsAcquisition;
+import com.yunkuo.cms.entity.assist.base.BaseCmsAcquisition;
 
 public class CmsAcquisition extends BaseCmsAcquisition {
 	private static final long serialVersionUID = 1L;
@@ -146,10 +146,10 @@ public class CmsAcquisition extends BaseCmsAcquisition {
 	 */
 	public CmsAcquisition (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsUser user,
-		com.jeecms.cms.entity.main.ContentType type,
-		com.jeecms.cms.entity.main.CmsSite site,
-		com.jeecms.cms.entity.main.Channel channel,
+		com.yunkuo.cms.entity.main.CmsUser user,
+		com.yunkuo.cms.entity.main.ContentType type,
+		com.yunkuo.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.Channel channel,
 		java.lang.String name,
 		java.lang.Integer status,
 		java.lang.Integer currNum,

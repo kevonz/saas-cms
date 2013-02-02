@@ -1,4 +1,4 @@
-package com.jeecms.common.security.rememberme;
+package com.yunkuo.common.security.rememberme;
 
 /**
  * @author Luke Taylor

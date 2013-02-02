@@ -1,14 +1,14 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.ChannelTxtDao;
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.ChannelTxt;
-import com.jeecms.cms.manager.main.ChannelTxtMng;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.dao.main.ChannelTxtDao;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.ChannelTxt;
+import com.yunkuo.cms.manager.main.ChannelTxtMng;
+import com.yunkuo.common.hibernate3.Updater;
 
 /**
  * 栏目文本Manager实现

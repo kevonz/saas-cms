@@ -1,26 +1,26 @@
-package com.jeecms.cms.statistic;
+package com.yunkuo.cms.statistic;
 
 import static java.util.Calendar.DATE;
 import static java.util.Calendar.DAY_OF_WEEK;
 import static java.util.Calendar.HOUR_OF_DAY;
 import static java.util.Calendar.MONTH;
 import static java.util.Calendar.YEAR;
-import static com.jeecms.cms.statistic.CmsStatistic.JOIN;
-import static com.jeecms.cms.statistic.CmsStatistic.TIMEPATTERN;
-import static com.jeecms.cms.statistic.CmsStatistic.MEMBER;
-import static com.jeecms.cms.statistic.CmsStatistic.CONTENT;
-import static com.jeecms.cms.statistic.CmsStatistic.COMMENT;
-import static com.jeecms.cms.statistic.CmsStatistic.GUESTBOOK;
-import static com.jeecms.cms.statistic.CmsStatistic.PV;
-import static com.jeecms.cms.statistic.CmsStatistic.UNIQUEIP;
-import static com.jeecms.cms.statistic.CmsStatistic.UNIQUEVISITOR;
-import static com.jeecms.cms.statistic.CmsStatistic.AVGVIEWS;
-import static com.jeecms.cms.statistic.CmsStatistic.TODAY;
-import static com.jeecms.cms.statistic.CmsStatistic.YESTERDAY;
-import static com.jeecms.cms.statistic.CmsStatistic.THISWEEK;
-import static com.jeecms.cms.statistic.CmsStatistic.THISMONTH;
-import static com.jeecms.cms.statistic.CmsStatistic.THISYEAR;
-import static com.jeecms.common.util.ArithmeticUtils.dividend;
+import static com.yunkuo.cms.statistic.CmsStatistic.AVGVIEWS;
+import static com.yunkuo.cms.statistic.CmsStatistic.COMMENT;
+import static com.yunkuo.cms.statistic.CmsStatistic.CONTENT;
+import static com.yunkuo.cms.statistic.CmsStatistic.GUESTBOOK;
+import static com.yunkuo.cms.statistic.CmsStatistic.JOIN;
+import static com.yunkuo.cms.statistic.CmsStatistic.MEMBER;
+import static com.yunkuo.cms.statistic.CmsStatistic.PV;
+import static com.yunkuo.cms.statistic.CmsStatistic.THISMONTH;
+import static com.yunkuo.cms.statistic.CmsStatistic.THISWEEK;
+import static com.yunkuo.cms.statistic.CmsStatistic.THISYEAR;
+import static com.yunkuo.cms.statistic.CmsStatistic.TIMEPATTERN;
+import static com.yunkuo.cms.statistic.CmsStatistic.TODAY;
+import static com.yunkuo.cms.statistic.CmsStatistic.UNIQUEIP;
+import static com.yunkuo.cms.statistic.CmsStatistic.UNIQUEVISITOR;
+import static com.yunkuo.cms.statistic.CmsStatistic.YESTERDAY;
+import static com.yunkuo.common.util.ArithmeticUtils.dividend;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -34,10 +34,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.statistic.CmsStatistic.CmsStatisticModel;
-import com.jeecms.cms.statistic.CmsStatistic.TimeRange;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.util.DateFormatUtils;
+import com.yunkuo.cms.statistic.CmsStatistic.CmsStatisticModel;
+import com.yunkuo.cms.statistic.CmsStatistic.TimeRange;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.util.DateFormatUtils;
 
 @Service
 @Transactional(readOnly = true)

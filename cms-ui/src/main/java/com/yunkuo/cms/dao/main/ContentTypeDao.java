@@ -1,9 +1,9 @@
-package com.jeecms.cms.dao.main;
+package com.yunkuo.cms.dao.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.ContentType;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.entity.main.ContentType;
+import com.yunkuo.common.hibernate3.Updater;
 
 public interface ContentTypeDao {
 	public List<ContentType> getList(boolean containDisabled);

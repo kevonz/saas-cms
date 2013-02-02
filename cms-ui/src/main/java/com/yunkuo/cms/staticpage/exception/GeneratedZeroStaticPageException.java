@@ -1,4 +1,4 @@
-package com.jeecms.cms.staticpage.exception;
+package com.yunkuo.cms.staticpage.exception;
 
 /**
  * 

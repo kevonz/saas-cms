@@ -1,7 +1,7 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
-import static com.jeecms.cms.Constants.TPLDIR_MEMBER;
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.cms.Constants.TPLDIR_MEMBER;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,16 +14,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.MemberConfig;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.ResponseUtils;
 
 /**
  * 收藏信息Action

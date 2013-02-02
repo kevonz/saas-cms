@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -46,8 +46,8 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	 */
 	public BaseCmsGuestbook (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
-		com.jeecms.cms.entity.assist.CmsGuestbookCtg ctg,
+		com.yunkuo.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.assist.CmsGuestbookCtg ctg,
 		java.lang.String ip,
 		java.util.Date createTime,
 		java.lang.Boolean checked,
@@ -80,13 +80,13 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	private java.lang.Boolean recommend;
 
 	// one to one
-	private com.jeecms.cms.entity.assist.CmsGuestbookExt ext;
+	private com.yunkuo.cms.entity.assist.CmsGuestbookExt ext;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsUser member;
-	private com.jeecms.cms.entity.main.CmsUser admin;
-	private com.jeecms.cms.entity.main.CmsSite site;
-	private com.jeecms.cms.entity.assist.CmsGuestbookCtg ctg;
+	private com.yunkuo.cms.entity.main.CmsUser member;
+	private com.yunkuo.cms.entity.main.CmsUser admin;
+	private com.yunkuo.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.assist.CmsGuestbookCtg ctg;
 
 
 
@@ -195,7 +195,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	/**
 	 * Return the value associated with the column: ext
 	 */
-	public com.jeecms.cms.entity.assist.CmsGuestbookExt getExt () {
+	public com.yunkuo.cms.entity.assist.CmsGuestbookExt getExt () {
 		return ext;
 	}
 
@@ -203,7 +203,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	 * Set the value related to the column: ext
 	 * @param ext the ext value
 	 */
-	public void setExt (com.jeecms.cms.entity.assist.CmsGuestbookExt ext) {
+	public void setExt (com.yunkuo.cms.entity.assist.CmsGuestbookExt ext) {
 		this.ext = ext;
 	}
 
@@ -211,7 +211,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	/**
 	 * Return the value associated with the column: member_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getMember () {
+	public com.yunkuo.cms.entity.main.CmsUser getMember () {
 		return member;
 	}
 
@@ -219,7 +219,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	 * Set the value related to the column: member_id
 	 * @param member the member_id value
 	 */
-	public void setMember (com.jeecms.cms.entity.main.CmsUser member) {
+	public void setMember (com.yunkuo.cms.entity.main.CmsUser member) {
 		this.member = member;
 	}
 
@@ -227,7 +227,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	/**
 	 * Return the value associated with the column: admin_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getAdmin () {
+	public com.yunkuo.cms.entity.main.CmsUser getAdmin () {
 		return admin;
 	}
 
@@ -235,7 +235,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	 * Set the value related to the column: admin_id
 	 * @param admin the admin_id value
 	 */
-	public void setAdmin (com.jeecms.cms.entity.main.CmsUser admin) {
+	public void setAdmin (com.yunkuo.cms.entity.main.CmsUser admin) {
 		this.admin = admin;
 	}
 
@@ -243,7 +243,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -251,7 +251,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -259,7 +259,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	/**
 	 * Return the value associated with the column: guestbookctg_id
 	 */
-	public com.jeecms.cms.entity.assist.CmsGuestbookCtg getCtg () {
+	public com.yunkuo.cms.entity.assist.CmsGuestbookCtg getCtg () {
 		return ctg;
 	}
 
@@ -267,7 +267,7 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 	 * Set the value related to the column: guestbookctg_id
 	 * @param ctg the guestbookctg_id value
 	 */
-	public void setCtg (com.jeecms.cms.entity.assist.CmsGuestbookCtg ctg) {
+	public void setCtg (com.yunkuo.cms.entity.assist.CmsGuestbookCtg ctg) {
 		this.ctg = ctg;
 	}
 
@@ -275,9 +275,9 @@ public abstract class BaseCmsGuestbook  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsGuestbook)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsGuestbook)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsGuestbook cmsGuestbook = (com.jeecms.cms.entity.assist.CmsGuestbook) obj;
+			com.yunkuo.cms.entity.assist.CmsGuestbook cmsGuestbook = (com.yunkuo.cms.entity.assist.CmsGuestbook) obj;
 			if (null == this.getId() || null == cmsGuestbook.getId()) return false;
 			else return (this.getId().equals(cmsGuestbook.getId()));
 		}

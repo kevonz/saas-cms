@@ -1,9 +1,9 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
 import java.sql.Timestamp;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsGuestbook;
-import com.jeecms.common.util.StrUtils;
+import com.yunkuo.cms.entity.assist.base.BaseCmsGuestbook;
+import com.yunkuo.common.util.StrUtils;
 
 public class CmsGuestbook extends BaseCmsGuestbook {
 	private static final long serialVersionUID = 1L;
@@ -103,8 +103,8 @@ public class CmsGuestbook extends BaseCmsGuestbook {
 	 */
 	public CmsGuestbook (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
-		com.jeecms.cms.entity.assist.CmsGuestbookCtg ctg,
+		com.yunkuo.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.assist.CmsGuestbookCtg ctg,
 		java.lang.String ip,
 		java.util.Date createTime,
 		java.lang.Boolean checked,

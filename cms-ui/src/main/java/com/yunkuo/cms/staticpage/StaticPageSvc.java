@@ -1,12 +1,12 @@
-package com.jeecms.cms.staticpage;
+package com.yunkuo.cms.staticpage;
 
 import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.Content;
 
 import freemarker.template.TemplateException;
 

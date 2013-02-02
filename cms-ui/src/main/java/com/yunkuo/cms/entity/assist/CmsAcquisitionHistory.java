@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsAcquisitionHistory;
+import com.yunkuo.cms.entity.assist.base.BaseCmsAcquisitionHistory;
 
 
 

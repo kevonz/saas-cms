@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsVoteTopic;
+import com.yunkuo.cms.entity.assist.base.BaseCmsVoteTopic;
 
 public class CmsVoteTopic extends BaseCmsVoteTopic {
 	private static final long serialVersionUID = 1L;
@@ -46,7 +46,7 @@ public class CmsVoteTopic extends BaseCmsVoteTopic {
 	 */
 	public CmsVoteTopic (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String title,
 		java.lang.Integer totalCount,
 		java.lang.Integer multiSelect,

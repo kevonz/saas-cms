@@ -1,4 +1,4 @@
-package com.jeecms.common.hibernate3;
+package com.yunkuo.common.hibernate3;
 
 import java.io.Serializable;
 

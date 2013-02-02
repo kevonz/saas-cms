@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
 import java.util.List;
 
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.assist.CmsSensitivity;
-import com.jeecms.cms.manager.assist.CmsSensitivityMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.web.WebErrors;
+import com.yunkuo.cms.entity.assist.CmsSensitivity;
+import com.yunkuo.cms.manager.assist.CmsSensitivityMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.web.WebErrors;
 
 @Controller
 public class CmsSensitivityAct {

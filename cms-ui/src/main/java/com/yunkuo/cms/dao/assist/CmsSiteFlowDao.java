@@ -1,6 +1,6 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
-import com.jeecms.cms.entity.assist.CmsSiteFlow;
+import com.yunkuo.cms.entity.assist.CmsSiteFlow;
 
 public interface CmsSiteFlowDao {
 	public CmsSiteFlow save(CmsSiteFlow cmsSiteFlow);

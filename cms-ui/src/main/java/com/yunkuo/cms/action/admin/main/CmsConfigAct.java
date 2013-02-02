@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,16 +9,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsConfig;
-import com.jeecms.cms.entity.main.MarkConfig;
-import com.jeecms.cms.entity.main.MemberConfig;
-import com.jeecms.cms.manager.main.CmsConfigMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.core.entity.Config.ConfigEmailSender;
-import com.jeecms.core.entity.Config.ConfigLogin;
-import com.jeecms.core.entity.Config.ConfigMessageTemplate;
-import com.jeecms.core.manager.ConfigMng;
+import com.yunkuo.cms.entity.main.CmsConfig;
+import com.yunkuo.cms.entity.main.MarkConfig;
+import com.yunkuo.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.manager.main.CmsConfigMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.core.entity.Config.ConfigEmailSender;
+import com.yunkuo.core.entity.Config.ConfigLogin;
+import com.yunkuo.core.entity.Config.ConfigMessageTemplate;
+import com.yunkuo.core.manager.ConfigMng;
 
 @Controller
 public class CmsConfigAct {

@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -7,24 +7,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.ChannelDao;
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.ChannelExt;
-import com.jeecms.cms.entity.main.ChannelTxt;
-import com.jeecms.cms.entity.main.CmsGroup;
-import com.jeecms.cms.entity.main.CmsModel;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserSite;
-import com.jeecms.cms.manager.main.ChannelExtMng;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.ChannelTxtMng;
-import com.jeecms.cms.manager.main.CmsGroupMng;
-import com.jeecms.cms.manager.main.CmsModelMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.service.ChannelDeleteChecker;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.main.ChannelDao;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.ChannelExt;
+import com.yunkuo.cms.entity.main.ChannelTxt;
+import com.yunkuo.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.entity.main.CmsModel;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserSite;
+import com.yunkuo.cms.manager.main.ChannelExtMng;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.ChannelTxtMng;
+import com.yunkuo.cms.manager.main.CmsGroupMng;
+import com.yunkuo.cms.manager.main.CmsModelMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.service.ChannelDeleteChecker;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 @Service
 @Transactional

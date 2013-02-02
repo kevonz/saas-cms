@@ -1,6 +1,6 @@
-package com.jeecms.common.security.rememberme;
+package com.yunkuo.common.security.rememberme;
 
-import com.jeecms.common.security.AuthenticationException;
+import com.yunkuo.common.security.AuthenticationException;
 
 @SuppressWarnings("serial")
 public class RememberMeAuthenticationException extends AuthenticationException {

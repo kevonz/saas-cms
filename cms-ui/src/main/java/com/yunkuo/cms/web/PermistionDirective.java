@@ -1,13 +1,13 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
-import static com.jeecms.cms.web.AdminContextInterceptor.PERMISSION_MODEL;
+import static com.yunkuo.cms.web.AdminContextInterceptor.PERMISSION_MODEL;
 
 import java.io.IOException;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.common.web.freemarker.DirectiveUtils;
+import com.yunkuo.common.web.freemarker.DirectiveUtils;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

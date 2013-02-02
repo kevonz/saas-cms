@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
 import java.util.Date;
 

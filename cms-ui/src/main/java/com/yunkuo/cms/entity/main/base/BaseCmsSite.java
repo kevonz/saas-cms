@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -57,7 +57,7 @@ public abstract class BaseCmsSite  implements Serializable {
 	 */
 	public BaseCmsSite (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsConfig config,
+		com.yunkuo.cms.entity.main.CmsConfig config,
 		java.lang.String domain,
 		java.lang.String path,
 		java.lang.String name,
@@ -125,8 +125,8 @@ public abstract class BaseCmsSite  implements Serializable {
 	private java.lang.String domainRedirect;
 
 	// many to one
-	private com.jeecms.core.entity.Ftp uploadFtp;
-	private com.jeecms.cms.entity.main.CmsConfig config;
+	private com.yunkuo.core.entity.Ftp uploadFtp;
+	private com.yunkuo.cms.entity.main.CmsConfig config;
 
 	// collections
 	private java.util.Map<java.lang.String, java.lang.String> attr;
@@ -464,7 +464,7 @@ public abstract class BaseCmsSite  implements Serializable {
 	/**
 	 * Return the value associated with the column: ftp_upload_id
 	 */
-	public com.jeecms.core.entity.Ftp getUploadFtp () {
+	public com.yunkuo.core.entity.Ftp getUploadFtp () {
 		return uploadFtp;
 	}
 
@@ -472,7 +472,7 @@ public abstract class BaseCmsSite  implements Serializable {
 	 * Set the value related to the column: ftp_upload_id
 	 * @param uploadFtp the ftp_upload_id value
 	 */
-	public void setUploadFtp (com.jeecms.core.entity.Ftp uploadFtp) {
+	public void setUploadFtp (com.yunkuo.core.entity.Ftp uploadFtp) {
 		this.uploadFtp = uploadFtp;
 	}
 
@@ -480,7 +480,7 @@ public abstract class BaseCmsSite  implements Serializable {
 	/**
 	 * Return the value associated with the column: config_id
 	 */
-	public com.jeecms.cms.entity.main.CmsConfig getConfig () {
+	public com.yunkuo.cms.entity.main.CmsConfig getConfig () {
 		return config;
 	}
 
@@ -488,7 +488,7 @@ public abstract class BaseCmsSite  implements Serializable {
 	 * Set the value related to the column: config_id
 	 * @param config the config_id value
 	 */
-	public void setConfig (com.jeecms.cms.entity.main.CmsConfig config) {
+	public void setConfig (com.yunkuo.cms.entity.main.CmsConfig config) {
 		this.config = config;
 	}
 
@@ -544,9 +544,9 @@ public abstract class BaseCmsSite  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.CmsSite)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.CmsSite)) return false;
 		else {
-			com.jeecms.cms.entity.main.CmsSite cmsSite = (com.jeecms.cms.entity.main.CmsSite) obj;
+			com.yunkuo.cms.entity.main.CmsSite cmsSite = (com.yunkuo.cms.entity.main.CmsSite) obj;
 			if (null == this.getId() || null == cmsSite.getId()) return false;
 			else return (this.getId().equals(cmsSite.getId()));
 		}

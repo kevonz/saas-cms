@@ -1,7 +1,7 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsMessage;
-import com.jeecms.common.util.StrUtils;
+import com.yunkuo.cms.entity.assist.base.BaseCmsMessage;
+import com.yunkuo.common.util.StrUtils;
 
 
 
@@ -25,9 +25,9 @@ public class CmsMessage extends BaseCmsMessage {
 	 */
 	public CmsMessage (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsUser msgReceiverUser,
-		com.jeecms.cms.entity.main.CmsUser msgSendUser,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsUser msgReceiverUser,
+		com.yunkuo.cms.entity.main.CmsUser msgSendUser,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String msgTitle,
 		java.lang.Boolean msgStatus,
 		java.lang.Integer msgBox) {

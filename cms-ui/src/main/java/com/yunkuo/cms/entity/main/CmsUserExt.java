@@ -1,8 +1,8 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseCmsUserExt;
+import com.yunkuo.cms.entity.main.base.BaseCmsUserExt;
 
 public class CmsUserExt extends BaseCmsUserExt {
 	private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.util.List;
 
@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsAcquisitionHistoryDao;
-import com.jeecms.cms.entity.assist.CmsAcquisitionHistory;
-import com.jeecms.cms.manager.assist.CmsAcquisitionHistoryMng;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.assist.CmsAcquisitionHistoryDao;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionHistory;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionHistoryMng;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 @Service
 @Transactional

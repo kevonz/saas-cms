@@ -1,11 +1,11 @@
-package com.jeecms.cms.statistic;
+package com.yunkuo.cms.statistic;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import com.jeecms.cms.statistic.CmsStatistic.TimeRange;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.statistic.CmsStatistic.TimeRange;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsStatisticDao {
 	public long memberStatistic(TimeRange timeRange);

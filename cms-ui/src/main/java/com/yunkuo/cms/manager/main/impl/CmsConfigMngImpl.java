@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import java.util.Date;
 
@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.CmsConfigDao;
-import com.jeecms.cms.entity.main.CmsConfig;
-import com.jeecms.cms.entity.main.MarkConfig;
-import com.jeecms.cms.entity.main.MemberConfig;
-import com.jeecms.cms.manager.main.CmsConfigMng;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.dao.main.CmsConfigDao;
+import com.yunkuo.cms.entity.main.CmsConfig;
+import com.yunkuo.cms.entity.main.MarkConfig;
+import com.yunkuo.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.manager.main.CmsConfigMng;
+import com.yunkuo.common.hibernate3.Updater;
 
 @Service
 @Transactional

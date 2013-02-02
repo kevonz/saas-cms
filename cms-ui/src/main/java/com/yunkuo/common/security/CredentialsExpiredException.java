@@ -1,4 +1,4 @@
-package com.jeecms.common.security;
+package com.yunkuo.common.security;
 
 /**
  * 认证信息过期异常。如：规定密码必须在一个月后修改，但是没有修改。

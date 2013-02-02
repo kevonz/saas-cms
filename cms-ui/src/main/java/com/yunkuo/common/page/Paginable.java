@@ -1,4 +1,4 @@
-package com.jeecms.common.page;
+package com.yunkuo.common.page;
 
 /**
  * 分页接口

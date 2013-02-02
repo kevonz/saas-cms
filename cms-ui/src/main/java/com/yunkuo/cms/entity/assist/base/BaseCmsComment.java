@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -47,8 +47,8 @@ public abstract class BaseCmsComment  implements Serializable {
 	 */
 	public BaseCmsComment (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.Content content,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.Content content,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.util.Date createTime,
 		java.lang.Short ups,
 		java.lang.Short downs,
@@ -84,13 +84,13 @@ public abstract class BaseCmsComment  implements Serializable {
 	private java.lang.Boolean checked;
 
 	// one to one
-	private com.jeecms.cms.entity.assist.CmsCommentExt commentExt;
+	private com.yunkuo.cms.entity.assist.CmsCommentExt commentExt;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsUser replayUser;
-	private com.jeecms.cms.entity.main.Content content;
-	private com.jeecms.cms.entity.main.CmsUser commentUser;
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsUser replayUser;
+	private com.yunkuo.cms.entity.main.Content content;
+	private com.yunkuo.cms.entity.main.CmsUser commentUser;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 
 
 
@@ -215,7 +215,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	/**
 	 * Return the value associated with the column: commentExt
 	 */
-	public com.jeecms.cms.entity.assist.CmsCommentExt getCommentExt () {
+	public com.yunkuo.cms.entity.assist.CmsCommentExt getCommentExt () {
 		return commentExt;
 	}
 
@@ -223,7 +223,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	 * Set the value related to the column: commentExt
 	 * @param commentExt the commentExt value
 	 */
-	public void setCommentExt (com.jeecms.cms.entity.assist.CmsCommentExt commentExt) {
+	public void setCommentExt (com.yunkuo.cms.entity.assist.CmsCommentExt commentExt) {
 		this.commentExt = commentExt;
 	}
 
@@ -231,7 +231,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	/**
 	 * Return the value associated with the column: reply_user_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getReplayUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getReplayUser () {
 		return replayUser;
 	}
 
@@ -239,7 +239,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	 * Set the value related to the column: reply_user_id
 	 * @param replayUser the reply_user_id value
 	 */
-	public void setReplayUser (com.jeecms.cms.entity.main.CmsUser replayUser) {
+	public void setReplayUser (com.yunkuo.cms.entity.main.CmsUser replayUser) {
 		this.replayUser = replayUser;
 	}
 
@@ -247,7 +247,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	/**
 	 * Return the value associated with the column: content_id
 	 */
-	public com.jeecms.cms.entity.main.Content getContent () {
+	public com.yunkuo.cms.entity.main.Content getContent () {
 		return content;
 	}
 
@@ -255,7 +255,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	 * Set the value related to the column: content_id
 	 * @param content the content_id value
 	 */
-	public void setContent (com.jeecms.cms.entity.main.Content content) {
+	public void setContent (com.yunkuo.cms.entity.main.Content content) {
 		this.content = content;
 	}
 
@@ -263,7 +263,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	/**
 	 * Return the value associated with the column: comment_user_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getCommentUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getCommentUser () {
 		return commentUser;
 	}
 
@@ -271,7 +271,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	 * Set the value related to the column: comment_user_id
 	 * @param commentUser the comment_user_id value
 	 */
-	public void setCommentUser (com.jeecms.cms.entity.main.CmsUser commentUser) {
+	public void setCommentUser (com.yunkuo.cms.entity.main.CmsUser commentUser) {
 		this.commentUser = commentUser;
 	}
 
@@ -279,7 +279,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -287,7 +287,7 @@ public abstract class BaseCmsComment  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -295,9 +295,9 @@ public abstract class BaseCmsComment  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsComment)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsComment)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsComment cmsComment = (com.jeecms.cms.entity.assist.CmsComment) obj;
+			com.yunkuo.cms.entity.assist.CmsComment cmsComment = (com.yunkuo.cms.entity.assist.CmsComment) obj;
 			if (null == this.getId() || null == cmsComment.getId()) return false;
 			else return (this.getId().equals(cmsComment.getId()));
 		}

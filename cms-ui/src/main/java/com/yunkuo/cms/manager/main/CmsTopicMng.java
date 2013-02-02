@@ -1,9 +1,9 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.CmsTopic;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.CmsTopic;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsTopicMng {
 

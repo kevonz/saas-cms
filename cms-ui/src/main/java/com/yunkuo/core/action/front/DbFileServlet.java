@@ -1,4 +1,4 @@
-package com.jeecms.core.action.front;
+package com.yunkuo.core.action.front;
 
 import java.io.IOException;
 
@@ -13,8 +13,8 @@ import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.jeecms.core.entity.DbFile;
-import com.jeecms.core.manager.DbFileMng;
+import com.yunkuo.core.entity.DbFile;
+import com.yunkuo.core.manager.DbFileMng;
 
 @SuppressWarnings("serial")
 public class DbFileServlet extends HttpServlet {

@@ -1,7 +1,7 @@
-package com.jeecms.common.web;
+package com.yunkuo.common.web;
 
-import static com.jeecms.common.web.Constants.POST;
-import static com.jeecms.common.web.Constants.UTF8;
+import static com.yunkuo.common.web.Constants.POST;
+import static com.yunkuo.common.web.Constants.UTF8;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

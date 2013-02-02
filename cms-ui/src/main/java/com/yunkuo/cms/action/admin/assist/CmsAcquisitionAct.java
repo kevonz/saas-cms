@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,24 +17,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.assist.CmsAcquisition;
-import com.jeecms.cms.entity.assist.CmsAcquisitionHistory;
-import com.jeecms.cms.entity.assist.CmsAcquisitionTemp;
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.ContentType;
-import com.jeecms.cms.manager.assist.CmsAcquisitionHistoryMng;
-import com.jeecms.cms.manager.assist.CmsAcquisitionMng;
-import com.jeecms.cms.manager.assist.CmsAcquisitionTempMng;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.ContentTypeMng;
-import com.jeecms.cms.service.AcquisitionSvc;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.assist.CmsAcquisition;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionHistory;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionTemp;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.ContentType;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionHistoryMng;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionMng;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionTempMng;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.ContentTypeMng;
+import com.yunkuo.cms.service.AcquisitionSvc;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class CmsAcquisitionAct {

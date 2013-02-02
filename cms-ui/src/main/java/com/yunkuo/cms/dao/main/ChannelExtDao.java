@@ -1,7 +1,7 @@
-package com.jeecms.cms.dao.main;
+package com.yunkuo.cms.dao.main;
 
-import com.jeecms.cms.entity.main.ChannelExt;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.entity.main.ChannelExt;
+import com.yunkuo.common.hibernate3.Updater;
 
 public interface ChannelExtDao {
 	public ChannelExt save(ChannelExt bean);

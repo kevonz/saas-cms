@@ -1,9 +1,9 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
 
 /**
  * 提供一些CMS系统中使用到的共用方法

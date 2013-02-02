@@ -1,6 +1,6 @@
-package com.jeecms.cms.staticpage;
+package com.yunkuo.cms.staticpage;
 
-import static com.jeecms.common.web.Constants.UTF8;
+import static com.yunkuo.common.web.Constants.UTF8;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,19 +20,19 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentCheck;
-import com.jeecms.cms.manager.assist.CmsKeywordMng;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateSimpleDao;
-import com.jeecms.common.page.Paginable;
-import com.jeecms.common.page.SimplePage;
-import com.jeecms.common.web.springmvc.RealPathResolver;
-import com.jeecms.core.web.front.URLHelper;
-import com.jeecms.core.web.front.URLHelper.PageInfo;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentCheck;
+import com.yunkuo.cms.manager.assist.CmsKeywordMng;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateSimpleDao;
+import com.yunkuo.common.page.Paginable;
+import com.yunkuo.common.page.SimplePage;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
+import com.yunkuo.core.web.front.URLHelper;
+import com.yunkuo.core.web.front.URLHelper.PageInfo;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

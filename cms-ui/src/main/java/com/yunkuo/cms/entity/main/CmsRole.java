@@ -1,8 +1,8 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import java.util.Collection;
 
-import com.jeecms.cms.entity.main.base.BaseCmsRole;
+import com.yunkuo.cms.entity.main.base.BaseCmsRole;
 
 public class CmsRole extends BaseCmsRole {
 	private static final long serialVersionUID = 1L;

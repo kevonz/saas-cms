@@ -1,13 +1,13 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.jeecms.cms.entity.main.base.BaseCmsUser;
-import com.jeecms.common.hibernate3.PriorityInterface;
-import com.jeecms.core.entity.UnifiedUser;
+import com.yunkuo.cms.entity.main.base.BaseCmsUser;
+import com.yunkuo.common.hibernate3.PriorityInterface;
+import com.yunkuo.core.entity.UnifiedUser;
 
 public class CmsUser extends BaseCmsUser implements PriorityInterface {
 	private static final long serialVersionUID = 1L;
@@ -406,7 +406,7 @@ public class CmsUser extends BaseCmsUser implements PriorityInterface {
 	 * Constructor for required fields
 	 */
 	public CmsUser(java.lang.Integer id,
-			com.jeecms.cms.entity.main.CmsGroup group,
+			com.yunkuo.cms.entity.main.CmsGroup group,
 			java.lang.String username, java.util.Date registerTime,
 			java.lang.String registerIp, java.lang.Integer loginCount,
 			java.lang.Integer rank, java.lang.Long uploadTotal,

@@ -1,4 +1,4 @@
-package com.jeecms.core.manager.impl;
+package com.yunkuo.core.manager.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,14 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.core.dao.ConfigDao;
-import com.jeecms.core.entity.Config;
-import com.jeecms.core.entity.Config.ConfigEmailSender;
-import com.jeecms.core.entity.Config.ConfigLogin;
-import com.jeecms.core.entity.Config.ConfigMessageTemplate;
-import com.jeecms.core.manager.ConfigMng;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.core.dao.ConfigDao;
+import com.yunkuo.core.entity.Config;
+import com.yunkuo.core.entity.Config.ConfigEmailSender;
+import com.yunkuo.core.entity.Config.ConfigLogin;
+import com.yunkuo.core.entity.Config.ConfigMessageTemplate;
+import com.yunkuo.core.manager.ConfigMng;
 
 @Service
 @Transactional

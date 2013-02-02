@@ -1,9 +1,9 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.assist.CmsFile;
-import com.jeecms.cms.entity.main.Content;
+import com.yunkuo.cms.entity.assist.CmsFile;
+import com.yunkuo.cms.entity.main.Content;
 
 public interface CmsFileMng {
 	public List<CmsFile> getList(Boolean valid);

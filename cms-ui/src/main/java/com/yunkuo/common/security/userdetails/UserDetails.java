@@ -1,4 +1,4 @@
-package com.jeecms.common.security.userdetails;
+package com.yunkuo.common.security.userdetails;
 
 import java.io.Serializable;
 

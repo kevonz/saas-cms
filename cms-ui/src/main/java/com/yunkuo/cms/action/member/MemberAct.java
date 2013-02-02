@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
-import static com.jeecms.cms.Constants.TPLDIR_MEMBER;
+import static com.yunkuo.cms.Constants.TPLDIR_MEMBER;
 
 import java.io.IOException;
 
@@ -15,16 +15,16 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserExt;
-import com.jeecms.cms.entity.main.MemberConfig;
-import com.jeecms.cms.manager.main.CmsUserExtMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserExt;
+import com.yunkuo.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.manager.main.CmsUserExtMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.web.ResponseUtils;
 
 /**
  * 会员中心Action

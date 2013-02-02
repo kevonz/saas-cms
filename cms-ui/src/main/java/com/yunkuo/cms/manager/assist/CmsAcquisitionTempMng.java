@@ -1,8 +1,8 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.assist.CmsAcquisitionTemp;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionTemp;
 
 public interface CmsAcquisitionTempMng {
 	public List<CmsAcquisitionTemp> getList(Integer siteId);

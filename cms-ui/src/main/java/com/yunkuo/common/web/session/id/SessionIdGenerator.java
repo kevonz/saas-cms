@@ -1,4 +1,4 @@
-package com.jeecms.common.web.session.id;
+package com.yunkuo.common.web.session.id;
 
 /**
  * session id 生成接口

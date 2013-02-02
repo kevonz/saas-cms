@@ -1,6 +1,6 @@
-package com.jeecms.cms;
+package com.yunkuo.cms;
 
-import static com.jeecms.common.web.Constants.UTF8;
+import static com.yunkuo.common.web.Constants.UTF8;
 
 import java.io.BufferedReader;
 import java.io.File;

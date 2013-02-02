@@ -1,11 +1,11 @@
-package com.jeecms.core.manager;
+package com.yunkuo.core.manager;
 
 import java.util.Map;
 
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.core.entity.Config;
-import com.jeecms.core.entity.Config.ConfigLogin;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.core.entity.Config;
+import com.yunkuo.core.entity.Config.ConfigLogin;
 
 public interface ConfigMng {
 	public Map<String, String> getMap();

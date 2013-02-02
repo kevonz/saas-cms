@@ -1,8 +1,8 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
-import static com.jeecms.cms.web.FrontUtils.RES_EXP;
-import static com.jeecms.common.web.Constants.SPT;
-import static com.jeecms.common.web.Constants.UTF8;
+import static com.yunkuo.cms.web.FrontUtils.RES_EXP;
+import static com.yunkuo.common.web.Constants.SPT;
+import static com.yunkuo.common.web.Constants.UTF8;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -26,15 +26,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeecms.cms.entity.assist.CmsFile;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsFileMng;
-import com.jeecms.cms.manager.assist.CmsResourceMng;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.file.FileWrap;
-import com.jeecms.common.file.FileWrap.FileComparator;
-import com.jeecms.common.util.Zipper.FileEntry;
-import com.jeecms.common.web.springmvc.RealPathResolver;
+import com.yunkuo.cms.entity.assist.CmsFile;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsFileMng;
+import com.yunkuo.cms.manager.assist.CmsResourceMng;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.file.FileWrap;
+import com.yunkuo.common.file.FileWrap.FileComparator;
+import com.yunkuo.common.util.Zipper.FileEntry;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
 
 @Service
 public class CmsResourceMngImpl implements CmsResourceMng {

@@ -1,4 +1,4 @@
-package com.jeecms.cms.dao.main.impl;
+package com.yunkuo.cms.dao.main.impl;
 
 import java.util.Date;
 
@@ -6,11 +6,11 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.main.CmsLogDao;
-import com.jeecms.cms.entity.main.CmsLog;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.main.CmsLogDao;
+import com.yunkuo.cms.entity.main.CmsLog;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.common.page.Pagination;
 
 @Repository
 public class CmsLogDaoImpl extends HibernateBaseDao<CmsLog, Integer> implements

@@ -1,4 +1,4 @@
-package com.jeecms.common.fck;
+package com.yunkuo.common.fck;
 
 import java.util.HashSet;
 import java.util.Set;

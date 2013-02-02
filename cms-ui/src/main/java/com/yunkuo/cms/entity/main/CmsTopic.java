@@ -1,10 +1,10 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import java.util.Collection;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseCmsTopic;
+import com.yunkuo.cms.entity.main.base.BaseCmsTopic;
 
 public class CmsTopic extends BaseCmsTopic {
 	private static final long serialVersionUID = 1L;

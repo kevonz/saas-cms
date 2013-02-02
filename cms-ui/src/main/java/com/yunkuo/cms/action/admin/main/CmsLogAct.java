@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,13 +11,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsLog;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
+import com.yunkuo.cms.entity.main.CmsLog;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
 
 @Controller
 public class CmsLogAct {

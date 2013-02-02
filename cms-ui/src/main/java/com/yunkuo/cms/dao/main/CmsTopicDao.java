@@ -1,10 +1,10 @@
-package com.jeecms.cms.dao.main;
+package com.yunkuo.cms.dao.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.CmsTopic;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.CmsTopic;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsTopicDao {
 	public List<CmsTopic> getList(Integer channelId, boolean recommend,

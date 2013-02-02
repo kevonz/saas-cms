@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
 import java.util.HashSet;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsRole;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsRoleMng;
-import com.jeecms.cms.web.WebErrors;
+import com.yunkuo.cms.entity.main.CmsRole;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsRoleMng;
+import com.yunkuo.cms.web.WebErrors;
 
 @Controller
 public class CmsRoleAct {

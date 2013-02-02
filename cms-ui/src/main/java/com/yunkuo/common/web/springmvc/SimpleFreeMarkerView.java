@@ -1,4 +1,4 @@
-package com.jeecms.common.web.springmvc;
+package com.yunkuo.common.web.springmvc;
 
 import java.io.IOException;
 import java.util.Map;

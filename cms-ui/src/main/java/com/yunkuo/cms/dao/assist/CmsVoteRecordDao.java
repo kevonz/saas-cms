@@ -1,6 +1,6 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
-import com.jeecms.cms.entity.assist.CmsVoteRecord;
+import com.yunkuo.cms.entity.assist.CmsVoteRecord;
 
 public interface CmsVoteRecordDao {
 	public CmsVoteRecord save(CmsVoteRecord bean);

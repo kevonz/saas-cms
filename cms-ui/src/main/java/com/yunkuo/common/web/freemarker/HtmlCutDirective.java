@@ -1,10 +1,10 @@
-package com.jeecms.common.web.freemarker;
+package com.yunkuo.common.web.freemarker;
 
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Map;
 
-import com.jeecms.common.util.StrUtils;
+import com.yunkuo.common.util.StrUtils;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

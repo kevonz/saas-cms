@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -71,8 +71,8 @@ public abstract class BaseCmsLog  implements Serializable {
 	private java.lang.String content;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsUser user;
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsUser user;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 
 
 
@@ -197,7 +197,7 @@ public abstract class BaseCmsLog  implements Serializable {
 	/**
 	 * Return the value associated with the column: user_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getUser () {
 		return user;
 	}
 
@@ -205,7 +205,7 @@ public abstract class BaseCmsLog  implements Serializable {
 	 * Set the value related to the column: user_id
 	 * @param user the user_id value
 	 */
-	public void setUser (com.jeecms.cms.entity.main.CmsUser user) {
+	public void setUser (com.yunkuo.cms.entity.main.CmsUser user) {
 		this.user = user;
 	}
 
@@ -213,7 +213,7 @@ public abstract class BaseCmsLog  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -221,7 +221,7 @@ public abstract class BaseCmsLog  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -229,9 +229,9 @@ public abstract class BaseCmsLog  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.CmsLog)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.CmsLog)) return false;
 		else {
-			com.jeecms.cms.entity.main.CmsLog cmsLog = (com.jeecms.cms.entity.main.CmsLog) obj;
+			com.yunkuo.cms.entity.main.CmsLog cmsLog = (com.yunkuo.cms.entity.main.CmsLog) obj;
 			if (null == this.getId() || null == cmsLog.getId()) return false;
 			else return (this.getId().equals(cmsLog.getId()));
 		}

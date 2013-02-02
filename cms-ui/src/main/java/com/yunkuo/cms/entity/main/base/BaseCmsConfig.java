@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -110,8 +110,8 @@ public abstract class BaseCmsConfig  implements Serializable {
 	private java.lang.Boolean emailValidate;
 
 	// components
-	 com.jeecms.cms.entity.main.MarkConfig m_markConfig;
-	 com.jeecms.cms.entity.main.EmailConfig m_emailConfig;
+	 com.yunkuo.cms.entity.main.MarkConfig m_markConfig;
+	 com.yunkuo.cms.entity.main.EmailConfig m_emailConfig;
 
 	// collections
 	private java.util.Map<java.lang.String, java.lang.String> attr;
@@ -340,7 +340,7 @@ public abstract class BaseCmsConfig  implements Serializable {
 		this.emailValidate = emailValidate;
 	}
 
-	public com.jeecms.cms.entity.main.MarkConfig getMarkConfig () {
+	public com.yunkuo.cms.entity.main.MarkConfig getMarkConfig () {
 		return m_markConfig;
 	}
 
@@ -348,12 +348,12 @@ public abstract class BaseCmsConfig  implements Serializable {
 	 * Set the value related to the column: ${prop.Column}
 	 * @param m_markConfig the ${prop.Column} value
 	 */
-	public void setMarkConfig (com.jeecms.cms.entity.main.MarkConfig m_markConfig) {
+	public void setMarkConfig (com.yunkuo.cms.entity.main.MarkConfig m_markConfig) {
 		this.m_markConfig = m_markConfig;
 	}
 
 
-	public com.jeecms.cms.entity.main.EmailConfig getEmailConfig () {
+	public com.yunkuo.cms.entity.main.EmailConfig getEmailConfig () {
 		return m_emailConfig;
 	}
 
@@ -361,7 +361,7 @@ public abstract class BaseCmsConfig  implements Serializable {
 	 * Set the value related to the column: ${prop.Column}
 	 * @param m_emailConfig the ${prop.Column} value
 	 */
-	public void setEmailConfig (com.jeecms.cms.entity.main.EmailConfig m_emailConfig) {
+	public void setEmailConfig (com.yunkuo.cms.entity.main.EmailConfig m_emailConfig) {
 		this.m_emailConfig = m_emailConfig;
 	}
 
@@ -385,9 +385,9 @@ public abstract class BaseCmsConfig  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.CmsConfig)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.CmsConfig)) return false;
 		else {
-			com.jeecms.cms.entity.main.CmsConfig cmsConfig = (com.jeecms.cms.entity.main.CmsConfig) obj;
+			com.yunkuo.cms.entity.main.CmsConfig cmsConfig = (com.yunkuo.cms.entity.main.CmsConfig) obj;
 			if (null == this.getId() || null == cmsConfig.getId()) return false;
 			else return (this.getId().equals(cmsConfig.getId()));
 		}

@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,11 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.ContentTagDao;
-import com.jeecms.cms.entity.main.ContentTag;
-import com.jeecms.cms.manager.main.ContentTagMng;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.main.ContentTagDao;
+import com.yunkuo.cms.entity.main.ContentTag;
+import com.yunkuo.cms.manager.main.ContentTagMng;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 @Service
 @Transactional

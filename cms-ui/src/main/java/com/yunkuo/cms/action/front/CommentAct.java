@@ -1,7 +1,7 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
-import static com.jeecms.cms.Constants.TPLDIR_CSI;
-import static com.jeecms.cms.Constants.TPLDIR_SPECIAL;
+import static com.yunkuo.cms.Constants.TPLDIR_CSI;
+import static com.yunkuo.cms.Constants.TPLDIR_SPECIAL;
 
 import java.util.List;
 
@@ -19,20 +19,20 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.assist.CmsComment;
-import com.jeecms.cms.entity.main.ChannelExt;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.manager.assist.CmsCommentMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.ResponseUtils;
-import com.jeecms.common.web.session.SessionProvider;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
+import com.yunkuo.cms.entity.assist.CmsComment;
+import com.yunkuo.cms.entity.main.ChannelExt;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.manager.assist.CmsCommentMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.ResponseUtils;
+import com.yunkuo.common.web.session.SessionProvider;
 
 @Controller
 public class CommentAct {

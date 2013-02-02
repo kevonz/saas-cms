@@ -1,6 +1,6 @@
-package com.jeecms.core.action.front;
+package com.yunkuo.core.action.front;
 
-import static com.jeecms.core.manager.AuthenticationMng.AUTH_KEY;
+import static com.yunkuo.core.manager.AuthenticationMng.AUTH_KEY;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,10 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.core.entity.Authentication;
-import com.jeecms.core.manager.AuthenticationMng;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.core.entity.Authentication;
+import com.yunkuo.core.manager.AuthenticationMng;
 
 /**
  * 登录处理Action

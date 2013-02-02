@@ -1,8 +1,8 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserSite;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserSite;
 
 public interface CmsUserSiteMng {
 	public CmsUserSite findById(Integer id);

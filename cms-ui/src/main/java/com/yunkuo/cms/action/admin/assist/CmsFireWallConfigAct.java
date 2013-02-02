@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,13 +18,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.common.web.springmvc.RealPathResolver;
 
-import com.jeecms.cms.Constants;
+import com.yunkuo.cms.Constants;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
 
 /**
  * @author Tom

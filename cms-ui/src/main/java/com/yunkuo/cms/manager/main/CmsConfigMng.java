@@ -1,10 +1,10 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.Date;
 
-import com.jeecms.cms.entity.main.CmsConfig;
-import com.jeecms.cms.entity.main.MarkConfig;
-import com.jeecms.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.entity.main.CmsConfig;
+import com.yunkuo.cms.entity.main.MarkConfig;
+import com.yunkuo.cms.entity.main.MemberConfig;
 
 public interface CmsConfigMng {
 	public CmsConfig get();

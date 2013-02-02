@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsSiteFlow;
+import com.yunkuo.cms.entity.assist.base.BaseCmsSiteFlow;
 
 
 
@@ -24,7 +24,7 @@ public class CmsSiteFlow extends BaseCmsSiteFlow {
 	 */
 	public CmsSiteFlow (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String accessIp,
 		java.lang.String accessDate,
 		java.lang.String accessPage,

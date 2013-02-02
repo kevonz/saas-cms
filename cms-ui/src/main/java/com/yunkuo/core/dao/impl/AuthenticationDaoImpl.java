@@ -1,14 +1,14 @@
-package com.jeecms.core.dao.impl;
+package com.yunkuo.core.dao.impl;
 
 import java.util.Date;
 
 import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.core.dao.AuthenticationDao;
-import com.jeecms.core.entity.Authentication;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.core.dao.AuthenticationDao;
+import com.yunkuo.core.entity.Authentication;
 
 @Repository
 public class AuthenticationDaoImpl extends

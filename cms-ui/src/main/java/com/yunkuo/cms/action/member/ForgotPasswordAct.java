@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
-import static com.jeecms.cms.Constants.TPLDIR_MEMBER;
+import static com.yunkuo.cms.Constants.TPLDIR_MEMBER;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,18 +14,18 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.core.entity.UnifiedUser;
-import com.jeecms.core.manager.ConfigMng;
-import com.jeecms.core.manager.UnifiedUserMng;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.core.entity.UnifiedUser;
+import com.yunkuo.core.manager.ConfigMng;
+import com.yunkuo.core.manager.UnifiedUserMng;
 
 /**
  * 找回密码Action

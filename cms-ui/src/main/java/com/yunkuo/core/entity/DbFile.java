@@ -1,6 +1,6 @@
-package com.jeecms.core.entity;
+package com.yunkuo.core.entity;
 
-import com.jeecms.core.entity.base.BaseDbFile;
+import com.yunkuo.core.entity.base.BaseDbFile;
 
 
 

@@ -1,11 +1,11 @@
-package com.jeecms.cms.dao.main;
+package com.yunkuo.cms.dao.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.Content.ContentStatus;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.Content.ContentStatus;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 /**
  * 内容DAO接口。

@@ -1,4 +1,4 @@
-package com.jeecms.common.util;
+package com.yunkuo.common.util;
 
 import java.text.DateFormat;
 import java.util.Date;

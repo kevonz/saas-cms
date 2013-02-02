@@ -1,7 +1,7 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsReceiverMessage;
-import com.jeecms.common.util.StrUtils;
+import com.yunkuo.cms.entity.assist.base.BaseCmsReceiverMessage;
+import com.yunkuo.common.util.StrUtils;
 
 public class CmsReceiverMessage extends BaseCmsReceiverMessage {
 	private static final long serialVersionUID = 1L;
@@ -22,9 +22,9 @@ public class CmsReceiverMessage extends BaseCmsReceiverMessage {
 	 * Constructor for required fields
 	 */
 	public CmsReceiverMessage(java.lang.Integer id,
-			com.jeecms.cms.entity.main.CmsUser msgReceiverUser,
-			com.jeecms.cms.entity.main.CmsUser msgSendUser,
-			com.jeecms.cms.entity.main.CmsSite site, java.lang.String msgTitle,
+			com.yunkuo.cms.entity.main.CmsUser msgReceiverUser,
+			com.yunkuo.cms.entity.main.CmsUser msgSendUser,
+			com.yunkuo.cms.entity.main.CmsSite site, java.lang.String msgTitle,
 			java.lang.String msgContent, java.util.Date sendTime,
 			boolean msgStatus, java.lang.Integer msgBox) {
 

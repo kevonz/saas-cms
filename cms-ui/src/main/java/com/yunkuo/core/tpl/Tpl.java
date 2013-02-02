@@ -1,4 +1,4 @@
-package com.jeecms.core.tpl;
+package com.yunkuo.core.tpl;
 
 import java.util.Date;
 

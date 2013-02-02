@@ -1,9 +1,9 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 import java.util.Set;
 
-import com.jeecms.cms.entity.main.CmsRole;
+import com.yunkuo.cms.entity.main.CmsRole;
 
 public interface CmsRoleMng {
 	public List<CmsRole> getList();

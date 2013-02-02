@@ -1,4 +1,4 @@
-package com.jeecms.common.file;
+package com.yunkuo.common.file;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -6,7 +6,7 @@ import java.util.Date;
 
 import org.apache.commons.lang.RandomStringUtils;
 
-import com.jeecms.common.util.Num62;
+import com.yunkuo.common.util.Num62;
 
 /**
  * 文件名生成帮助类

@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.util.List;
 
@@ -6,18 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsCommentDao;
-import com.jeecms.cms.entity.assist.CmsComment;
-import com.jeecms.cms.entity.assist.CmsCommentExt;
-import com.jeecms.cms.manager.assist.CmsCommentExtMng;
-import com.jeecms.cms.manager.assist.CmsCommentMng;
-import com.jeecms.cms.manager.assist.CmsSensitivityMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.manager.main.ContentCountMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.assist.CmsCommentDao;
+import com.yunkuo.cms.entity.assist.CmsComment;
+import com.yunkuo.cms.entity.assist.CmsCommentExt;
+import com.yunkuo.cms.manager.assist.CmsCommentExtMng;
+import com.yunkuo.cms.manager.assist.CmsCommentMng;
+import com.yunkuo.cms.manager.assist.CmsSensitivityMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.manager.main.ContentCountMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 @Service
 @Transactional

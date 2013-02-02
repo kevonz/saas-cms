@@ -1,9 +1,9 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
 import java.util.Date;
-import com.jeecms.cms.entity.assist.CmsMessage;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.assist.CmsMessage;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 /**
  *江西金磊科技发展有限公司jeecms研发

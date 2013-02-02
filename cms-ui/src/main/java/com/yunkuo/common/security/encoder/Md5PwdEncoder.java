@@ -1,4 +1,4 @@
-package com.jeecms.common.security.encoder;
+package com.yunkuo.common.security.encoder;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

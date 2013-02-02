@@ -1,4 +1,4 @@
-package com.jeecms.common.security.annotation;
+package com.yunkuo.common.security.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

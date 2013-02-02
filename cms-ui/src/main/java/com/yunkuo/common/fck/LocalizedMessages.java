@@ -1,4 +1,4 @@
-package com.jeecms.common.fck;
+package com.yunkuo.common.fck;
 
 import java.util.Properties;
 
@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.servlet.LocaleResolver;
 
-import com.jeecms.common.web.springmvc.MessageResolver;
+import com.yunkuo.common.web.springmvc.MessageResolver;
 
 /**
  * Provides access to localized messages (properties).

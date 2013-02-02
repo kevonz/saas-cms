@@ -1,7 +1,7 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
-import static com.jeecms.cms.Constants.TPLDIR_MEMBER;
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.cms.Constants.TPLDIR_MEMBER;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.util.List;
 import java.util.Set;
@@ -17,25 +17,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentExt;
-import com.jeecms.cms.entity.main.ContentTxt;
-import com.jeecms.cms.entity.main.ContentType;
-import com.jeecms.cms.entity.main.MemberConfig;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.manager.main.ContentTypeMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.util.StrUtils;
-import com.jeecms.common.web.session.SessionProvider;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentExt;
+import com.yunkuo.cms.entity.main.ContentTxt;
+import com.yunkuo.cms.entity.main.ContentType;
+import com.yunkuo.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.manager.main.ContentTypeMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.util.StrUtils;
+import com.yunkuo.common.web.session.SessionProvider;
 
 /**
  * 会员投稿Action

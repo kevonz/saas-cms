@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.directive;
+package com.yunkuo.cms.action.directive;
 
-import static com.jeecms.common.web.freemarker.DirectiveUtils.OUT_BEAN;
+import static com.yunkuo.common.web.freemarker.DirectiveUtils.OUT_BEAN;
 import static freemarker.template.ObjectWrapper.DEFAULT_WRAPPER;
 
 import java.io.IOException;
@@ -10,12 +10,12 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.freemarker.DirectiveUtils;
-import com.jeecms.common.web.freemarker.ParamsRequiredException;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.freemarker.DirectiveUtils;
+import com.yunkuo.common.web.freemarker.ParamsRequiredException;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
@@ -13,27 +13,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.CmsUserDao;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsGroup;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserExt;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsGroupMng;
-import com.jeecms.cms.manager.main.CmsRoleMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.CmsUserExtMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.manager.main.CmsUserSiteMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.core.entity.UnifiedUser;
-import com.jeecms.core.manager.UnifiedUserMng;
+import com.yunkuo.cms.dao.main.CmsUserDao;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserExt;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsGroupMng;
+import com.yunkuo.cms.manager.main.CmsRoleMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.CmsUserExtMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.manager.main.CmsUserSiteMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.core.entity.UnifiedUser;
+import com.yunkuo.core.manager.UnifiedUserMng;
 
 @Service
 @Transactional

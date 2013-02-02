@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsKeyword;
+import com.yunkuo.cms.entity.assist.base.BaseCmsKeyword;
 
 public class CmsKeyword extends BaseCmsKeyword {
 	private static final long serialVersionUID = 1L;

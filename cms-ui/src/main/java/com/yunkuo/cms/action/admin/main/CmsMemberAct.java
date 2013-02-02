@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.util.List;
 
@@ -15,17 +15,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsGroup;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserExt;
-import com.jeecms.cms.manager.main.CmsGroupMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserExt;
+import com.yunkuo.cms.manager.main.CmsGroupMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class CmsMemberAct {

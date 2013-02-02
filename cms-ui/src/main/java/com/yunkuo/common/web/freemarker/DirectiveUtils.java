@@ -1,4 +1,4 @@
-package com.jeecms.common.web.freemarker;
+package com.yunkuo.common.web.freemarker;
 
 import static org.springframework.web.servlet.view.AbstractTemplateView.SPRING_MACRO_REQUEST_CONTEXT_ATTRIBUTE;
 
@@ -10,7 +10,7 @@ import java.util.Set;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.servlet.support.RequestContext;
 
-import com.jeecms.common.web.springmvc.DateTypeEditor;
+import com.yunkuo.common.web.springmvc.DateTypeEditor;
 
 import freemarker.core.Environment;
 import freemarker.template.AdapterTemplateModel;

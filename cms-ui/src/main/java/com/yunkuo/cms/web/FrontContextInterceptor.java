@@ -1,4 +1,4 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,12 +11,12 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.core.manager.AuthenticationMng;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.core.manager.AuthenticationMng;
 
 /**
  * CMS上下文信息拦截器

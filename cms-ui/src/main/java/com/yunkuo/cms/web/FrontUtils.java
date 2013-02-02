@@ -1,16 +1,16 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
-import static com.jeecms.cms.Constants.RES_PATH;
-import static com.jeecms.cms.Constants.TPLDIR_COMMON;
-import static com.jeecms.cms.Constants.TPLDIR_STYLE_LIST;
-import static com.jeecms.cms.Constants.TPLDIR_TAG;
-import static com.jeecms.cms.Constants.TPL_STYLE_PAGE_CHANNEL;
-import static com.jeecms.cms.Constants.TPL_SUFFIX;
-import static com.jeecms.common.web.Constants.MESSAGE;
-import static com.jeecms.common.web.Constants.UTF8;
-import static com.jeecms.common.web.ProcessTimeFilter.START_TIME;
-import static com.jeecms.common.web.freemarker.DirectiveUtils.PARAM_TPL_SUB;
-import static com.jeecms.core.action.front.LoginAct.PROCESS_URL;
+import static com.yunkuo.cms.Constants.RES_PATH;
+import static com.yunkuo.cms.Constants.TPLDIR_COMMON;
+import static com.yunkuo.cms.Constants.TPLDIR_STYLE_LIST;
+import static com.yunkuo.cms.Constants.TPLDIR_TAG;
+import static com.yunkuo.cms.Constants.TPL_STYLE_PAGE_CHANNEL;
+import static com.yunkuo.cms.Constants.TPL_SUFFIX;
+import static com.yunkuo.common.web.Constants.MESSAGE;
+import static com.yunkuo.common.web.Constants.UTF8;
+import static com.yunkuo.common.web.ProcessTimeFilter.START_TIME;
+import static com.yunkuo.common.web.freemarker.DirectiveUtils.PARAM_TPL_SUB;
+import static com.yunkuo.core.action.front.LoginAct.PROCESS_URL;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -23,13 +23,13 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.propertyeditors.LocaleEditor;
 import org.springframework.context.MessageSource;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.freemarker.DirectiveUtils;
-import com.jeecms.common.web.springmvc.MessageResolver;
-import com.jeecms.core.web.front.URLHelper;
-import com.jeecms.core.web.front.URLHelper.PageInfo;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.freemarker.DirectiveUtils;
+import com.yunkuo.common.web.springmvc.MessageResolver;
+import com.yunkuo.core.web.front.URLHelper;
+import com.yunkuo.core.web.front.URLHelper.PageInfo;
 
 import freemarker.core.Environment;
 import freemarker.template.AdapterTemplateModel;

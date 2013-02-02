@@ -1,4 +1,4 @@
-package com.jeecms.cms.lucene;
+package com.yunkuo.cms.lucene;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,9 +26,9 @@ import org.apache.lucene.search.TermRangeQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.util.Version;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.common.page.Pagination;
 
 public class LuceneContent {
 

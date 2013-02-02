@@ -1,4 +1,4 @@
-package com.jeecms.common.web.cos;
+package com.yunkuo.common.web.cos;
 
 import java.io.IOException;
 

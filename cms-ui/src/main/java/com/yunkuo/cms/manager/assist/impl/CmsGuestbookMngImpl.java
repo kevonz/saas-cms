@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsGuestbookDao;
-import com.jeecms.cms.entity.assist.CmsGuestbook;
-import com.jeecms.cms.entity.assist.CmsGuestbookExt;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.assist.CmsGuestbookCtgMng;
-import com.jeecms.cms.manager.assist.CmsGuestbookExtMng;
-import com.jeecms.cms.manager.assist.CmsGuestbookMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.assist.CmsGuestbookDao;
+import com.yunkuo.cms.entity.assist.CmsGuestbook;
+import com.yunkuo.cms.entity.assist.CmsGuestbookExt;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.assist.CmsGuestbookCtgMng;
+import com.yunkuo.cms.manager.assist.CmsGuestbookExtMng;
+import com.yunkuo.cms.manager.assist.CmsGuestbookMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 @Service
 @Transactional

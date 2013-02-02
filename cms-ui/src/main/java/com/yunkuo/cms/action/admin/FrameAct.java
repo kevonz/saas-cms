@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin;
+package com.yunkuo.cms.action.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

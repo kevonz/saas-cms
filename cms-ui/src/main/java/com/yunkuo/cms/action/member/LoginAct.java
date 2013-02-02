@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
-import static com.jeecms.cms.Constants.TPLDIR_CSI;
+import static com.yunkuo.cms.Constants.TPLDIR_CSI;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.RequestUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.RequestUtils;
 
 @Controller
 public class LoginAct {

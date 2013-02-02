@@ -1,4 +1,4 @@
-package com.jeecms.common.security.rememberme;
+package com.yunkuo.common.security.rememberme;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -10,8 +10,8 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.util.StringUtils;
 
-import com.jeecms.common.security.UsernameNotFoundException;
-import com.jeecms.common.security.userdetails.UserDetails;
+import com.yunkuo.common.security.UsernameNotFoundException;
+import com.yunkuo.common.security.userdetails.UserDetails;
 
 /**
  * Identifies previously remembered users by a Base-64 encoded cookie.

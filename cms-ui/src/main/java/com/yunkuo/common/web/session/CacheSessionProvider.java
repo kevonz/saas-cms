@@ -1,4 +1,4 @@
-package com.jeecms.common.web.session;
+package com.yunkuo.common.web.session;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -12,10 +12,10 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
-import com.jeecms.common.web.Constants;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.session.cache.SessionCache;
-import com.jeecms.common.web.session.id.SessionIdGenerator;
+import com.yunkuo.common.web.Constants;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.session.cache.SessionCache;
+import com.yunkuo.common.web.session.id.SessionIdGenerator;
 
 /**
  * 使用Memcached分布式缓存实现Session

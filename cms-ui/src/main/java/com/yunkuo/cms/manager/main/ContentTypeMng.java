@@ -1,8 +1,8 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.ContentType;
+import com.yunkuo.cms.entity.main.ContentType;
 
 public interface ContentTypeMng {
 	public List<ContentType> getList(boolean containDisabled);

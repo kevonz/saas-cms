@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
 import java.util.List;
 
@@ -11,13 +11,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.assist.CmsFriendlinkCtg;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsFriendlinkCtgMng;
-import com.jeecms.cms.manager.assist.CmsFriendlinkMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
+import com.yunkuo.cms.entity.assist.CmsFriendlinkCtg;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsFriendlinkCtgMng;
+import com.yunkuo.cms.manager.assist.CmsFriendlinkMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
 
 @Controller
 public class CmsFriendlinkCtgAct {

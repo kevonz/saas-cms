@@ -1,4 +1,4 @@
-package com.jeecms.cms.statistic.workload;
+package com.yunkuo.cms.statistic.workload;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -12,14 +12,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
-import com.jeecms.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.util.DateUtils;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
+import com.yunkuo.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.util.DateUtils;
 
 /**
  * @author Tom

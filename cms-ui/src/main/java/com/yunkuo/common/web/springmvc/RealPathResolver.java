@@ -1,4 +1,4 @@
-package com.jeecms.common.web.springmvc;
+package com.yunkuo.common.web.springmvc;
 
 /**
  * 绝对路径提供类

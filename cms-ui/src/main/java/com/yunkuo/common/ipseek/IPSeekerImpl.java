@@ -1,4 +1,4 @@
-package com.jeecms.common.ipseek;
+package com.yunkuo.common.ipseek;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jeecms.common.web.springmvc.RealPathResolver;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
 
 public class IPSeekerImpl implements IPSeeker{
 	// 用来做为cache，查询一个ip时首先查看cache，以减少不必要的重复查找

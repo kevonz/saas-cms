@@ -1,4 +1,4 @@
-package com.jeecms.cms.statistic;
+package com.yunkuo.cms.statistic;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -13,34 +13,34 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.statistic.CmsStatistic.CmsStatisticModel;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.statistic.CmsStatistic.CmsStatisticModel;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
 
-import static com.jeecms.cms.statistic.CmsStatistic.MEMBER;
-import static com.jeecms.cms.statistic.CmsStatistic.CONTENT;
-import static com.jeecms.cms.statistic.CmsStatistic.COMMENT;
-import static com.jeecms.cms.statistic.CmsStatistic.GUESTBOOK;
-import static com.jeecms.cms.statistic.CmsStatistic.PV;
-import static com.jeecms.cms.statistic.CmsStatistic.UNIQUEIP;
-import static com.jeecms.cms.statistic.CmsStatistic.UNIQUEVISITOR;
-import static com.jeecms.cms.statistic.CmsStatistic.AVGVIEWS;
-import static com.jeecms.cms.statistic.CmsStatistic.SITEID;
-import static com.jeecms.cms.statistic.CmsStatistic.ISREPLYED;
-import static com.jeecms.cms.statistic.CmsStatistic.USERID;
-import static com.jeecms.cms.statistic.CmsStatistic.CHANNELID;
-import static com.jeecms.cms.statistic.CmsStatistic.REFERER_WEBSITE;
-import static com.jeecms.cms.statistic.CmsStatistic.REFERER_PAGE;
-import static com.jeecms.cms.statistic.CmsStatistic.ACCESS_PAGE;
-import static com.jeecms.cms.statistic.CmsStatistic.AREA;
-import static com.jeecms.cms.statistic.CmsStatistic.REFERER_KEYWORD;
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.cms.statistic.CmsStatistic.ACCESS_PAGE;
+import static com.yunkuo.cms.statistic.CmsStatistic.AREA;
+import static com.yunkuo.cms.statistic.CmsStatistic.AVGVIEWS;
+import static com.yunkuo.cms.statistic.CmsStatistic.CHANNELID;
+import static com.yunkuo.cms.statistic.CmsStatistic.COMMENT;
+import static com.yunkuo.cms.statistic.CmsStatistic.CONTENT;
+import static com.yunkuo.cms.statistic.CmsStatistic.GUESTBOOK;
+import static com.yunkuo.cms.statistic.CmsStatistic.ISREPLYED;
+import static com.yunkuo.cms.statistic.CmsStatistic.MEMBER;
+import static com.yunkuo.cms.statistic.CmsStatistic.PV;
+import static com.yunkuo.cms.statistic.CmsStatistic.REFERER_KEYWORD;
+import static com.yunkuo.cms.statistic.CmsStatistic.REFERER_PAGE;
+import static com.yunkuo.cms.statistic.CmsStatistic.REFERER_WEBSITE;
+import static com.yunkuo.cms.statistic.CmsStatistic.SITEID;
+import static com.yunkuo.cms.statistic.CmsStatistic.UNIQUEIP;
+import static com.yunkuo.cms.statistic.CmsStatistic.UNIQUEVISITOR;
+import static com.yunkuo.cms.statistic.CmsStatistic.USERID;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 @Controller
 public class CmsStatisticAct {

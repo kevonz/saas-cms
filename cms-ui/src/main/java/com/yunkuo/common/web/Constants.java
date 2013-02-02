@@ -1,4 +1,4 @@
-package com.jeecms.common.web;
+package com.yunkuo.common.web;
 
 /**
  * web常量

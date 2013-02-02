@@ -1,4 +1,4 @@
-package com.jeecms.common.image;
+package com.yunkuo.common.image;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,7 +15,7 @@ import magick.PixelPacket;
 
 import org.apache.commons.io.FileUtils;
 
-import com.jeecms.common.image.ImageUtils.Position;
+import com.yunkuo.common.image.ImageUtils.Position;
 
 public class MagickImageScale {
 	/**

@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -136,7 +136,7 @@ public abstract class BaseChannelExt  implements Serializable {
 	private java.lang.String description;
 
 	// one to one
-	private com.jeecms.cms.entity.main.Channel channel;
+	private com.yunkuo.cms.entity.main.Channel channel;
 
 
 
@@ -597,7 +597,7 @@ public abstract class BaseChannelExt  implements Serializable {
 	/**
 	 * Return the value associated with the column: channel
 	 */
-	public com.jeecms.cms.entity.main.Channel getChannel () {
+	public com.yunkuo.cms.entity.main.Channel getChannel () {
 		return channel;
 	}
 
@@ -605,7 +605,7 @@ public abstract class BaseChannelExt  implements Serializable {
 	 * Set the value related to the column: channel
 	 * @param channel the channel value
 	 */
-	public void setChannel (com.jeecms.cms.entity.main.Channel channel) {
+	public void setChannel (com.yunkuo.cms.entity.main.Channel channel) {
 		this.channel = channel;
 	}
 
@@ -613,9 +613,9 @@ public abstract class BaseChannelExt  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.ChannelExt)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.ChannelExt)) return false;
 		else {
-			com.jeecms.cms.entity.main.ChannelExt channelExt = (com.jeecms.cms.entity.main.ChannelExt) obj;
+			com.yunkuo.cms.entity.main.ChannelExt channelExt = (com.yunkuo.cms.entity.main.ChannelExt) obj;
 			if (null == this.getId() || null == channelExt.getId()) return false;
 			else return (this.getId().equals(channelExt.getId()));
 		}

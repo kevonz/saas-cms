@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -12,16 +12,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.util.UrlPathHelper;
 
-import com.jeecms.cms.dao.main.CmsLogDao;
-import com.jeecms.cms.entity.main.CmsLog;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.springmvc.MessageResolver;
+import com.yunkuo.cms.dao.main.CmsLogDao;
+import com.yunkuo.cms.entity.main.CmsLog;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.springmvc.MessageResolver;
 
 @Service
 @Transactional

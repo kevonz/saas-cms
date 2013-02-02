@@ -20,11 +20,11 @@
 
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 	<!--
-		<bean id="multipartResolver" class="com.jeecms.common.web.cos.CosMultipartResolver"/>
+		<bean id="multipartResolver" class="com.yunkuo.common.web.cos.CosMultipartResolver"/>
 		-->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="webBindingInitializer">
-			<bean class=" com.jeecms.common.web.springmvc.BindingInitializer"/>
+			<bean class=" com.yunkuo.common.web.springmvc.BindingInitializer"/>
 		</property>
 	</bean>
 	
@@ -45,7 +45,7 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="adminContextInterceptor" class="com.jeecms.cms.web.AdminContextInterceptor">
+	<bean id="adminContextInterceptor" class="com.yunkuo.cms.web.AdminContextInterceptor">
 		<property name="auth" value="true"/>
 		<property name="loginUrl" value="/admin/cms/login.do"/>
 		<property name="returnUrl" value="/admin/cms/index.do"/>
@@ -56,9 +56,9 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="adminLocaleIntercept" class="com.jeecms.cms.web.AdminLocaleInterceptor"/>
+	<bean id="adminLocaleIntercept" class="com.yunkuo.cms.web.AdminLocaleInterceptor"/>
 	
-	<bean id="fireWallInterceptor" class="com.jeecms.cms.web.FireWallInterceptor">
+	<bean id="fireWallInterceptor" class="com.yunkuo.cms.web.FireWallInterceptor">
 	</bean>
 	
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
@@ -75,8 +75,8 @@
 			</props>
 		</property>
 	</bean>
-	<bean id="freemarkerViewResolver" class="com.jeecms.common.web.springmvc.RichFreeMarkerViewResolver">
-		<property name="prefix" value="/jeecms_sys/"/>
+	<bean id="freemarkerViewResolver" class="com.yunkuo.common.web.springmvc.RichFreeMarkerViewResolver">
+		<property name="prefix" value="/admin/"/>
 		<property name="suffix" value=".html"/>
 		<property name="contentType" value="text/html; charset=UTF-8"/>
 		<property name="exposeRequestAttributes" value="false"/>
@@ -111,9 +111,15 @@
 			</props>
 		</property>
 	</bean>
-	
+
 	<context:annotation-config/>
-	
+	<context:component-scan base-package="com.yunkuo.cms.action.admin,com.yunkuo.cms.lucene" />
+	<bean id="templateAct" class="com.yunkuo.cms.action.admin.assist.TemplateAct">
+		<property name="tplManager" ref="tplManager"/>
+	</bean>	
+	<bean id="staticAct" class="com.yunkuo.cms.staticpage.StaticAct"/>
+	<bean id="cmsStatististAct" class="com.yunkuo.cms.statistic.CmsStatisticAct"/>
+	<bean id="workloadStatisticAct" class="com.yunkuo.cms.statistic.workload.CmsWorkLoadStatisticAct"/>
 	<!--包含action-->
-	<import resource="jeecms-servlet-admin-action.xml"/>
+	<!-- <import resource="jeecms-servlet-admin-action.xml"/> -->
 </beans>

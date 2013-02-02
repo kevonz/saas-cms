@@ -1,4 +1,4 @@
-package com.jeecms.common.hibernate3;
+package com.yunkuo.common.hibernate3;
 
 /**
  * Hibernate实现父子结构tree，使用The Nested Set Model算法

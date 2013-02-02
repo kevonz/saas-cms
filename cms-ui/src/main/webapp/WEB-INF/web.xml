@@ -4,11 +4,10 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			/WEB-INF/config/application-context.xml
+			/WEB-INF/config/cms-servlet.xml
 			/WEB-INF/config/cache-context.xml
 			/WEB-INF/config/captcha-context.xml
-			/WEB-INF/config/jeecore-context.xml
-			/WEB-INF/config/jeecms-context.xml
+			/WEB-INF/config/cms-context.xml
 		</param-value>
 	</context-param>
 	<!-- log4j properties -->
@@ -34,7 +33,7 @@
 	
 	<filter>
 		<filter-name>processTime</filter-name>
-		<filter-class>com.jeecms.common.web.ProcessTimeFilter</filter-class>
+		<filter-class>com.yunkuo.common.web.ProcessTimeFilter</filter-class>
 	</filter>
 	<filter>
 		<filter-name>encoding</filter-name>
@@ -113,7 +112,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/config/jeecms-servlet-admin.xml</param-value>
+			<param-value>/WEB-INF/config/cms-context-admin.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -122,13 +121,13 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/config/jeecms-servlet-front.xml</param-value>
+			<param-value>/WEB-INF/config/cms-context-front.xml</param-value>
 		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet>
 		<servlet-name>Jcaptcha</servlet-name>
-		<servlet-class>com.jeecms.common.captcha.JcaptchaServlet</servlet-class>
+		<servlet-class>com.yunkuo.common.captcha.JcaptchaServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jcaptcha</servlet-name>
@@ -136,7 +135,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>DbFile</servlet-name>
-		<servlet-class>com.jeecms.core.action.front.DbFileServlet</servlet-class>
+		<servlet-class>com.yunkuo.core.action.front.DbFileServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Admin</servlet-name>

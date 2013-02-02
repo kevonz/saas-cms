@@ -1,4 +1,4 @@
-package com.jeecms.common.web;
+package com.yunkuo.common.web;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

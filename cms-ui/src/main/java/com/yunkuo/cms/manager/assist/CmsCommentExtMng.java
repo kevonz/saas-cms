@@ -1,7 +1,7 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
-import com.jeecms.cms.entity.assist.CmsComment;
-import com.jeecms.cms.entity.assist.CmsCommentExt;
+import com.yunkuo.cms.entity.assist.CmsComment;
+import com.yunkuo.cms.entity.assist.CmsCommentExt;
 
 public interface CmsCommentExtMng {
 	public CmsCommentExt save(String ip, String text, CmsComment comment);

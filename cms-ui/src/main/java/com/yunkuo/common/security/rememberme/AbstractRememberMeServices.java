@@ -1,4 +1,4 @@
-package com.jeecms.common.security.rememberme;
+package com.yunkuo.common.security.rememberme;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -11,12 +11,12 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
-import com.jeecms.common.security.AccountStatusException;
-import com.jeecms.common.security.UsernameNotFoundException;
-import com.jeecms.common.security.userdetails.AccountStatusUserDetailsChecker;
-import com.jeecms.common.security.userdetails.UserDetails;
-import com.jeecms.common.security.userdetails.UserDetailsChecker;
-import com.jeecms.common.security.userdetails.UserDetailsService;
+import com.yunkuo.common.security.AccountStatusException;
+import com.yunkuo.common.security.UsernameNotFoundException;
+import com.yunkuo.common.security.userdetails.AccountStatusUserDetailsChecker;
+import com.yunkuo.common.security.userdetails.UserDetails;
+import com.yunkuo.common.security.userdetails.UserDetailsChecker;
+import com.yunkuo.common.security.userdetails.UserDetailsService;
 
 public abstract class AbstractRememberMeServices implements RememberMeService,
 		InitializingBean {

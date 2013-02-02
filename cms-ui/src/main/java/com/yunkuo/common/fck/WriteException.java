@@ -1,4 +1,4 @@
-package com.jeecms.common.fck;
+package com.yunkuo.common.fck;
 
 /**
  * Thrown to indicate that an error has occurred during some write action.

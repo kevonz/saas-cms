@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsFriendlinkCtg;
+import com.yunkuo.cms.entity.assist.base.BaseCmsFriendlinkCtg;
 
 
 
@@ -24,7 +24,7 @@ public class CmsFriendlinkCtg extends BaseCmsFriendlinkCtg {
 	 */
 	public CmsFriendlinkCtg (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String name,
 		java.lang.Integer priority) {
 

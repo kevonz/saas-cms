@@ -1,19 +1,19 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 import java.util.Map;
 
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentExt;
-import com.jeecms.cms.entity.main.ContentTxt;
-import com.jeecms.cms.entity.main.Content.ContentStatus;
-import com.jeecms.cms.staticpage.exception.ContentNotCheckedException;
-import com.jeecms.cms.staticpage.exception.GeneratedZeroStaticPageException;
-import com.jeecms.cms.staticpage.exception.StaticPageNotOpenException;
-import com.jeecms.cms.staticpage.exception.TemplateNotFoundException;
-import com.jeecms.cms.staticpage.exception.TemplateParseException;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentExt;
+import com.yunkuo.cms.entity.main.ContentTxt;
+import com.yunkuo.cms.entity.main.Content.ContentStatus;
+import com.yunkuo.cms.staticpage.exception.ContentNotCheckedException;
+import com.yunkuo.cms.staticpage.exception.GeneratedZeroStaticPageException;
+import com.yunkuo.cms.staticpage.exception.StaticPageNotOpenException;
+import com.yunkuo.cms.staticpage.exception.TemplateNotFoundException;
+import com.yunkuo.cms.staticpage.exception.TemplateParseException;
+import com.yunkuo.common.page.Pagination;
 
 public interface ContentMng {
 	public Pagination getPageByRight(String title, Integer typeId,

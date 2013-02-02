@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin;
+package com.yunkuo.cms.action.admin;
 
 import java.util.List;
 import java.util.Properties;
@@ -10,12 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.statistic.CmsStatisticSvc;
-import com.jeecms.cms.web.AdminContextInterceptor;
-import com.jeecms.cms.web.CmsUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.statistic.CmsStatisticSvc;
+import com.yunkuo.cms.web.AdminContextInterceptor;
+import com.yunkuo.cms.web.CmsUtils;
 
 @Controller
 public class WelcomeAct {

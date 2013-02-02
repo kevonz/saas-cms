@@ -1,7 +1,7 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.CmsUserExt;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsUserExt;
 
 public interface CmsUserExtMng {
 	public CmsUserExt save(CmsUserExt ext, CmsUser user);

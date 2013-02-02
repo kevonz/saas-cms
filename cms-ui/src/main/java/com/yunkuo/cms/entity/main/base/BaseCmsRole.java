@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -66,7 +66,7 @@ public abstract class BaseCmsRole  implements Serializable {
 	private java.lang.Boolean m_super;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 
 	// collections
 	private java.util.Set<java.lang.String> perms;
@@ -146,7 +146,7 @@ public abstract class BaseCmsRole  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -154,7 +154,7 @@ public abstract class BaseCmsRole  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -178,9 +178,9 @@ public abstract class BaseCmsRole  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.CmsRole)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.CmsRole)) return false;
 		else {
-			com.jeecms.cms.entity.main.CmsRole cmsRole = (com.jeecms.cms.entity.main.CmsRole) obj;
+			com.yunkuo.cms.entity.main.CmsRole cmsRole = (com.yunkuo.cms.entity.main.CmsRole) obj;
 			if (null == this.getId() || null == cmsRole.getId()) return false;
 			else return (this.getId().equals(cmsRole.getId()));
 		}

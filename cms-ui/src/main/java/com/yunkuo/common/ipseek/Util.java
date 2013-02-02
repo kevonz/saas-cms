@@ -1,4 +1,4 @@
-package com.jeecms.common.ipseek;
+package com.yunkuo.common.ipseek;
 
 import java.io.UnsupportedEncodingException;
 import java.util.StringTokenizer;

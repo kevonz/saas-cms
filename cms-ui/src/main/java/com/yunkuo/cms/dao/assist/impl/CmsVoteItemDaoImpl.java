@@ -1,12 +1,12 @@
-package com.jeecms.cms.dao.assist.impl;
+package com.yunkuo.cms.dao.assist.impl;
 
 import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.assist.CmsVoteItemDao;
-import com.jeecms.cms.entity.assist.CmsVoteItem;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.assist.CmsVoteItemDao;
+import com.yunkuo.cms.entity.assist.CmsVoteItem;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.common.page.Pagination;
 
 @Repository
 public class CmsVoteItemDaoImpl extends HibernateBaseDao<CmsVoteItem, Integer>

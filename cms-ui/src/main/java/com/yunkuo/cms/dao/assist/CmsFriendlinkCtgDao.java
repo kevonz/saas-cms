@@ -1,9 +1,9 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.assist.CmsFriendlinkCtg;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.entity.assist.CmsFriendlinkCtg;
+import com.yunkuo.common.hibernate3.Updater;
 
 public interface CmsFriendlinkCtgDao {
 	public List<CmsFriendlinkCtg> getList(Integer siteId);

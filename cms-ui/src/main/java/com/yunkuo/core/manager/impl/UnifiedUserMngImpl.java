@@ -1,4 +1,4 @@
-package com.jeecms.core.manager.impl;
+package com.yunkuo.core.manager.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.Timestamp;
@@ -19,18 +19,18 @@ import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.common.email.EmailSendTool;
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.security.BadCredentialsException;
-import com.jeecms.common.security.UsernameNotFoundException;
-import com.jeecms.common.security.encoder.PwdEncoder;
-import com.jeecms.core.dao.UnifiedUserDao;
-import com.jeecms.core.entity.UnifiedUser;
-import com.jeecms.core.entity.Config.ConfigLogin;
-import com.jeecms.core.manager.ConfigMng;
-import com.jeecms.core.manager.UnifiedUserMng;
+import com.yunkuo.common.email.EmailSendTool;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.security.BadCredentialsException;
+import com.yunkuo.common.security.UsernameNotFoundException;
+import com.yunkuo.common.security.encoder.PwdEncoder;
+import com.yunkuo.core.dao.UnifiedUserDao;
+import com.yunkuo.core.entity.UnifiedUser;
+import com.yunkuo.core.entity.Config.ConfigLogin;
+import com.yunkuo.core.manager.ConfigMng;
+import com.yunkuo.core.manager.UnifiedUserMng;
 
 @Service
 @Transactional

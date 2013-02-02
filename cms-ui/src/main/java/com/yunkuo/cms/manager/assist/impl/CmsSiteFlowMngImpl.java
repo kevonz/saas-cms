@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.sql.Timestamp;
 import java.util.Date;
@@ -11,12 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsSiteFlowDao;
-import com.jeecms.cms.entity.assist.CmsSiteFlow;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsSiteFlowMng;
-import com.jeecms.cms.statistic.FlowBean;
-import com.jeecms.common.util.DateFormatUtils;
+import com.yunkuo.cms.dao.assist.CmsSiteFlowDao;
+import com.yunkuo.cms.entity.assist.CmsSiteFlow;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsSiteFlowMng;
+import com.yunkuo.cms.statistic.FlowBean;
+import com.yunkuo.common.util.DateFormatUtils;
 
 @Service
 @Transactional

@@ -1,12 +1,12 @@
-package com.jeecms.cms.dao.main.impl;
+package com.yunkuo.cms.dao.main.impl;
 
-import static com.jeecms.cms.entity.main.Content.ContentStatus.all;
-import static com.jeecms.cms.entity.main.Content.ContentStatus.checked;
-import static com.jeecms.cms.entity.main.Content.ContentStatus.draft;
-import static com.jeecms.cms.entity.main.Content.ContentStatus.passed;
-import static com.jeecms.cms.entity.main.Content.ContentStatus.prepared;
-import static com.jeecms.cms.entity.main.Content.ContentStatus.recycle;
-import static com.jeecms.cms.entity.main.Content.ContentStatus.rejected;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.all;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.checked;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.draft;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.passed;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.prepared;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.recycle;
+import static com.yunkuo.cms.entity.main.Content.ContentStatus.rejected;
 
 import java.util.Date;
 import java.util.List;
@@ -15,13 +15,13 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.main.ContentDao;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentCheck;
-import com.jeecms.cms.entity.main.Content.ContentStatus;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.main.ContentDao;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentCheck;
+import com.yunkuo.cms.entity.main.Content.ContentStatus;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.common.page.Pagination;
 
 @Repository
 public class ContentDaoImpl extends HibernateBaseDao<Content, Integer>

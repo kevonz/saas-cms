@@ -1,7 +1,7 @@
-package com.jeecms.cms.dao.main;
+package com.yunkuo.cms.dao.main;
 
-import com.jeecms.cms.entity.main.CmsUserSite;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.entity.main.CmsUserSite;
+import com.yunkuo.common.hibernate3.Updater;
 
 public interface CmsUserSiteDao {
 	public CmsUserSite findById(Integer id);

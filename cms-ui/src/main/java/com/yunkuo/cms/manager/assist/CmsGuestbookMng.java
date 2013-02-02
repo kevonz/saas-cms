@@ -1,13 +1,13 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.entity.assist.CmsGuestbook;
-import com.jeecms.cms.entity.assist.CmsGuestbookExt;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.assist.CmsGuestbook;
+import com.yunkuo.cms.entity.assist.CmsGuestbookExt;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsGuestbookMng {
 	public Pagination getPage(Integer siteId, Integer ctgId,Integer userId, Boolean recommend,

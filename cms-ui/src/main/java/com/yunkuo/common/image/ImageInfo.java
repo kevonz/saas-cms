@@ -10,7 +10,7 @@
  *
  * Contributed to the Public Domain.
  */
-package com.jeecms.common.image;
+package com.yunkuo.common.image;
 
 import java.io.DataInput;
 import java.io.FileInputStream;

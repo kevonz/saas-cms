@@ -1,4 +1,4 @@
-package com.jeecms.common.web.springmvc;
+package com.yunkuo.common.web.springmvc;
 
 import java.beans.PropertyEditorSupport;
 import java.text.DateFormat;

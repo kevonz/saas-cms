@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsVoteRecord;
+import com.yunkuo.cms.entity.assist.base.BaseCmsVoteRecord;
 
 
 
@@ -24,7 +24,7 @@ public class CmsVoteRecord extends BaseCmsVoteRecord {
 	 */
 	public CmsVoteRecord (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.assist.CmsVoteTopic topic,
+		com.yunkuo.cms.entity.assist.CmsVoteTopic topic,
 		java.util.Date time,
 		java.lang.String ip,
 		java.lang.String cookie) {

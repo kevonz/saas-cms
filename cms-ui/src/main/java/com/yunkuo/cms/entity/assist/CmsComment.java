@@ -1,9 +1,9 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
 import java.sql.Timestamp;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsComment;
-import com.jeecms.common.util.StrUtils;
+import com.yunkuo.cms.entity.assist.base.BaseCmsComment;
+import com.yunkuo.common.util.StrUtils;
 
 public class CmsComment extends BaseCmsComment {
 	private static final long serialVersionUID = 1L;
@@ -64,8 +64,8 @@ public class CmsComment extends BaseCmsComment {
 	 */
 	public CmsComment (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.Content content,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.Content content,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.util.Date createTime,
 		java.lang.Short ups,
 		java.lang.Short downs,

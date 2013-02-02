@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -23,20 +23,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeecms.cms.entity.assist.CmsAdvertising;
-import com.jeecms.cms.entity.assist.CmsAdvertisingSpace;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsAdvertisingMng;
-import com.jeecms.cms.manager.assist.CmsAdvertisingSpaceMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.upload.FileRepository;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.core.entity.Ftp;
-import com.jeecms.core.manager.DbFileMng;
+import com.yunkuo.cms.entity.assist.CmsAdvertising;
+import com.yunkuo.cms.entity.assist.CmsAdvertisingSpace;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsAdvertisingMng;
+import com.yunkuo.cms.manager.assist.CmsAdvertisingSpaceMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.upload.FileRepository;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.core.entity.Ftp;
+import com.yunkuo.core.manager.DbFileMng;
 
 @Controller
 public class CmsAdvertisingAct {

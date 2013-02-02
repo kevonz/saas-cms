@@ -1,4 +1,4 @@
-package com.jeecms.common.security;
+package com.yunkuo.common.security;
 
 /**
  * 账号状态异常

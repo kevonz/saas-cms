@@ -1,8 +1,8 @@
-package com.jeecms.core.dao;
+package com.yunkuo.core.dao;
 
 import java.util.List;
 
-import com.jeecms.core.entity.DbTpl;
+import com.yunkuo.core.entity.DbTpl;
 
 public interface DbTplDao {
 	public List<DbTpl> getStartWith(String prefix);

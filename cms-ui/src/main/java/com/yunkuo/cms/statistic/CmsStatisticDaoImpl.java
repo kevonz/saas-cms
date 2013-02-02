@@ -1,9 +1,10 @@
-package com.jeecms.cms.statistic;
+package com.yunkuo.cms.statistic;
 
-import static com.jeecms.cms.statistic.CmsStatistic.SITEID;
-import static com.jeecms.cms.statistic.CmsStatistic.ISREPLYED;
-import static com.jeecms.cms.statistic.CmsStatistic.USERID;
-import static com.jeecms.cms.statistic.CmsStatistic.CHANNELID;
+import static com.yunkuo.cms.statistic.CmsStatistic.CHANNELID;
+import static com.yunkuo.cms.statistic.CmsStatistic.ISREPLYED;
+import static com.yunkuo.cms.statistic.CmsStatistic.SITEID;
+import static com.yunkuo.cms.statistic.CmsStatistic.USERID;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -11,10 +12,10 @@ import java.util.Map;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.statistic.CmsStatistic.TimeRange;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateSimpleDao;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.statistic.CmsStatistic.TimeRange;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateSimpleDao;
+import com.yunkuo.common.page.Pagination;
 
 @Repository
 public class CmsStatisticDaoImpl extends HibernateSimpleDao implements

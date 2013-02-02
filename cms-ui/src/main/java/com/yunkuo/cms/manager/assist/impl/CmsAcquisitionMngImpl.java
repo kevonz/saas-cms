@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.util.Date;
 import java.util.List;
@@ -7,22 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsAcquisitionDao;
-import com.jeecms.cms.entity.assist.CmsAcquisition;
-import com.jeecms.cms.entity.assist.CmsAcquisitionHistory;
-import com.jeecms.cms.entity.assist.CmsAcquisitionTemp;
-import com.jeecms.cms.entity.assist.CmsAcquisition.AcquisitionResultType;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentExt;
-import com.jeecms.cms.entity.main.ContentTxt;
-import com.jeecms.cms.manager.assist.CmsAcquisitionMng;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.manager.main.ContentTypeMng;
-import com.jeecms.cms.service.ChannelDeleteChecker;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.dao.assist.CmsAcquisitionDao;
+import com.yunkuo.cms.entity.assist.CmsAcquisition;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionHistory;
+import com.yunkuo.cms.entity.assist.CmsAcquisitionTemp;
+import com.yunkuo.cms.entity.assist.CmsAcquisition.AcquisitionResultType;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentExt;
+import com.yunkuo.cms.entity.main.ContentTxt;
+import com.yunkuo.cms.manager.assist.CmsAcquisitionMng;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.manager.main.ContentTypeMng;
+import com.yunkuo.cms.service.ChannelDeleteChecker;
+import com.yunkuo.common.hibernate3.Updater;
 
 @Service
 @Transactional

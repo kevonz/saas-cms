@@ -1,4 +1,4 @@
-package com.jeecms.cms.statistic;
+package com.yunkuo.cms.statistic;
 
 public class FlowBean {
 	private String accessDate;

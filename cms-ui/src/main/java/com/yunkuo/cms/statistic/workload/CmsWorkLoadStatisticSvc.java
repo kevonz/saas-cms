@@ -1,10 +1,10 @@
-package com.jeecms.cms.statistic.workload;
+package com.yunkuo.cms.statistic.workload;
 
 import java.util.Date;
 import java.util.List;
 
-import com.jeecms.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
-import com.jeecms.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
+import com.yunkuo.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
+import com.yunkuo.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
 
 public interface CmsWorkLoadStatisticSvc {
 	public List<CmsWorkLoadStatistic> statistic(Integer channelId,

@@ -1,4 +1,4 @@
-package com.jeecms.common.upload;
+package com.yunkuo.common.upload;
 
 import java.io.File;
 import java.io.IOException;

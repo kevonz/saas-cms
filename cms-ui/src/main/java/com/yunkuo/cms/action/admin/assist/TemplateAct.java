@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,19 +19,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeecms.cms.Constants;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsResourceMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.util.Zipper;
-import com.jeecms.common.util.Zipper.FileEntry;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.ResponseUtils;
-import com.jeecms.core.tpl.Tpl;
-import com.jeecms.core.tpl.TplManager;
+import com.yunkuo.cms.Constants;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsResourceMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.util.Zipper;
+import com.yunkuo.common.util.Zipper.FileEntry;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.ResponseUtils;
+import com.yunkuo.core.tpl.Tpl;
+import com.yunkuo.core.tpl.TplManager;
 
 /**
  * JEECMS模板的Action

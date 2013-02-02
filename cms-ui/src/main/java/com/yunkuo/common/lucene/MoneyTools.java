@@ -1,4 +1,4 @@
-package com.jeecms.common.lucene;
+package com.yunkuo.common.lucene;
 
 import java.math.BigDecimal;
 

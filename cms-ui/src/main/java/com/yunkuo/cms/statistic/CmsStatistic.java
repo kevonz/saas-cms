@@ -1,4 +1,4 @@
-package com.jeecms.cms.statistic;
+package com.yunkuo.cms.statistic;
 
 import java.text.NumberFormat;
 import java.util.Date;

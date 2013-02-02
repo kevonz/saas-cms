@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import static com.jeecms.common.web.Constants.SPT;
+import static com.yunkuo.common.web.Constants.SPT;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
@@ -13,12 +13,12 @@ import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.assist.CmsComment;
-import com.jeecms.cms.entity.main.Channel.AfterCheckEnum;
-import com.jeecms.cms.entity.main.base.BaseContent;
-import com.jeecms.cms.staticpage.StaticPageUtils;
-import com.jeecms.cms.web.CmsThreadVariable;
-import com.jeecms.core.web.ContentInterface;
+import com.yunkuo.cms.entity.assist.CmsComment;
+import com.yunkuo.cms.entity.main.Channel.AfterCheckEnum;
+import com.yunkuo.cms.entity.main.base.BaseContent;
+import com.yunkuo.cms.staticpage.StaticPageUtils;
+import com.yunkuo.cms.web.CmsThreadVariable;
+import com.yunkuo.core.web.ContentInterface;
 
 public class Content extends BaseContent implements ContentInterface {
 	private static final long serialVersionUID = 1L;
@@ -895,7 +895,7 @@ public class Content extends BaseContent implements ContentInterface {
 	 * Constructor for required fields
 	 */
 	public Content(java.lang.Integer id,
-			com.jeecms.cms.entity.main.CmsSite site, java.util.Date sortDate,
+			com.yunkuo.cms.entity.main.CmsSite site, java.util.Date sortDate,
 			java.lang.Byte topLevel, java.lang.Boolean hasTitleImg,
 			java.lang.Boolean recommend, java.lang.Byte status,
 			java.lang.Integer viewsDay, java.lang.Short commentsDay,

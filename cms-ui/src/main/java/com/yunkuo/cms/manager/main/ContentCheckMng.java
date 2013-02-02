@@ -1,7 +1,7 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentCheck;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentCheck;
 
 /**
  * 内容审核Manager接口

@@ -1,9 +1,9 @@
-package com.jeecms.cms.service;
+package com.yunkuo.cms.service;
 
 import java.sql.Timestamp;
 import java.util.Date;
 
-import static com.jeecms.common.util.ParseURLKeyword.getKeyword;
+import static com.yunkuo.common.util.ParseURLKeyword.getKeyword;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
 
@@ -16,12 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.jeecms.cms.entity.assist.CmsSiteFlow;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsSiteFlowMng;
-import com.jeecms.cms.statistic.FlowBean;
-import com.jeecms.common.ipseek.IPSeeker;
-import com.jeecms.common.util.DateFormatUtils;
+import com.yunkuo.cms.entity.assist.CmsSiteFlow;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsSiteFlowMng;
+import com.yunkuo.cms.statistic.FlowBean;
+import com.yunkuo.common.ipseek.IPSeeker;
+import com.yunkuo.common.util.DateFormatUtils;
 
 @Service
 public class CmsSiteFlowCacheImpl implements CmsSiteFlowCache, DisposableBean {

@@ -1,10 +1,10 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import java.sql.Timestamp;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseContentExt;
+import com.yunkuo.cms.entity.main.base.BaseContentExt;
 
 public class ContentExt extends BaseContentExt {
 	private static final long serialVersionUID = 1L;

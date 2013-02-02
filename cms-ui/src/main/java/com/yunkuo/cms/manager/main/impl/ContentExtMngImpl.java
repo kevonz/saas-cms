@@ -1,14 +1,14 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.ContentExtDao;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentExt;
-import com.jeecms.cms.manager.main.ContentExtMng;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.dao.main.ContentExtDao;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentExt;
+import com.yunkuo.cms.manager.main.ContentExtMng;
+import com.yunkuo.common.hibernate3.Updater;
 
 @Service
 @Transactional

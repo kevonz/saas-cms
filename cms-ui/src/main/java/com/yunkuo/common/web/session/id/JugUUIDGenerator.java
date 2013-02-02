@@ -1,4 +1,4 @@
-package com.jeecms.common.web.session.id;
+package com.yunkuo.common.web.session.id;
 
 import org.apache.commons.lang.StringUtils;
 import org.safehaus.uuid.UUID;

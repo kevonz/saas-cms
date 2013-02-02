@@ -1,4 +1,4 @@
-package com.jeecms.common.fck;
+package com.yunkuo.common.fck;
 
 import javax.servlet.http.HttpServletRequest;
 

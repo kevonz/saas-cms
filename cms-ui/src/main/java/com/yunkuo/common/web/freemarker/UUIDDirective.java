@@ -1,4 +1,4 @@
-package com.jeecms.common.web.freemarker;
+package com.yunkuo.common.web.freemarker;
 
 import java.io.IOException;
 import java.util.Map;

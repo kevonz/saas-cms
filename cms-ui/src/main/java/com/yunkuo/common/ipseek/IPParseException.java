@@ -1,4 +1,4 @@
-package com.jeecms.common.ipseek;
+package com.yunkuo.common.ipseek;
 
 /**
  * 

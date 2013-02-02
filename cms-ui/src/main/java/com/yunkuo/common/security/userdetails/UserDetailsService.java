@@ -1,8 +1,8 @@
-package com.jeecms.common.security.userdetails;
+package com.yunkuo.common.security.userdetails;
 
 import org.springframework.dao.DataAccessException;
 
-import com.jeecms.common.security.UsernameNotFoundException;
+import com.yunkuo.common.security.UsernameNotFoundException;
 
 /**
  * Defines an interface for implementations that wish to provide data access

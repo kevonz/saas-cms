@@ -1,9 +1,9 @@
-package com.jeecms.cms.action.admin;
+package com.yunkuo.cms.action.admin;
 
-import static com.jeecms.core.action.front.LoginAct.MESSAGE;
-import static com.jeecms.core.action.front.LoginAct.PROCESS_URL;
-import static com.jeecms.core.action.front.LoginAct.RETURN_URL;
-import static com.jeecms.core.manager.AuthenticationMng.AUTH_KEY;
+import static com.yunkuo.core.action.front.LoginAct.MESSAGE;
+import static com.yunkuo.core.action.front.LoginAct.PROCESS_URL;
+import static com.yunkuo.core.action.front.LoginAct.RETURN_URL;
+import static com.yunkuo.core.manager.AuthenticationMng.AUTH_KEY;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -19,23 +19,23 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.common.security.BadCredentialsException;
-import com.jeecms.common.security.DisabledException;
-import com.jeecms.common.security.UsernameNotFoundException;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.core.entity.Authentication;
-import com.jeecms.core.entity.Config.ConfigLogin;
-import com.jeecms.core.manager.AuthenticationMng;
-import com.jeecms.core.manager.ConfigMng;
-import com.jeecms.core.manager.UnifiedUserMng;
-import com.jeecms.core.web.WebErrors;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.common.security.BadCredentialsException;
+import com.yunkuo.common.security.DisabledException;
+import com.yunkuo.common.security.UsernameNotFoundException;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.core.entity.Authentication;
+import com.yunkuo.core.entity.Config.ConfigLogin;
+import com.yunkuo.core.manager.AuthenticationMng;
+import com.yunkuo.core.manager.ConfigMng;
+import com.yunkuo.core.manager.UnifiedUserMng;
+import com.yunkuo.core.web.WebErrors;
 
 @Controller
 public class CmsLoginAct {

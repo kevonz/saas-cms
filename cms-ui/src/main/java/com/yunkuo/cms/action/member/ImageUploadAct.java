@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.member;
+package com.yunkuo.cms.action.member;
 
-import static com.jeecms.cms.Constants.TPLDIR_MEMBER;
+import static com.yunkuo.cms.Constants.TPLDIR_MEMBER;
 
 import java.awt.Color;
 import java.io.File;
@@ -21,19 +21,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.MarkConfig;
-import com.jeecms.cms.entity.main.MemberConfig;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.image.ImageScale;
-import com.jeecms.common.image.ImageUtils;
-import com.jeecms.common.upload.FileRepository;
-import com.jeecms.common.web.springmvc.RealPathResolver;
-import com.jeecms.core.entity.Ftp;
-import com.jeecms.core.manager.DbFileMng;
-import com.jeecms.core.web.WebErrors;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.MarkConfig;
+import com.yunkuo.cms.entity.main.MemberConfig;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.image.ImageScale;
+import com.yunkuo.common.image.ImageUtils;
+import com.yunkuo.common.upload.FileRepository;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
+import com.yunkuo.core.entity.Ftp;
+import com.yunkuo.core.manager.DbFileMng;
+import com.yunkuo.core.web.WebErrors;
 
 @Controller
 public class ImageUploadAct {

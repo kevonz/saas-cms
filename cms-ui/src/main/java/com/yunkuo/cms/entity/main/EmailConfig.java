@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import com.jeecms.cms.entity.main.base.BaseEmailConfig;
+import com.yunkuo.cms.entity.main.base.BaseEmailConfig;
 
 
 

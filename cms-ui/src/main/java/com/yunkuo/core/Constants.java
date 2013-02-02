@@ -1,4 +1,4 @@
-package com.jeecms.core;
+package com.yunkuo.core;
 
 /**
  * jeecore 常量

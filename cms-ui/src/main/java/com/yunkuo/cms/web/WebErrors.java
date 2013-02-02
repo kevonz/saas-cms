@@ -1,4 +1,4 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
 import java.io.Serializable;
 import java.util.Locale;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.context.MessageSource;
 
-public class WebErrors extends com.jeecms.core.web.WebErrors {
+public class WebErrors extends com.yunkuo.core.web.WebErrors {
 
 	/**
 	 * 通过HttpServletRequest创建WebErrors

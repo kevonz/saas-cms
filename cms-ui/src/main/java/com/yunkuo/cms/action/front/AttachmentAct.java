@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,14 +15,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.CmsConfig;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentAttachment;
-import com.jeecms.cms.manager.main.ContentCountMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.security.encoder.PwdEncoder;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.main.CmsConfig;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentAttachment;
+import com.yunkuo.cms.manager.main.ContentCountMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.security.encoder.PwdEncoder;
+import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class AttachmentAct {

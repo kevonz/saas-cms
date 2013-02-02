@@ -1,12 +1,12 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 import java.util.Map;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.ChannelExt;
-import com.jeecms.cms.entity.main.ChannelTxt;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.ChannelExt;
+import com.yunkuo.cms.entity.main.ChannelTxt;
+import com.yunkuo.common.page.Pagination;
 
 /**
  * 栏目管理接口

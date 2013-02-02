@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.directive.abs;
+package com.yunkuo.cms.action.directive.abs;
 
 import java.util.HashSet;
 import java.util.List;
@@ -8,15 +8,15 @@ import java.util.Set;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.ContentTag;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.manager.main.ContentTagMng;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.freemarker.DirectiveUtils;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.ContentTag;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.manager.main.ContentTagMng;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.freemarker.DirectiveUtils;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveModel;

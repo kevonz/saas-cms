@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.main.impl;
+package com.yunkuo.cms.manager.main.impl;
 
 import java.util.List;
 import java.util.Set;
@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.main.CmsGroupDao;
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsGroup;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsGroupMng;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.dao.main.CmsGroupDao;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsGroupMng;
+import com.yunkuo.common.hibernate3.Updater;
 
 @Service
 @Transactional

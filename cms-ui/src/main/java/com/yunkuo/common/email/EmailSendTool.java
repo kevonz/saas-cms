@@ -1,4 +1,4 @@
-package com.jeecms.common.email;
+package com.yunkuo.common.email;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;

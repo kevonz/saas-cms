@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.jeecms.cms.entity.assist">
+<hibernate-mapping package="com.yunkuo.cms.entity.assist">
 	<class name="CmsAcquisition" table="jc_acquisition">
 		<meta attribute="sync-DAO">false</meta>
 		<id name="id" type="integer" column="acquisition_id"><generator class="identity"/></id>
@@ -32,9 +32,9 @@
 		<property name="paginationStart" column="pagination_start" type="string" not-null="false" length="255"/>
 		<property name="paginationEnd" column="pagination_end" type="string" not-null="false" length="255"/>
 		<property name="queue" type="integer" not-null="true" length="11"/>
-		<many-to-one name="user" column="user_id" class="com.jeecms.cms.entity.main.CmsUser" not-null="true"></many-to-one>
-		<many-to-one name="type" column="type_id" class="com.jeecms.cms.entity.main.ContentType" not-null="true"></many-to-one>
-		<many-to-one name="site" column="site_id" class="com.jeecms.cms.entity.main.CmsSite" not-null="true"></many-to-one>
-		<many-to-one name="channel" column="channel_id" class="com.jeecms.cms.entity.main.Channel" not-null="true"></many-to-one>
+		<many-to-one name="user" column="user_id" class="com.yunkuo.cms.entity.main.CmsUser" not-null="true"></many-to-one>
+		<many-to-one name="type" column="type_id" class="com.yunkuo.cms.entity.main.ContentType" not-null="true"></many-to-one>
+		<many-to-one name="site" column="site_id" class="com.yunkuo.cms.entity.main.CmsSite" not-null="true"></many-to-one>
+		<many-to-one name="channel" column="channel_id" class="com.yunkuo.cms.entity.main.Channel" not-null="true"></many-to-one>
 	</class>
 </hibernate-mapping>

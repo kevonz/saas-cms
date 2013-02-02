@@ -1,9 +1,9 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
-import static com.jeecms.cms.Constants.TPLDIR_TOPIC;
-import static com.jeecms.cms.action.front.TopicAct.TOPIC_DEFAULT;
-import static com.jeecms.cms.action.front.TopicAct.TOPIC_INDEX;
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.cms.Constants.TPLDIR_TOPIC;
+import static com.yunkuo.cms.action.front.TopicAct.TOPIC_DEFAULT;
+import static com.yunkuo.cms.action.front.TopicAct.TOPIC_INDEX;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.util.List;
 
@@ -21,21 +21,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsTopic;
-import com.jeecms.cms.manager.assist.CmsFileMng;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsTopicMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.ResponseUtils;
-import com.jeecms.common.web.springmvc.MessageResolver;
-import com.jeecms.core.tpl.TplManager;
-import com.jeecms.core.web.CoreUtils;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsTopic;
+import com.yunkuo.cms.manager.assist.CmsFileMng;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsTopicMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.ResponseUtils;
+import com.yunkuo.common.web.springmvc.MessageResolver;
+import com.yunkuo.core.tpl.TplManager;
+import com.yunkuo.core.web.CoreUtils;
 
 @Controller
 public class CmsTopicAct {

@@ -1,14 +1,14 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsCommentExtDao;
-import com.jeecms.cms.entity.assist.CmsComment;
-import com.jeecms.cms.entity.assist.CmsCommentExt;
-import com.jeecms.cms.manager.assist.CmsCommentExtMng;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.dao.assist.CmsCommentExtDao;
+import com.yunkuo.cms.entity.assist.CmsComment;
+import com.yunkuo.cms.entity.assist.CmsCommentExt;
+import com.yunkuo.cms.manager.assist.CmsCommentExtMng;
+import com.yunkuo.common.hibernate3.Updater;
 
 @Service
 @Transactional

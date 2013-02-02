@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -50,7 +50,7 @@ public abstract class BaseCmsCommentExt  implements Serializable {
 	private java.lang.String reply;
 
 	// one to one
-	private com.jeecms.cms.entity.assist.CmsComment comment;
+	private com.yunkuo.cms.entity.assist.CmsComment comment;
 
 
 
@@ -127,7 +127,7 @@ public abstract class BaseCmsCommentExt  implements Serializable {
 	/**
 	 * Return the value associated with the column: comment
 	 */
-	public com.jeecms.cms.entity.assist.CmsComment getComment () {
+	public com.yunkuo.cms.entity.assist.CmsComment getComment () {
 		return comment;
 	}
 
@@ -135,7 +135,7 @@ public abstract class BaseCmsCommentExt  implements Serializable {
 	 * Set the value related to the column: comment
 	 * @param comment the comment value
 	 */
-	public void setComment (com.jeecms.cms.entity.assist.CmsComment comment) {
+	public void setComment (com.yunkuo.cms.entity.assist.CmsComment comment) {
 		this.comment = comment;
 	}
 
@@ -143,9 +143,9 @@ public abstract class BaseCmsCommentExt  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsCommentExt)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsCommentExt)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsCommentExt cmsCommentExt = (com.jeecms.cms.entity.assist.CmsCommentExt) obj;
+			com.yunkuo.cms.entity.assist.CmsCommentExt cmsCommentExt = (com.yunkuo.cms.entity.assist.CmsCommentExt) obj;
 			if (null == this.getId() || null == cmsCommentExt.getId()) return false;
 			else return (this.getId().equals(cmsCommentExt.getId()));
 		}

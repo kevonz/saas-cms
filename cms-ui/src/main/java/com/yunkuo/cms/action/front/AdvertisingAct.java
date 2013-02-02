@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
-import static com.jeecms.cms.Constants.TPLDIR_CSI;
+import static com.yunkuo.cms.Constants.TPLDIR_CSI;
 
 import java.util.List;
 
@@ -12,13 +12,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.assist.CmsAdvertising;
-import com.jeecms.cms.entity.assist.CmsAdvertisingSpace;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsAdvertisingMng;
-import com.jeecms.cms.manager.assist.CmsAdvertisingSpaceMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
+import com.yunkuo.cms.entity.assist.CmsAdvertising;
+import com.yunkuo.cms.entity.assist.CmsAdvertisingSpace;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsAdvertisingMng;
+import com.yunkuo.cms.manager.assist.CmsAdvertisingSpaceMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
 
 /**
  * 广告Action

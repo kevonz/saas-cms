@@ -1,4 +1,4 @@
-package com.jeecms.common.fck;
+package com.yunkuo.common.fck;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.jeecms.common.util;
+package com.yunkuo.common.util;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

@@ -1,12 +1,12 @@
-package com.jeecms.cms.statistic.workload;
+package com.yunkuo.cms.statistic.workload;
 
 
 import java.util.Date;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
-import com.jeecms.common.hibernate3.HibernateSimpleDao;
+import com.yunkuo.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
+import com.yunkuo.common.hibernate3.HibernateSimpleDao;
 
 @Repository
 public class CmsWorkLoadStatisticDaoImpl extends HibernateSimpleDao implements CmsWorkLoadStatisticDao {

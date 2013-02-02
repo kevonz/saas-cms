@@ -1,12 +1,12 @@
-package com.jeecms.core.web.front;
+package com.yunkuo.core.web.front;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.util.UrlPathHelper;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.web.CmsUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.web.CmsUtils;
 
 /**
  * URI帮助类

@@ -1,14 +1,14 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import static com.jeecms.cms.Constants.TPLDIR_ALONE;
-import static com.jeecms.cms.Constants.TPLDIR_CHANNEL;
-import static com.jeecms.cms.Constants.TPLDIR_CONTENT;
-import static com.jeecms.cms.Constants.TPL_SUFFIX;
-import static com.jeecms.common.web.Constants.DEFAULT;
+import static com.yunkuo.cms.Constants.TPLDIR_ALONE;
+import static com.yunkuo.cms.Constants.TPLDIR_CHANNEL;
+import static com.yunkuo.cms.Constants.TPLDIR_CONTENT;
+import static com.yunkuo.cms.Constants.TPL_SUFFIX;
+import static com.yunkuo.common.web.Constants.DEFAULT;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseCmsModel;
+import com.yunkuo.cms.entity.main.base.BaseCmsModel;
 
 public class CmsModel extends BaseCmsModel {
 	private static final long serialVersionUID = 1L;

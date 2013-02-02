@@ -1,10 +1,10 @@
-package com.jeecms.common.security.userdetails;
+package com.yunkuo.common.security.userdetails;
 
-import com.jeecms.common.security.AccountExpiredException;
-import com.jeecms.common.security.AccountStatusException;
-import com.jeecms.common.security.CredentialsExpiredException;
-import com.jeecms.common.security.DisabledException;
-import com.jeecms.common.security.LockedException;
+import com.yunkuo.common.security.AccountExpiredException;
+import com.yunkuo.common.security.AccountStatusException;
+import com.yunkuo.common.security.CredentialsExpiredException;
+import com.yunkuo.common.security.DisabledException;
+import com.yunkuo.common.security.LockedException;
 
 /**
  * @author Luke Taylor

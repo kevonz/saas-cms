@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin;
+package com.yunkuo.cms.action.admin;
 
 import java.io.File;
 
@@ -11,12 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.image.ImageScale;
-import com.jeecms.common.upload.FileRepository;
-import com.jeecms.core.entity.Ftp;
-import com.jeecms.core.manager.DbFileMng;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.image.ImageScale;
+import com.yunkuo.common.upload.FileRepository;
+import com.yunkuo.core.entity.Ftp;
+import com.yunkuo.core.manager.DbFileMng;
 
 @Controller
 public class ImageCutAct {

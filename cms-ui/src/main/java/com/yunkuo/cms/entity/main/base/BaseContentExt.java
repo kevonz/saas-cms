@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -96,7 +96,7 @@ public abstract class BaseContentExt  implements Serializable {
 	private java.lang.Boolean needRegenerate;
 
 	// one to one
-	private com.jeecms.cms.entity.main.Content content;
+	private com.yunkuo.cms.entity.main.Content content;
 
 
 
@@ -397,7 +397,7 @@ public abstract class BaseContentExt  implements Serializable {
 	/**
 	 * Return the value associated with the column: content
 	 */
-	public com.jeecms.cms.entity.main.Content getContent () {
+	public com.yunkuo.cms.entity.main.Content getContent () {
 		return content;
 	}
 
@@ -405,7 +405,7 @@ public abstract class BaseContentExt  implements Serializable {
 	 * Set the value related to the column: content
 	 * @param content the content value
 	 */
-	public void setContent (com.jeecms.cms.entity.main.Content content) {
+	public void setContent (com.yunkuo.cms.entity.main.Content content) {
 		this.content = content;
 	}
 
@@ -413,9 +413,9 @@ public abstract class BaseContentExt  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.ContentExt)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.ContentExt)) return false;
 		else {
-			com.jeecms.cms.entity.main.ContentExt contentExt = (com.jeecms.cms.entity.main.ContentExt) obj;
+			com.yunkuo.cms.entity.main.ContentExt contentExt = (com.yunkuo.cms.entity.main.ContentExt) obj;
 			if (null == this.getId() || null == contentExt.getId()) return false;
 			else return (this.getId().equals(contentExt.getId()));
 		}

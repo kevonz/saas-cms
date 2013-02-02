@@ -1,9 +1,9 @@
-package com.jeecms.cms.statistic.workload;
+package com.yunkuo.cms.statistic.workload;
 
 import java.util.Date;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsUser;
 
 /**
  * @author Tom

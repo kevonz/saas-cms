@@ -1,4 +1,4 @@
-package com.jeecms.common.ipseek;
+package com.yunkuo.common.ipseek;
 
 public interface Message {
 	String bad_ip_file = "IP地址库文件错误";

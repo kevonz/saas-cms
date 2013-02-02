@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,16 +14,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.CmsConfigMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.web.ResponseUtils;
-import com.jeecms.core.entity.Ftp;
-import com.jeecms.core.manager.FtpMng;
-import com.jeecms.core.web.WebErrors;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.CmsConfigMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.web.ResponseUtils;
+import com.yunkuo.core.entity.Ftp;
+import com.yunkuo.core.manager.FtpMng;
+import com.yunkuo.core.web.WebErrors;
 
 @Controller
 public class CmsSiteAct {

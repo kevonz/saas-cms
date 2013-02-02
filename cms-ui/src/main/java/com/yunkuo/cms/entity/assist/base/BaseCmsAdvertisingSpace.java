@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -40,7 +40,7 @@ public abstract class BaseCmsAdvertisingSpace  implements Serializable {
 	 */
 	public BaseCmsAdvertisingSpace (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String name,
 		java.lang.Boolean enabled) {
 
@@ -66,7 +66,7 @@ public abstract class BaseCmsAdvertisingSpace  implements Serializable {
 	private java.lang.Boolean enabled;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 
 
 
@@ -143,7 +143,7 @@ public abstract class BaseCmsAdvertisingSpace  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -151,7 +151,7 @@ public abstract class BaseCmsAdvertisingSpace  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -159,9 +159,9 @@ public abstract class BaseCmsAdvertisingSpace  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsAdvertisingSpace)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsAdvertisingSpace)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsAdvertisingSpace cmsAdvertisingSpace = (com.jeecms.cms.entity.assist.CmsAdvertisingSpace) obj;
+			com.yunkuo.cms.entity.assist.CmsAdvertisingSpace cmsAdvertisingSpace = (com.yunkuo.cms.entity.assist.CmsAdvertisingSpace) obj;
 			if (null == this.getId() || null == cmsAdvertisingSpace.getId()) return false;
 			else return (this.getId().equals(cmsAdvertisingSpace.getId()));
 		}

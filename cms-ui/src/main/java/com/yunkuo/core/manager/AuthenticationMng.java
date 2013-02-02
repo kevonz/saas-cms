@@ -1,14 +1,14 @@
-package com.jeecms.core.manager;
+package com.yunkuo.core.manager;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.security.BadCredentialsException;
-import com.jeecms.common.security.UsernameNotFoundException;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.core.entity.Authentication;
-import com.jeecms.core.entity.UnifiedUser;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.security.BadCredentialsException;
+import com.yunkuo.common.security.UsernameNotFoundException;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.core.entity.Authentication;
+import com.yunkuo.core.entity.UnifiedUser;
 
 /**
  * 认证信息管理接口

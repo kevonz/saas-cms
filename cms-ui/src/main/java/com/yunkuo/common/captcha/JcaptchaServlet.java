@@ -1,4 +1,4 @@
-package com.jeecms.common.captcha;
+package com.yunkuo.common.captcha;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -15,9 +15,9 @@ import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.jeecms.common.web.session.SessionProvider;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
+import com.yunkuo.common.web.session.SessionProvider;
 
 /**
  * 提供验证码图片的Servlet

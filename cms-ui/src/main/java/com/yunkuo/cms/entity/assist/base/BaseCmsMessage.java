@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -44,9 +44,9 @@ public abstract class BaseCmsMessage  implements Serializable {
 	 */
 	public BaseCmsMessage (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsUser msgReceiverUser,
-		com.jeecms.cms.entity.main.CmsUser msgSendUser,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsUser msgReceiverUser,
+		com.yunkuo.cms.entity.main.CmsUser msgSendUser,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String msgTitle,
 		java.lang.Boolean msgStatus,
 		java.lang.Integer msgBox) {
@@ -78,12 +78,12 @@ public abstract class BaseCmsMessage  implements Serializable {
 	private java.lang.Integer msgBox;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsUser msgReceiverUser;
-	private com.jeecms.cms.entity.main.CmsUser msgSendUser;
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsUser msgReceiverUser;
+	private com.yunkuo.cms.entity.main.CmsUser msgSendUser;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 	
 	// collections
-	private java.util.Set<com.jeecms.cms.entity.assist.CmsReceiverMessage> receiverMsgs;
+	private java.util.Set<com.yunkuo.cms.entity.assist.CmsReceiverMessage> receiverMsgs;
 
 
 
@@ -192,7 +192,7 @@ public abstract class BaseCmsMessage  implements Serializable {
 	/**
 	 * Return the value associated with the column: msg_receiver_user
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getMsgReceiverUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getMsgReceiverUser () {
 		return msgReceiverUser;
 	}
 
@@ -200,7 +200,7 @@ public abstract class BaseCmsMessage  implements Serializable {
 	 * Set the value related to the column: msg_receiver_user
 	 * @param msgReceiverUser the msg_receiver_user value
 	 */
-	public void setMsgReceiverUser (com.jeecms.cms.entity.main.CmsUser msgReceiverUser) {
+	public void setMsgReceiverUser (com.yunkuo.cms.entity.main.CmsUser msgReceiverUser) {
 		this.msgReceiverUser = msgReceiverUser;
 	}
 
@@ -208,7 +208,7 @@ public abstract class BaseCmsMessage  implements Serializable {
 	/**
 	 * Return the value associated with the column: msg_send_user
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getMsgSendUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getMsgSendUser () {
 		return msgSendUser;
 	}
 
@@ -216,7 +216,7 @@ public abstract class BaseCmsMessage  implements Serializable {
 	 * Set the value related to the column: msg_send_user
 	 * @param msgSendUser the msg_send_user value
 	 */
-	public void setMsgSendUser (com.jeecms.cms.entity.main.CmsUser msgSendUser) {
+	public void setMsgSendUser (com.yunkuo.cms.entity.main.CmsUser msgSendUser) {
 		this.msgSendUser = msgSendUser;
 	}
 
@@ -224,7 +224,7 @@ public abstract class BaseCmsMessage  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -232,24 +232,24 @@ public abstract class BaseCmsMessage  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 	
-	public java.util.Set<com.jeecms.cms.entity.assist.CmsReceiverMessage> getReceiverMsgs() {
+	public java.util.Set<com.yunkuo.cms.entity.assist.CmsReceiverMessage> getReceiverMsgs() {
 		return receiverMsgs;
 	}
 
 	public void setReceiverMsgs(
-			java.util.Set<com.jeecms.cms.entity.assist.CmsReceiverMessage> receiverMsgs) {
+			java.util.Set<com.yunkuo.cms.entity.assist.CmsReceiverMessage> receiverMsgs) {
 		this.receiverMsgs = receiverMsgs;
 	}
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsMessage)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsMessage)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsMessage cmsMessage = (com.jeecms.cms.entity.assist.CmsMessage) obj;
+			com.yunkuo.cms.entity.assist.CmsMessage cmsMessage = (com.yunkuo.cms.entity.assist.CmsMessage) obj;
 			if (null == this.getId() || null == cmsMessage.getId()) return false;
 			else return (this.getId().equals(cmsMessage.getId()));
 		}

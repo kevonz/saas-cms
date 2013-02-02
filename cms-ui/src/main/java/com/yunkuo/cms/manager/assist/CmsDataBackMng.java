@@ -1,9 +1,9 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.jeecms.cms.entity.back.CmsField;
+import com.yunkuo.cms.entity.back.CmsField;
 
 public interface CmsDataBackMng {
 	public List<String> listTabels();

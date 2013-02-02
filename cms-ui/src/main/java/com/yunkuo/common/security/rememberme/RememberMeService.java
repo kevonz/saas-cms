@@ -1,9 +1,9 @@
-package com.jeecms.common.security.rememberme;
+package com.yunkuo.common.security.rememberme;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jeecms.common.security.userdetails.UserDetails;
+import com.yunkuo.common.security.userdetails.UserDetails;
 
 public interface RememberMeService {
 

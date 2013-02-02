@@ -1,15 +1,15 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import static com.jeecms.cms.Constants.RES_PATH;
-import static com.jeecms.cms.Constants.TPL_BASE;
-import static com.jeecms.cms.Constants.UPLOAD_PATH;
-import static com.jeecms.common.web.Constants.DEFAULT;
+import static com.yunkuo.cms.Constants.RES_PATH;
+import static com.yunkuo.cms.Constants.TPL_BASE;
+import static com.yunkuo.cms.Constants.UPLOAD_PATH;
+import static com.yunkuo.common.web.Constants.DEFAULT;
 
 import java.util.Collection;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseCmsSite;
+import com.yunkuo.cms.entity.main.base.BaseCmsSite;
 
 public class CmsSite extends BaseCmsSite {
 	private static final long serialVersionUID = 1L;
@@ -245,7 +245,7 @@ public class CmsSite extends BaseCmsSite {
 	 */
 	public CmsSite (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsConfig config,
+		com.yunkuo.cms.entity.main.CmsConfig config,
 		java.lang.String domain,
 		java.lang.String path,
 		java.lang.String name,

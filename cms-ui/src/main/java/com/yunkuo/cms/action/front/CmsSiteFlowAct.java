@@ -1,4 +1,4 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.service.CmsSiteFlowCache;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.service.CmsSiteFlowCache;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class CmsSiteFlowAct {

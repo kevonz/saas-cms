@@ -1,8 +1,8 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
-import com.jeecms.cms.entity.assist.CmsVoteTopic;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.assist.CmsVoteTopic;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsVoteTopicDao {
 	public Pagination getPage(Integer siteId, int pageNo, int pageSize);

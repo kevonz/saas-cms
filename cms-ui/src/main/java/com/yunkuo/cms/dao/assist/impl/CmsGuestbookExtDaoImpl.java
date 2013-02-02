@@ -1,10 +1,10 @@
-package com.jeecms.cms.dao.assist.impl;
+package com.yunkuo.cms.dao.assist.impl;
 
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.assist.CmsGuestbookExtDao;
-import com.jeecms.cms.entity.assist.CmsGuestbookExt;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.cms.dao.assist.CmsGuestbookExtDao;
+import com.yunkuo.cms.entity.assist.CmsGuestbookExt;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
 
 @Repository
 public class CmsGuestbookExtDaoImpl extends

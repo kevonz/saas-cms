@@ -1,6 +1,6 @@
-package com.jeecms.common.file;
+package com.yunkuo.common.file;
 
-import static com.jeecms.common.web.Constants.SPT;
+import static com.yunkuo.common.web.Constants.SPT;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -14,7 +14,7 @@ import java.util.Locale;
 
 import org.apache.commons.io.FilenameUtils;
 
-import com.jeecms.common.image.ImageUtils;
+import com.yunkuo.common.image.ImageUtils;
 
 /**
  * 文件包装类

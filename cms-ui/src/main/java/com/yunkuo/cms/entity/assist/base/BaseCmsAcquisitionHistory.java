@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -67,8 +67,8 @@ public abstract class BaseCmsAcquisitionHistory  implements Serializable {
 	private java.lang.String description;
 
 	// many to one
-	private com.jeecms.cms.entity.assist.CmsAcquisition acquisition;
-	private com.jeecms.cms.entity.main.Content content;
+	private com.yunkuo.cms.entity.assist.CmsAcquisition acquisition;
+	private com.yunkuo.cms.entity.main.Content content;
 
 
 
@@ -161,7 +161,7 @@ public abstract class BaseCmsAcquisitionHistory  implements Serializable {
 	/**
 	 * Return the value associated with the column: acquisition_id
 	 */
-	public com.jeecms.cms.entity.assist.CmsAcquisition getAcquisition () {
+	public com.yunkuo.cms.entity.assist.CmsAcquisition getAcquisition () {
 		return acquisition;
 	}
 
@@ -169,7 +169,7 @@ public abstract class BaseCmsAcquisitionHistory  implements Serializable {
 	 * Set the value related to the column: acquisition_id
 	 * @param acquisition the acquisition_id value
 	 */
-	public void setAcquisition (com.jeecms.cms.entity.assist.CmsAcquisition acquisition) {
+	public void setAcquisition (com.yunkuo.cms.entity.assist.CmsAcquisition acquisition) {
 		this.acquisition = acquisition;
 	}
 
@@ -177,7 +177,7 @@ public abstract class BaseCmsAcquisitionHistory  implements Serializable {
 	/**
 	 * Return the value associated with the column: content_id
 	 */
-	public com.jeecms.cms.entity.main.Content getContent () {
+	public com.yunkuo.cms.entity.main.Content getContent () {
 		return content;
 	}
 
@@ -185,7 +185,7 @@ public abstract class BaseCmsAcquisitionHistory  implements Serializable {
 	 * Set the value related to the column: content_id
 	 * @param content the content_id value
 	 */
-	public void setContent (com.jeecms.cms.entity.main.Content content) {
+	public void setContent (com.yunkuo.cms.entity.main.Content content) {
 		this.content = content;
 	}
 
@@ -193,9 +193,9 @@ public abstract class BaseCmsAcquisitionHistory  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsAcquisitionHistory)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsAcquisitionHistory)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsAcquisitionHistory cmsAcquisitionHistory = (com.jeecms.cms.entity.assist.CmsAcquisitionHistory) obj;
+			com.yunkuo.cms.entity.assist.CmsAcquisitionHistory cmsAcquisitionHistory = (com.yunkuo.cms.entity.assist.CmsAcquisitionHistory) obj;
 			if (null == this.getId() || null == cmsAcquisitionHistory.getId()) return false;
 			else return (this.getId().equals(cmsAcquisitionHistory.getId()));
 		}

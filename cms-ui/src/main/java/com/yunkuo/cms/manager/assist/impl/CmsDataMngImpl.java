@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.util.List;
 
@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsDataDao;
-import com.jeecms.cms.entity.back.CmsConstraints;
-import com.jeecms.cms.entity.back.CmsField;
-import com.jeecms.cms.entity.back.CmsTable;
-import com.jeecms.cms.manager.assist.CmsDataMng;
+import com.yunkuo.cms.dao.assist.CmsDataDao;
+import com.yunkuo.cms.entity.back.CmsConstraints;
+import com.yunkuo.cms.entity.back.CmsField;
+import com.yunkuo.cms.entity.back.CmsTable;
+import com.yunkuo.cms.manager.assist.CmsDataMng;
 
 @Service
 @Transactional

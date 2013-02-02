@@ -1,10 +1,10 @@
-package com.jeecms.cms.dao.main.impl;
+package com.yunkuo.cms.dao.main.impl;
 
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.main.CmsUserSiteDao;
-import com.jeecms.cms.entity.main.CmsUserSite;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.cms.dao.main.CmsUserSiteDao;
+import com.yunkuo.cms.entity.main.CmsUserSite;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
 
 @Repository
 public class CmsUserSiteDaoImpl extends HibernateBaseDao<CmsUserSite, Integer>

@@ -1,8 +1,8 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
-import static com.jeecms.common.web.Constants.MESSAGE;
-import static com.jeecms.core.action.front.LoginAct.PROCESS_URL;
-import static com.jeecms.core.action.front.LoginAct.RETURN_URL;
+import static com.yunkuo.common.web.Constants.MESSAGE;
+import static com.yunkuo.core.action.front.LoginAct.PROCESS_URL;
+import static com.yunkuo.core.action.front.LoginAct.RETURN_URL;
 
 import java.util.List;
 import java.util.Set;
@@ -18,14 +18,14 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import org.springframework.web.util.UrlPathHelper;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.main.CmsSiteMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.common.web.springmvc.MessageResolver;
-import com.jeecms.core.manager.AuthenticationMng;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.main.CmsSiteMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.common.web.springmvc.MessageResolver;
+import com.yunkuo.core.manager.AuthenticationMng;
 
 /**
  * CMS上下文信息拦截器

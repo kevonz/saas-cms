@@ -1,4 +1,4 @@
-package com.jeecms.common.web.springmvc;
+package com.yunkuo.common.web.springmvc;
 
 import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 import org.springframework.web.servlet.view.AbstractUrlBasedView;

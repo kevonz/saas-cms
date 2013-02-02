@@ -1,8 +1,8 @@
-package com.jeecms.core.manager;
+package com.yunkuo.core.manager;
 
 import java.util.List;
 
-import com.jeecms.core.entity.Ftp;
+import com.yunkuo.core.entity.Ftp;
 
 public interface FtpMng {
 	public List<Ftp> getList();

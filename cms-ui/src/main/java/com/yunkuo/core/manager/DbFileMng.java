@@ -1,11 +1,11 @@
-package com.jeecms.core.manager;
+package com.yunkuo.core.manager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.jeecms.core.entity.DbFile;
+import com.yunkuo.core.entity.DbFile;
 
 public interface DbFileMng {
 	public DbFile findById(String id);

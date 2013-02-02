@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.jeecms.cms.entity.assist">
+<hibernate-mapping package="com.yunkuo.cms.entity.assist">
 	<class name="CmsVoteTopic" table="jc_vote_topic">
 		<meta attribute="sync-DAO">false</meta>
 		<cache usage="read-write"/>
@@ -17,8 +17,8 @@
 		<property name="restrictCookie" column="is_restrict_cookie" type="java.lang.Boolean" not-null="true"/>
 		<property name="disabled" column="is_disabled" type="java.lang.Boolean" not-null="true"/>
 		<property name="def" column="is_def" type="java.lang.Boolean" not-null="true"/>
-		<many-to-one name="site" column="site_id" class="com.jeecms.cms.entity.main.CmsSite" not-null="true"></many-to-one>		
-		<set name="items" inverse="true" cascade="delete-orphan" sort="com.jeecms.common.hibernate3.PriorityComparator">
+		<many-to-one name="site" column="site_id" class="com.yunkuo.cms.entity.main.CmsSite" not-null="true"></many-to-one>		
+		<set name="items" inverse="true" cascade="delete-orphan" sort="com.yunkuo.common.hibernate3.PriorityComparator">
 			<cache usage="read-write"/>
 			<key column="votetopic_id"/>
 			<one-to-many class="CmsVoteItem"/>

@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import com.jeecms.cms.entity.main.base.BaseCmsUserSite;
+import com.yunkuo.cms.entity.main.base.BaseCmsUserSite;
 
 public class CmsUserSite extends BaseCmsUserSite {
 	private static final long serialVersionUID = 1L;
@@ -22,8 +22,8 @@ public class CmsUserSite extends BaseCmsUserSite {
 	 */
 	public CmsUserSite (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsUser user,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsUser user,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.Byte checkStep,
 		java.lang.Boolean allChannel) {
 

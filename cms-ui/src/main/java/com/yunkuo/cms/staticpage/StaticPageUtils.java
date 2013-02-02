@@ -1,4 +1,4 @@
-package com.jeecms.cms.staticpage;
+package com.yunkuo.cms.staticpage;
 
 import java.util.Calendar;
 import java.util.Date;

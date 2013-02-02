@@ -1,10 +1,10 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.back.CmsConstraints;
-import com.jeecms.cms.entity.back.CmsField;
-import com.jeecms.cms.entity.back.CmsTable;
+import com.yunkuo.cms.entity.back.CmsConstraints;
+import com.yunkuo.cms.entity.back.CmsField;
+import com.yunkuo.cms.entity.back.CmsTable;
 
 public interface CmsDataDao {
 	public List<CmsTable> listTables();

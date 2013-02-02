@@ -1,7 +1,7 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import static com.jeecms.common.web.Constants.INDEX;
-import static com.jeecms.common.web.Constants.SPT;
+import static com.yunkuo.common.web.Constants.INDEX;
+import static com.yunkuo.common.web.Constants.SPT;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,11 +12,11 @@ import java.util.TreeSet;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.entity.main.base.BaseChannel;
-import com.jeecms.cms.staticpage.StaticPageUtils;
-import com.jeecms.common.hibernate3.HibernateTree;
-import com.jeecms.common.hibernate3.PriorityComparator;
-import com.jeecms.common.hibernate3.PriorityInterface;
+import com.yunkuo.cms.entity.main.base.BaseChannel;
+import com.yunkuo.cms.staticpage.StaticPageUtils;
+import com.yunkuo.common.hibernate3.HibernateTree;
+import com.yunkuo.common.hibernate3.PriorityComparator;
+import com.yunkuo.common.hibernate3.PriorityInterface;
 
 /**
  * 栏目实体类
@@ -807,8 +807,8 @@ public class Channel extends BaseChannel implements HibernateTree<Integer>,
 	 * Constructor for required fields
 	 */
 	public Channel(java.lang.Integer id,
-			com.jeecms.cms.entity.main.CmsSite site,
-			com.jeecms.cms.entity.main.CmsModel model, java.lang.Integer lft,
+			com.yunkuo.cms.entity.main.CmsSite site,
+			com.yunkuo.cms.entity.main.CmsModel model, java.lang.Integer lft,
 			java.lang.Integer rgt, java.lang.Integer priority,
 			java.lang.Boolean hasContent, java.lang.Boolean display) {
 

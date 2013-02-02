@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -19,21 +19,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.assist.CmsMessage;
-import com.jeecms.cms.entity.assist.CmsReceiverMessage;
-import com.jeecms.cms.entity.main.CmsGroup;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.assist.CmsMessageMng;
-import com.jeecms.cms.manager.assist.CmsReceiverMessageMng;
-import com.jeecms.cms.manager.main.CmsGroupMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.ResponseUtils;
+import com.yunkuo.cms.entity.assist.CmsMessage;
+import com.yunkuo.cms.entity.assist.CmsReceiverMessage;
+import com.yunkuo.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.assist.CmsMessageMng;
+import com.yunkuo.cms.manager.assist.CmsReceiverMessageMng;
+import com.yunkuo.cms.manager.main.CmsGroupMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class CmsMessageAct {

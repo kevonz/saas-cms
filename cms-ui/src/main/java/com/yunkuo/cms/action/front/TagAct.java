@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
-import static com.jeecms.cms.Constants.TPLDIR_SPECIAL;
+import static com.yunkuo.cms.Constants.TPLDIR_SPECIAL;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.ContentTag;
-import com.jeecms.cms.manager.main.ContentTagMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.ContentTag;
+import com.yunkuo.cms.manager.main.ContentTagMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
 
 @Controller
 public class TagAct {

@@ -1,4 +1,4 @@
-package com.jeecms.common.web.session.cache;
+package com.yunkuo.common.web.session.cache;
 
 import java.io.Serializable;
 import java.util.Map;

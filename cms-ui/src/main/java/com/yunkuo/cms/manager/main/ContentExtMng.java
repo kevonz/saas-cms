@@ -1,7 +1,7 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.entity.main.ContentExt;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.ContentExt;
 
 public interface ContentExtMng {
 	public ContentExt save(ContentExt ext, Content content);

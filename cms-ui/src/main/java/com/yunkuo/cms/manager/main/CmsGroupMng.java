@@ -1,8 +1,8 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.entity.main.CmsGroup;
 
 public interface CmsGroupMng {
 	public List<CmsGroup> getList();

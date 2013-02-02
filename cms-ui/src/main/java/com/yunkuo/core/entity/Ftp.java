@@ -1,4 +1,4 @@
-package com.jeecms.core.entity;
+package com.yunkuo.core.entity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,8 +18,8 @@ import org.apache.commons.net.ftp.FTPReply;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jeecms.common.upload.UploadUtils;
-import com.jeecms.core.entity.base.BaseFtp;
+import com.yunkuo.common.upload.UploadUtils;
+import com.yunkuo.core.entity.base.BaseFtp;
 
 public class Ftp extends BaseFtp {
 	private static final long serialVersionUID = 1L;

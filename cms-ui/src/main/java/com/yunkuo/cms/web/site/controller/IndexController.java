@@ -1,10 +1,10 @@
 package com.yunkuo.cms.web.site.controller;
 
-import static com.jeecms.cms.Constants.TPLDIR_MEMBER;
-import static com.jeecms.core.action.front.LoginAct.MESSAGE;
-import static com.jeecms.core.action.front.LoginAct.PROCESS_URL;
-import static com.jeecms.core.action.front.LoginAct.RETURN_URL;
-import static com.jeecms.core.manager.AuthenticationMng.AUTH_KEY;
+import static com.yunkuo.cms.Constants.TPLDIR_MEMBER;
+import static com.yunkuo.core.action.front.LoginAct.MESSAGE;
+import static com.yunkuo.core.action.front.LoginAct.PROCESS_URL;
+import static com.yunkuo.core.action.front.LoginAct.RETURN_URL;
+import static com.yunkuo.core.manager.AuthenticationMng.AUTH_KEY;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -21,20 +21,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.jeecms.cms.action.member.CasLoginAct;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.main.CmsUserMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.session.SessionProvider;
-import com.jeecms.core.entity.Authentication;
-import com.jeecms.core.entity.Config.ConfigLogin;
-import com.jeecms.core.manager.AuthenticationMng;
-import com.jeecms.core.manager.ConfigMng;
-import com.jeecms.core.manager.UnifiedUserMng;
 import com.octo.captcha.service.image.ImageCaptchaService;
+import com.yunkuo.cms.action.member.CasLoginAct;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.main.CmsUserMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.session.SessionProvider;
+import com.yunkuo.core.entity.Authentication;
+import com.yunkuo.core.entity.Config.ConfigLogin;
+import com.yunkuo.core.manager.AuthenticationMng;
+import com.yunkuo.core.manager.ConfigMng;
+import com.yunkuo.core.manager.UnifiedUserMng;
 
 @Controller
 public class IndexController {

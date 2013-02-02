@@ -1,9 +1,9 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.assist.CmsAdvertisingSpace;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.entity.assist.CmsAdvertisingSpace;
+import com.yunkuo.common.hibernate3.Updater;
 
 public interface CmsAdvertisingSpaceDao {
 	public List<CmsAdvertisingSpace> getList(Integer siteId);

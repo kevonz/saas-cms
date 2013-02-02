@@ -1,4 +1,4 @@
-package com.jeecms.common.web.cos;
+package com.yunkuo.common.web.cos;
 
 /**
  * A <code>Part</code> is an abstract upload part which represents an 

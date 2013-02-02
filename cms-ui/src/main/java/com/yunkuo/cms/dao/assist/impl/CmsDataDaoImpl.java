@@ -1,4 +1,4 @@
-package com.jeecms.cms.dao.assist.impl;
+package com.yunkuo.cms.dao.assist.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.assist.CmsDataDao;
-import com.jeecms.cms.entity.back.CmsConstraints;
-import com.jeecms.cms.entity.back.CmsField;
-import com.jeecms.cms.entity.back.CmsTable;
+import com.yunkuo.cms.dao.assist.CmsDataDao;
+import com.yunkuo.cms.entity.back.CmsConstraints;
+import com.yunkuo.cms.entity.back.CmsField;
+import com.yunkuo.cms.entity.back.CmsTable;
 
 @Repository
 public class CmsDataDaoImpl extends JdbcDaoSupport implements CmsDataDao {

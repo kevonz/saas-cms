@@ -1,10 +1,10 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.jeecms.cms.entity.main.CmsLog;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.main.CmsLog;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsLogMng {
 	public Pagination getPage(Integer category, Integer siteId,

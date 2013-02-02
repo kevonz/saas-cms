@@ -1,12 +1,12 @@
-package com.jeecms.core.dao.impl;
+package com.yunkuo.core.dao.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.core.dao.FtpDao;
-import com.jeecms.core.entity.Ftp;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.core.dao.FtpDao;
+import com.yunkuo.core.entity.Ftp;
 
 @Repository
 public class FtpDaoImpl extends HibernateBaseDao<Ftp, Integer> implements

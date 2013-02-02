@@ -1,8 +1,8 @@
-package com.jeecms.cms.service;
+package com.yunkuo.cms.service;
 
 import java.util.Map;
 
-import com.jeecms.cms.entity.main.Content;
+import com.yunkuo.cms.entity.main.Content;
 
 /**
  * ContentListener的抽象实现

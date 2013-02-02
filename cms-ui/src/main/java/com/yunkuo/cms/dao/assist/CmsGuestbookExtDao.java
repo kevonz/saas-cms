@@ -1,7 +1,7 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
-import com.jeecms.cms.entity.assist.CmsGuestbookExt;
-import com.jeecms.common.hibernate3.Updater;
+import com.yunkuo.cms.entity.assist.CmsGuestbookExt;
+import com.yunkuo.common.hibernate3.Updater;
 
 public interface CmsGuestbookExtDao {
 	public CmsGuestbookExt findById(Integer id);

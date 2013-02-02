@@ -1,4 +1,4 @@
-package com.jeecms.common.web.session;
+package com.yunkuo.common.web.session;
 
 import java.io.Serializable;
 

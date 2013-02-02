@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -40,8 +40,8 @@ public abstract class BaseCmsUserSite  implements Serializable {
 	 */
 	public BaseCmsUserSite (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsUser user,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsUser user,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.Byte checkStep,
 		java.lang.Boolean allChannel) {
 
@@ -67,8 +67,8 @@ public abstract class BaseCmsUserSite  implements Serializable {
 	private java.lang.Boolean allChannel;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsUser user;
-	private com.jeecms.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsUser user;
+	private com.yunkuo.cms.entity.main.CmsSite site;
 
 
 
@@ -129,7 +129,7 @@ public abstract class BaseCmsUserSite  implements Serializable {
 	/**
 	 * Return the value associated with the column: user_id
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getUser () {
 		return user;
 	}
 
@@ -137,7 +137,7 @@ public abstract class BaseCmsUserSite  implements Serializable {
 	 * Set the value related to the column: user_id
 	 * @param user the user_id value
 	 */
-	public void setUser (com.jeecms.cms.entity.main.CmsUser user) {
+	public void setUser (com.yunkuo.cms.entity.main.CmsUser user) {
 		this.user = user;
 	}
 
@@ -145,7 +145,7 @@ public abstract class BaseCmsUserSite  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -153,7 +153,7 @@ public abstract class BaseCmsUserSite  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -161,9 +161,9 @@ public abstract class BaseCmsUserSite  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.CmsUserSite)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.CmsUserSite)) return false;
 		else {
-			com.jeecms.cms.entity.main.CmsUserSite cmsUserSite = (com.jeecms.cms.entity.main.CmsUserSite) obj;
+			com.yunkuo.cms.entity.main.CmsUserSite cmsUserSite = (com.yunkuo.cms.entity.main.CmsUserSite) obj;
 			if (null == this.getId() || null == cmsUserSite.getId()) return false;
 			else return (this.getId().equals(cmsUserSite.getId()));
 		}

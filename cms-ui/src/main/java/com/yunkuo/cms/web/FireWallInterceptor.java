@@ -1,4 +1,4 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,9 +15,9 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.jeecms.cms.Constants;
-import com.jeecms.common.web.RequestUtils;
-import com.jeecms.common.web.springmvc.RealPathResolver;
+import com.yunkuo.cms.Constants;
+import com.yunkuo.common.web.RequestUtils;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
 
 /**
  * 网站防火墙拦截器

@@ -1,10 +1,10 @@
-package com.jeecms.core.dao;
+package com.yunkuo.core.dao;
 
 import java.util.Date;
 
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.core.entity.Authentication;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.core.entity.Authentication;
 
 public interface AuthenticationDao {
 

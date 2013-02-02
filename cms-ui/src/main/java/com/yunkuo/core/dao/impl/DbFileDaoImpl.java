@@ -1,10 +1,10 @@
-package com.jeecms.core.dao.impl;
+package com.yunkuo.core.dao.impl;
 
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.core.dao.DbFileDao;
-import com.jeecms.core.entity.DbFile;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.core.dao.DbFileDao;
+import com.yunkuo.core.entity.DbFile;
 
 @Repository
 public class DbFileDaoImpl extends HibernateBaseDao<DbFile, String> implements

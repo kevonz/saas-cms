@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -46,8 +46,8 @@ public abstract class BaseChannel  implements Serializable {
 	 */
 	public BaseChannel (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
-		com.jeecms.cms.entity.main.CmsModel model,
+		com.yunkuo.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsModel model,
 		java.lang.Integer lft,
 		java.lang.Integer rgt,
 		java.lang.Integer priority,
@@ -83,19 +83,19 @@ public abstract class BaseChannel  implements Serializable {
 	private java.lang.Boolean display;
 
 	// one to one
-	private com.jeecms.cms.entity.main.ChannelExt channelExt;
+	private com.yunkuo.cms.entity.main.ChannelExt channelExt;
 
 	// many to one
-	private com.jeecms.cms.entity.main.CmsSite site;
-	private com.jeecms.cms.entity.main.CmsModel model;
-	private com.jeecms.cms.entity.main.Channel parent;
+	private com.yunkuo.cms.entity.main.CmsSite site;
+	private com.yunkuo.cms.entity.main.CmsModel model;
+	private com.yunkuo.cms.entity.main.Channel parent;
 
 	// collections
-	private java.util.Set<com.jeecms.cms.entity.main.Channel> child;
-	private java.util.Set<com.jeecms.cms.entity.main.CmsGroup> viewGroups;
-	private java.util.Set<com.jeecms.cms.entity.main.CmsGroup> contriGroups;
-	private java.util.Set<com.jeecms.cms.entity.main.CmsUser> users;
-	private java.util.Set<com.jeecms.cms.entity.main.ChannelTxt> channelTxtSet;
+	private java.util.Set<com.yunkuo.cms.entity.main.Channel> child;
+	private java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> viewGroups;
+	private java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> contriGroups;
+	private java.util.Set<com.yunkuo.cms.entity.main.CmsUser> users;
+	private java.util.Set<com.yunkuo.cms.entity.main.ChannelTxt> channelTxtSet;
 	private java.util.Map<java.lang.String, java.lang.String> attr;
 
 
@@ -221,7 +221,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: channelExt
 	 */
-	public com.jeecms.cms.entity.main.ChannelExt getChannelExt () {
+	public com.yunkuo.cms.entity.main.ChannelExt getChannelExt () {
 		return channelExt;
 	}
 
@@ -229,7 +229,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: channelExt
 	 * @param channelExt the channelExt value
 	 */
-	public void setChannelExt (com.jeecms.cms.entity.main.ChannelExt channelExt) {
+	public void setChannelExt (com.yunkuo.cms.entity.main.ChannelExt channelExt) {
 		this.channelExt = channelExt;
 	}
 
@@ -237,7 +237,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: site_id
 	 */
-	public com.jeecms.cms.entity.main.CmsSite getSite () {
+	public com.yunkuo.cms.entity.main.CmsSite getSite () {
 		return site;
 	}
 
@@ -245,7 +245,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: site_id
 	 * @param site the site_id value
 	 */
-	public void setSite (com.jeecms.cms.entity.main.CmsSite site) {
+	public void setSite (com.yunkuo.cms.entity.main.CmsSite site) {
 		this.site = site;
 	}
 
@@ -253,7 +253,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: model_id
 	 */
-	public com.jeecms.cms.entity.main.CmsModel getModel () {
+	public com.yunkuo.cms.entity.main.CmsModel getModel () {
 		return model;
 	}
 
@@ -261,7 +261,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: model_id
 	 * @param model the model_id value
 	 */
-	public void setModel (com.jeecms.cms.entity.main.CmsModel model) {
+	public void setModel (com.yunkuo.cms.entity.main.CmsModel model) {
 		this.model = model;
 	}
 
@@ -269,7 +269,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: parent_id
 	 */
-	public com.jeecms.cms.entity.main.Channel getParent () {
+	public com.yunkuo.cms.entity.main.Channel getParent () {
 		return parent;
 	}
 
@@ -277,7 +277,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: parent_id
 	 * @param parent the parent_id value
 	 */
-	public void setParent (com.jeecms.cms.entity.main.Channel parent) {
+	public void setParent (com.yunkuo.cms.entity.main.Channel parent) {
 		this.parent = parent;
 	}
 
@@ -285,7 +285,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: child
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.Channel> getChild () {
+	public java.util.Set<com.yunkuo.cms.entity.main.Channel> getChild () {
 		return child;
 	}
 
@@ -293,7 +293,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: child
 	 * @param child the child value
 	 */
-	public void setChild (java.util.Set<com.jeecms.cms.entity.main.Channel> child) {
+	public void setChild (java.util.Set<com.yunkuo.cms.entity.main.Channel> child) {
 		this.child = child;
 	}
 
@@ -301,7 +301,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: viewGroups
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.CmsGroup> getViewGroups () {
+	public java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> getViewGroups () {
 		return viewGroups;
 	}
 
@@ -309,7 +309,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: viewGroups
 	 * @param viewGroups the viewGroups value
 	 */
-	public void setViewGroups (java.util.Set<com.jeecms.cms.entity.main.CmsGroup> viewGroups) {
+	public void setViewGroups (java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> viewGroups) {
 		this.viewGroups = viewGroups;
 	}
 
@@ -317,7 +317,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: contriGroups
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.CmsGroup> getContriGroups () {
+	public java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> getContriGroups () {
 		return contriGroups;
 	}
 
@@ -325,7 +325,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: contriGroups
 	 * @param contriGroups the contriGroups value
 	 */
-	public void setContriGroups (java.util.Set<com.jeecms.cms.entity.main.CmsGroup> contriGroups) {
+	public void setContriGroups (java.util.Set<com.yunkuo.cms.entity.main.CmsGroup> contriGroups) {
 		this.contriGroups = contriGroups;
 	}
 
@@ -333,7 +333,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: users
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.CmsUser> getUsers () {
+	public java.util.Set<com.yunkuo.cms.entity.main.CmsUser> getUsers () {
 		return users;
 	}
 
@@ -341,7 +341,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: users
 	 * @param users the users value
 	 */
-	public void setUsers (java.util.Set<com.jeecms.cms.entity.main.CmsUser> users) {
+	public void setUsers (java.util.Set<com.yunkuo.cms.entity.main.CmsUser> users) {
 		this.users = users;
 	}
 
@@ -349,7 +349,7 @@ public abstract class BaseChannel  implements Serializable {
 	/**
 	 * Return the value associated with the column: channelTxtSet
 	 */
-	public java.util.Set<com.jeecms.cms.entity.main.ChannelTxt> getChannelTxtSet () {
+	public java.util.Set<com.yunkuo.cms.entity.main.ChannelTxt> getChannelTxtSet () {
 		return channelTxtSet;
 	}
 
@@ -357,7 +357,7 @@ public abstract class BaseChannel  implements Serializable {
 	 * Set the value related to the column: channelTxtSet
 	 * @param channelTxtSet the channelTxtSet value
 	 */
-	public void setChannelTxtSet (java.util.Set<com.jeecms.cms.entity.main.ChannelTxt> channelTxtSet) {
+	public void setChannelTxtSet (java.util.Set<com.yunkuo.cms.entity.main.ChannelTxt> channelTxtSet) {
 		this.channelTxtSet = channelTxtSet;
 	}
 
@@ -381,9 +381,9 @@ public abstract class BaseChannel  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.Channel)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.Channel)) return false;
 		else {
-			com.jeecms.cms.entity.main.Channel channel = (com.jeecms.cms.entity.main.Channel) obj;
+			com.yunkuo.cms.entity.main.Channel channel = (com.yunkuo.cms.entity.main.Channel) obj;
 			if (null == this.getId() || null == channel.getId()) return false;
 			else return (this.getId().equals(channel.getId()));
 		}

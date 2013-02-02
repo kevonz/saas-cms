@@ -1,8 +1,8 @@
-package com.jeecms.cms.dao.assist;
+package com.yunkuo.cms.dao.assist;
 
-import com.jeecms.cms.entity.assist.CmsCommentExt;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.assist.CmsCommentExt;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsCommentExtDao {
 	public Pagination getPage(int pageNo, int pageSize);

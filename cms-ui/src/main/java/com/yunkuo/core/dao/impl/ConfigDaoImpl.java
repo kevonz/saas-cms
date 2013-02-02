@@ -1,12 +1,12 @@
-package com.jeecms.core.dao.impl;
+package com.yunkuo.core.dao.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.core.dao.ConfigDao;
-import com.jeecms.core.entity.Config;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.core.dao.ConfigDao;
+import com.yunkuo.core.entity.Config;
 
 @Repository
 public class ConfigDaoImpl extends HibernateBaseDao<Config, String> implements

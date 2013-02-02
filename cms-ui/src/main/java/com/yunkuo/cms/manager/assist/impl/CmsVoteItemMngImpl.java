@@ -1,4 +1,4 @@
-package com.jeecms.cms.manager.assist.impl;
+package com.yunkuo.cms.manager.assist.impl;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeecms.cms.dao.assist.CmsVoteItemDao;
-import com.jeecms.cms.entity.assist.CmsVoteItem;
-import com.jeecms.cms.entity.assist.CmsVoteTopic;
-import com.jeecms.cms.manager.assist.CmsVoteItemMng;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.assist.CmsVoteItemDao;
+import com.yunkuo.cms.entity.assist.CmsVoteItem;
+import com.yunkuo.cms.entity.assist.CmsVoteTopic;
+import com.yunkuo.cms.manager.assist.CmsVoteItemMng;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 @Service
 @Transactional

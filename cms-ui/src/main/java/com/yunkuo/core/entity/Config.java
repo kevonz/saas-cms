@@ -1,4 +1,4 @@
-package com.jeecms.core.entity;
+package com.yunkuo.core.entity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.core.entity.base.BaseConfig;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.core.entity.base.BaseConfig;
 
 public class Config extends BaseConfig {
 	private static final long serialVersionUID = 1L;

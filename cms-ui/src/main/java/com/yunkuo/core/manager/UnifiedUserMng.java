@@ -1,16 +1,16 @@
-package com.jeecms.core.manager;
+package com.yunkuo.core.manager;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.mail.MessagingException;
 
-import com.jeecms.common.email.EmailSender;
-import com.jeecms.common.email.MessageTemplate;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.security.BadCredentialsException;
-import com.jeecms.common.security.UsernameNotFoundException;
-import com.jeecms.core.entity.UnifiedUser;
+import com.yunkuo.common.email.EmailSender;
+import com.yunkuo.common.email.MessageTemplate;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.security.BadCredentialsException;
+import com.yunkuo.common.security.UsernameNotFoundException;
+import com.yunkuo.core.entity.UnifiedUser;
 
 public interface UnifiedUserMng {
 	/**

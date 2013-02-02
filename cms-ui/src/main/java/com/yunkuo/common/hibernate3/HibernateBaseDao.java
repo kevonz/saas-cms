@@ -1,4 +1,4 @@
-package com.jeecms.common.hibernate3;
+package com.yunkuo.common.hibernate3;
 
 import static org.hibernate.EntityMode.POJO;
 
@@ -13,7 +13,7 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.metadata.ClassMetadata;
 import org.springframework.util.Assert;
 
-import com.jeecms.common.util.MyBeanUtils;
+import com.yunkuo.common.util.MyBeanUtils;
 
 /**
  * hibernate DAO基类

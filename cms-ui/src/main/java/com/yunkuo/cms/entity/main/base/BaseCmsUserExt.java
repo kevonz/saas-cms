@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.main.base;
+package com.yunkuo.cms.entity.main.base;
 
 import java.io.Serializable;
 
@@ -64,7 +64,7 @@ public abstract class BaseCmsUserExt  implements Serializable {
 	private java.lang.String userSignature;
 
 	// one to one
-	private com.jeecms.cms.entity.main.CmsUser user;
+	private com.yunkuo.cms.entity.main.CmsUser user;
 
 
 
@@ -252,7 +252,7 @@ public abstract class BaseCmsUserExt  implements Serializable {
 	/**
 	 * Return the value associated with the column: user
 	 */
-	public com.jeecms.cms.entity.main.CmsUser getUser () {
+	public com.yunkuo.cms.entity.main.CmsUser getUser () {
 		return user;
 	}
 
@@ -260,7 +260,7 @@ public abstract class BaseCmsUserExt  implements Serializable {
 	 * Set the value related to the column: user
 	 * @param user the user value
 	 */
-	public void setUser (com.jeecms.cms.entity.main.CmsUser user) {
+	public void setUser (com.yunkuo.cms.entity.main.CmsUser user) {
 		this.user = user;
 	}
 
@@ -268,9 +268,9 @@ public abstract class BaseCmsUserExt  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.main.CmsUserExt)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.main.CmsUserExt)) return false;
 		else {
-			com.jeecms.cms.entity.main.CmsUserExt cmsUserExt = (com.jeecms.cms.entity.main.CmsUserExt) obj;
+			com.yunkuo.cms.entity.main.CmsUserExt cmsUserExt = (com.yunkuo.cms.entity.main.CmsUserExt) obj;
 			if (null == this.getId() || null == cmsUserExt.getId()) return false;
 			else return (this.getId().equals(cmsUserExt.getId()));
 		}

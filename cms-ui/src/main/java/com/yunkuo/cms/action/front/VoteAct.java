@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
-import static com.jeecms.cms.Constants.TPLDIR_SPECIAL;
+import static com.yunkuo.cms.Constants.TPLDIR_SPECIAL;
 
 import java.util.Date;
 import java.util.UUID;
@@ -18,16 +18,16 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.assist.CmsVoteItem;
-import com.jeecms.cms.entity.assist.CmsVoteTopic;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.manager.assist.CmsVoteRecordMng;
-import com.jeecms.cms.manager.assist.CmsVoteTopicMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
+import com.yunkuo.cms.entity.assist.CmsVoteItem;
+import com.yunkuo.cms.entity.assist.CmsVoteTopic;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.manager.assist.CmsVoteRecordMng;
+import com.yunkuo.cms.manager.assist.CmsVoteTopicMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
 
 @Controller
 public class VoteAct {

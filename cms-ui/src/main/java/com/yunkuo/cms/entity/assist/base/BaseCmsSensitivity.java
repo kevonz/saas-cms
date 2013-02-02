@@ -1,4 +1,4 @@
-package com.jeecms.cms.entity.assist.base;
+package com.yunkuo.cms.entity.assist.base;
 
 import java.io.Serializable;
 
@@ -119,9 +119,9 @@ public abstract class BaseCmsSensitivity  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.cms.entity.assist.CmsSensitivity)) return false;
+		if (!(obj instanceof com.yunkuo.cms.entity.assist.CmsSensitivity)) return false;
 		else {
-			com.jeecms.cms.entity.assist.CmsSensitivity cmsSensitivity = (com.jeecms.cms.entity.assist.CmsSensitivity) obj;
+			com.yunkuo.cms.entity.assist.CmsSensitivity cmsSensitivity = (com.yunkuo.cms.entity.assist.CmsSensitivity) obj;
 			if (null == this.getId() || null == cmsSensitivity.getId()) return false;
 			else return (this.getId().equals(cmsSensitivity.getId()));
 		}

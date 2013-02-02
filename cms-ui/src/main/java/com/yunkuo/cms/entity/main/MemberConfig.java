@@ -1,11 +1,11 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.common.util.StrUtils;
+import com.yunkuo.common.util.StrUtils;
 
 public class MemberConfig {
 	public MemberConfig() {

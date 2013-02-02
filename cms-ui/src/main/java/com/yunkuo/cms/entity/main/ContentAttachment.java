@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.main;
+package com.yunkuo.cms.entity.main;
 
-import com.jeecms.cms.entity.main.base.BaseContentAttachment;
+import com.yunkuo.cms.entity.main.base.BaseContentAttachment;
 
 public class ContentAttachment extends BaseContentAttachment {
 	private static final long serialVersionUID = 1L;

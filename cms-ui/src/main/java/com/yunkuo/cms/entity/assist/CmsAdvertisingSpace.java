@@ -1,6 +1,6 @@
-package com.jeecms.cms.entity.assist;
+package com.yunkuo.cms.entity.assist;
 
-import com.jeecms.cms.entity.assist.base.BaseCmsAdvertisingSpace;
+import com.yunkuo.cms.entity.assist.base.BaseCmsAdvertisingSpace;
 
 
 
@@ -24,7 +24,7 @@ public class CmsAdvertisingSpace extends BaseCmsAdvertisingSpace {
 	 */
 	public CmsAdvertisingSpace (
 		java.lang.Integer id,
-		com.jeecms.cms.entity.main.CmsSite site,
+		com.yunkuo.cms.entity.main.CmsSite site,
 		java.lang.String name,
 		java.lang.Boolean enabled) {
 

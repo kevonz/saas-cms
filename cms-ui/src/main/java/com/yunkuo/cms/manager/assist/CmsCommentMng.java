@@ -1,10 +1,10 @@
-package com.jeecms.cms.manager.assist;
+package com.yunkuo.cms.manager.assist;
 
 import java.util.List;
 
-import com.jeecms.cms.entity.assist.CmsComment;
-import com.jeecms.cms.entity.assist.CmsCommentExt;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.entity.assist.CmsComment;
+import com.yunkuo.cms.entity.assist.CmsCommentExt;
+import com.yunkuo.common.page.Pagination;
 
 public interface CmsCommentMng {
 	public Pagination getPage(Integer siteId, Integer contentId,

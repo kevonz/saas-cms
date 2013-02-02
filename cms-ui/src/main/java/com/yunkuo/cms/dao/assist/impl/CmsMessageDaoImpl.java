@@ -1,16 +1,16 @@
-package com.jeecms.cms.dao.assist.impl;
+package com.yunkuo.cms.dao.assist.impl;
 
 import java.util.Date;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jeecms.cms.dao.assist.CmsMessageDao;
-import com.jeecms.cms.entity.assist.CmsGuestbook;
-import com.jeecms.cms.entity.assist.CmsMessage;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.common.hibernate3.Updater;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.assist.CmsMessageDao;
+import com.yunkuo.cms.entity.assist.CmsGuestbook;
+import com.yunkuo.cms.entity.assist.CmsMessage;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.common.hibernate3.Updater;
+import com.yunkuo.common.page.Pagination;
 
 /**
  *江西金磊科技发展有限公司jeecms研发

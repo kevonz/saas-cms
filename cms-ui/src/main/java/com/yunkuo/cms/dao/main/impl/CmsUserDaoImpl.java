@@ -1,4 +1,4 @@
-package com.jeecms.cms.dao.main.impl;
+package com.yunkuo.cms.dao.main.impl;
 
 import java.util.List;
 
@@ -6,11 +6,11 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.jeecms.cms.dao.main.CmsUserDao;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.common.hibernate3.Finder;
-import com.jeecms.common.hibernate3.HibernateBaseDao;
-import com.jeecms.common.page.Pagination;
+import com.yunkuo.cms.dao.main.CmsUserDao;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.common.hibernate3.Finder;
+import com.yunkuo.common.hibernate3.HibernateBaseDao;
+import com.yunkuo.common.page.Pagination;
 
 @Repository
 public class CmsUserDaoImpl extends HibernateBaseDao<CmsUser, Integer>

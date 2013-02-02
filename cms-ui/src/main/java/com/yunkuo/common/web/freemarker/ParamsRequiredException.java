@@ -1,4 +1,4 @@
-package com.jeecms.common.web.freemarker;
+package com.yunkuo.common.web.freemarker;
 
 import freemarker.template.TemplateModelException;
 

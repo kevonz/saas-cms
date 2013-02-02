@@ -1,7 +1,7 @@
-package com.jeecms.cms.action.front;
+package com.yunkuo.cms.action.front;
 
-import static com.jeecms.cms.Constants.TPLDIR_INDEX;
-import static com.jeecms.common.web.Constants.INDEX;
+import static com.yunkuo.cms.Constants.TPLDIR_INDEX;
+import static com.yunkuo.common.web.Constants.INDEX;
 
 import java.util.Set;
 
@@ -16,20 +16,20 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsGroup;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.manager.assist.CmsKeywordMng;
-import com.jeecms.cms.manager.main.ChannelMng;
-import com.jeecms.cms.manager.main.ContentMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.page.Paginable;
-import com.jeecms.common.page.SimplePage;
-import com.jeecms.core.web.front.URLHelper;
-import com.jeecms.core.web.front.URLHelper.PageInfo;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsGroup;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.manager.assist.CmsKeywordMng;
+import com.yunkuo.cms.manager.main.ChannelMng;
+import com.yunkuo.cms.manager.main.ContentMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.page.Paginable;
+import com.yunkuo.common.page.SimplePage;
+import com.yunkuo.core.web.front.URLHelper;
+import com.yunkuo.core.web.front.URLHelper.PageInfo;
 
 @Controller
 public class DynamicPageAct {

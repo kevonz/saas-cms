@@ -1,4 +1,4 @@
-package com.jeecms.cms.service;
+package com.yunkuo.cms.service;
 
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.jeecms.cms.entity.main.ContentCount;
-import com.jeecms.cms.manager.main.ContentCountMng;
+import com.yunkuo.cms.entity.main.ContentCount;
+import com.yunkuo.cms.manager.main.ContentCountMng;
 
 /**
  * 内容计数器缓存实现

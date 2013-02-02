@@ -1,7 +1,7 @@
-package com.jeecms.cms.manager.main;
+package com.yunkuo.cms.manager.main;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.ChannelTxt;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.ChannelTxt;
 
 /**
  * 栏目文本Manager接口

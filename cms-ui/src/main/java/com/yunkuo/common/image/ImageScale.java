@@ -1,4 +1,4 @@
-package com.jeecms.common.image;
+package com.yunkuo.common.image;
 
 import java.awt.Color;
 import java.io.File;

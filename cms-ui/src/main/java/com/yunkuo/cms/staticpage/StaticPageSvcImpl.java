@@ -1,8 +1,8 @@
-package com.jeecms.cms.staticpage;
+package com.yunkuo.cms.staticpage;
 
-import static com.jeecms.cms.Constants.TPLDIR_INDEX;
-import static com.jeecms.cms.action.front.DynamicPageAct.TPL_INDEX;
-import static com.jeecms.common.web.Constants.UTF8;
+import static com.yunkuo.cms.Constants.TPLDIR_INDEX;
+import static com.yunkuo.cms.action.front.DynamicPageAct.TPL_INDEX;
+import static com.yunkuo.common.web.Constants.UTF8;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,12 +24,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
-import com.jeecms.cms.entity.main.Channel;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.Content;
-import com.jeecms.cms.web.FrontUtils;
-import com.jeecms.common.web.Constants;
-import com.jeecms.common.web.springmvc.RealPathResolver;
+import com.yunkuo.cms.entity.main.Channel;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.Content;
+import com.yunkuo.cms.web.FrontUtils;
+import com.yunkuo.common.web.Constants;
+import com.yunkuo.common.web.springmvc.RealPathResolver;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

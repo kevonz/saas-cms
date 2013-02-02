@@ -1,4 +1,4 @@
-package com.jeecms.core.entity.base;
+package com.yunkuo.core.entity.base;
 
 import java.io.Serializable;
 
@@ -139,9 +139,9 @@ public abstract class BaseDbFile  implements Serializable {
 
 	public boolean equals (Object obj) {
 		if (null == obj) return false;
-		if (!(obj instanceof com.jeecms.core.entity.DbFile)) return false;
+		if (!(obj instanceof com.yunkuo.core.entity.DbFile)) return false;
 		else {
-			com.jeecms.core.entity.DbFile dbFile = (com.jeecms.core.entity.DbFile) obj;
+			com.yunkuo.core.entity.DbFile dbFile = (com.yunkuo.core.entity.DbFile) obj;
 			if (null == this.getId() || null == dbFile.getId()) return false;
 			else return (this.getId().equals(dbFile.getId()));
 		}

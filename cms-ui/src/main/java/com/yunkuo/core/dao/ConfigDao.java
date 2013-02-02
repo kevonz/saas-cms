@@ -1,8 +1,8 @@
-package com.jeecms.core.dao;
+package com.yunkuo.core.dao;
 
 import java.util.List;
 
-import com.jeecms.core.entity.Config;
+import com.yunkuo.core.entity.Config;
 
 public interface ConfigDao {
 	public List<Config> getList();

@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.assist;
+package com.yunkuo.cms.action.admin.assist;
 
-import static com.jeecms.common.page.SimplePage.cpn;
+import static com.yunkuo.common.page.SimplePage.cpn;
 
 import java.util.Date;
 import java.util.List;
@@ -15,18 +15,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.assist.CmsGuestbook;
-import com.jeecms.cms.entity.assist.CmsGuestbookCtg;
-import com.jeecms.cms.entity.assist.CmsGuestbookExt;
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.manager.assist.CmsGuestbookCtgMng;
-import com.jeecms.cms.manager.assist.CmsGuestbookMng;
-import com.jeecms.cms.manager.main.CmsLogMng;
-import com.jeecms.cms.web.CmsUtils;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.page.Pagination;
-import com.jeecms.common.web.CookieUtils;
-import com.jeecms.common.web.RequestUtils;
+import com.yunkuo.cms.entity.assist.CmsGuestbook;
+import com.yunkuo.cms.entity.assist.CmsGuestbookCtg;
+import com.yunkuo.cms.entity.assist.CmsGuestbookExt;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.manager.assist.CmsGuestbookCtgMng;
+import com.yunkuo.cms.manager.assist.CmsGuestbookMng;
+import com.yunkuo.cms.manager.main.CmsLogMng;
+import com.yunkuo.cms.web.CmsUtils;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.page.Pagination;
+import com.yunkuo.common.web.CookieUtils;
+import com.yunkuo.common.web.RequestUtils;
 
 @Controller
 public class CmsGuestbookAct {

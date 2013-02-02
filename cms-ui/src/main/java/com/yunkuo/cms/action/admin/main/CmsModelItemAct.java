@@ -1,6 +1,6 @@
-package com.jeecms.cms.action.admin.main;
+package com.yunkuo.cms.action.admin.main;
 
-import static com.jeecms.common.web.Constants.MESSAGE;
+import static com.yunkuo.common.web.Constants.MESSAGE;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +15,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jeecms.cms.entity.main.CmsModel;
-import com.jeecms.cms.entity.main.CmsModelItem;
-import com.jeecms.cms.manager.main.CmsModelItemMng;
-import com.jeecms.cms.manager.main.CmsModelMng;
-import com.jeecms.cms.web.WebErrors;
-import com.jeecms.common.web.springmvc.MessageResolver;
+import com.yunkuo.cms.entity.main.CmsModel;
+import com.yunkuo.cms.entity.main.CmsModelItem;
+import com.yunkuo.cms.manager.main.CmsModelItemMng;
+import com.yunkuo.cms.manager.main.CmsModelMng;
+import com.yunkuo.cms.web.WebErrors;
+import com.yunkuo.common.web.springmvc.MessageResolver;
 
 @Controller
 public class CmsModelItemAct {

@@ -1,4 +1,4 @@
-package com.jeecms.cms;
+package com.yunkuo.cms;
 
 /**
  * CMS常量

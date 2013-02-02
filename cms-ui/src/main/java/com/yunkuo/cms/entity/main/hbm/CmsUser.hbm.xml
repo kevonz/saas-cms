@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.jeecms.cms.entity.main">
+<hibernate-mapping package="com.yunkuo.cms.entity.main">
 	<class name="CmsUser" table="jc_user">
 		<meta attribute="sync-DAO">false</meta>
 		<cache usage="read-write"/>
@@ -45,19 +45,19 @@
 		</set>
 		<set name="sendMessages" inverse="true" cascade="delete">
 			<key column="msg_send_user"/>
-			<one-to-many class="com.jeecms.cms.entity.assist.CmsMessage"/>
+			<one-to-many class="com.yunkuo.cms.entity.assist.CmsMessage"/>
 		</set>
 		<set name="receivMessages" inverse="true" cascade="delete">
 			<key column="msg_receiver_user"/>
-			<one-to-many class="com.jeecms.cms.entity.assist.CmsMessage"/>
+			<one-to-many class="com.yunkuo.cms.entity.assist.CmsMessage"/>
 		</set>
 		<set name="sendReceiverMessages" inverse="true" cascade="delete">
 			<key column="msg_send_user"/>
-			<one-to-many class="com.jeecms.cms.entity.assist.CmsReceiverMessage"/>
+			<one-to-many class="com.yunkuo.cms.entity.assist.CmsReceiverMessage"/>
 		</set>
 		<set name="receivReceiverMessages" inverse="true" cascade="delete">
 			<key column="msg_receiver_user"/>
-			<one-to-many class="com.jeecms.cms.entity.assist.CmsReceiverMessage"/>
+			<one-to-many class="com.yunkuo.cms.entity.assist.CmsReceiverMessage"/>
 		</set>
 	</class>
 </hibernate-mapping>

@@ -1,7 +1,7 @@
-package com.jeecms.cms.web;
+package com.yunkuo.cms.web;
 
-import com.jeecms.cms.entity.main.CmsSite;
-import com.jeecms.cms.entity.main.CmsUser;
+import com.yunkuo.cms.entity.main.CmsSite;
+import com.yunkuo.cms.entity.main.CmsUser;
 
 /**
  * CMS线程变量
