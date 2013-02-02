@@ -62,7 +62,7 @@
 
 	<bean id="cacheProvider" class="com.yunkuo.common.hibernate3.SpringEhCacheProvider">
 		<property name="configLocation">
-			<value>classpath:ehcache-hibernate.xml</value>
+			<value>/WEB-INF/config/ehcache/ehcache-hibernate.xml</value>
 		</property>
 		<property name="diskStoreLocation">
 			<value>/WEB-INF/cache/hibernate</value>

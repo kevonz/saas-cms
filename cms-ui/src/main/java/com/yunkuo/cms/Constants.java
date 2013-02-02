@@ -84,15 +84,15 @@ public class Constants {
 	/**
 	 * 上传路径
 	 */
-	public static final String UPLOAD_PATH = "/u/cms/";
+	public static final String UPLOAD_PATH = "/upload/cms/";
 	/**
 	 * 资源路径
 	 */
-	public static final String RES_PATH = "/r/cms";
+	public static final String RES_PATH = "/static/cms";
 	/**
 	 * 模板路径
 	 */
-	public static final String TPL_BASE = "/WEB-INF/t/cms";
+	public static final String TPL_BASE = "/WEB-INF/template/cms";
 	/**
 	 * 全文检索索引路径
 	 */
@@ -100,15 +100,15 @@ public class Constants {
 	/**
 	 * 列表样式模板路径
 	 */
-	public static final String TPL_STYLE_LIST = "/WEB-INF/t/cms_sys_defined/style_list/style_";
+	public static final String TPL_STYLE_LIST = "/WEB-INF/template/cms_sys_defined/style_list/style_";
 	/**
 	 * 内容分页模板路径
 	 */
-	public static final String TPL_STYLE_PAGE_CONTENT = "/WEB-INF/t/cms_sys_defined/style_page/content_";
+	public static final String TPL_STYLE_PAGE_CONTENT = "/WEB-INF/template/cms_sys_defined/style_page/content_";
 	/**
 	 * 列表分页模板路径
 	 */
-	public static final String TPL_STYLE_PAGE_CHANNEL = "/WEB-INF/t/cms_sys_defined/style_page/channel_";
+	public static final String TPL_STYLE_PAGE_CHANNEL = "/WEB-INF/template/cms_sys_defined/style_page/channel_";
 	/**
 	 * 页面禁止访问
 	 */

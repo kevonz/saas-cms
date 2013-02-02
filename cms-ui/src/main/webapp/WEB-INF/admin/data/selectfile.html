@@ -50,7 +50,7 @@ function selectFile(name)
 <div class="body-box">
 <form id="tableForm" method="post">
 <@p.table value=list;file,i,has_next><#rt/>
-	<@p.column title=" " width="20" align="center"><img src="${base}/res/common/img/file/${file.ico}.gif"/></@p.column><#t/>
+	<@p.column title=" " width="20" align="center"><img src="${base}/static/_default/common/img/file/${file.ico}.gif"/></@p.column><#t/>
 	<@p.column code="resource.filename">
 		<span style="cursor: pointer;" onclick="selectFile('${file.filename}')">${file.filename}</span>
 	</@p.column><#t/>

@@ -141,7 +141,7 @@ function hideImage(a) {
 	<@p.column title="<input type='checkbox' onclick='Pn.checkbox(\"names\",this.checked)'/>" width="20">
 		<input type="checkbox" name="names" value="${resource.name}"/><#t/>
 	</@p.column><#t/>
-	<@p.column title=" " width="20" align="center"><img src="${base}/res/common/img/file/${resource.ico}.gif"/></@p.column><#t/>
+	<@p.column title=" " width="20" align="center"><img src="${base}/static/_default/common/img/file/${resource.ico}.gif"/></@p.column><#t/>
 	<@p.column code="resource.filename">
 		<#if resource.directory>
 		<a href="v_list.do?root=${resource.name}">${resource.filename}</a>

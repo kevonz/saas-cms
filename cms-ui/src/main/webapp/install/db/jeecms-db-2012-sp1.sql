@@ -180,13 +180,13 @@ CREATE TABLE `jc_advertising_attr` (
 LOCK TABLES `jc_advertising_attr` WRITE;
 /*!40000 ALTER TABLE `jc_advertising_attr` DISABLE KEYS */;
 INSERT INTO `jc_advertising_attr` VALUES (1,'image_title','查看JEECMS官方网站');
-INSERT INTO `jc_advertising_attr` VALUES (1,'image_url','/r/cms/www/red/img/banner.gif');
+INSERT INTO `jc_advertising_attr` VALUES (1,'image_url','/static/cms/www/red/img/banner.gif');
 INSERT INTO `jc_advertising_attr` VALUES (1,'image_target','_blank');
 INSERT INTO `jc_advertising_attr` VALUES (1,'image_link','http://www.jeecms.com');
 INSERT INTO `jc_advertising_attr` VALUES (1,'image_width','735');
 INSERT INTO `jc_advertising_attr` VALUES (1,'image_height','70');
 INSERT INTO `jc_advertising_attr` VALUES (2,'image_title','JEECMS官方网站');
-INSERT INTO `jc_advertising_attr` VALUES (2,'image_url','/r/cms/www/red/img/banner1.jpg');
+INSERT INTO `jc_advertising_attr` VALUES (2,'image_url','/static/cms/www/red/img/banner1.jpg');
 INSERT INTO `jc_advertising_attr` VALUES (2,'image_target','_blank');
 INSERT INTO `jc_advertising_attr` VALUES (2,'image_link','http://www.jeecms.com');
 INSERT INTO `jc_advertising_attr` VALUES (2,'image_width','960');
@@ -362,35 +362,35 @@ CREATE TABLE `jc_channel_ext` (
 
 LOCK TABLES `jc_channel_ext` WRITE;
 /*!40000 ALTER TABLE `jc_channel_ext` DISABLE KEYS */;
-INSERT INTO `jc_channel_ext` VALUES (1,'新闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'新闻资讯','新闻资讯','新闻资讯');
+INSERT INTO `jc_channel_ext` VALUES (1,'新闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'新闻资讯','新闻资讯','新闻资讯');
 INSERT INTO `jc_channel_ext` VALUES (9,'下载',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'下载中心','下载中心','下载中心');
 INSERT INTO `jc_channel_ext` VALUES (10,'关于我们',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'关于我们','关于我们','关于我们');
-INSERT INTO `jc_channel_ext` VALUES (11,'国内新闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/新闻内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,'国内新闻','国内新闻','国内新闻');
-INSERT INTO `jc_channel_ext` VALUES (12,'国际新闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目_子栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'国际新闻','国际新闻','国际新闻');
-INSERT INTO `jc_channel_ext` VALUES (13,'社会热点',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目_子栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'社会热点','社会热点','社会热点');
-INSERT INTO `jc_channel_ext` VALUES (14,'时事评论',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目_子栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'时事评论','时事评论','时事评论');
-INSERT INTO `jc_channel_ext` VALUES (15,'图片新闻',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/作品内容.html',NULL,NULL,1,0,139,139,310,310,0,1,0,'图片新闻','图片新闻','图片新闻');
-INSERT INTO `jc_channel_ext` VALUES (37,'系统软件',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/下载栏目_二级.html',NULL,NULL,NULL,1,1,48,48,139,98,0,1,0,'系统软件','系统软件','系统软件');
-INSERT INTO `jc_channel_ext` VALUES (38,'网络游戏',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/下载栏目_二级.html',NULL,NULL,NULL,1,1,48,48,139,98,0,1,0,'网络游戏','网络工具','网络游戏');
-INSERT INTO `jc_channel_ext` VALUES (39,'媒体工具',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/下载栏目_二级.html',NULL,NULL,NULL,1,1,48,48,139,98,0,1,0,'媒体工具','媒体工具','媒体工具');
-INSERT INTO `jc_channel_ext` VALUES (40,'基金视点',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/新闻内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (41,'财经报道',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/新闻栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/新闻内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (42,'图库',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/图库栏目.html','/WEB-INF/t/cms/www/red/content/图库内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (43,'文娱体育',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/图库栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/图库内容.html',NULL,NULL,1,0,67,50,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (44,'美容资讯',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/图库栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/图库内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (45,'文化 校园',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/图库栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/图库内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (11,'国内新闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/新闻内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,'国内新闻','国内新闻','国内新闻');
+INSERT INTO `jc_channel_ext` VALUES (12,'国际新闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目_子栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'国际新闻','国际新闻','国际新闻');
+INSERT INTO `jc_channel_ext` VALUES (13,'社会热点',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目_子栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'社会热点','社会热点','社会热点');
+INSERT INTO `jc_channel_ext` VALUES (14,'时事评论',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目_子栏目.html',NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,'时事评论','时事评论','时事评论');
+INSERT INTO `jc_channel_ext` VALUES (15,'图片新闻',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/作品内容.html',NULL,NULL,1,0,139,139,310,310,0,1,0,'图片新闻','图片新闻','图片新闻');
+INSERT INTO `jc_channel_ext` VALUES (37,'系统软件',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/下载栏目_二级.html',NULL,NULL,NULL,1,1,48,48,139,98,0,1,0,'系统软件','系统软件','系统软件');
+INSERT INTO `jc_channel_ext` VALUES (38,'网络游戏',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/下载栏目_二级.html',NULL,NULL,NULL,1,1,48,48,139,98,0,1,0,'网络游戏','网络工具','网络游戏');
+INSERT INTO `jc_channel_ext` VALUES (39,'媒体工具',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/下载栏目_二级.html',NULL,NULL,NULL,1,1,48,48,139,98,0,1,0,'媒体工具','媒体工具','媒体工具');
+INSERT INTO `jc_channel_ext` VALUES (40,'基金视点',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/新闻内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (41,'财经报道',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/新闻栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/新闻内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (42,'图库',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/图库栏目.html','/WEB-INF/template/cms/www/red/content/图库内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (43,'文娱体育',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/图库栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/图库内容.html',NULL,NULL,1,0,67,50,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (44,'美容资讯',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/图库栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/图库内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (45,'文化 校园',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/图库栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/图库内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
 INSERT INTO `jc_channel_ext` VALUES (46,'视频',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (47,'作品',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/作品栏目.html','/WEB-INF/t/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (47,'作品',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/作品栏目.html','/WEB-INF/template/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
 INSERT INTO `jc_channel_ext` VALUES (48,'产品',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (49,'明星糗镜头',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (50,'有才恶搞',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (51,'经典搞笑专辑',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (52,'哈哈趣闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (53,'风景风光类',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (54,'蓝天白云绿地',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (55,'冬雪系列',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/t/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (56,'手机',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/产品栏目.html','/WEB-INF/t/cms/www/red/content/产品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
-INSERT INTO `jc_channel_ext` VALUES (57,'实用助手',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/t/cms/www/red/channel/下载栏目.html','/WEB-INF/t/cms/www/red/content/下载内容.html',NULL,NULL,1,1,48,48,180,120,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (49,'明星糗镜头',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (50,'有才恶搞',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (51,'经典搞笑专辑',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (52,'哈哈趣闻',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/视频栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/视频内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (53,'风景风光类',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (54,'蓝天白云绿地',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (55,'冬雪系列',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/作品栏目_子栏目.html','/WEB-INF/template/cms/www/red/content/作品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (56,'手机',NULL,NULL,'0','0','0','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/产品栏目.html','/WEB-INF/template/cms/www/red/content/产品内容.html',NULL,NULL,0,0,139,139,310,310,0,1,0,NULL,NULL,NULL);
+INSERT INTO `jc_channel_ext` VALUES (57,'实用助手',NULL,NULL,'0','0','1','0',20,NULL,NULL,NULL,'/WEB-INF/template/cms/www/red/channel/下载栏目.html','/WEB-INF/template/cms/www/red/content/下载内容.html',NULL,NULL,1,1,48,48,180,120,0,1,0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `jc_channel_ext` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -598,13 +598,13 @@ CREATE TABLE `jc_config` (
   `port` int(11) default NULL COMMENT '端口',
   `db_file_uri` varchar(50) NOT NULL default '/dbfile.svl?n=' COMMENT '数据库附件访问地址',
   `is_upload_to_db` tinyint(1) NOT NULL default '0' COMMENT '上传附件至数据库',
-  `def_img` varchar(255) NOT NULL default '/JeeCms/r/cms/www/default/no_picture.gif' COMMENT '图片不存在时默认图片',
+  `def_img` varchar(255) NOT NULL default '/JeeCms/static/cms/www/default/no_picture.gif' COMMENT '图片不存在时默认图片',
   `login_url` varchar(255) NOT NULL default '/login.jspx' COMMENT '登录地址',
   `process_url` varchar(255) default NULL COMMENT '登录后处理地址',
   `mark_on` tinyint(1) NOT NULL default '1' COMMENT '开启图片水印',
   `mark_width` int(11) NOT NULL default '120' COMMENT '图片最小宽度',
   `mark_height` int(11) NOT NULL default '120' COMMENT '图片最小高度',
-  `mark_image` varchar(100) default '/r/cms/www/watermark.png' COMMENT '图片水印',
+  `mark_image` varchar(100) default '/static/cms/www/watermark.png' COMMENT '图片水印',
   `mark_content` varchar(100) NOT NULL default 'www.jeecms.com' COMMENT '文字水印内容',
   `mark_size` int(11) NOT NULL default '20' COMMENT '文字水印大小',
   `mark_color` varchar(10) NOT NULL default '#FF0000' COMMENT '文字水印颜色',
@@ -630,7 +630,7 @@ CREATE TABLE `jc_config` (
 
 LOCK TABLES `jc_config` WRITE;
 /*!40000 ALTER TABLE `jc_config` DISABLE KEYS */;
-INSERT INTO `jc_config` VALUES (1,NULL,NULL,80,'/dbfile.svl?n=',0,'/r/cms/www/no_picture.gif','/login.jspx',NULL,1,120,120,'/r/cms/www/watermark.png','www.jeecms.com',20,'#FF0000',50,1,0,0,'2011-12-19','2011-12-19 17:30:44','jeecms',12,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `jc_config` VALUES (1,NULL,NULL,80,'/dbfile.svl?n=',0,'/static/cms/www/no_picture.gif','/login.jspx',NULL,1,120,120,'/static/cms/www/watermark.png','www.jeecms.com',20,'#FF0000',50,1,0,0,'2011-12-19','2011-12-19 17:30:44','jeecms',12,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `jc_config` ENABLE KEYS */;
 UNLOCK TABLES;
 
