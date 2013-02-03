@@ -15,8 +15,7 @@ a{text-decoration:none;}
 #tab ul li div#oDIV4 {left:-300px;}
 #tab,#tab ul li div,#tab ul li div li {width:100%;}
 #tab {height:700px;background:#FFFFFF;overflow:hidden;}
-#tab ul li h3 a {height:18px;padding:5px 0 2px;margin:5px 0px 0px 5px;text-align:center;
-border:solid #ccc 1px;border-bottom:none;color:#333;}
+#tab ul li h3 a {height:18px;padding:5px 0 2px;margin:5px 0px 0px 5px;text-align:center;border:solid #ccc 1px;border-bottom:none;color:#333;}
 #tab ul li h3 a:hover {background-color:#ddd;border-color:#fff;}
 #tab ul li.up h3 a {background:#999;border-color:#fff #999 #999 #fff;color:#fff;}
 #tab ul li div {border:solid #999;border-width:1px 0;background:#f7f7f7;width:100%;height:167px;}
@@ -29,8 +28,7 @@ border:solid #ccc 1px;border-bottom:none;color:#333;}
 #tab #oDIV3 iframe {border:none;width:100%;height:660px;margin:5px;padding-top:40px;}
 #tab #oDIV4 iframe {border:none;width:100%;height:660px;margin:5px;padding-top:40px;}
 .keyupImg{background:#999;border-color:#fff #999 #999 #fff;color:#fff;}
-.beginImg{height:18px;padding:5px 0 2px;margin:5px 0px 0px 5px;text-align:center;
-border:solid #ccc 1px;border-bottom:none;color:#333;}
+.beginImg{height:18px;padding:5px 0 2px;margin:5px 0px 0px 5px;text-align:center;border:solid #ccc 1px;border-bottom:none;color:#333;}
 
 
 .tab{ width:540px; margin-left:10px; border-left:1px solid #ccc;}
