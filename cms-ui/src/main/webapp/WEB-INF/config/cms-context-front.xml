@@ -6,6 +6,9 @@
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
 	default-lazy-init="true">
 	<context:component-scan base-package="com.yunkuo.cms.web" />
+	<context:annotation-config/>
+	<context:component-scan base-package="com.yunkuo.cms.action.front,com.yunkuo.cms.action.member" />
+	<!-- <import resource="jeecms-servlet-front-action.xml"/> -->
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="cacheSeconds" value="-1"/>
 		<property name="basenames">
@@ -113,8 +116,5 @@
 			</props>
 		</property>
 	</bean>
-	<context:annotation-config/>
-	<context:component-scan base-package="com.yunkuo.cms.action.front,com.yunkuo.cms.action.member" />
-	<!-- <import resource="jeecms-servlet-front-action.xml"/> -->
 
 </beans>

@@ -48,7 +48,7 @@ public class DynamicPageAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/##-", method = RequestMethod.GET)
 	public String index(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		FrontUtils.frontData(request, model, site);
@@ -71,7 +71,7 @@ public class DynamicPageAct {
 	/**
 	 * 动态页入口
 	 */
-	@RequestMapping(value = "/**/*.*", method = RequestMethod.GET)
+	@RequestMapping(value = "/##-**/*.*", method = RequestMethod.GET)
 	public String dynamic(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		// 尽量不要携带太多参数，多使用标签获取数据。
