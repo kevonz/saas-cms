@@ -55,7 +55,7 @@ public class RegisterAct {
 	public static final String REGISTER_ACTIVE_SUCCESS = "tpl.registerActiveSuccess";
 	public static final String LOGIN_INPUT = "tpl.loginInput";
 
-	@RequestMapping(value = "/register.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String input(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -75,7 +75,7 @@ public class RegisterAct {
 				TPLDIR_MEMBER, REGISTER);
 	}
 
-	@RequestMapping(value = "/register.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String submit(String username, String email, String password,
 			CmsUserExt userExt, String captcha, String nextUrl,
 			HttpServletRequest request, HttpServletResponse response,
