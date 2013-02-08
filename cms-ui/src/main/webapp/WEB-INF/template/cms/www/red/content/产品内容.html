@@ -47,7 +47,7 @@ $(function() {
         [/#if]
         <div class="content">${txt!}</div>
         <div class="pagebar">[#include "../style_page/content.html"/]</div>
-        <div class="tags"><strong>Tags：</strong> [#if content.tagStr??] [#list content.tags as t]<a target="_blank" href="${base}/tag/${t.id}.jspx">${t.name}</a>[/#list] [#else] 本文暂无Tags！ [/#if]</div>
+        <div class="tags"><strong>Tags：</strong> [#if content.tagStr??] [#list content.tags as t]<a target="_blank" href="${base}/tag/${t.id}">${t.name}</a>[/#list] [#else] 本文暂无Tags！ [/#if]</div>
         <div class="other box">[#if channel.allowUpdown]
         <div class="ding fl" onclick="Cms.up('${base}',${content.id},${content.ups});">
         <p>顶</p>
