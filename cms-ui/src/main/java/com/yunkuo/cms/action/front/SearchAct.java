@@ -22,7 +22,7 @@ public class SearchAct {
 	public static final String SEARCH_RESULT = "tpl.searchResult";
 	public static final String SEARCH_ERROR = "tpl.searchError";
 
-	@RequestMapping(value = "/search*.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/search*", method = RequestMethod.GET)
 	public String index(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);

@@ -1067,7 +1067,7 @@ CREATE TABLE `jc_config` (
   `db_file_uri` varchar(50) NOT NULL DEFAULT '/dbfile.svl?n=' COMMENT '数据库附件访问地址',
   `is_upload_to_db` tinyint(1) NOT NULL DEFAULT '0' COMMENT '上传附件至数据库',
   `def_img` varchar(255) NOT NULL DEFAULT '/JeeCms/r/cms/www/default/no_picture.gif' COMMENT '图片不存在时默认图片',
-  `login_url` varchar(255) NOT NULL DEFAULT '/login.jspx' COMMENT '登录地址',
+  `login_url` varchar(255) NOT NULL DEFAULT '/login' COMMENT '登录地址',
   `process_url` varchar(255) DEFAULT NULL COMMENT '登录后处理地址',
   `mark_on` tinyint(1) NOT NULL DEFAULT '1' COMMENT '开启图片水印',
   `mark_width` int(11) NOT NULL DEFAULT '120' COMMENT '图片最小宽度',
@@ -1096,7 +1096,7 @@ CREATE TABLE `jc_config` (
 -- ----------------------------
 -- Records of jc_config
 -- ----------------------------
-INSERT INTO `jc_config` VALUES ('1', '/cms-ui', null, '8080', '/dbfile.svl?n=', '0', '/r/cms/www/no_picture.gif', '/login.jspx', null, '1', '120', '120', '/r/cms/www/watermark.png', 'www.yunkuo.com', '20', '#FF0000', '50', '1', '0', '0', '2013-02-05', '2013-02-05 22:32:39', 'jeecms', '12', null, null, null, null, null, '1');
+INSERT INTO `jc_config` VALUES ('1', '/cms-ui', null, '8080', '/dbfile.svl?n=', '0', '/r/cms/www/no_picture.gif', '/login', null, '1', '120', '120', '/r/cms/www/watermark.png', 'www.yunkuo.com', '20', '#FF0000', '50', '1', '0', '0', '2013-02-05', '2013-02-05 22:32:39', 'jeecms', '12', null, null, null, null, null, '1');
 
 -- ----------------------------
 -- Table structure for `jc_config_attr`
@@ -5549,7 +5549,7 @@ INSERT INTO `jc_site_flow` VALUES ('34', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2
 INSERT INTO `jc_site_flow` VALUES ('35', '1', '0:0:0:0:0:0:0:1', '2013-1-27', '2013-01-27 23:20:28', 'http://localhost:8080/cms-ui/', '', '', '', '', 'uy3r260f382m1nuk1vtreqa1r');
 INSERT INTO `jc_site_flow` VALUES ('36', '1', '0:0:0:0:0:0:0:1', '2013-1-28', '2013-01-28 00:15:41', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/register', '', '', '1af23ime8jex41ub014jsy6dty');
 INSERT INTO `jc_site_flow` VALUES ('37', '1', '0:0:0:0:0:0:0:1', '2013-1-28', '2013-01-28 23:12:18', 'http://localhost:8080/cms-ui/cjbd/112.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/tag/40', '', '', '5DA84C60D4DA5CCF9EF7C9ACED066F2A');
-INSERT INTO `jc_site_flow` VALUES ('38', '1', '0:0:0:0:0:0:0:1', '2013-1-31', '2013-01-31 23:59:54', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'D24DFB3E1EF2F14920C49E349EC91D60');
+INSERT INTO `jc_site_flow` VALUES ('38', '1', '0:0:0:0:0:0:0:1', '2013-1-31', '2013-01-31 23:59:54', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'D24DFB3E1EF2F14920C49E349EC91D60');
 INSERT INTO `jc_site_flow` VALUES ('39', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 21:04:57', 'http://localhost:8080/cms-ui/', '', '', '', '', '55FA62F13E22437DD80571F5C945CB12');
 INSERT INTO `jc_site_flow` VALUES ('40', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 21:59:33', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/index.jspx', '', '', '55FA62F13E22437DD80571F5C945CB12');
 INSERT INTO `jc_site_flow` VALUES ('41', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 22:39:28', 'http://localhost:8080/cms-ui/shehui/247.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '55FA62F13E22437DD80571F5C945CB12');
@@ -5563,15 +5563,15 @@ INSERT INTO `jc_site_flow` VALUES ('48', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '20
 INSERT INTO `jc_site_flow` VALUES ('49', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 21:25:53', 'http://localhost:8080/cms-ui/', '', '', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
 INSERT INTO `jc_site_flow` VALUES ('50', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 21:27:46', 'http://localhost:8080/cms-ui/gnxw/603.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/content/v_list.do', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
 INSERT INTO `jc_site_flow` VALUES ('51', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 21:25:56', 'http://localhost:8080/cms-ui/gnxw/39.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
-INSERT INTO `jc_site_flow` VALUES ('52', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:26:28', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
+INSERT INTO `jc_site_flow` VALUES ('52', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:26:28', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
 INSERT INTO `jc_site_flow` VALUES ('53', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:39:57', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/comment.jspx?contentId=246', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
-INSERT INTO `jc_site_flow` VALUES ('54', '1', '0:0:0:0:0:0:0:1', '2013-2-4', '2013-02-04 21:11:52', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'fnwe7kje2gwb1i6hxy2ke7cje');
+INSERT INTO `jc_site_flow` VALUES ('54', '1', '0:0:0:0:0:0:0:1', '2013-2-4', '2013-02-04 21:11:52', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'fnwe7kje2gwb1i6hxy2ke7cje');
 INSERT INTO `jc_site_flow` VALUES ('55', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:58:06', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('56', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:58:32', 'http://localhost:8080/cms-ui/gnxw/index_2.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/gnxw/index.jhtml', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('57', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:59:21', 'http://localhost:8080/cms-ui/gnxw/index_3.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/gnxw/index_2.jhtml', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('58', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:58:22', 'http://localhost:8080/cms-ui/gnxw/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/news/index.jhtml', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('59', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:32:40', 'http://localhost:8080/cms-ui/shehui/250.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
-INSERT INTO `jc_site_flow` VALUES ('60', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:35:21', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
+INSERT INTO `jc_site_flow` VALUES ('60', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:35:21', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
 INSERT INTO `jc_site_flow` VALUES ('61', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:42:23', 'http://localhost:8080/cms-ui/gnxw/249.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/topic/2.jspx', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
 INSERT INTO `jc_site_flow` VALUES ('62', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 00:32:52', 'http://localhost:8080/cms-ui/', '', '', '', '', '6E0FE640A168EE5A6B02A16387205E6B');
 INSERT INTO `jc_site_flow` VALUES ('63', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 22:11:20', 'http://localhost:8080/cms-ui/index.html', '', '', '', '', '02A8D37922F9801DFFCE0BC18732AD56');
@@ -5582,11 +5582,11 @@ INSERT INTO `jc_site_flow` VALUES ('67', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '20
 INSERT INTO `jc_site_flow` VALUES ('68', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:12:44', 'http://localhost:8080/cms-ui/gnxw/39.htm', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('69', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:13:19', 'http://localhost:8080/cms-ui/index.jhtml', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('70', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:36:06', 'http://localhost:8080/cms-ui/', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
-INSERT INTO `jc_site_flow` VALUES ('71', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:45:42', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
+INSERT INTO `jc_site_flow` VALUES ('71', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:45:42', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('72', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:01:46', 'http://localhost:8080/cms-ui/gnxw/602.htm', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('73', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:01:59', 'http://localhost:8080/cms-ui/dong/327.htm', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('74', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:01:46', 'http://localhost:8080/cms-ui/gnxw/39.htm', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
-INSERT INTO `jc_site_flow` VALUES ('75', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:05:48', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
+INSERT INTO `jc_site_flow` VALUES ('75', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:05:48', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('76', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:06:18', 'http://localhost:8080/cms-ui/about.htm', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('77', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:09:06', 'http://localhost:8080/cms-ui/', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('78', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:08:48', 'http://localhost:8080/cms-ui/index.jhtml', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');

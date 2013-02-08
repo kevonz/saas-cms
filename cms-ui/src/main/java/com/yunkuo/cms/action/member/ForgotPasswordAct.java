@@ -54,7 +54,7 @@ public class ForgotPasswordAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/forgot_password.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/member/forgotpassword", method = RequestMethod.GET)
 	public String forgotPasswordInput(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -73,7 +73,7 @@ public class ForgotPasswordAct {
 	 * @param response
 	 * @return
 	 */
-	@RequestMapping(value = "/member/forgot_password.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/member/forgotpassword", method = RequestMethod.POST)
 	public String forgotPasswordSubmit(String username, String email,
 			String captcha, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {

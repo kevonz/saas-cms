@@ -44,7 +44,7 @@ public class CmsLoginAct {
 
 	public static final String COOKIE_ERROR_REMAINING = "_error_remaining";
 
-	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String input(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		String processUrl = RequestUtils.getQueryParam(request, PROCESS_URL);
@@ -78,7 +78,7 @@ public class CmsLoginAct {
 		return "login";
 	}
 
-	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String submit(String username, String password, String captcha,
 			String processUrl, String returnUrl, String message,
 			HttpServletRequest request, HttpServletResponse response,
@@ -106,7 +106,7 @@ public class CmsLoginAct {
 				if (view != null) {
 					return view;
 				} else {
-					return "redirect:login.jspx";
+					return "redirect:login";
 				}
 			} catch (UsernameNotFoundException e) {
 				errors.addErrorString(e.getMessage());
@@ -137,7 +137,7 @@ public class CmsLoginAct {
 		return "login";
 	}
 
-	@RequestMapping(value = "/logout.do")
+	@RequestMapping(value = "/logout")
 	public String logout(HttpServletRequest request,
 			HttpServletResponse response) {
 		String authId = (String) session.getAttribute(request, AUTH_KEY);
@@ -151,7 +151,7 @@ public class CmsLoginAct {
 		if (view != null) {
 			return view;
 		} else {
-			return "redirect:login.jspx";
+			return "redirect:login";
 		}
 	}
 

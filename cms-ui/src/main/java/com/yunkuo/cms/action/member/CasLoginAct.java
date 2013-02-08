@@ -49,7 +49,7 @@ public class CasLoginAct {
 	public static final String LOGIN_INPUT = "tpl.loginInput";
 	public static final String LOGIN_STATUS = "tpl.loginStatus";
 
-	@RequestMapping(value = "/login.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String input(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String sol = site.getSolutionPath();
@@ -86,7 +86,7 @@ public class CasLoginAct {
 		return FrontUtils.getTplPath(request, sol, TPLDIR_MEMBER, LOGIN_INPUT);
 	}
 
-	@RequestMapping(value = "/login.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String submit(String username, String password, String captcha,
 			String processUrl, String returnUrl, String message,
 			HttpServletRequest request, HttpServletResponse response,
@@ -116,7 +116,7 @@ public class CasLoginAct {
 					return view;
 				} else {
 					FrontUtils.frontData(request, model, site);
-					return "redirect:login.jspx";
+					return "redirect:login";
 				}
 			} catch (UsernameNotFoundException e) {
 				errors.addErrorString(e.getMessage());
@@ -142,7 +142,7 @@ public class CasLoginAct {
 		return FrontUtils.getTplPath(request, sol, TPLDIR_MEMBER, LOGIN_INPUT);
 	}
 
-	@RequestMapping(value = "/logout.jspx")
+	@RequestMapping(value = "/logout")
 	public String logout(HttpServletRequest request,
 			HttpServletResponse response) {
 		String authId = (String) session.getAttribute(request, AUTH_KEY);
@@ -156,7 +156,7 @@ public class CasLoginAct {
 		if (view != null) {
 			return view;
 		} else {
-			return "redirect:login.jspx";
+			return "redirect:login";
 		}
 	}
 

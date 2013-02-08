@@ -65,7 +65,7 @@ public class LoginAct {
 	 * @param model
 	 * @return 重定向至processUrl，如prosessUrl不存在，则返回登录成功界面。
 	 */
-	@RequestMapping(value = "/login.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String input(HttpServletRequest request, ModelMap model) {
 		String processUrl = RequestUtils.getQueryParam(request, PROCESS_URL);
 		String returnUrl = RequestUtils.getQueryParam(request, RETURN_URL);
@@ -97,7 +97,7 @@ public class LoginAct {
 		return LOGIN_INPUT;
 	}
 
-	@RequestMapping(value = "/login.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String submit(String username, String password, String processUrl,
 			String returnUrl, String message, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
@@ -148,7 +148,7 @@ public class LoginAct {
 		if (view != null) {
 			return view;
 		} else {
-			return "redirect:login.jspx";
+			return "redirect:login";
 		}
 	}
 

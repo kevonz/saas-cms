@@ -45,7 +45,7 @@ public class GuestbookMemberAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/myguestbook.jspx")
+	@RequestMapping(value = "/member/myguestbook")
 	public String myguestbook(Integer pageNo, Integer ctgId,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
