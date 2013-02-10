@@ -3,7 +3,6 @@ package com.yunkuo.common.hibernate3;
 /**
  * 实体按优先级排序类的接口。用于hibernate的sort排序
  * 
- * @author liufang
  * 
  */
 public interface PriorityInterface {

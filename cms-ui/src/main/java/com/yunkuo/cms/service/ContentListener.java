@@ -7,7 +7,6 @@ import com.yunkuo.cms.entity.main.Content;
 /**
  * 内容修改监听器
  * 
- * @author liufang
  * 
  */
 public interface ContentListener {

@@ -7,7 +7,6 @@ import java.util.Date;
  * 
  * 定义统一的内容显示接口，便于所有内容可以采用统一的显示方式。
  * 
- * @author liufang
  * 
  */
 public interface ContentInterface {

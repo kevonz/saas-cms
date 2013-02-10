@@ -12,7 +12,6 @@ import org.springframework.web.util.HtmlUtils;
 /**
  * 字符串的帮助类，提供静态方法，不可以实例化。
  * 
- * @author liufang
  * 
  */
 public class StrUtils {

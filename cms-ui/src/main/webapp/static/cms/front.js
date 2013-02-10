@@ -9,7 +9,7 @@ Cms.viewCount = function(base, contentId, viewId, commentId, downloadId, upId,
 	downloadId = downloadId || "downloads";
 	upId = upId || "ups";
 	downId = downId || "downs";
-	$.getJSON(base + "/content_view.jspx", {
+	$.getJSON(base + "/content_view", {
 		contentId : contentId
 	}, function(data) {
 		if (data.length > 0) {
@@ -25,7 +25,7 @@ Cms.viewCount = function(base, contentId, viewId, commentId, downloadId, upId,
  * 站点流量统计
  */
 Cms.siteFlow = function(base, page, referer) {
-	$.get(base + "/flow_statistic.jspx", {
+	$.get(base + "/flow_statistic", {
 		page : page,
 		referer : referer
 	});
@@ -40,7 +40,7 @@ Cms.up = function(base, contentId, origValue, upId) {
 		return false;
 	}
 	$.cookie("_cms_updown_" + contentId, "1");
-	$.get(base + "/content_up.jspx", {
+	$.get(base + "/content_up", {
 		"contentId" : contentId
 	}, function(data) {
 		$("#" + upId).text(origValue + 1);
@@ -57,7 +57,7 @@ Cms.down = function(base, contentId, origValue, downId) {
 		return false;
 	}
 	$.cookie("_cms_updown_" + contentId, "1");
-	$.get(base + "/content_down.jspx", {
+	$.get(base + "/content_down", {
 		contentId : contentId
 	}, function(data) {
 		$("#" + downId).text(origValue + 1);
@@ -68,13 +68,13 @@ Cms.down = function(base, contentId, origValue, downId) {
  * 获取附件地址
  */
 Cms.attachment = function(base, contentId, n, prefix) {
-	$.get(base + "/attachment_url.jspx", {
+	$.get(base + "/attachment_url", {
 		"cid" : contentId,
 		"n" : n
 	}, function(data) {
 		var url;
 		for (var i = 0;i < n; i++) {
-			url = base + "/attachment.jspx?cid=" + contentId + "&i=" + i
+			url = base + "/attachment?cid=" + contentId + "&i=" + i
 					+ data[i];
 			$("#" + prefix + i).attr("href", url);
 		}
@@ -106,14 +106,14 @@ Cms.comment = function(callback, form) {
  */
 Cms.commentList = function(base, c, options) {
 	c = c || "commentListDiv";
-	$("#" + c).load(base + "/comment_list.jspx", options);
+	$("#" + c).load(base + "/comment_list", options);
 }
 /**
  * 客户端包含登录
  */
 Cms.loginCsi = function(base, c, options) {
 	c = c || "loginCsiDiv";
-	$("#" + c).load(base + "/login_csi.jspx", options);
+	$("#" + c).load(base + "/login_csi", options);
 }
 /**
  * 向上滚动js类
@@ -184,7 +184,7 @@ Cms.LeftRoller.prototype.roll = function() {
  * 收藏信息
  */
 Cms.collect = function(base, cId, operate,showSpanId,hideSpanId) {
-	$.post(base + "/member/collect.jspx", {
+	$.post(base + "/member/collect", {
 		"cId" : cId,
 		"operate" : operate
 	}, function(data) {
@@ -207,7 +207,7 @@ Cms.collect = function(base, cId, operate,showSpanId,hideSpanId) {
  * 列表取消收藏信息
  */
 Cms.cmsCollect = function(base, cId, operate) {
-	$.post(base + "/member/collect.jspx", {
+	$.post(base + "/member/collect", {
 		"cId" : cId,
 		"operate" : operate
 	}, function(data) {
@@ -227,7 +227,7 @@ Cms.cmsCollect = function(base, cId, operate) {
  * 检测是否已经收藏信息
  */
 Cms.collectexist = function(base, cId,showSpanId,hideSpanId) {
-	$.post(base + "/member/collect_exist.jspx", {
+	$.post(base + "/member/collect_exist", {
 		"cId" : cId
 	}, function(data) {
 		if(data.result){

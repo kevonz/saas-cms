@@ -16,7 +16,7 @@ import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class CmsSiteFlowAct {
-	@RequestMapping("/flow_statistic.jspx")
+	@RequestMapping("/flow_statistic")
 	public void flowStatistic(HttpServletRequest request,
 			HttpServletResponse response, String page, String referer) {
 		if (!StringUtils.isBlank(page)) {

@@ -7,7 +7,6 @@ import java.io.IOException;
 /**
  * 图片缩小接口
  * 
- * @author liufang
  * 
  */
 public interface ImageScale {

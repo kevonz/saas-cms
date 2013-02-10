@@ -11,7 +11,6 @@ import com.yunkuo.common.util.Num62;
 /**
  * 文件名生成帮助类
  * 
- * @author liufang
  * 
  */
 public class FileNameUtils {

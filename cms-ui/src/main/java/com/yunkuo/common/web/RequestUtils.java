@@ -21,7 +21,6 @@ import org.springframework.web.util.UrlPathHelper;
 /**
  * HttpServletRequest帮助类
  * 
- * @author liufang
  * 
  */
 public class RequestUtils {

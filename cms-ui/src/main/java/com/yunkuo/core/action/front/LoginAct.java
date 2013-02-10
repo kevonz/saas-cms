@@ -33,7 +33,6 @@ import com.yunkuo.core.web.WebErrors;
  * 只要在同一数据库实例下，即可访问。各系统可以自行实现退出登录。
  * </ul>
  * 
- * @author liufang
  * 
  */
 @Controller
@@ -134,7 +133,7 @@ public class LoginAct {
 
 	}
 
-	@RequestMapping(value = "/logout.jspx")
+	@RequestMapping(value = "/logout")
 	public String logout(HttpServletRequest request,
 			HttpServletResponse response) {
 		String authId = (String) session.getAttribute(request, AUTH_KEY);

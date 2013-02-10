@@ -8,7 +8,6 @@ import org.springframework.util.Assert;
 /**
  * 将BigDecimal类型的金额转换成String类型，便于Lucene搜索。
  * 
- * @author liufang
  * 
  */
 public class MoneyTools {

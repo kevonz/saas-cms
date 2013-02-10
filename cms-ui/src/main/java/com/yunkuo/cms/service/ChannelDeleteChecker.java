@@ -3,7 +3,6 @@ package com.yunkuo.cms.service;
 /**
  * 检查栏目是否可以删除的接口
  * 
- * @author liufang
  * 
  */
 public interface ChannelDeleteChecker {

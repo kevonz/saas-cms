@@ -22,7 +22,6 @@ import com.yunkuo.common.web.session.SessionProvider;
 /**
  * 提供验证码图片的Servlet
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("serial")

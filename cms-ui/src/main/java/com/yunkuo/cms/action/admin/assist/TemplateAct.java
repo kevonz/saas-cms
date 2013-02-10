@@ -36,7 +36,6 @@ import com.yunkuo.core.tpl.TplManager;
 /**
  * JEECMS模板的Action
  * 
- * @author liufang
  * 
  */
 // TODO 验证path必须以TPL_BASE开头，不能有..后退关键字

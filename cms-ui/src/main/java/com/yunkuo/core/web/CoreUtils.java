@@ -8,7 +8,6 @@ import org.apache.commons.lang.StringUtils;
 /**
  * 提供Core中公用的方法
  * 
- * @author liufang
  * 
  */
 public class CoreUtils {

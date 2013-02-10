@@ -14,7 +14,6 @@ import freemarker.template.TemplateModel;
 /**
  * 评论标签基类
  * 
- * @author liufang
  * 
  */
 public abstract class AbstractCmsCommentDirective implements

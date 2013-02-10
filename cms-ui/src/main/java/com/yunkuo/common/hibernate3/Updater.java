@@ -13,7 +13,6 @@ import java.util.Set;
  * <li>MIN：最小化更新模式。所有字段都不更新。include例外。</li>
  * </ul>
  * 
- * @author liufang
  * 
  */
 public class Updater<T> {

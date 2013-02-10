@@ -52,7 +52,7 @@ public class ImageUploadAct {
 	 */
 	public static final String ERROR = "error";
 
-	@RequestMapping("/member/o_upload_image.jspx")
+	@RequestMapping("/member/o_upload_image")
 	public String execute(
 			String filename,
 			Integer uploadNum,

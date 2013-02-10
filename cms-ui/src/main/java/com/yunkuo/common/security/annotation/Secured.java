@@ -10,7 +10,6 @@ import java.lang.annotation.Target;
 /**
  * 权限控制注解
  * 
- * @author liufang
  * 
  */
 @Target( { ElementType.TYPE })

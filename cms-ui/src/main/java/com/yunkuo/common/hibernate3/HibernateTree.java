@@ -3,7 +3,6 @@ package com.yunkuo.common.hibernate3;
 /**
  * Hibernate实现父子结构tree，使用The Nested Set Model算法
  * 
- * @author liufang
  * 
  */
 public interface HibernateTree<T extends Number> {

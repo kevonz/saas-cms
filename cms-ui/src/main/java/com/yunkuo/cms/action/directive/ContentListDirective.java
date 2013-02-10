@@ -30,7 +30,6 @@ import freemarker.template.TemplateModel;
 /**
  * 内容列表标签
  * 
- * @author liufang
  * 
  */
 public class ContentListDirective extends AbstractContentDirective {

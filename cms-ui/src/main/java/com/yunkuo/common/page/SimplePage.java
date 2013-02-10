@@ -3,7 +3,6 @@ package com.yunkuo.common.page;
 /**
  * 简单分页类
  * 
- * @author liufang
  * 
  */
 public class SimplePage implements Paginable {

@@ -13,7 +13,6 @@ import org.springframework.util.StringUtils;
  * 
  * 根据日期字符串长度判断是长日期还是短日期。只支持yyyy-MM-dd，yyyy-MM-dd HH:mm:ss两种格式。
  * 扩展支持yyyy,yyyy-MM日期格式
- * @author liufang
  * 
  */
 public class DateTypeEditor extends PropertyEditorSupport {

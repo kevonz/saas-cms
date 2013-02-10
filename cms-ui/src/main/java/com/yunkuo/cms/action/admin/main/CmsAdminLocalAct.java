@@ -28,7 +28,6 @@ import com.yunkuo.common.web.RequestUtils;
 /**
  * 本站管理员ACTION
  * 
- * @author liufang
  * 
  */
 @Controller

@@ -5,7 +5,6 @@ import java.util.Date;
 /**
  * 模板接口
  * 
- * @author liufang
  * 
  */
 public interface Tpl {

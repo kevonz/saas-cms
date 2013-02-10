@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * 列表分页。包含list属性。
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("serial")

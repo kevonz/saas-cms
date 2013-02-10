@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>${channel.title!channel.name} - ${site.name} - Powered by JEECMS</title>
+<title>${channel.title!channel.name} - ${site.name}</title>
 <meta http-equiv="keywords" content="${channel.keywords!}"/>
 <meta http-equiv="description" content="${channel.description!}"/>
 <script src="${resSys}/jquery.js" type="text/javascript"></script>
@@ -74,8 +74,8 @@ $(function() {
 		   [@cms_topic_list count='4' descLen='30' append='...']
 		   [#list tag_list as t]
 			<dl class="list[#if t_has_next] line[#else] mt5[/#if] box">
-				<dt><a href="${base}/topic/${t.id}.jspx" target="_blank">${t.name}</a></dt>
-				<dd class="pic"><a href="${base}/topic/${t.id}.jspx"><img src="${t.titleImg!site.defImg}"/></a></dd>
+				<dt><a href="${base}/topic/${t.id}" target="_blank">${t.name}</a></dt>
+				<dd class="pic"><a href="${base}/topic/${t.id}"><img src="${t.titleImg!site.defImg}"/></a></dd>
 				<dd class="text">[@text_cut s=t.description len=descLen append=append/]</dd>
 			</dl>
 			[/#list]

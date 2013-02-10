@@ -21,7 +21,6 @@ import com.yunkuo.common.image.ImageUtils;
  * 
  * 用于前台显示文件信息
  * 
- * @author liufang
  * 
  */
 public class FileWrap {
@@ -340,7 +339,7 @@ public class FileWrap {
 	/**
 	 * 文件比较器，文件夹靠前排。
 	 * 
-	 * @author liufang
+	*
 	 * 
 	 */
 	public static class FileComparator implements Comparator<File> {

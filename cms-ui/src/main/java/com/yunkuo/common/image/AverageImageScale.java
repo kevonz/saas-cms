@@ -17,7 +17,6 @@ import com.yunkuo.common.image.ImageUtils.Position;
 /**
  * 图片缩小类。使用方型区域颜色平均算法
  * 
- * @author liufang
  * 
  */
 public class AverageImageScale {

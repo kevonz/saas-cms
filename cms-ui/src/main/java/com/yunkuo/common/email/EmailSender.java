@@ -3,7 +3,6 @@ package com.yunkuo.common.email;
 /**
  * 邮件发送者
  * 
- * @author liufang
  * 
  */
 public interface EmailSender {

@@ -28,7 +28,7 @@ import com.yunkuo.common.web.ResponseUtils;
 /**
  * 收藏信息Action
  * 
- * @author 江西金磊科技发展有限公司
+ *
  * 
  */
 @Controller
@@ -46,7 +46,7 @@ public class CollectionMemberAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/collection_list.jspx")
+	@RequestMapping(value = "/member/collection_list")
 	public String collection_list(String queryTitle, Integer queryChannelId,
 			Integer pageNo, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
@@ -74,7 +74,7 @@ public class CollectionMemberAct {
 				TPLDIR_MEMBER, COLLECTION_LIST);
 	}
 
-	@RequestMapping(value = "/member/collect.jspx")
+	@RequestMapping(value = "/member/collect")
 	public void collect(Integer cId, Integer operate,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) throws JSONException {
@@ -89,7 +89,7 @@ public class CollectionMemberAct {
 		ResponseUtils.renderJson(response, object.toString());
 	}
 
-	@RequestMapping(value = "/member/collect_exist.jspx")
+	@RequestMapping(value = "/member/collect_exist")
 	public void collect_exist(Integer cId, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsSite site = CmsUtils.getSite(request);

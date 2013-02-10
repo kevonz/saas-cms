@@ -30,7 +30,6 @@ import freemarker.template.TemplateModel;
 /**
  * 留言分页标签
  * 
- * @author liufang
  * 
  */
 public class CmsGuestbookPageDirective extends AbstractCmsGuestbookDirective {

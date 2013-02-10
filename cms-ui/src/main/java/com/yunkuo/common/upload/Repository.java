@@ -7,7 +7,6 @@ import java.io.OutputStream;
 /**
  * 文件存储接口
  * 
- * @author liufang
  * 
  */
 public interface Repository {

@@ -43,7 +43,7 @@ import com.yunkuo.core.manager.DbFileMng;
  * 
  * 为了更好、更灵活的处理fck上传，重新实现FCK服务器端接口。
  * 
- * @author liufang
+*
  * 
  */
 @Controller
@@ -51,7 +51,7 @@ public class FckAct {
 
 	private static final Logger log = LoggerFactory.getLogger(FckAct.class);
 
-	@RequestMapping(value = "/fck/upload.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/fck/upload", method = RequestMethod.POST)
 	public void upload(
 			@RequestParam(value = "Command", required = false) String commandStr,
 			@RequestParam(value = "Type", required = false) String typeStr,

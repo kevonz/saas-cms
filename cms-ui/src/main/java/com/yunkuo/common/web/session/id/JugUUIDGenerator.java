@@ -7,7 +7,6 @@ import org.safehaus.uuid.UUIDGenerator;
 /**
  * 通过UUID生成SESSION ID
  * 
- * @author liufang
  * 
  */
 public class JugUUIDGenerator implements SessionIdGenerator {

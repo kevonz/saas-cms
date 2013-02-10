@@ -24,7 +24,7 @@ import freemarker.template.TemplateModel;
 /**
  * 友情链接类别列表标签
  * 
- * @author liufang
+*
  * 
  */
 public class CmsFriendlinkListDirective implements TemplateDirectiveModel {

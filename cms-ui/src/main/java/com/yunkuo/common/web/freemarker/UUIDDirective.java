@@ -15,7 +15,6 @@ import freemarker.template.TemplateModel;
 /**
  * UUID生成器
  * 
- * @author liufang
  * 
  */
 public class UUIDDirective implements TemplateDirectiveModel {

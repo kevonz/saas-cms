@@ -22,14 +22,13 @@ import com.yunkuo.core.manager.AuthenticationMng;
  * 
  * 登录成功后的处理类
  * 
- * @author liufang
  * 
  */
 @Controller
 public class ProcessAct {
 	private static Logger log = LoggerFactory.getLogger(ProcessAct.class);
 
-	@RequestMapping(value = "/process.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/process", method = RequestMethod.GET)
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
 		String returnUrl = RequestUtils.getQueryParam(request,

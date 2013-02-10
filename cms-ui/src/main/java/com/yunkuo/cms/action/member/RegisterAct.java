@@ -42,7 +42,6 @@ import com.yunkuo.core.manager.UnifiedUserMng;
 /**
  * 前台会员注册Action
  * 
- * @author liufang
  * 
  */
 @Controller
@@ -135,7 +134,7 @@ public class RegisterAct {
 		
 	}
 
-	@RequestMapping(value = "/active.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/active", method = RequestMethod.GET)
 	public String active(String username, String key,HttpServletRequest request, 
 			HttpServletResponse response,ModelMap model) throws IOException {
 		CmsSite site = CmsUtils.getSite(request);
@@ -151,7 +150,7 @@ public class RegisterAct {
 				TPLDIR_MEMBER, REGISTER_ACTIVE_SUCCESS);
 	}
 
-	@RequestMapping(value = "/username_unique.jspx")
+	@RequestMapping(value = "/username_unique")
 	public void usernameUnique(HttpServletRequest request,
 			HttpServletResponse response) {
 		String username = RequestUtils.getQueryParam(request, "username");
@@ -175,7 +174,7 @@ public class RegisterAct {
 		ResponseUtils.renderJson(response, "true");
 	}
 
-	@RequestMapping(value = "/email_unique.jspx")
+	@RequestMapping(value = "/email_unique")
 	public void emailUnique(HttpServletRequest request,
 			HttpServletResponse response) {
 		String email = RequestUtils.getQueryParam(request, "email");

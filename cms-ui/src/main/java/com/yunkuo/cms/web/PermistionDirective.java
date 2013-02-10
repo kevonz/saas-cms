@@ -21,7 +21,6 @@ import freemarker.template.TemplateSequenceModel;
 /**
  * 后台管理员权限许可
  * 
- * @author liufang
  * 
  */
 public class PermistionDirective implements TemplateDirectiveModel {

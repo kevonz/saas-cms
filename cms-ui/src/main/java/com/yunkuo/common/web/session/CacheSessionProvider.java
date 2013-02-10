@@ -20,7 +20,6 @@ import com.yunkuo.common.web.session.id.SessionIdGenerator;
 /**
  * 使用Memcached分布式缓存实现Session
  * 
- * @author liufang
  * 
  */
 public class CacheSessionProvider implements SessionProvider, InitializingBean {

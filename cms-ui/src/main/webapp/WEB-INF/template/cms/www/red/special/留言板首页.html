@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=7" /> 
-<title>用户留言 - ${site.name} - Powered by JEECMS</title>
+<title>用户留言 - ${site.name}</title>
 <meta http-equiv="keywords" content="用户留言"/>
 <meta http-equiv="description" content="用户留言"/>
 <link href="/${res}/css/global.css" type="text/css" rel="stylesheet" />
@@ -35,7 +35,7 @@
                         <dd class="gb-photo fl">
                             [#if m.member?? && m.member.userImg??]
                                 [#if m.member.userImg!=""]
-                                <img src="${guestbook.member.userImg!}"  height="50" width="50"/>
+                                <img src="${m.member.userImg!}"  height="50" width="50"/>
                                [#else]
                                 <img src="/${res}/img/member/member-phtot.gif" height="50" width="50"/>
                                  [/#if]
@@ -133,7 +133,7 @@
        	    <div class="rlogin-t"><img src="/${res}/img/guestbook/login-tbg.gif" width="244" height="30" /></div>
                <div class="rlogin-box">
                   [#if user??]
-                    <div>欢迎您: ${user.username} &nbsp; ${user.group.name} &nbsp; <a href="logout.jspx?returnUrl=/">退出登录</a></div>
+                    <div>欢迎您: ${user.username} &nbsp; ${user.group.name} &nbsp; <a href="logout?returnUrl=/">退出登录</a></div>
                     [#else]
                     <script type="text/javascript">
                     $(function() {
@@ -153,7 +153,7 @@
                           </tr>
                           <tr>
                             <td width="25%" height="30" align="right">&nbsp;</td>
-                            <td height="30">&nbsp;&nbsp;&nbsp;<a href="/member/forgotpassword" target="_blank">忘记密码？</a></td>
+                            <td height="30">&nbsp;&nbsp;&nbsp;<a href="${base}/member/forgotpassword" target="_blank">忘记密码？</a></td>
                           </tr>
                           <tr>
                             <td width="25%" height="30" align="right">&nbsp;</td>
@@ -167,7 +167,7 @@
           <div class=" gb-rg mt10">
           	   <h1>本周热点</h1>
                <div class="week-hot">
-               	  <script type="text/javascript" src="${base}/ad.jspx?id=5"></script>
+               	  <script type="text/javascript" src="${base}/ad?id=5"></script>
                         <ul>
                           [@cms_content_list count='5' titLen='15' orderBy='8' channelOption='1' append=append ] 
                              [#list tag_list as a]

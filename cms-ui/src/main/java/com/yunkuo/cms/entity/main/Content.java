@@ -26,7 +26,6 @@ public class Content extends BaseContent implements ContentInterface {
 	/**
 	 * 状态
 	 * 
-	 * @author liufang
 	 * 
 	 */
 	public enum ContentStatus {

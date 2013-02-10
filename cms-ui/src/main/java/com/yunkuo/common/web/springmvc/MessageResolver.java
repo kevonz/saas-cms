@@ -11,7 +11,6 @@ import org.springframework.web.servlet.support.RequestContextUtils;
 /**
  * 国际化信息帮助类
  * 
- * @author liufang
  * 
  */
 public final class MessageResolver {

@@ -7,7 +7,6 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * 模板Service
  * 
- * @author liufang
  * 
  */
 public interface TplManager {

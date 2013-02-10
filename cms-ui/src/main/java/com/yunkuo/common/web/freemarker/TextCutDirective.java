@@ -17,7 +17,6 @@ import freemarker.template.TemplateModel;
  * 
  * 需要拦截器com.jeecms.common.web.ProcessTimeFilter支持
  * 
- * @author liufang
  * 
  */
 public class TextCutDirective implements TemplateDirectiveModel {

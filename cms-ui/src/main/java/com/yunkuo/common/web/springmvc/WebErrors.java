@@ -23,7 +23,6 @@ import org.springframework.web.servlet.support.RequestContextUtils;
  * 
  * 可以通过MessageSource实现国际化。
  * 
- * @author liufang
  * 
  */
 public abstract class WebErrors {

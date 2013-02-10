@@ -13,7 +13,6 @@ import com.yunkuo.common.util.Zipper.FileEntry;
 /**
  * 模板资源管理接口
  * 
- * @author liufang
  * 
  */
 public interface CmsResourceMng {

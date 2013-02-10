@@ -23,7 +23,6 @@ import freemarker.template.TemplateNumberModel;
  * 
  * 需要拦截器com.jeecms.common.web.ProcessTimeFilter支持
  * 
- * @author liufang
  * 
  */
 public class ProcessTimeDirective implements TemplateDirectiveModel {

@@ -11,7 +11,7 @@ import com.yunkuo.cms.web.CmsUtils;
 /**
  * URI帮助类
  * 
- * @author liufang
+*
  * 
  */
 public class URLHelper {
@@ -235,7 +235,7 @@ public class URLHelper {
 	/**
 	 * URI信息
 	 * 
-	 * @author liufang
+	*
 	 * 
 	 */
 	public static class PageInfo {

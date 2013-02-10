@@ -15,7 +15,6 @@ import com.yunkuo.common.web.ResponseUtils;
 /**
  * 友情链接点击次数Action
  * 
- * @author liufang
  * 
  */
 @Controller
@@ -23,7 +22,7 @@ public class FriendlinkAct {
 	// private static final Logger log = LoggerFactory
 	// .getLogger(FriendlinkAct.class);
 
-	@RequestMapping(value = "/friendlink_view.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/friendlink_view", method = RequestMethod.GET)
 	public void view(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		if (id != null) {

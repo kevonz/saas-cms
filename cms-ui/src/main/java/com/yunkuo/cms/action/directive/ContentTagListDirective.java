@@ -32,7 +32,6 @@ import freemarker.template.TemplateModel;
 /**
  * TAG列表标签
  * 
- * @author liufang
  * 
  */
 public class ContentTagListDirective implements TemplateDirectiveModel {

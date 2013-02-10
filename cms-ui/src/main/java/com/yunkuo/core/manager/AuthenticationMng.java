@@ -13,7 +13,6 @@ import com.yunkuo.core.entity.UnifiedUser;
 /**
  * 认证信息管理接口
  * 
- * @author liufang
  * 
  */
 public interface AuthenticationMng {

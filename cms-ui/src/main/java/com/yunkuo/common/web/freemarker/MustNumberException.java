@@ -5,7 +5,6 @@ import freemarker.template.TemplateModelException;
 /**
  * 非数字参数异常
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("serial")

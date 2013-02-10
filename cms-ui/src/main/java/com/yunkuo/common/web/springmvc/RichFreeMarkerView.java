@@ -11,7 +11,6 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerView;
  * 
  * 支持jsp标签，Application、Session、Request、RequestParameters属性
  * 
- * @author liufang
  * 
  */
 public class RichFreeMarkerView extends FreeMarkerView {

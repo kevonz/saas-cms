@@ -19,7 +19,6 @@ import com.yunkuo.common.web.RequestUtils;
 /**
  * 自定义客户端包含模板
  * 
- * @author liufang
  * 
  */
 @Controller
@@ -37,7 +36,7 @@ public class CsiCustomAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/csi_custom.jspx")
+	@RequestMapping(value = "/csi_custom")
 	public String custom(String tpl, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		log.debug("visit csi custom template: {}", tpl);

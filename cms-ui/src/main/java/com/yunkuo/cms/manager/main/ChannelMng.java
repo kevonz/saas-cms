@@ -11,7 +11,6 @@ import com.yunkuo.common.page.Pagination;
 /**
  * 栏目管理接口
  * 
- * @author liufang
  * 
  */
 public interface ChannelMng {

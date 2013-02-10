@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * 本地文件存储
  * 
- * @author liufang
  * 
  */
 public class FileRepository implements ServletContextAware {

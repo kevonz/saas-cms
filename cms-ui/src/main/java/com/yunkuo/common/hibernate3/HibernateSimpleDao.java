@@ -25,7 +25,6 @@ import com.yunkuo.common.util.MyBeanUtils;
  * 
  * 提供hql分页查询，不带泛型，与具体实体类无关。
  * 
- * @author liufang
  * 
  */
 public abstract class HibernateSimpleDao {

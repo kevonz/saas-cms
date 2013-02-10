@@ -9,7 +9,6 @@ import javax.servlet.http.HttpSession;
 /**
  * HttpSession提供类
  * 
- * @author liufang
  * 
  */
 public class HttpSessionProvider implements SessionProvider {

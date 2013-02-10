@@ -8,7 +8,6 @@ import com.yunkuo.cms.entity.main.ContentCheck;
  * 
  * '内容'数据存在，则'内容审核'数据必须存在。
  * 
- * @author liufang
  * 
  */
 public interface ContentCheckMng {

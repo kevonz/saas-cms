@@ -8,7 +8,6 @@ import com.yunkuo.common.hibernate3.Updater;
 /**
  * 站点DAO接口
  * 
- * @author liufang
  * 
  */
 public interface CmsSiteDao {

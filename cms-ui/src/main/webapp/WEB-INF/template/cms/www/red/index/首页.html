@@ -50,13 +50,13 @@ function HoverLi(m,n,counter){
 </div>
 <!--焦点图片_end-->
 <!--精彩专题_begin-->
-<div class="left_top2"><h2><a href="${base}/topic.jspx" target="_blank">精彩专题</a></h2></div>
+<div class="left_top2"><h2><a href="${base}/topic" target="_blank">精彩专题</a></h2></div>
 	<div class="rb_right_div">
 	   [@cms_topic_list count='4' recommend='1' descLen='35' append='...']
 	   [#list tag_list as t]
 		<dl class="list[#if t_index=0] line[#else] mt5[/#if] box">
-			<dt><a href="${base}/topic/${t.id}.jspx" target="_blank">${t.name}</a></dt>
-			<dd class="pic"><a href="${base}/topic/${t.id}.jspx"><img src="${t.titleImg!site.defImg}"/></a></dd>
+			<dt><a href="${base}/topic/${t.id}" target="_blank">${t.name}</a></dt>
+			<dd class="pic"><a href="${base}/topic/${t.id}"><img src="${t.titleImg!site.defImg}"/></a></dd>
 			<dd class="text">[@text_cut s=t.description len=descLen append=append/]</dd>
 		</dl>
 		[/#list]

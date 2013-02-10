@@ -32,7 +32,7 @@ import freemarker.template.TemplateModel;
 /**
  * 专题列表标签
  * 
- * @author liufang
+*
  * 
  */
 public class CmsTopicListDirective implements TemplateDirectiveModel {

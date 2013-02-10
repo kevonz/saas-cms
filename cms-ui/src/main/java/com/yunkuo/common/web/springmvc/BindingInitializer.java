@@ -9,7 +9,6 @@ import org.springframework.web.context.request.WebRequest;
 /**
  * 数据绑定初始化类
  * 
- * @author liufang
  * 
  */
 public class BindingInitializer implements WebBindingInitializer {

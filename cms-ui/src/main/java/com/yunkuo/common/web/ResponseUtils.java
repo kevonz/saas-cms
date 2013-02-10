@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 /**
  * HttpServletResponse帮助类
  * 
- * @author liufang
  * 
  */
 public final class ResponseUtils {

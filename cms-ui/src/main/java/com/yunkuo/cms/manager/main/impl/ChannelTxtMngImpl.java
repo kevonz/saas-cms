@@ -13,7 +13,6 @@ import com.yunkuo.common.hibernate3.Updater;
 /**
  * 栏目文本Manager实现
  * 
- * @author liufang
  * 
  */
 @Service

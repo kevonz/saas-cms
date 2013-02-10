@@ -3,7 +3,6 @@ package com.yunkuo.common.web.springmvc;
 /**
  * 绝对路径提供类
  * 
- * @author liufang
  * 
  */
 public interface RealPathResolver {

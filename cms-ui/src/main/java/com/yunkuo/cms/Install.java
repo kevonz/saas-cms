@@ -18,7 +18,6 @@ import org.apache.commons.lang.StringUtils;
 /**
  * 安装类
  * 
- * @author liufang
  * 
  */
 public class Install {

@@ -40,7 +40,6 @@ import com.yunkuo.common.web.session.SessionProvider;
 /**
  * 会员投稿Action
  * 
- * @author liufang
  * 
  */
 @Controller
@@ -65,7 +64,7 @@ public class ContributeAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/contribute_list.jspx")
+	@RequestMapping(value = "/member/contribute_list")
 	public String list(String queryTitle, Integer queryChannelId,
 			Integer pageNo, HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -99,7 +98,7 @@ public class ContributeAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/contribute_add.jspx")
+	@RequestMapping(value = "/member/contribute_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		CmsUser user = CmsUtils.getUser(request);
@@ -146,7 +145,7 @@ public class ContributeAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/contribute_save.jspx")
+	@RequestMapping(value = "/member/contribute_save")
 	public String save(String title, String author, String description,
 			String txt, String tagStr, Integer channelId, String captcha,
 			String nextUrl, HttpServletRequest request,
@@ -198,7 +197,7 @@ public class ContributeAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/contribute_edit.jspx")
+	@RequestMapping(value = "/member/contribute_edit")
 	public String edit(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -252,7 +251,7 @@ public class ContributeAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/contribute_update.jspx")
+	@RequestMapping(value = "/member/contribute_update")
 	public String update(Integer id, String title, String author,
 			String description, String txt, String tagStr, Integer channelId,
 			String nextUrl, HttpServletRequest request,
@@ -301,7 +300,7 @@ public class ContributeAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/contribute_delete.jspx")
+	@RequestMapping(value = "/member/contribute_delete")
 	public String delete(Integer[] ids, HttpServletRequest request,
 			String nextUrl, HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);

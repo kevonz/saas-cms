@@ -6,7 +6,6 @@ import java.util.Locale;
 /**
  * 图片辅助类
  * 
- * @author liufang
  * 
  */
 public abstract class ImageUtils {
@@ -104,7 +103,7 @@ public abstract class ImageUtils {
 	 * 
 	 * 包含左边偏移量，右边偏移量。
 	 * 
-	 * @author liufang
+	*
 	 * 
 	 */
 	public static class Position {

@@ -6,7 +6,6 @@ import com.yunkuo.cms.entity.main.CmsUser;
 /**
  * CMS线程变量
  * 
- * @author liufang
  * 
  */
 public class CmsThreadVariable {

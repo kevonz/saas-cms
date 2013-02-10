@@ -3,7 +3,6 @@ package com.yunkuo.common.util;
 /**
  * 62进制数字
  * 
- * @author liufang
  * 
  */
 public class Num62 {

@@ -9,7 +9,6 @@ import com.yunkuo.common.page.Pagination;
 /**
  * 用户DAO接口
  * 
- * @author liufang
  * 
  */
 public interface CmsUserDao{

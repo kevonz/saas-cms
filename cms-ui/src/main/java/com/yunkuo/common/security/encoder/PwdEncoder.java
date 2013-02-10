@@ -3,7 +3,6 @@ package com.yunkuo.common.security.encoder;
 /**
  * 密码加密接口
  * 
- * @author liufang
  * 
  */
 public interface PwdEncoder {

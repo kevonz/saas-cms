@@ -41,7 +41,6 @@ import freemarker.template.TemplateNumberModel;
 /**
  * 前台工具类
  * 
- * @author liufang
  * 
  */
 public class FrontUtils {

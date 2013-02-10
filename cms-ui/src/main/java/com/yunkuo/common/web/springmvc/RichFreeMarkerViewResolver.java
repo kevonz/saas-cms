@@ -8,7 +8,6 @@ import org.springframework.web.servlet.view.AbstractUrlBasedView;
  * 
  * Override buildView, if viewName start with / , then ignore prefix.
  * 
- * @author liufang
  * 
  */
 public class RichFreeMarkerViewResolver extends AbstractTemplateViewResolver {

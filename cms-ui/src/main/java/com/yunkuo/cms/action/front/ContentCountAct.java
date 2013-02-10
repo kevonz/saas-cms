@@ -16,7 +16,7 @@ import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class ContentCountAct {
-	@RequestMapping(value = "/content_view.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/content_view", method = RequestMethod.GET)
 	public void contentView(Integer contentId, HttpServletRequest request,
 			HttpServletResponse response) throws JSONException {
 		if (contentId == null) {
@@ -33,7 +33,7 @@ public class ContentCountAct {
 		}
 	}
 
-	@RequestMapping(value = "/content_up.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/content_up", method = RequestMethod.GET)
 	public void contentUp(Integer contentId, HttpServletRequest request,
 			HttpServletResponse response) throws JSONException {
 		if (contentId == null) {
@@ -44,7 +44,7 @@ public class ContentCountAct {
 		}
 	}
 
-	@RequestMapping(value = "/content_down.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/content_down", method = RequestMethod.GET)
 	public void contentDown(Integer contentId, HttpServletRequest request,
 			HttpServletResponse response) throws JSONException {
 		if (contentId == null) {

@@ -18,7 +18,6 @@ import org.springframework.util.Assert;
 /**
  * 用于制作zip压缩包
  * 
- * @author liufang
  * 
  */
 public class Zipper {

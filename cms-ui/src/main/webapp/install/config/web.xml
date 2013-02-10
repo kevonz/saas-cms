@@ -39,18 +39,7 @@
 		<filter-name>osivFilter</filter-name>
 		<url-pattern>*.do</url-pattern>
 	</filter-mapping>
-	<filter-mapping>
-		<filter-name>processTime</filter-name>
-		<url-pattern>*.jspx</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>encoding</filter-name>
-		<url-pattern>*.jspx</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>osivFilter</filter-name>
-		<url-pattern>*.jspx</url-pattern>
-	</filter-mapping>
+	
 	<filter-mapping>
 		<filter-name>processTime</filter-name>
 		<url-pattern>*.jhtml</url-pattern>
@@ -125,10 +114,7 @@
 		<servlet-name>CmsFront</servlet-name>
 		<url-pattern>*.jhtml</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>CmsFront</servlet-name>
-		<url-pattern>*.jspx</url-pattern>
-	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>CmsFront</servlet-name>
 		<url-pattern>*.jsp</url-pattern>

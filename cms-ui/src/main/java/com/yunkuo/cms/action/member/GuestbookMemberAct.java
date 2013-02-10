@@ -25,7 +25,7 @@ import com.yunkuo.common.web.CookieUtils;
 /**
  * 会员中心获取留言Action
  * 
- * @author 江西金磊科技发展有限公司
+ *
  * 
  */
 @Controller
@@ -72,7 +72,7 @@ public class GuestbookMemberAct {
 	 * 留言详细
 	 * 
 	 */
-	@RequestMapping(value = "/member/guestbook_detail.jspx")
+	@RequestMapping(value = "/member/guestbook_detail")
 	public String guestbook_detail(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -95,7 +95,7 @@ public class GuestbookMemberAct {
 	/**
 	 * 查看留言回复
 	 */
-	@RequestMapping(value = "/member/guestbook_replay.jspx")
+	@RequestMapping(value = "/member/guestbook_replay")
 	public String guestbook_replay(Integer id, String nextUrl,HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);

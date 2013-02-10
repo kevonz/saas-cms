@@ -9,7 +9,6 @@ import org.apache.commons.codec.binary.Hex;
 /**
  * MD5密码加密
  * 
- * @author liufang
  * 
  */
 public class Md5PwdEncoder implements PwdEncoder {

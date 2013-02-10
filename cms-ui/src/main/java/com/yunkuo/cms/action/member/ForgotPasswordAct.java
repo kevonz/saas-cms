@@ -34,7 +34,7 @@ import com.yunkuo.core.manager.UnifiedUserMng;
  * 如果信息正确，返回一个提示页面，并发送一封找回密码的邮件，邮件包含一个链接及新密码，点击链接新密码即生效<li>
  * 如果输入错误或服务器邮箱等信息设置不完整，则给出提示信息<li>
  * 
- * @author liufang
+*
  * 
  */
 @Controller
@@ -118,7 +118,7 @@ public class ForgotPasswordAct {
 				TPLDIR_MEMBER, FORGOT_PASSWORD_RESULT);
 	}
 
-	@RequestMapping(value = "/member/password_reset.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/member/password_reset", method = RequestMethod.GET)
 	public String passwordReset(Integer uid, String key,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {

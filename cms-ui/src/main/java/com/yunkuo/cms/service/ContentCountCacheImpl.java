@@ -16,7 +16,6 @@ import com.yunkuo.cms.manager.main.ContentCountMng;
 /**
  * 内容计数器缓存实现
  * 
- * @author liufang
  * 
  */
 @Service

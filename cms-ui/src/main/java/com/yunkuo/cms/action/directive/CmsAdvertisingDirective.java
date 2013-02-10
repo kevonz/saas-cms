@@ -22,7 +22,6 @@ import freemarker.template.TemplateModel;
 /**
  * 广告对象标签
  * 
- * @author liufang
  * 
  */
 public class CmsAdvertisingDirective implements TemplateDirectiveModel {

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>我的收藏- ${site.name} - Powered by JEECMS</title>
+<title>我的收藏- ${site.name}</title>
 <link href="${resSys}/front.css" rel="stylesheet" type="text/css"/>
 <script src="${resSys}/jquery.js" type="text/javascript"></script>
 <script src="${resSys}/front.js" type="text/javascript"></script>
@@ -16,10 +16,10 @@
         [#include "../member/会员中心页_页顶.html"/]
         <div class="mr-top-position">
 		     <div class="mr-top-tit fl">我的收藏</div>
-		    <div class="modify fr"><a href="${base}/member/collection_list.jspx">我的收藏</a></div>
+		    <div class="modify fr"><a href="${base}/member/collection_list">我的收藏</a></div>
 		 </div>
         <div class="mc_content">   
-          	<form id="tableForm" action="collection_list.jspx" method="post">
+          	<form id="tableForm" action="collection_list" method="post">
             [#if pagination.list?size gt 0]
             <table border="0" cellpadding="0" cellspacing="1" bgcolor="#C8DCF0" class="tblist">
             <tr>
@@ -61,7 +61,7 @@
                 try{
                     var tableForm = document.getElementById("tableForm");
                     $("input[name=pageNo]").val(pageNo);
-                    tableForm.action="collection_list.jspx";
+                    tableForm.action="collection_list";
                     tableForm.onsubmit=null;
                     tableForm.submit();
                 } catch(e) {

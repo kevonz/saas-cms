@@ -24,7 +24,6 @@ import freemarker.template.TemplateModel;
 /**
  * 投票标签
  * 
- * @author liufang
  * 
  */
 public class CmsVoteDirective implements TemplateDirectiveModel {

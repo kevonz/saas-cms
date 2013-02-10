@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>投票 - ${site.name} - Powered by JEECMS</title>
+<title>投票 - ${site.name}</title>
 <link href="${resSys}/front.css" rel="stylesheet" type="text/css"/>
 <script src="${resSys}/jquery.js" type="text/javascript"></script>
 <script src="${resSys}/front.js" type="text/javascript"></script>
@@ -11,7 +11,7 @@
 <body>
 [@process_time/]
 <h4>${vote.title?html}</h4>
-<form action="${base}/vote.jspx" method="post">
+<form action="${base}/vote" method="post">
 <input type="hidden" name="voteId" value="${vote.id}"/>
 <ul>
 [#list vote.items as item]

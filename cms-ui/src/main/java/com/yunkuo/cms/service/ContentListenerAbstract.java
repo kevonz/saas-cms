@@ -7,7 +7,6 @@ import com.yunkuo.cms.entity.main.Content;
 /**
  * ContentListener的抽象实现
  * 
- * @author liufang
  * 
  */
 public class ContentListenerAbstract implements ContentListener {

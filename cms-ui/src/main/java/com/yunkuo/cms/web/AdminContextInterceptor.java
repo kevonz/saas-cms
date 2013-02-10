@@ -32,7 +32,6 @@ import com.yunkuo.core.manager.AuthenticationMng;
  * 
  * 包括登录信息、权限信息、站点信息
  * 
- * @author liufang
  * 
  */
 public class AdminContextInterceptor extends HandlerInterceptorAdapter {

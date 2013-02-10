@@ -11,7 +11,6 @@ import org.springframework.util.Assert;
 /**
  * Cookie 辅助类
  * 
- * @author liufang
  * 
  */
 public class CookieUtils {

@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Session提供者
  * 
- * @author liufang
  * 
  */
 public interface SessionProvider {

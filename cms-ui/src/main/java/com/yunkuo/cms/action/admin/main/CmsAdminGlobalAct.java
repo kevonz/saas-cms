@@ -27,7 +27,6 @@ import com.yunkuo.common.web.RequestUtils;
 /**
  * 全站管理员ACTION
  * 
- * @author liufang
  * 
  */
 @Controller

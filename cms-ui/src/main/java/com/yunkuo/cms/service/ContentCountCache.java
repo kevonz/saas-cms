@@ -3,7 +3,6 @@ package com.yunkuo.cms.service;
 /**
  * 内容计数器缓存接口
  * 
- * @author liufang
  * 
  */
 public interface ContentCountCache {

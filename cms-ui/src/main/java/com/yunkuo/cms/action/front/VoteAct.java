@@ -40,7 +40,7 @@ public class VoteAct {
 	public static final String VOTE_INPUT = "tpl.voteInput";
 	public static final String VOTE_RESULT = "tpl.voteResult";
 
-	@RequestMapping(value = "/vote_result.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/vote_result", method = RequestMethod.GET)
 	public String result(Integer voteId, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -51,7 +51,7 @@ public class VoteAct {
 				TPLDIR_SPECIAL, VOTE_RESULT);
 	}
 
-	@RequestMapping(value = "/vote.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/vote", method = RequestMethod.GET)
 	public String input(Integer voteId, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -62,7 +62,7 @@ public class VoteAct {
 				TPLDIR_SPECIAL, VOTE_INPUT);
 	}
 
-	@RequestMapping(value = "/vote.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/vote", method = RequestMethod.POST)
 	public String submit(Integer voteId, Integer[] itemIds,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {

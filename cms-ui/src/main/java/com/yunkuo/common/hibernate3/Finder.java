@@ -12,7 +12,6 @@ import org.hibernate.type.Type;
 /**
  * HQL语句分页查询
  * 
- * @author liufang
  * 
  */
 public class Finder {

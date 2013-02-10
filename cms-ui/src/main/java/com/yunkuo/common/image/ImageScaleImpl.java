@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
  * 
  * 根据环境情况选择java图片缩小方式或专业的magick图片缩小方式
  * 
- * @author liufang
  * 
  */
 public class ImageScaleImpl implements ImageScale {

@@ -41,7 +41,7 @@ import com.yunkuo.common.web.session.SessionProvider;
 /**
  * 站内信Action
  * 
- * @author 江西金磊科技发展有限公司
+ *
  * 
  */
 @Controller
@@ -68,7 +68,7 @@ public class MessageAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/message_mng.jspx")
+	@RequestMapping(value = "/member/message_mng")
 	public String message_mng(Integer box, String msg,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
@@ -109,7 +109,7 @@ public class MessageAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/member/message_list.jspx")
+	@RequestMapping(value = "/member/message_list")
 	public String message_inbox(Integer pageNo, String title,
 			Date sendBeginTime, Date sendEndTime, Boolean status, Integer box,
 			HttpServletRequest request, HttpServletResponse response,
@@ -164,7 +164,7 @@ public class MessageAct {
 				TPLDIR_MESSAGE, returnPage);
 	}
 
-	@RequestMapping(value = "/member/message_add.jspx")
+	@RequestMapping(value = "/member/message_add")
 	public String message_add(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -182,7 +182,7 @@ public class MessageAct {
 				TPLDIR_MESSAGE, MESSAGE_ADD);
 	}
 
-	@RequestMapping(value = "/member/message_reply.jspx")
+	@RequestMapping(value = "/member/message_reply")
 	public String message_reply(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -209,7 +209,7 @@ public class MessageAct {
 	}
 
 	// 直接发送
-	@RequestMapping(value = "/member/message_send.jspx")
+	@RequestMapping(value = "/member/message_send")
 	public String message_send(CmsMessage message, String username,
 			String captcha, String nextUrl, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
@@ -248,7 +248,7 @@ public class MessageAct {
 	}
 
 	// 存草稿
-	@RequestMapping(value = "/member/message_save.jspx")
+	@RequestMapping(value = "/member/message_save")
 	public String message_save(CmsMessage message, String username,
 			String captcha, String nextUrl, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
@@ -286,7 +286,7 @@ public class MessageAct {
 	}
 
 	// 发送
-	@RequestMapping(value = "/member/message_tosend.jspx")
+	@RequestMapping(value = "/member/message_tosend")
 	public String message_tosend(Integer id, String nextUrl, String captcha,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
@@ -325,7 +325,7 @@ public class MessageAct {
 		return FrontUtils.showSuccess(request, model, nextUrl);
 	}
 
-	@RequestMapping(value = "/member/message_edit.jspx")
+	@RequestMapping(value = "/member/message_edit")
 	public String message_edit(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -351,7 +351,7 @@ public class MessageAct {
 				TPLDIR_MESSAGE, MESSAGE_EDIT);
 	}
 
-	@RequestMapping(value = "/member/message_update.jspx")
+	@RequestMapping(value = "/member/message_update")
 	public String message_update(CmsMessage message, String nextUrl,
 			String captcha, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
@@ -389,7 +389,7 @@ public class MessageAct {
 		return FrontUtils.showSuccess(request, model, nextUrl);
 	}
 
-	@RequestMapping(value = "/member/message_read.jspx")
+	@RequestMapping(value = "/member/message_read")
 	public String message_read(Integer id, Integer box,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
@@ -435,7 +435,7 @@ public class MessageAct {
 	}
 
 	// 转发
-	@RequestMapping(value = "/member/message_forward.jspx")
+	@RequestMapping(value = "/member/message_forward")
 	public String message_forward(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -462,7 +462,7 @@ public class MessageAct {
 	}
 
 	// 清空信息到垃圾箱
-	@RequestMapping(value = "/member/message_trash.jspx")
+	@RequestMapping(value = "/member/message_trash")
 	public void message_trash(Integer ids[], HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -518,7 +518,7 @@ public class MessageAct {
 	}
 
 	// 还原垃圾箱信息
-	@RequestMapping(value = "/member/message_revert.jspx")
+	@RequestMapping(value = "/member/message_revert")
 	public void message_revert(Integer ids[], HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -544,7 +544,7 @@ public class MessageAct {
 	}
 
 	// 清空垃圾箱信息
-	@RequestMapping(value = "/member/message_empty.jspx")
+	@RequestMapping(value = "/member/message_empty")
 	public void message_empty(Integer ids[], HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -604,7 +604,7 @@ public class MessageAct {
 	}
 
 	// 查找未读信息条数
-	@RequestMapping(value = "/member/message_countUnreadMsg.jspx")
+	@RequestMapping(value = "/member/message_countUnreadMsg")
 	public void findUnreadMessagesByUser(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -628,7 +628,7 @@ public class MessageAct {
 	}
 
 	// 物理删除信件（暂时无用）
-	@RequestMapping(value = "/member/message_delete.jspx")
+	@RequestMapping(value = "/member/message_delete")
 	public String message_delete(Integer[] ids, String nextUrl,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {

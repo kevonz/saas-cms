@@ -21,7 +21,7 @@ function toTrash(){
 		 if(!confirm("您确定要删除这些信息吗？")) {
 				return;
 			}
-		 $.post("message_trash.jspx", {
+		 $.post("message_trash", {
 				"ids" : ids
 			}, function(data) {
 				if(data.result){
@@ -42,7 +42,7 @@ function trash(id){
 	 if(!confirm("您确定要删除该条信息吗？")) {
 			return;
 		}
-	 $.post("message_trash.jspx", {
+	 $.post("message_trash", {
 			"ids" : id
 		}, function(data) {
 			if(data.result){
@@ -53,7 +53,7 @@ function trash(id){
 		}, "json");
 }
 function forward(){
-	$("#jvForm").attr("action","message_forward.jspx");
+	$("#jvForm").attr("action","message_forward");
 	$("#jvForm").submit();
 }
 function empty(){
@@ -67,7 +67,7 @@ function empty(){
 		 if(!confirm("您确定要彻底删除这些信息吗？")) {
 				return;
 			}
-		 $.post("message_empty.jspx", {
+		 $.post("message_empty", {
 				"ids" : ids
 			}, function(data) {
 				if(data.result){
@@ -87,7 +87,7 @@ function emptySingle(id){
 	 if(!confirm("您确定要彻底删除该信息吗？")) {
 			return;
 		}
-	 $.post("message_empty.jspx", {
+	 $.post("message_empty", {
 			"ids" : id
 		}, function(data) {
 			if(data.result){
@@ -108,7 +108,7 @@ function revert(){
 		 if(!confirm("您确定要还原这些信息吗？")) {
 				return;
 			}
-		 $.post("message_revert.jspx", {
+		 $.post("message_revert", {
 				"ids" : ids
 			}, function(data) {
 				if(data.result){
@@ -126,23 +126,23 @@ function revert(){
 }
 function toDraft(){
 	$("#box").val(2);
-	$("#nextUrl").val("message_mng.jspx?box=2");
-	$("#jvForm").attr("action","message_save.jspx");
+	$("#nextUrl").val("message_mng?box=2");
+	$("#jvForm").attr("action","message_save");
 	$("#jvForm").submit();
 }
 function toSend(){
-	$("#nextUrl").val("message_mng.jspx?box=1");
-	$("#jvForm").attr("action","message_tosend.jspx");
+	$("#nextUrl").val("message_mng?box=1");
+	$("#jvForm").attr("action","message_tosend");
 	$("#jvForm").submit();
 }
 function reply(){
 	$("#nextUrl").val("message_reply?box=1");
-	$("#jvForm").attr("action","message_reply.jspx");
+	$("#jvForm").attr("action","message_reply");
 	$("#jvForm").submit();
 }
 function find_user(){
 	var username=$("#username").val();
-	$.post("message_findUser.jspx", {
+	$.post("message_findUser", {
 		"username" : username
 	}, function(data) {
 		if(data.result){

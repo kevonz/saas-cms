@@ -3,7 +3,6 @@ package com.yunkuo.common.security;
 /**
  * 用户被禁用异常
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("serial")

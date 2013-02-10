@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>会员信息修改 - ${site.name} - Powered by JEECMS</title>
+<title>会员信息修改 - ${site.name}</title>
 <link href="${resSys}/front.css" rel="stylesheet" type="text/css"/>
 <script src="${resSys}/jquery.js" type="text/javascript"></script>
 <script src="${resSys}/front.js" type="text/javascript"></script>
@@ -23,11 +23,11 @@ $(function() {
         [#include "会员中心页_页顶.html"/]
         <div class="mr-top-position">
 		     <div class="mr-top-tit fl">修改个人资料</div>
-		    <div class="modify fr"><a href="${base}/member/profile.jspx">修改个人资料</a></div>
+		    <div class="modify fr"><a href="${base}/member/profile">修改个人资料</a></div>
 		 </div>
         <div class="mc_content">   
              [#include "image_upload.html"/]
-   <form id="jvForm" action="profile.jspx" method="post">
+   <form id="jvForm" action="profile" method="post">
      <table width="98%" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#C8DCF0" style="margin:5px;">
        <tr>
          <td width="150" height="25" align="right" bgcolor="#f6fbff">真实姓名：</td>
@@ -95,7 +95,7 @@ $(function() {
        
        <tr>
          <td height="25" colspan="2" align="center" bgcolor="#f6fbff">
-		    <input type="hidden" name="nextUrl" value="profile.jspx"/>
+		    <input type="hidden" name="nextUrl" value="profile"/>
 	        <input type="submit" value="提交" class="member_button"/> &nbsp; <input type="reset" value="重置" class="member_button"/>
 		 </td>
          </tr>

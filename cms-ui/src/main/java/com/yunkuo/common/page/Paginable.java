@@ -3,7 +3,6 @@ package com.yunkuo.common.page;
 /**
  * 分页接口
  * 
- * @author liufang
  * 
  */
 public interface Paginable {

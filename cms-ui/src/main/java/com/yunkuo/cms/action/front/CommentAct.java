@@ -41,7 +41,7 @@ public class CommentAct {
 	public static final String COMMENT_PAGE = "tpl.commentPage";
 	public static final String COMMENT_LIST = "tpl.commentList";
 
-	@RequestMapping(value = "/comment*.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/comment*", method = RequestMethod.GET)
 	public String page(Integer contentId, Integer pageNo,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
@@ -63,7 +63,7 @@ public class CommentAct {
 				TPLDIR_SPECIAL, COMMENT_PAGE);
 	}
 
-	@RequestMapping(value = "/comment_list.jspx")
+	@RequestMapping(value = "/comment_list")
 	public String list(Integer siteId, Integer contentId, Integer greatTo,
 			Integer recommend, Integer checked, Integer orderBy, Integer count,
 			HttpServletRequest request, HttpServletResponse response,
@@ -99,7 +99,7 @@ public class CommentAct {
 				TPLDIR_CSI, COMMENT_LIST);
 	}
 
-	@RequestMapping(value = "/comment.jspx", method = RequestMethod.POST)
+	@RequestMapping(value = "/comment", method = RequestMethod.POST)
 	public void submit(Integer contentId, String text, String captcha,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) throws JSONException {
@@ -165,7 +165,7 @@ public class CommentAct {
 		ResponseUtils.renderJson(response, json.toString());
 	}
 
-	@RequestMapping(value = "/comment_up.jspx")
+	@RequestMapping(value = "/comment_up")
 	public void up(Integer contentId, HttpServletRequest request,
 			HttpServletResponse response) {
 		if (exist(contentId)) {
@@ -176,7 +176,7 @@ public class CommentAct {
 		}
 	}
 
-	@RequestMapping(value = "/comment_down.jspx")
+	@RequestMapping(value = "/comment_down")
 	public void down(Integer contentId, HttpServletRequest request,
 			HttpServletResponse response) {
 		if (exist(contentId)) {

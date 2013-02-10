@@ -7,7 +7,6 @@ import com.yunkuo.cms.entity.main.CmsModel;
 /**
  * 模型Manager接口
  * 
- * @author liufang
  * 
  */
 public interface CmsModelMng {

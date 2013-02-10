@@ -3,7 +3,6 @@ package com.yunkuo.common.security;
 /**
  * 认证信息错误异常。如：密码错误。
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("serial")

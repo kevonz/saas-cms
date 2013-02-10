@@ -21,7 +21,6 @@ import com.yunkuo.common.hibernate3.PriorityInterface;
 /**
  * 栏目实体类
  * 
- * @author liufang
  * 
  */
 public class Channel extends BaseChannel implements HibernateTree<Integer>,
@@ -31,7 +30,7 @@ public class Channel extends BaseChannel implements HibernateTree<Integer>,
 	/**
 	 * 审核后内容修改方式
 	 * 
-	 * @author liufang
+	*
 	 * 
 	 */
 	public static enum AfterCheckEnum {

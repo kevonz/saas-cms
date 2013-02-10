@@ -25,7 +25,6 @@ import freemarker.template.TemplateScalarModel;
 /**
  * Freemarker标签工具类
  * 
- * @author liufang
  * 
  */
 public abstract class DirectiveUtils {
@@ -245,7 +244,7 @@ public abstract class DirectiveUtils {
 	/**
 	 * 模板调用类型
 	 * 
-	 * @author liufang
+	*
 	 */
 	public enum InvokeType {
 		body, custom, sysDefined, userDefined

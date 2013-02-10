@@ -26,7 +26,6 @@ import freemarker.template.TemplateModel;
 /**
  * 翻页包含标签
  * 
- * @author liufang
  * 
  */
 public class PaginationDirective implements TemplateDirectiveModel {

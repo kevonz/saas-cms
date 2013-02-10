@@ -3,7 +3,6 @@ package com.yunkuo.common.web;
 /**
  * web常量
  * 
- * @author liufang
  * 
  */
 public abstract class Constants {

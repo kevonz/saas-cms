@@ -29,7 +29,6 @@ import com.yunkuo.common.web.ResponseUtils;
 /**
  * JEECMS资源的Action
  * 
- * @author liufang
  * 
  */
 // TODO 验证path必须以TPL_BASE开头，不能有..后退关键字

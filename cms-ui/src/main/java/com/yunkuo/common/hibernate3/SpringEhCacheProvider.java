@@ -22,7 +22,6 @@ import org.springframework.core.io.Resource;
  * 
  * 解决配置文件地址和缓存文件存放地址的问题。支持/WEB-INF的地址格式。
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("deprecation")

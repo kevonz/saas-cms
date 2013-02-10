@@ -3,7 +3,6 @@ package com.yunkuo.common.email;
 /**
  * 邮件模板
  * 
- * @author liufang
  * 
  */
 public interface MessageTemplate {

@@ -17,7 +17,6 @@ import com.yunkuo.cms.entity.main.CmsSite;
 /**
  * 前台本地化信息拦截器
  * 
- * @author liufang
  * 
  */
 public class FrontLocaleInterceptor extends HandlerInterceptorAdapter {

@@ -3,7 +3,6 @@ package com.yunkuo.common.security;
 /**
  * 账号过期异常。如：改账号只缴纳了一年的费用，一年后没有续费。
  * 
- * @author liufang
  * 
  */
 @SuppressWarnings("serial")

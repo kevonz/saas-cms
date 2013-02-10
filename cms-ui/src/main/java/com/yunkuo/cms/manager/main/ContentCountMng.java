@@ -10,7 +10,6 @@ import com.yunkuo.cms.entity.main.ContentCount;
  * 
  * '内容'数据存在则'内容计数'数据必须存在。
  * 
- * @author liufang
  * 
  */
 public interface ContentCountMng {

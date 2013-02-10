@@ -36,7 +36,6 @@ import com.yunkuo.common.page.Pagination;
  * <li>21：总顶降序
  * </ul>
  * 
- * @author liufang
  * 
  */
 public interface ContentDao {

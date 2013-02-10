@@ -21,8 +21,6 @@ import freemarker.template.Configuration;
  * 
  * 不支持jsp标签、不支持request、session、application等对象，可用于前台模板页面。
  * 
- * @author liufang
- * 
  */
 public class SimpleFreeMarkerView extends AbstractTemplateView {
 	/**

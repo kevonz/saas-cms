@@ -23,7 +23,6 @@ import com.yunkuo.cms.web.FrontUtils;
 /**
  * 广告Action
  * 
- * @author liufang
  * 
  */
 @Controller
@@ -34,7 +33,7 @@ public class AdvertisingAct {
 	public static final String TPL_AD = "tpl.advertising";
 	public static final String TPL_ADSPACE = "tpl.adspace";
 
-	@RequestMapping(value = "/ad.jspx")
+	@RequestMapping(value = "/ad")
 	public String ad(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -47,7 +46,7 @@ public class AdvertisingAct {
 				TPLDIR_CSI, TPL_AD);
 	}
 
-	@RequestMapping(value = "/adspace.jspx")
+	@RequestMapping(value = "/adspace")
 	public String adspace(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -62,7 +61,7 @@ public class AdvertisingAct {
 				TPLDIR_CSI, TPL_ADSPACE);
 	}
 
-	@RequestMapping(value = "/ad_display.jspx")
+	@RequestMapping(value = "/ad_display")
 	public void display(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		if (id != null) {
@@ -73,7 +72,7 @@ public class AdvertisingAct {
 		response.setDateHeader("Expires", 0);
 	}
 
-	@RequestMapping(value = "/ad_click.jspx")
+	@RequestMapping(value = "/ad_click")
 	public void click(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		if (id != null) {

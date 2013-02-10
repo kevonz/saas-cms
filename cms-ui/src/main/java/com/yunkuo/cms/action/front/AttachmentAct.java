@@ -29,7 +29,7 @@ public class AttachmentAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(AttachmentAct.class);
 
-	@RequestMapping(value = "/attachment.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/attachment", method = RequestMethod.GET)
 	public void attachment(Integer cid, Integer i, Long t, String k,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) throws IOException {
@@ -70,7 +70,7 @@ public class AttachmentAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/attachment_url.jspx", method = RequestMethod.GET)
+	@RequestMapping(value = "/attachment_url", method = RequestMethod.GET)
 	public void url(Integer cid, Integer n, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		if (cid == null || n == null) {
