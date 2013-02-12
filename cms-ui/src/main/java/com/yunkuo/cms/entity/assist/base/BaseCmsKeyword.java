@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the jc_keyword table.
+ * This is an object that contains data related to the cms_keyword table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="jc_keyword"
+ *  table="cms_keyword"
  */
 
 public abstract class BaseCmsKeyword  implements Serializable {

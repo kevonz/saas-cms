@@ -126,9 +126,9 @@ public class Install {
 			String cxtPath, String port) throws Exception {
 		Connection conn = getConn(dbHost, dbPort, dbName, dbUser, dbPassword);
 		Statement stat = conn.createStatement();
-		String sql = "update jc_site set domain='" + domain + "'";
+		String sql = "update cms_site set domain='" + domain + "'";
 		stat.executeUpdate(sql);
-		sql = "update jc_config set context_path='" + cxtPath + "',port="
+		sql = "update cms_config set context_path='" + cxtPath + "',port="
 				+ port;
 		stat.executeUpdate(sql);
 		stat.close();

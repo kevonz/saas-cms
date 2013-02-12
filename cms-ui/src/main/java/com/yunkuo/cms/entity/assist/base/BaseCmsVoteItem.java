@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the jc_vote_item table.
+ * This is an object that contains data related to the cms_vote_item table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="jc_vote_item"
+ *  table="cms_vote_item"
  */
 
 public abstract class BaseCmsVoteItem  implements Serializable {

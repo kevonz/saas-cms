@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the jc_message table.
+ * This is an object that contains data related to the cms_message table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="jc_message"
+ *  table="cms_message"
  */
 
 public abstract class BaseCmsMessage  implements Serializable {

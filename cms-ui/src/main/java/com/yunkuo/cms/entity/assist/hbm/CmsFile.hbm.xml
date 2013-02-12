@@ -6,7 +6,7 @@
 <hibernate-mapping package="com.yunkuo.cms.entity.assist">
 	<class
 		name="CmsFile"
-		table="jc_file"
+		table="cms_file"
 	>
 		<meta attribute="sync-DAO">false</meta>
 		<id

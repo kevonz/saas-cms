@@ -34,7 +34,7 @@
 			<key column="user_id"/>
 			<many-to-many column="role_id" class="CmsRole"/>
 		</set>
-		<set name="channels" table="jc_channel_user" inverse="true">
+		<set name="channels" table="cms_channel_user" inverse="true">
 			<cache usage="read-write"/>
 			<key column="user_id"/>
 			<many-to-many column="channel_id" class="Channel"/>
