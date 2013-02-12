@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.yunkuo.cms.entity.main">
-	<class name="CmsUser" table="jc_user">
+	<class name="CmsUser" table="cms_user">
 		<meta attribute="sync-DAO">false</meta>
 		<cache usage="read-write"/>
 		<id name="id" type="java.lang.Integer" column="user_id"><generator class="assigned"/></id>
@@ -30,7 +30,7 @@
 			<key column="user_id"/>
 			<one-to-many class="CmsUserSite"/>
 		</set>
-		<set name="roles" table="jc_user_role">
+		<set name="roles" table="cms_user_role">
 			<key column="user_id"/>
 			<many-to-many column="role_id" class="CmsRole"/>
 		</set>
@@ -39,7 +39,7 @@
 			<key column="user_id"/>
 			<many-to-many column="channel_id" class="Channel"/>
 		</set>
-		<set name="collectContents" table="jc_user_collection">
+		<set name="collectContents" table="cms_user_collection">
 			<key column="user_id"/>
 			<many-to-many column="content_id" class="Content"/>
 		</set>

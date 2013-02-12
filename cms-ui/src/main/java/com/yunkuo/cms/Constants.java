@@ -120,7 +120,7 @@ public class Constants {
 	/**
 	 * 数据库备份文本前缀
 	 */
-	public static String ONESQL_PREFIX="JEECMS_BACKUP_";
+	public static String ONESQL_PREFIX="CMS_BACKUP_";
 	/**
 	 * 防火墙配置文件
 	 */

@@ -33,7 +33,7 @@
 			<key column="content_id"/>
 			<many-to-many column="group_id" class="CmsGroup"/>
 		</set>
-		<set name="collectUsers" table="jc_user_collection">
+		<set name="collectUsers" table="cms_user_collection">
 			<key column="content_id"/>
 			<many-to-many column="user_id" class="CmsUser"/>
 		</set>

@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 
 /**
- * This is an object that contains data related to the jo_config table.
+ * This is an object that contains data related to the yk_config table.
  * Do not modify this class because it will be overwritten if the configuration file
  * related to this class is modified.
  *
  * @hibernate.class
- *  table="jo_config"
+ *  table="yk_config"
  */
 
 public abstract class BaseConfig  implements Serializable {

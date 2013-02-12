@@ -10,10 +10,182 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2013-02-07 00:39:46
+Date: 2013-02-12 22:55:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `cms_group`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_group`;
+CREATE TABLE `cms_group` (
+  `group_id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(100) NOT NULL COMMENT '名称',
+  `priority` int(11) NOT NULL DEFAULT '10' COMMENT '排列顺序',
+  `need_captcha` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否需要验证码',
+  `need_check` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否需要审核',
+  `allow_per_day` int(11) NOT NULL DEFAULT '4096' COMMENT '每日允许上传KB',
+  `allow_max_file` int(11) NOT NULL DEFAULT '1024' COMMENT '每个文件最大KB',
+  `allow_suffix` varchar(255) DEFAULT 'jpg,jpeg,gif,png,bmp' COMMENT '允许上传的后缀',
+  `is_reg_def` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否默认会员组',
+  PRIMARY KEY (`group_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='CMS会员组表';
+
+-- ----------------------------
+-- Records of cms_group
+-- ----------------------------
+INSERT INTO `cms_group` VALUES ('1', '普通会员', '10', '1', '1', '4096', '1024', 'jpg,jpeg,gif,png,bmp', '1');
+INSERT INTO `cms_group` VALUES ('2', '高级组', '10', '1', '1', '0', '0', '', '0');
+
+-- ----------------------------
+-- Table structure for `cms_user`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_user`;
+CREATE TABLE `cms_user` (
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL COMMENT '用户名',
+  `email` varchar(100) DEFAULT NULL COMMENT '邮箱',
+  `register_time` datetime NOT NULL COMMENT '注册时间',
+  `register_ip` varchar(50) NOT NULL DEFAULT '127.0.0.1' COMMENT '注册IP',
+  `last_login_time` datetime NOT NULL COMMENT '最后登录时间',
+  `last_login_ip` varchar(50) NOT NULL DEFAULT '127.0.0.1' COMMENT '最后登录IP',
+  `login_count` int(11) NOT NULL DEFAULT '0' COMMENT '登录次数',
+  `rank` int(11) NOT NULL DEFAULT '0' COMMENT '管理员级别',
+  `upload_total` bigint(20) NOT NULL DEFAULT '0' COMMENT '上传总大小',
+  `upload_size` int(11) NOT NULL DEFAULT '0' COMMENT '上传大小',
+  `upload_date` date DEFAULT NULL COMMENT '上传日期',
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否管理员',
+  `is_viewonly_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否只读管理员',
+  `is_self_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否只管理自己的数据',
+  `is_disabled` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否禁用',
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `ak_username` (`username`),
+  KEY `fk_cms_user_group` (`group_id`) USING BTREE,
+  CONSTRAINT `fk_jc_user_group` FOREIGN KEY (`group_id`) REFERENCES `cms_group` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户表';
+
+-- ----------------------------
+-- Records of cms_user
+-- ----------------------------
+INSERT INTO `cms_user` VALUES ('1', '1', 'admin', 'bettersaas@163.com', '2011-01-03 00:00:00', '127.0.0.1', '2013-02-12 21:49:40', '0:0:0:0:0:0:0:1', '185', '9', '0', '0', null, '1', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('5', '1', 'test', 'test@163.com', '2011-12-19 15:26:02', '192.168.0.173', '2011-12-19 15:26:02', '192.168.0.173', '0', '0', '0', '0', '2011-12-19', '0', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('6', '1', 'bettersaas', 'bettersaas@163.com', '2013-01-23 23:48:52', '0:0:0:0:0:0:0:1', '2013-01-31 23:59:53', '0:0:0:0:0:0:0:1', '1', '0', '0', '0', '2013-01-23', '0', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('7', '1', 'aaa', 'aaa@aa.com', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-03', '0', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('8', '1', '666', '666@666.com', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-05', '0', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('9', '1', '333', '333@333.com', '2013-02-08 01:23:14', '0:0:0:0:0:0:0:1', '2013-02-08 01:23:14', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-08', '0', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('10', '1', 'kevonz', 'kevonz@live.com', '2013-02-12 11:35:40', '0:0:0:0:0:0:0:1', '2013-02-12 11:35:40', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-12', '0', '0', '0', '0');
+INSERT INTO `cms_user` VALUES ('11', '1', 'abcabc', 'abcabc@abc.abc', '2013-02-12 19:13:22', '0:0:0:0:0:0:0:1', '2013-02-12 19:13:22', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-12', '0', '0', '0', '0');
+
+-- ----------------------------
+-- Table structure for `cms_user_collection`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_user_collection`;
+CREATE TABLE `cms_user_collection` (
+  `user_id` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `content_id` int(11) NOT NULL DEFAULT '0' COMMENT '内容id',
+  PRIMARY KEY (`user_id`,`content_id`),
+  KEY `fk_jc_user_collection_con` (`content_id`),
+  CONSTRAINT `fk_jc_user_collection_con` FOREIGN KEY (`content_id`) REFERENCES `jc_content` (`content_id`),
+  CONSTRAINT `fk_jc_user_collection_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户收藏关联表';
+
+-- ----------------------------
+-- Records of cms_user_collection
+-- ----------------------------
+INSERT INTO `cms_user_collection` VALUES ('1', '237');
+
+-- ----------------------------
+-- Table structure for `cms_user_department`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_user_department`;
+CREATE TABLE `cms_user_department` (
+  `department_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`department_id`,`user_id`),
+  KEY `fk_jc_department_user` (`user_id`),
+  CONSTRAINT `fk_jc_department_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`),
+  CONSTRAINT `fk_jc_user_department` FOREIGN KEY (`department_id`) REFERENCES `jc_department` (`depart_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户部门关联表';
+
+-- ----------------------------
+-- Records of cms_user_department
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `cms_user_ext`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_user_ext`;
+CREATE TABLE `cms_user_ext` (
+  `user_id` int(11) NOT NULL,
+  `realname` varchar(100) DEFAULT NULL COMMENT '真实姓名',
+  `gender` tinyint(1) DEFAULT NULL COMMENT '性别',
+  `birthday` datetime DEFAULT NULL COMMENT '出生日期',
+  `intro` varchar(255) DEFAULT NULL COMMENT '个人介绍',
+  `comefrom` varchar(150) DEFAULT NULL COMMENT '来自',
+  `qq` varchar(100) DEFAULT NULL COMMENT 'QQ',
+  `msn` varchar(100) DEFAULT NULL COMMENT 'MSN',
+  `phone` varchar(50) DEFAULT NULL COMMENT '电话',
+  `mobile` varchar(50) DEFAULT NULL COMMENT '手机',
+  `user_img` varchar(255) DEFAULT NULL COMMENT '用户头像',
+  `user_signature` varchar(255) DEFAULT NULL COMMENT '用户个性签名',
+  PRIMARY KEY (`user_id`),
+  CONSTRAINT `fk_jc_ext_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户扩展信息表';
+
+-- ----------------------------
+-- Records of cms_user_ext
+-- ----------------------------
+INSERT INTO `cms_user_ext` VALUES ('1', 'cms', '1', null, '2348985t999', null, null, null, null, null, '/cms-ui/user/images/201302/012108334utw.png', '');
+INSERT INTO `cms_user_ext` VALUES ('5', null, null, null, null, ',', null, null, null, null, null, null);
+INSERT INTO `cms_user_ext` VALUES ('6', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `cms_user_ext` VALUES ('7', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `cms_user_ext` VALUES ('8', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `cms_user_ext` VALUES ('9', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `cms_user_ext` VALUES ('10', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `cms_user_ext` VALUES ('11', null, null, null, null, null, null, null, null, null, null, null);
+
+-- ----------------------------
+-- Table structure for `cms_user_role`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_user_role`;
+CREATE TABLE `cms_user_role` (
+  `role_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`role_id`,`user_id`),
+  KEY `fk_jc_role_user` (`user_id`),
+  CONSTRAINT `fk_jc_role_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`),
+  CONSTRAINT `fk_jc_user_role` FOREIGN KEY (`role_id`) REFERENCES `jc_role` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户角色关联表';
+
+-- ----------------------------
+-- Records of cms_user_role
+-- ----------------------------
+INSERT INTO `cms_user_role` VALUES ('1', '1');
+
+-- ----------------------------
+-- Table structure for `cms_user_site`
+-- ----------------------------
+DROP TABLE IF EXISTS `cms_user_site`;
+CREATE TABLE `cms_user_site` (
+  `usersite_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `site_id` int(11) NOT NULL,
+  `check_step` tinyint(4) NOT NULL DEFAULT '1' COMMENT '审核级别',
+  `is_all_channel` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否拥有所有栏目的权限',
+  PRIMARY KEY (`usersite_id`),
+  KEY `fk_jc_site_user` (`user_id`),
+  KEY `fk_jc_user_site` (`site_id`),
+  CONSTRAINT `fk_jc_site_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`),
+  CONSTRAINT `fk_jc_user_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='CMS管理员站点表';
+
+-- ----------------------------
+-- Records of cms_user_site
+-- ----------------------------
+INSERT INTO `cms_user_site` VALUES ('1', '1', '1', '2', '1');
+INSERT INTO `cms_user_site` VALUES ('2', '1', '2', '2', '1');
 
 -- ----------------------------
 -- Table structure for `jc_acquisition`
@@ -62,7 +234,7 @@ CREATE TABLE `jc_acquisition` (
   CONSTRAINT `fk_jc_acquisition_channel` FOREIGN KEY (`channel_id`) REFERENCES `jc_channel` (`channel_id`),
   CONSTRAINT `fk_jc_acquisition_contenttype` FOREIGN KEY (`type_id`) REFERENCES `jc_content_type` (`type_id`),
   CONSTRAINT `fk_jc_acquisition_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`),
-  CONSTRAINT `fk_jc_acquisition_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`)
+  CONSTRAINT `fk_jc_acquisition_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='CMS采集表';
 
 -- ----------------------------
@@ -907,7 +1079,7 @@ CREATE TABLE `jc_channel_user` (
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`channel_id`,`user_id`),
   KEY `fk_jc_channel_user` (`user_id`),
-  CONSTRAINT `fk_jc_channel_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`),
+  CONSTRAINT `fk_jc_channel_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`),
   CONSTRAINT `fk_jc_user_channel` FOREIGN KEY (`channel_id`) REFERENCES `jc_channel` (`channel_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS栏目用户关联表';
 
@@ -924,7 +1096,7 @@ CREATE TABLE `jc_chnl_group_contri` (
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`channel_id`,`group_id`),
   KEY `fk_jc_channel_group_c` (`group_id`),
-  CONSTRAINT `fk_jc_channel_group_c` FOREIGN KEY (`group_id`) REFERENCES `jc_group` (`group_id`),
+  CONSTRAINT `fk_jc_channel_group_c` FOREIGN KEY (`group_id`) REFERENCES `cms_group` (`group_id`),
   CONSTRAINT `fk_jc_group_channel_c` FOREIGN KEY (`channel_id`) REFERENCES `jc_channel` (`channel_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS栏目投稿会员组关联表';
 
@@ -979,7 +1151,7 @@ CREATE TABLE `jc_chnl_group_view` (
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`channel_id`,`group_id`),
   KEY `fk_jc_channel_group_v` (`group_id`),
-  CONSTRAINT `fk_jc_channel_group_v` FOREIGN KEY (`group_id`) REFERENCES `jc_group` (`group_id`),
+  CONSTRAINT `fk_jc_channel_group_v` FOREIGN KEY (`group_id`) REFERENCES `cms_group` (`group_id`),
   CONSTRAINT `fk_jc_group_channel_v` FOREIGN KEY (`channel_id`) REFERENCES `jc_channel` (`channel_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS栏目浏览会员组关联表';
 
@@ -1009,10 +1181,10 @@ CREATE TABLE `jc_comment` (
   KEY `fk_jc_comment_site` (`site_id`),
   KEY `fk_jc_comment_user` (`comment_user_id`),
   CONSTRAINT `fk_jc_comment_content` FOREIGN KEY (`content_id`) REFERENCES `jc_content` (`content_id`),
-  CONSTRAINT `fk_jc_comment_reply` FOREIGN KEY (`reply_user_id`) REFERENCES `jc_user` (`user_id`),
+  CONSTRAINT `fk_jc_comment_reply` FOREIGN KEY (`reply_user_id`) REFERENCES `cms_user` (`user_id`),
   CONSTRAINT `fk_jc_comment_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`),
-  CONSTRAINT `fk_jc_comment_user` FOREIGN KEY (`comment_user_id`) REFERENCES `jc_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='CMS评论表';
+  CONSTRAINT `fk_jc_comment_user` FOREIGN KEY (`comment_user_id`) REFERENCES `cms_user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='CMS评论表';
 
 -- ----------------------------
 -- Records of jc_comment
@@ -1027,6 +1199,7 @@ INSERT INTO `jc_comment` VALUES ('7', '1', null, '39', '1', '2013-01-24 23:27:05
 INSERT INTO `jc_comment` VALUES ('8', '1', null, '39', '1', '2013-01-24 23:29:02', null, '0', '0', '0', '0');
 INSERT INTO `jc_comment` VALUES ('9', '1', null, '246', '1', '2013-02-01 23:47:08', null, '0', '0', '0', '0');
 INSERT INTO `jc_comment` VALUES ('10', null, null, '246', '1', '2013-02-07 00:22:32', null, '0', '0', '0', '0');
+INSERT INTO `jc_comment` VALUES ('11', null, null, '237', '1', '2013-02-09 00:17:22', null, '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `jc_comment_ext`
@@ -1054,6 +1227,7 @@ INSERT INTO `jc_comment_ext` VALUES ('7', '0:0:0:0:0:0:0:1', 'afewaf', null);
 INSERT INTO `jc_comment_ext` VALUES ('8', '0:0:0:0:0:0:0:1', 'awfef', null);
 INSERT INTO `jc_comment_ext` VALUES ('9', '0:0:0:0:0:0:0:1', '888888888', null);
 INSERT INTO `jc_comment_ext` VALUES ('10', '0:0:0:0:0:0:0:1', '777777', null);
+INSERT INTO `jc_comment_ext` VALUES ('11', '0:0:0:0:0:0:0:1', 'rthdrh', null);
 
 -- ----------------------------
 -- Table structure for `jc_config`
@@ -1067,7 +1241,7 @@ CREATE TABLE `jc_config` (
   `db_file_uri` varchar(50) NOT NULL DEFAULT '/dbfile.svl?n=' COMMENT '数据库附件访问地址',
   `is_upload_to_db` tinyint(1) NOT NULL DEFAULT '0' COMMENT '上传附件至数据库',
   `def_img` varchar(255) NOT NULL DEFAULT '/JeeCms/r/cms/www/default/no_picture.gif' COMMENT '图片不存在时默认图片',
-  `login_url` varchar(255) NOT NULL DEFAULT '/login' COMMENT '登录地址',
+  `login_url` varchar(255) NOT NULL DEFAULT '/login.jspx' COMMENT '登录地址',
   `process_url` varchar(255) DEFAULT NULL COMMENT '登录后处理地址',
   `mark_on` tinyint(1) NOT NULL DEFAULT '1' COMMENT '开启图片水印',
   `mark_width` int(11) NOT NULL DEFAULT '120' COMMENT '图片最小宽度',
@@ -1096,7 +1270,7 @@ CREATE TABLE `jc_config` (
 -- ----------------------------
 -- Records of jc_config
 -- ----------------------------
-INSERT INTO `jc_config` VALUES ('1', '/cms-ui', null, '8080', '/dbfile.svl?n=', '0', '/r/cms/www/no_picture.gif', '/login', null, '1', '120', '120', '/r/cms/www/watermark.png', 'www.yunkuo.com', '20', '#FF0000', '50', '1', '0', '0', '2013-02-05', '2013-02-05 22:32:39', 'jeecms', '12', null, null, null, null, null, '1');
+INSERT INTO `jc_config` VALUES ('1', '/cms-ui', null, '8080', '/dbfile.svl?n=', '0', '/r/cms/www/no_picture.gif', '/login.jspx', null, '1', '120', '120', '/r/cms/www/watermark.png', 'www.yunkuo.com', '20', '#FF0000', '50', '1', '0', '0', '2013-02-10', '2013-02-10 23:14:05', 'jeecms', '12', null, null, null, null, null, '1');
 
 -- ----------------------------
 -- Table structure for `jc_config_attr`
@@ -1118,7 +1292,7 @@ INSERT INTO `jc_config_attr` VALUES ('1', 'username_reserved', '');
 INSERT INTO `jc_config_attr` VALUES ('1', 'register_on', 'true');
 INSERT INTO `jc_config_attr` VALUES ('1', 'member_on', 'true');
 INSERT INTO `jc_config_attr` VALUES ('1', 'username_min_len', '3');
-INSERT INTO `jc_config_attr` VALUES ('1', 'version', 'jeecms-3.1.1-final');
+INSERT INTO `jc_config_attr` VALUES ('1', 'version', 'cms-3.1.1-final');
 
 -- ----------------------------
 -- Table structure for `jc_content`
@@ -1147,7 +1321,7 @@ CREATE TABLE `jc_content` (
   CONSTRAINT `fk_jc_contentchannel` FOREIGN KEY (`channel_id`) REFERENCES `jc_channel` (`channel_id`),
   CONSTRAINT `fk_jc_content_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`),
   CONSTRAINT `fk_jc_content_type` FOREIGN KEY (`type_id`) REFERENCES `jc_content_type` (`type_id`),
-  CONSTRAINT `fk_jc_content_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`)
+  CONSTRAINT `fk_jc_content_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=608 DEFAULT CHARSET=utf8 COMMENT='CMS内容表';
 
 -- ----------------------------
@@ -1251,7 +1425,7 @@ INSERT INTO `jc_content` VALUES ('246', '13', '1', '1', '1', '2011-12-19 08:54:3
 INSERT INTO `jc_content` VALUES ('247', '13', '1', '1', '1', '2011-12-19 08:55:04', '0', '0', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('248', '13', '1', '1', '1', '2011-12-19 08:55:51', '0', '0', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('249', '11', '1', '2', '1', '2011-12-19 09:02:32', '0', '0', '0', '2', '0', '0', '0', '0');
-INSERT INTO `jc_content` VALUES ('250', '13', '1', '2', '1', '2011-12-19 09:10:17', '0', '0', '0', '2', '1', '0', '0', '0');
+INSERT INTO `jc_content` VALUES ('250', '13', '1', '2', '1', '2011-12-19 09:10:17', '0', '0', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('251', '41', '1', '1', '1', '2011-12-19 09:19:32', '0', '0', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('252', '41', '1', '1', '1', '2011-12-19 09:20:23', '0', '0', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('253', '41', '1', '1', '1', '2011-12-19 09:20:58', '0', '0', '0', '2', '0', '0', '0', '0');
@@ -1311,7 +1485,7 @@ INSERT INTO `jc_content` VALUES ('306', '52', '1', '2', '1', '2011-12-19 10:59:4
 INSERT INTO `jc_content` VALUES ('307', '52', '1', '2', '1', '2011-12-19 11:00:37', '0', '0', '1', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('308', '52', '1', '2', '1', '2011-12-19 11:01:22', '0', '0', '1', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('309', '52', '1', '2', '1', '2011-12-19 11:01:51', '0', '0', '1', '2', '0', '0', '0', '0');
-INSERT INTO `jc_content` VALUES ('310', '52', '1', '2', '1', '2011-12-19 11:03:01', '0', '0', '1', '2', '0', '0', '0', '0');
+INSERT INTO `jc_content` VALUES ('310', '52', '1', '2', '1', '2011-12-19 11:03:01', '0', '0', '1', '2', '1', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('311', '52', '1', '2', '1', '2011-12-19 11:03:41', '0', '0', '1', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('312', '49', '1', '2', '1', '2011-12-19 11:06:15', '0', '0', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('313', '49', '1', '2', '1', '2011-12-19 11:07:01', '0', '0', '0', '2', '0', '0', '0', '0');
@@ -1333,7 +1507,7 @@ INSERT INTO `jc_content` VALUES ('328', '38', '1', '1', '1', '2011-12-19 12:02:0
 INSERT INTO `jc_content` VALUES ('329', '38', '1', '1', '1', '2011-12-19 13:17:53', '0', '1', '0', '2', '0', '0', '0', '0');
 INSERT INTO `jc_content` VALUES ('330', '38', '1', '1', '1', '2011-12-19 13:45:17', '0', '1', '0', '2', '0', '0', '1', '0');
 INSERT INTO `jc_content` VALUES ('331', '39', '1', '1', '1', '2011-12-19 13:53:49', '0', '1', '0', '2', '0', '0', '0', '0');
-INSERT INTO `jc_content` VALUES ('332', '39', '1', '1', '1', '2011-12-19 13:57:03', '0', '1', '0', '2', '0', '0', '0', '0');
+INSERT INTO `jc_content` VALUES ('332', '39', '1', '1', '1', '2011-12-19 13:57:03', '0', '1', '0', '2', '0', '0', '2', '0');
 INSERT INTO `jc_content` VALUES ('333', '37', '1', '1', '1', '2011-12-19 14:10:29', '0', '1', '0', '2', '0', '0', '1', '0');
 INSERT INTO `jc_content` VALUES ('334', '57', '1', '1', '1', '2011-12-19 14:18:12', '0', '1', '0', '2', '0', '0', '1', '0');
 INSERT INTO `jc_content` VALUES ('335', '57', '1', '1', '1', '2011-12-19 14:21:32', '0', '1', '0', '2', '0', '0', '0', '0');
@@ -2295,7 +2469,7 @@ CREATE TABLE `jc_content_check` (
   PRIMARY KEY (`content_id`),
   KEY `fk_jc_content_check_user` (`reviewer`),
   CONSTRAINT `fk_jc_check_content` FOREIGN KEY (`content_id`) REFERENCES `jc_content` (`content_id`),
-  CONSTRAINT `fk_jc_content_check_user` FOREIGN KEY (`reviewer`) REFERENCES `jc_user` (`user_id`)
+  CONSTRAINT `fk_jc_content_check_user` FOREIGN KEY (`reviewer`) REFERENCES `cms_user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS内容审核信息表';
 
 -- ----------------------------
@@ -2792,7 +2966,7 @@ INSERT INTO `jc_content_count` VALUES ('35', '0', '0', '0', '0', '0', '0', '0', 
 INSERT INTO `jc_content_count` VALUES ('36', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('37', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('38', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('39', '14', '2', '1', '0', '2', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('39', '14', '2', '0', '0', '2', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('40', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('41', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('42', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -2818,7 +2992,7 @@ INSERT INTO `jc_content_count` VALUES ('65', '0', '0', '0', '0', '0', '0', '0', 
 INSERT INTO `jc_content_count` VALUES ('66', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('112', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('115', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('116', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('116', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('117', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('172', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('173', '4', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0');
@@ -2870,9 +3044,9 @@ INSERT INTO `jc_content_count` VALUES ('231', '0', '0', '0', '0', '0', '0', '0',
 INSERT INTO `jc_content_count` VALUES ('232', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('233', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('234', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('235', '4', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('235', '4', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('236', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('237', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('237', '5', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('238', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('239', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('240', '2', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -2881,11 +3055,11 @@ INSERT INTO `jc_content_count` VALUES ('242', '0', '0', '0', '0', '0', '0', '0',
 INSERT INTO `jc_content_count` VALUES ('243', '2', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('244', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('245', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('246', '1', '1', '0', '0', '3', '3', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('246', '1', '1', '0', '0', '3', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('247', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('248', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('249', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('250', '24', '1', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('250', '24', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('251', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('252', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('253', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -2927,7 +3101,7 @@ INSERT INTO `jc_content_count` VALUES ('288', '0', '0', '0', '0', '0', '0', '0',
 INSERT INTO `jc_content_count` VALUES ('289', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('290', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('291', '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('292', '7', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('292', '7', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('293', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('294', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('295', '16', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -2945,7 +3119,7 @@ INSERT INTO `jc_content_count` VALUES ('306', '0', '0', '0', '0', '0', '0', '0',
 INSERT INTO `jc_content_count` VALUES ('307', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('308', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('309', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('310', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('310', '8', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('311', '9', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('312', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('313', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -2965,9 +3139,9 @@ INSERT INTO `jc_content_count` VALUES ('326', '13', '0', '0', '0', '0', '0', '0'
 INSERT INTO `jc_content_count` VALUES ('327', '8', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('328', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('329', '6', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('330', '8', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('330', '9', '1', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('331', '5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('332', '10', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('332', '10', '0', '0', '0', '0', '0', '0', '0', '2', '2', '1', '2', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('333', '2', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('334', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('335', '3', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -3165,7 +3339,7 @@ INSERT INTO `jc_content_count` VALUES ('527', '0', '0', '0', '0', '0', '0', '0',
 INSERT INTO `jc_content_count` VALUES ('528', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('529', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('530', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('531', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('531', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('532', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('533', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('534', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
@@ -3241,7 +3415,7 @@ INSERT INTO `jc_content_count` VALUES ('603', '0', '0', '0', '0', '0', '0', '0',
 INSERT INTO `jc_content_count` VALUES ('604', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('605', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `jc_content_count` VALUES ('606', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
-INSERT INTO `jc_content_count` VALUES ('607', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `jc_content_count` VALUES ('607', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `jc_content_ext`
@@ -3738,7 +3912,7 @@ CREATE TABLE `jc_content_group_view` (
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`content_id`,`group_id`),
   KEY `fk_jc_content_group_v` (`group_id`),
-  CONSTRAINT `fk_jc_content_group_v` FOREIGN KEY (`group_id`) REFERENCES `jc_group` (`group_id`),
+  CONSTRAINT `fk_jc_content_group_v` FOREIGN KEY (`group_id`) REFERENCES `cms_group` (`group_id`),
   CONSTRAINT `fk_jc_group_content_v` FOREIGN KEY (`content_id`) REFERENCES `jc_content` (`content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS内容浏览会员组关联表';
 
@@ -4782,29 +4956,6 @@ INSERT INTO `jc_friendlink_ctg` VALUES ('1', '1', '文字链接', '1');
 INSERT INTO `jc_friendlink_ctg` VALUES ('2', '1', '品牌专区（图片链接）', '2');
 
 -- ----------------------------
--- Table structure for `jc_group`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_group`;
-CREATE TABLE `jc_group` (
-  `group_id` int(11) NOT NULL AUTO_INCREMENT,
-  `group_name` varchar(100) NOT NULL COMMENT '名称',
-  `priority` int(11) NOT NULL DEFAULT '10' COMMENT '排列顺序',
-  `need_captcha` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否需要验证码',
-  `need_check` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否需要审核',
-  `allow_per_day` int(11) NOT NULL DEFAULT '4096' COMMENT '每日允许上传KB',
-  `allow_max_file` int(11) NOT NULL DEFAULT '1024' COMMENT '每个文件最大KB',
-  `allow_suffix` varchar(255) DEFAULT 'jpg,jpeg,gif,png,bmp' COMMENT '允许上传的后缀',
-  `is_reg_def` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否默认会员组',
-  PRIMARY KEY (`group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='CMS会员组表';
-
--- ----------------------------
--- Records of jc_group
--- ----------------------------
-INSERT INTO `jc_group` VALUES ('1', '普通会员', '10', '1', '1', '4096', '1024', 'jpg,jpeg,gif,png,bmp', '1');
-INSERT INTO `jc_group` VALUES ('2', '高级组', '10', '1', '1', '0', '0', '', '0');
-
--- ----------------------------
 -- Table structure for `jc_guestbook`
 -- ----------------------------
 DROP TABLE IF EXISTS `jc_guestbook`;
@@ -4825,10 +4976,10 @@ CREATE TABLE `jc_guestbook` (
   KEY `fk_jc_guestbook_member` (`member_id`),
   KEY `fk_jc_guestbook_site` (`site_id`),
   CONSTRAINT `fk_jc_ctg_guestbook` FOREIGN KEY (`guestbookctg_id`) REFERENCES `jc_guestbook_ctg` (`guestbookctg_id`),
-  CONSTRAINT `fk_jc_guestbook_admin` FOREIGN KEY (`admin_id`) REFERENCES `jc_user` (`user_id`),
-  CONSTRAINT `fk_jc_guestbook_member` FOREIGN KEY (`member_id`) REFERENCES `jc_user` (`user_id`),
+  CONSTRAINT `fk_jc_guestbook_admin` FOREIGN KEY (`admin_id`) REFERENCES `cms_user` (`user_id`),
+  CONSTRAINT `fk_jc_guestbook_member` FOREIGN KEY (`member_id`) REFERENCES `cms_user` (`user_id`),
   CONSTRAINT `fk_jc_guestbook_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='CMS留言';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='CMS留言';
 
 -- ----------------------------
 -- Records of jc_guestbook
@@ -4840,6 +4991,7 @@ INSERT INTO `jc_guestbook` VALUES ('4', '1', '1', '1', null, '192.168.0.1', '201
 INSERT INTO `jc_guestbook` VALUES ('5', '1', '1', '1', null, '192.168.0.200', '2011-12-18 16:10:10', null, '0', '0');
 INSERT INTO `jc_guestbook` VALUES ('6', '1', '1', '1', null, '192.168.0.200', '2011-12-18 16:10:52', null, '0', '0');
 INSERT INTO `jc_guestbook` VALUES ('7', '1', '1', '1', null, '192.168.0.1', '2011-12-19 12:06:28', null, '1', '1');
+INSERT INTO `jc_guestbook` VALUES ('8', '1', '1', null, null, '0:0:0:0:0:0:0:1', '2013-02-10 23:30:07', null, '0', '0');
 
 -- ----------------------------
 -- Table structure for `jc_guestbook_ctg`
@@ -4904,6 +5056,7 @@ INSERT INTO `jc_guestbook_ext` VALUES ('4', '多重压力将影响整体衣柜�
 INSERT INTO `jc_guestbook_ext` VALUES ('5', '1111111111111111111111111111111', '11111111111111111111111111111111111111111111111111111111111111111111111', null, null, null, null);
 INSERT INTO `jc_guestbook_ext` VALUES ('6', '11111111111111111111', '1111111111111111111111111111111', null, null, '1111111111', null);
 INSERT INTO `jc_guestbook_ext` VALUES ('7', '足球宝贝徐冬冬', '足球宝贝徐冬冬海边写真 湿身展无限魅力足球宝贝徐冬冬海边写真 湿身展无限魅', null, '11@102.com', '1222331155', null);
+INSERT INTO `jc_guestbook_ext` VALUES ('8', '23424', 'sgregesr', null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `jc_keyword`
@@ -4943,7 +5096,7 @@ CREATE TABLE `jc_log` (
   KEY `fk_jc_log_site` (`site_id`),
   KEY `fk_jc_log_user` (`user_id`),
   CONSTRAINT `fk_jc_log_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`),
-  CONSTRAINT `fk_jc_log_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`)
+  CONSTRAINT `fk_jc_log_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COMMENT='CMS日志表';
 
 -- ----------------------------
@@ -5013,8 +5166,8 @@ CREATE TABLE `jc_message` (
   KEY `fk_jc_message_user_receiver` (`msg_receiver_user`),
   KEY `fk_jc_message_site` (`site_id`),
   CONSTRAINT `fk_jc_message_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`),
-  CONSTRAINT `fk_jc_message_user_receiver` FOREIGN KEY (`msg_receiver_user`) REFERENCES `jc_user` (`user_id`),
-  CONSTRAINT `fk_jc_message_user_send` FOREIGN KEY (`msg_send_user`) REFERENCES `jc_user` (`user_id`)
+  CONSTRAINT `fk_jc_message_user_receiver` FOREIGN KEY (`msg_receiver_user`) REFERENCES `cms_user` (`user_id`),
+  CONSTRAINT `fk_jc_message_user_send` FOREIGN KEY (`msg_send_user`) REFERENCES `cms_user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='站内信';
 
 -- ----------------------------
@@ -5352,8 +5505,8 @@ CREATE TABLE `jc_receiver_message` (
   KEY `fk_jc_receiver_message_message` (`msg_id`),
   CONSTRAINT `fk_jc_receiver_message_message` FOREIGN KEY (`msg_id`) REFERENCES `jc_message` (`msg_id`),
   CONSTRAINT `fk_jc_receiver_message_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`),
-  CONSTRAINT `fk_jc_receiver_message_user_receiver` FOREIGN KEY (`msg_receiver_user`) REFERENCES `jc_user` (`user_id`),
-  CONSTRAINT `fk_jc_receiver_message_user_send` FOREIGN KEY (`msg_send_user`) REFERENCES `jc_user` (`user_id`)
+  CONSTRAINT `fk_jc_receiver_message_user_receiver` FOREIGN KEY (`msg_receiver_user`) REFERENCES `cms_user` (`user_id`),
+  CONSTRAINT `fk_jc_receiver_message_user_send` FOREIGN KEY (`msg_send_user`) REFERENCES `cms_user` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='站内信收信表';
 
 -- ----------------------------
@@ -5447,7 +5600,7 @@ CREATE TABLE `jc_site` (
   KEY `fk_jc_site_config` (`config_id`),
   KEY `fk_jc_site_upload_ftp` (`ftp_upload_id`),
   CONSTRAINT `fk_jc_site_config` FOREIGN KEY (`config_id`) REFERENCES `jc_config` (`config_id`),
-  CONSTRAINT `fk_jc_site_upload_ftp` FOREIGN KEY (`ftp_upload_id`) REFERENCES `jo_ftp` (`ftp_id`)
+  CONSTRAINT `fk_jc_site_upload_ftp` FOREIGN KEY (`ftp_upload_id`) REFERENCES `yk_ftp` (`ftp_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='CMS站点表';
 
 -- ----------------------------
@@ -5507,7 +5660,7 @@ CREATE TABLE `jc_site_flow` (
   PRIMARY KEY (`flow_id`),
   KEY `fk_jc_flow_site` (`site_id`),
   CONSTRAINT `fk_jc_flow_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8 COMMENT='站点流量统计表';
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8 COMMENT='站点流量统计表';
 
 -- ----------------------------
 -- Records of jc_site_flow
@@ -5534,8 +5687,8 @@ INSERT INTO `jc_site_flow` VALUES ('19', '1', '127.0.0.1', '2013-1-23', '2013-01
 INSERT INTO `jc_site_flow` VALUES ('20', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:20:24', 'http://localhost:8080/cms-ui/gnxw/607.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/jeeadmin/jeecms/content/v_list.do', '', '本机地址', '57E968DDF8FD1C9FE0D819B3767FA6A5');
 INSERT INTO `jc_site_flow` VALUES ('21', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:18:49', 'http://localhost:8080/cms-ui/shehui/248.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '本机地址', '57E968DDF8FD1C9FE0D819B3767FA6A5');
 INSERT INTO `jc_site_flow` VALUES ('22', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:33:44', 'http://localhost:8080/jeecms/', '', '', '', '本机地址', '9BC6DACF6B24490869D685630B055B7E');
-INSERT INTO `jc_site_flow` VALUES ('23', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 23:34:38', 'http://localhost:8080/cms-ui/gnxw/605.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/contribute_list', '', '', 'AD8CD3F1B55656A01CEE20A7F188F2BB');
-INSERT INTO `jc_site_flow` VALUES ('24', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 23:34:04', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/search?q=%E8%AF%B7%E8%BE%93%E5%85%A5%E5%85%B3%E9%94%AE%E8%AF%8D&channelId=', '', '', 'AD8CD3F1B55656A01CEE20A7F188F2BB');
+INSERT INTO `jc_site_flow` VALUES ('23', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 23:34:38', 'http://localhost:8080/cms-ui/gnxw/605.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/contribute_list.jspx', '', '', 'AD8CD3F1B55656A01CEE20A7F188F2BB');
+INSERT INTO `jc_site_flow` VALUES ('24', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 23:34:04', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/search.jspx?q=%E8%AF%B7%E8%BE%93%E5%85%A5%E5%85%B3%E9%94%AE%E8%AF%8D&channelId=', '', '', 'AD8CD3F1B55656A01CEE20A7F188F2BB');
 INSERT INTO `jc_site_flow` VALUES ('25', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2013-01-24 21:24:13', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/top.do', '', '', 'B88C3A7E5C4BA9790399B0B38F276075');
 INSERT INTO `jc_site_flow` VALUES ('26', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2013-01-24 21:42:07', 'http://localhost:8080/cms-ui/gnxw/606.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/content/v_list.do?cid=1', '', '', 'B88C3A7E5C4BA9790399B0B38F276075');
 INSERT INTO `jc_site_flow` VALUES ('27', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2013-01-24 21:46:41', 'http://localhost:8080/cms-ui/whxy/297.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/picture/index.jhtml', '', '', 'B88C3A7E5C4BA9790399B0B38F276075');
@@ -5547,32 +5700,32 @@ INSERT INTO `jc_site_flow` VALUES ('32', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2
 INSERT INTO `jc_site_flow` VALUES ('33', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2013-01-24 23:28:10', 'http://localhost:8080/cms-ui/download/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/photo/187.jhtml', '', '', 'moq9ghkot08sj47p7y9j4ua4');
 INSERT INTO `jc_site_flow` VALUES ('34', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2013-01-24 23:27:55', 'http://localhost:8080/cms-ui/photo/186.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/news/index.jhtml', '', '', 'moq9ghkot08sj47p7y9j4ua4');
 INSERT INTO `jc_site_flow` VALUES ('35', '1', '0:0:0:0:0:0:0:1', '2013-1-27', '2013-01-27 23:20:28', 'http://localhost:8080/cms-ui/', '', '', '', '', 'uy3r260f382m1nuk1vtreqa1r');
-INSERT INTO `jc_site_flow` VALUES ('36', '1', '0:0:0:0:0:0:0:1', '2013-1-28', '2013-01-28 00:15:41', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/register', '', '', '1af23ime8jex41ub014jsy6dty');
-INSERT INTO `jc_site_flow` VALUES ('37', '1', '0:0:0:0:0:0:0:1', '2013-1-28', '2013-01-28 23:12:18', 'http://localhost:8080/cms-ui/cjbd/112.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/tag/40', '', '', '5DA84C60D4DA5CCF9EF7C9ACED066F2A');
-INSERT INTO `jc_site_flow` VALUES ('38', '1', '0:0:0:0:0:0:0:1', '2013-1-31', '2013-01-31 23:59:54', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'D24DFB3E1EF2F14920C49E349EC91D60');
+INSERT INTO `jc_site_flow` VALUES ('36', '1', '0:0:0:0:0:0:0:1', '2013-1-28', '2013-01-28 00:15:41', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/register.jspx', '', '', '1af23ime8jex41ub014jsy6dty');
+INSERT INTO `jc_site_flow` VALUES ('37', '1', '0:0:0:0:0:0:0:1', '2013-1-28', '2013-01-28 23:12:18', 'http://localhost:8080/cms-ui/cjbd/112.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/tag/40.jspx', '', '', '5DA84C60D4DA5CCF9EF7C9ACED066F2A');
+INSERT INTO `jc_site_flow` VALUES ('38', '1', '0:0:0:0:0:0:0:1', '2013-1-31', '2013-01-31 23:59:54', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'D24DFB3E1EF2F14920C49E349EC91D60');
 INSERT INTO `jc_site_flow` VALUES ('39', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 21:04:57', 'http://localhost:8080/cms-ui/', '', '', '', '', '55FA62F13E22437DD80571F5C945CB12');
-INSERT INTO `jc_site_flow` VALUES ('40', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 21:59:33', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/index', '', '', '55FA62F13E22437DD80571F5C945CB12');
+INSERT INTO `jc_site_flow` VALUES ('40', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 21:59:33', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/index.jspx', '', '', '55FA62F13E22437DD80571F5C945CB12');
 INSERT INTO `jc_site_flow` VALUES ('41', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 22:39:28', 'http://localhost:8080/cms-ui/shehui/247.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '55FA62F13E22437DD80571F5C945CB12');
 INSERT INTO `jc_site_flow` VALUES ('42', '1', '0:0:0:0:0:0:0:1', '2013-2-1', '2013-02-01 23:36:33', 'http://localhost:8080/cms-ui/shehui/246.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '55FA62F13E22437DD80571F5C945CB12');
-INSERT INTO `jc_site_flow` VALUES ('43', '1', '0:0:0:0:0:0:0:1', '2013-2-2', '2013-02-02 00:14:11', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/contribute_add', '', '', '55FA62F13E22437DD80571F5C945CB12');
+INSERT INTO `jc_site_flow` VALUES ('43', '1', '0:0:0:0:0:0:0:1', '2013-2-2', '2013-02-02 00:14:11', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/contribute_add.jspx', '', '', '55FA62F13E22437DD80571F5C945CB12');
 INSERT INTO `jc_site_flow` VALUES ('44', '1', '0:0:0:0:0:0:0:1', '2013-2-2', '2013-02-02 23:11:52', 'http://localhost:8080/cms-ui/', '', '', '', '', 'D29D81CA52A74B58E9142745CD60B172');
 INSERT INTO `jc_site_flow` VALUES ('45', '1', '0:0:0:0:0:0:0:1', '2013-2-2', '2013-02-02 23:49:00', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/gnxw/39.jhtml', '', '', 'A77AD84C029362DE7ED2FB4D72333788');
 INSERT INTO `jc_site_flow` VALUES ('46', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 18:55:15', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '74638FA1FB258A0B60AD1B65BA732D39');
 INSERT INTO `jc_site_flow` VALUES ('47', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 18:55:49', 'http://localhost:8080/cms-ui/phone/292.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/product/index.jhtml', '', '', '74638FA1FB258A0B60AD1B65BA732D39');
-INSERT INTO `jc_site_flow` VALUES ('48', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 18:55:41', 'http://localhost:8080/cms-ui/product/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/guestbook', '', '', '74638FA1FB258A0B60AD1B65BA732D39');
+INSERT INTO `jc_site_flow` VALUES ('48', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 18:55:41', 'http://localhost:8080/cms-ui/product/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/guestbook.jspx', '', '', '74638FA1FB258A0B60AD1B65BA732D39');
 INSERT INTO `jc_site_flow` VALUES ('49', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 21:25:53', 'http://localhost:8080/cms-ui/', '', '', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
 INSERT INTO `jc_site_flow` VALUES ('50', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 21:27:46', 'http://localhost:8080/cms-ui/gnxw/603.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/content/v_list.do', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
 INSERT INTO `jc_site_flow` VALUES ('51', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 21:25:56', 'http://localhost:8080/cms-ui/gnxw/39.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
-INSERT INTO `jc_site_flow` VALUES ('52', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:26:28', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
-INSERT INTO `jc_site_flow` VALUES ('53', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:39:57', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/comment?contentId=246', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
-INSERT INTO `jc_site_flow` VALUES ('54', '1', '0:0:0:0:0:0:0:1', '2013-2-4', '2013-02-04 21:11:52', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'fnwe7kje2gwb1i6hxy2ke7cje');
+INSERT INTO `jc_site_flow` VALUES ('52', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:26:28', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
+INSERT INTO `jc_site_flow` VALUES ('53', '1', '0:0:0:0:0:0:0:1', '2013-2-3', '2013-02-03 23:39:57', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/comment.jspx?contentId=246', '', '', 'AA2E4F4A8F7CF0F700DFF3C4AC91579F');
+INSERT INTO `jc_site_flow` VALUES ('54', '1', '0:0:0:0:0:0:0:1', '2013-2-4', '2013-02-04 21:11:52', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'fnwe7kje2gwb1i6hxy2ke7cje');
 INSERT INTO `jc_site_flow` VALUES ('55', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:58:06', 'http://localhost:8080/cms-ui/news/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('56', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:58:32', 'http://localhost:8080/cms-ui/gnxw/index_2.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/gnxw/index.jhtml', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('57', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:59:21', 'http://localhost:8080/cms-ui/gnxw/index_3.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/gnxw/index_2.jhtml', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('58', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 21:58:22', 'http://localhost:8080/cms-ui/gnxw/index.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/news/index.jhtml', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
 INSERT INTO `jc_site_flow` VALUES ('59', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:32:40', 'http://localhost:8080/cms-ui/shehui/250.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '0A4F0DDE3219D007A5CEF9D3C20A6269');
-INSERT INTO `jc_site_flow` VALUES ('60', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:35:21', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
-INSERT INTO `jc_site_flow` VALUES ('61', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:42:23', 'http://localhost:8080/cms-ui/gnxw/249.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/topic/2', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
+INSERT INTO `jc_site_flow` VALUES ('60', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:35:21', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
+INSERT INTO `jc_site_flow` VALUES ('61', '1', '0:0:0:0:0:0:0:1', '2013-2-5', '2013-02-05 22:42:23', 'http://localhost:8080/cms-ui/gnxw/249.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/topic/2.jspx', '', '', 'CFB0E8424BF93F9ED97766BC0316AB78');
 INSERT INTO `jc_site_flow` VALUES ('62', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 00:32:52', 'http://localhost:8080/cms-ui/', '', '', '', '', '6E0FE640A168EE5A6B02A16387205E6B');
 INSERT INTO `jc_site_flow` VALUES ('63', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 22:11:20', 'http://localhost:8080/cms-ui/index.html', '', '', '', '', '02A8D37922F9801DFFCE0BC18732AD56');
 INSERT INTO `jc_site_flow` VALUES ('64', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:04:12', 'http://localhost:8080/cms-ui/index.html', '', '', '', '', '2EC4A7EAC7F3D0753CF2830FF674CB62');
@@ -5582,11 +5735,11 @@ INSERT INTO `jc_site_flow` VALUES ('67', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '20
 INSERT INTO `jc_site_flow` VALUES ('68', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:12:44', 'http://localhost:8080/cms-ui/gnxw/39.htm', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('69', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:13:19', 'http://localhost:8080/cms-ui/index.jhtml', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('70', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:36:06', 'http://localhost:8080/cms-ui/', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
-INSERT INTO `jc_site_flow` VALUES ('71', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:45:42', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
+INSERT INTO `jc_site_flow` VALUES ('71', '1', '0:0:0:0:0:0:0:1', '2013-2-6', '2013-02-06 23:45:42', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('72', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:01:46', 'http://localhost:8080/cms-ui/gnxw/602.htm', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
 INSERT INTO `jc_site_flow` VALUES ('73', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:01:59', 'http://localhost:8080/cms-ui/dong/327.htm', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('74', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:01:46', 'http://localhost:8080/cms-ui/gnxw/39.htm', '', '', '', '', 'CCAF02F6121714F6122B0C0FE1801A5E');
-INSERT INTO `jc_site_flow` VALUES ('75', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:05:48', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login?returnUrl=/', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
+INSERT INTO `jc_site_flow` VALUES ('75', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:05:48', 'http://localhost:8080/cms-ui/?locale=zh_CN', 'http://localhost:8080', 'http://localhost:8080/cms-ui/login.jspx?returnUrl=/', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('76', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:06:18', 'http://localhost:8080/cms-ui/about.htm', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('77', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:09:06', 'http://localhost:8080/cms-ui/', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
 INSERT INTO `jc_site_flow` VALUES ('78', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:08:48', 'http://localhost:8080/cms-ui/index.jhtml', '', '', '', '', 'A6ADB9138103617B212FAD9B8B642E01');
@@ -5597,9 +5750,29 @@ INSERT INTO `jc_site_flow` VALUES ('82', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '20
 INSERT INTO `jc_site_flow` VALUES ('83', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:21:52', 'http://localhost:8080/cms-ui/shehui/247.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
 INSERT INTO `jc_site_flow` VALUES ('84', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:22:08', 'http://localhost:8080/cms-ui/works/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/download/index.htm', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
 INSERT INTO `jc_site_flow` VALUES ('85', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:21:59', 'http://localhost:8080/cms-ui/wyty/275.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/picture/index.htm', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
-INSERT INTO `jc_site_flow` VALUES ('86', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:22:06', 'http://localhost:8080/cms-ui/download/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/guestbook', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
+INSERT INTO `jc_site_flow` VALUES ('86', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:22:06', 'http://localhost:8080/cms-ui/download/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/guestbook.jspx', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
 INSERT INTO `jc_site_flow` VALUES ('87', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:22:16', 'http://localhost:8080/cms-ui/dong/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/works/index.htm', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
 INSERT INTO `jc_site_flow` VALUES ('88', '1', '0:0:0:0:0:0:0:1', '2013-2-7', '2013-02-07 00:22:17', 'http://localhost:8080/cms-ui/tiankong/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms-ui/dong/index.htm', '', '', 'E8CF4A86EAA6791DD0ED3FE2BA256749');
+INSERT INTO `jc_site_flow` VALUES ('89', '1', '0:0:0:0:0:0:0:1', '2013-2-8', '2013-02-08 01:11:24', 'http://localhost:8080/cms-ui/', '', '', '', '', '175onbaamcjep1q1esad1u5hrj');
+INSERT INTO `jc_site_flow` VALUES ('90', '1', '0:0:0:0:0:0:0:1', '2013-2-8', '2013-02-08 20:58:58', 'http://localhost/cms-ui/download/index.htm', 'http://localhost', 'http://localhost/cms-ui/cjbd/116.htm', '', '', 'umnyu2r2ytjk19r4dik9jf138');
+INSERT INTO `jc_site_flow` VALUES ('91', '1', '0:0:0:0:0:0:0:1', '2013-2-8', '2013-02-08 21:16:01', 'http://localhost/cms-ui/gnxw/607.htm', '', '', '', '', '14zctwlm6ntvltxacu19b1fh2');
+INSERT INTO `jc_site_flow` VALUES ('92', '1', '0:0:0:0:0:0:0:1', '2013-2-8', '2013-02-08 21:23:23', 'http://localhost/cms-ui/', 'http://localhost', 'http://localhost/cms-ui/gnxw/607.htm', '', '', '14zctwlm6ntvltxacu19b1fh2');
+INSERT INTO `jc_site_flow` VALUES ('93', '1', '0:0:0:0:0:0:0:1', '2013-2-8', '2013-02-08 23:03:55', 'http://localhost/cms-ui/', '', '', '', '', '1mjsgg108dlzi1pizwpzjdp03');
+INSERT INTO `jc_site_flow` VALUES ('94', '1', '0:0:0:0:0:0:0:1', '2013-2-8', '2013-02-08 23:23:52', 'http://localhost/cms-ui/', 'http://localhost', 'http://localhost/cms-ui/login?returnUrl=http://localhost/cms-ui/login?returnUrl=/', '', '', 'uh8clykdjxdt1xaiy16llt920');
+INSERT INTO `jc_site_flow` VALUES ('95', '1', '0:0:0:0:0:0:0:1', '2013-2-9', '2013-02-09 00:17:06', 'http://localhost/cms-ui/news/index.htm', 'http://localhost', 'http://localhost/cms-ui/guestbook', '', '', '1nl58ulbxhrw7e5y0sihf5oot');
+INSERT INTO `jc_site_flow` VALUES ('96', '1', '0:0:0:0:0:0:0:1', '2013-2-9', '2013-02-09 00:17:10', 'http://localhost/cms-ui/world/237.htm', 'http://localhost', 'http://localhost/cms-ui/news/index.htm', '', '', '1nl58ulbxhrw7e5y0sihf5oot');
+INSERT INTO `jc_site_flow` VALUES ('97', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 22:02:28', 'http://localhost/cms-ui/gnxw/607.htm', '', '', '', '', '1rrfrijt6lewc1c956ccsu7tv9');
+INSERT INTO `jc_site_flow` VALUES ('98', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 23:13:38', 'http://localhost/cms-ui/', '', '', '', '', '19if54zmum2971552ydujfifk3');
+INSERT INTO `jc_site_flow` VALUES ('99', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 23:15:03', 'http://localhost/cms-ui/mrzx/index.htm', 'http://localhost', 'http://localhost/cms-ui/', '', '', '1npzizhmyik58x56whbdi18ug');
+INSERT INTO `jc_site_flow` VALUES ('100', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 23:14:02', 'http://localhost/cms-ui/veido/index.htm', 'http://localhost', 'http://localhost/cms-ui/', '', '', '19if54zmum2971552ydujfifk3');
+INSERT INTO `jc_site_flow` VALUES ('101', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 23:14:04', 'http://localhost/cms-ui/hhqw/310.htm', 'http://localhost', 'http://localhost/cms-ui/veido/index.htm', '', '', '19if54zmum2971552ydujfifk3');
+INSERT INTO `jc_site_flow` VALUES ('102', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 23:15:51', 'http://localhost/cms-ui/shehui/62.htm', 'http://localhost', 'http://localhost/cms-ui/', '', '', '1npzizhmyik58x56whbdi18ug');
+INSERT INTO `jc_site_flow` VALUES ('103', '1', '0:0:0:0:0:0:0:1', '2013-2-10', '2013-02-10 23:21:03', 'http://localhost/cms-ui/tiankong/324.htm', 'http://localhost', 'http://localhost/cms-ui/shehui/62.htm', '', '', '1npzizhmyik58x56whbdi18ug');
+INSERT INTO `jc_site_flow` VALUES ('104', '1', '0:0:0:0:0:0:0:1', '2013-2-11', '2013-02-11 00:16:13', 'http://localhost/cms-ui/?locale=zh_CN', 'http://localhost', 'http://localhost/cms-ui/login?returnUrl=/', '', '', '7ihwicjnt9j41dgb8480987dk');
+INSERT INTO `jc_site_flow` VALUES ('105', '1', '0:0:0:0:0:0:0:1', '2013-2-12', '2013-02-12 12:06:33', 'http://localhost/cms-ui/', '', '', '', '', '2921l88tc9pg1tyv8m26r07ba');
+INSERT INTO `jc_site_flow` VALUES ('106', '1', '0:0:0:0:0:0:0:1', '2013-2-12', '2013-02-12 21:13:55', 'http://localhost/cms-ui/', '', '', '', '', 'fxcks5jgdxlw12g3phc8wqktv');
+INSERT INTO `jc_site_flow` VALUES ('107', '1', '0:0:0:0:0:0:0:1', '2013-2-12', '2013-02-12 21:14:14', 'http://localhost/cms-ui/?locale=zh_CN', 'http://localhost', 'http://localhost/cms-ui/login?returnUrl=/', '', '', '1bgbc6l91wfkh118o00mmv5yzh');
+INSERT INTO `jc_site_flow` VALUES ('108', '1', '0:0:0:0:0:0:0:1', '2013-2-12', '2013-02-12 21:46:30', 'http://localhost/cms-ui/?locale=zh_CN', 'http://localhost', 'http://localhost/cms-ui/login', '', '', '196cddte00oif1udn62xcode8x');
 
 -- ----------------------------
 -- Table structure for `jc_site_model`
@@ -5671,149 +5844,6 @@ INSERT INTO `jc_topic` VALUES ('2', null, '上海世博会专题', '世博', '�
 INSERT INTO `jc_topic` VALUES ('3', null, '低碳经济', '低碳', '低碳', '所谓低碳经济，是指在可持续发展理念指导下，通过技术创新、制度创新、产业转型、新能源开发等多种手段，尽可能地减少煤炭石油等高碳能源消耗，减少温室气体排放，达到经济社会发展与生态环境保护双赢的一种经济发展形态。', 'http://www.6788.cn/bscyw/upfiles/0125/1f0aaff5/fery/w1tg.jpg', null, '', '10', '0');
 
 -- ----------------------------
--- Table structure for `jc_user`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_user`;
-CREATE TABLE `jc_user` (
-  `user_id` int(11) NOT NULL,
-  `group_id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL COMMENT '用户名',
-  `email` varchar(100) DEFAULT NULL COMMENT '邮箱',
-  `register_time` datetime NOT NULL COMMENT '注册时间',
-  `register_ip` varchar(50) NOT NULL DEFAULT '127.0.0.1' COMMENT '注册IP',
-  `last_login_time` datetime NOT NULL COMMENT '最后登录时间',
-  `last_login_ip` varchar(50) NOT NULL DEFAULT '127.0.0.1' COMMENT '最后登录IP',
-  `login_count` int(11) NOT NULL DEFAULT '0' COMMENT '登录次数',
-  `rank` int(11) NOT NULL DEFAULT '0' COMMENT '管理员级别',
-  `upload_total` bigint(20) NOT NULL DEFAULT '0' COMMENT '上传总大小',
-  `upload_size` int(11) NOT NULL DEFAULT '0' COMMENT '上传大小',
-  `upload_date` date DEFAULT NULL COMMENT '上传日期',
-  `is_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否管理员',
-  `is_viewonly_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否只读管理员',
-  `is_self_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否只管理自己的数据',
-  `is_disabled` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否禁用',
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `ak_username` (`username`),
-  KEY `fk_jc_user_group` (`group_id`),
-  CONSTRAINT `fk_jc_user_group` FOREIGN KEY (`group_id`) REFERENCES `jc_group` (`group_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户表';
-
--- ----------------------------
--- Records of jc_user
--- ----------------------------
-INSERT INTO `jc_user` VALUES ('1', '1', 'admin', 'bettersaas@163.com', '2011-01-03 00:00:00', '127.0.0.1', '2013-02-07 00:02:23', '0:0:0:0:0:0:0:1', '181', '9', '0', '0', null, '1', '0', '0', '0');
-INSERT INTO `jc_user` VALUES ('5', '1', 'test', 'test@163.com', '2011-12-19 15:26:02', '192.168.0.173', '2011-12-19 15:26:02', '192.168.0.173', '0', '0', '0', '0', '2011-12-19', '0', '0', '0', '0');
-INSERT INTO `jc_user` VALUES ('6', '1', 'bettersaas', 'bettersaas@163.com', '2013-01-23 23:48:52', '0:0:0:0:0:0:0:1', '2013-01-31 23:59:53', '0:0:0:0:0:0:0:1', '1', '0', '0', '0', '2013-01-23', '0', '0', '0', '0');
-INSERT INTO `jc_user` VALUES ('7', '1', 'aaa', 'aaa@aa.com', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-03', '0', '0', '0', '0');
-INSERT INTO `jc_user` VALUES ('8', '1', '666', '666@666.com', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '0', '0', '0', '0', '2013-02-05', '0', '0', '0', '0');
-
--- ----------------------------
--- Table structure for `jc_user_collection`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_user_collection`;
-CREATE TABLE `jc_user_collection` (
-  `user_id` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
-  `content_id` int(11) NOT NULL DEFAULT '0' COMMENT '内容id',
-  PRIMARY KEY (`user_id`,`content_id`),
-  KEY `fk_jc_user_collection_con` (`content_id`),
-  CONSTRAINT `fk_jc_user_collection_con` FOREIGN KEY (`content_id`) REFERENCES `jc_content` (`content_id`),
-  CONSTRAINT `fk_jc_user_collection_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户收藏关联表';
-
--- ----------------------------
--- Records of jc_user_collection
--- ----------------------------
-INSERT INTO `jc_user_collection` VALUES ('1', '237');
-
--- ----------------------------
--- Table structure for `jc_user_department`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_user_department`;
-CREATE TABLE `jc_user_department` (
-  `department_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`department_id`,`user_id`),
-  KEY `fk_jc_department_user` (`user_id`),
-  CONSTRAINT `fk_jc_department_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`),
-  CONSTRAINT `fk_jc_user_department` FOREIGN KEY (`department_id`) REFERENCES `jc_department` (`depart_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户部门关联表';
-
--- ----------------------------
--- Records of jc_user_department
--- ----------------------------
-
--- ----------------------------
--- Table structure for `jc_user_ext`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_user_ext`;
-CREATE TABLE `jc_user_ext` (
-  `user_id` int(11) NOT NULL,
-  `realname` varchar(100) DEFAULT NULL COMMENT '真实姓名',
-  `gender` tinyint(1) DEFAULT NULL COMMENT '性别',
-  `birthday` datetime DEFAULT NULL COMMENT '出生日期',
-  `intro` varchar(255) DEFAULT NULL COMMENT '个人介绍',
-  `comefrom` varchar(150) DEFAULT NULL COMMENT '来自',
-  `qq` varchar(100) DEFAULT NULL COMMENT 'QQ',
-  `msn` varchar(100) DEFAULT NULL COMMENT 'MSN',
-  `phone` varchar(50) DEFAULT NULL COMMENT '电话',
-  `mobile` varchar(50) DEFAULT NULL COMMENT '手机',
-  `user_img` varchar(255) DEFAULT NULL COMMENT '用户头像',
-  `user_signature` varchar(255) DEFAULT NULL COMMENT '用户个性签名',
-  PRIMARY KEY (`user_id`),
-  CONSTRAINT `fk_jc_ext_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户扩展信息表';
-
--- ----------------------------
--- Records of jc_user_ext
--- ----------------------------
-INSERT INTO `jc_user_ext` VALUES ('1', 'cms', '1', null, '2348985t999', null, null, null, null, null, '/cms-ui/user/images/201302/012108334utw.png', '');
-INSERT INTO `jc_user_ext` VALUES ('5', null, null, null, null, ',', null, null, null, null, null, null);
-INSERT INTO `jc_user_ext` VALUES ('6', null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `jc_user_ext` VALUES ('7', null, null, null, null, null, null, null, null, null, null, null);
-INSERT INTO `jc_user_ext` VALUES ('8', null, null, null, null, null, null, null, null, null, null, null);
-
--- ----------------------------
--- Table structure for `jc_user_role`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_user_role`;
-CREATE TABLE `jc_user_role` (
-  `role_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`role_id`,`user_id`),
-  KEY `fk_jc_role_user` (`user_id`),
-  CONSTRAINT `fk_jc_role_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`),
-  CONSTRAINT `fk_jc_user_role` FOREIGN KEY (`role_id`) REFERENCES `jc_role` (`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='CMS用户角色关联表';
-
--- ----------------------------
--- Records of jc_user_role
--- ----------------------------
-INSERT INTO `jc_user_role` VALUES ('1', '1');
-
--- ----------------------------
--- Table structure for `jc_user_site`
--- ----------------------------
-DROP TABLE IF EXISTS `jc_user_site`;
-CREATE TABLE `jc_user_site` (
-  `usersite_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `site_id` int(11) NOT NULL,
-  `check_step` tinyint(4) NOT NULL DEFAULT '1' COMMENT '审核级别',
-  `is_all_channel` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否拥有所有栏目的权限',
-  PRIMARY KEY (`usersite_id`),
-  KEY `fk_jc_site_user` (`user_id`),
-  KEY `fk_jc_user_site` (`site_id`),
-  CONSTRAINT `fk_jc_site_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`),
-  CONSTRAINT `fk_jc_user_site` FOREIGN KEY (`site_id`) REFERENCES `jc_site` (`site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='CMS管理员站点表';
-
--- ----------------------------
--- Records of jc_user_site
--- ----------------------------
-INSERT INTO `jc_user_site` VALUES ('1', '1', '1', '2', '1');
-INSERT INTO `jc_user_site` VALUES ('2', '1', '2', '2', '1');
-
--- ----------------------------
 -- Table structure for `jc_vote_item`
 -- ----------------------------
 DROP TABLE IF EXISTS `jc_vote_item`;
@@ -5836,7 +5866,7 @@ INSERT INTO `jc_vote_item` VALUES ('4', '1', 'jsp是未来发展的趋势', '23'
 INSERT INTO `jc_vote_item` VALUES ('5', '1', 'java执行速度快，性能优良', '5', '5');
 INSERT INTO `jc_vote_item` VALUES ('6', '1', '跨平台，支持windows、linux、unix', '6', '6');
 INSERT INTO `jc_vote_item` VALUES ('7', '1', '学习研究', '11', '7');
-INSERT INTO `jc_vote_item` VALUES ('8', '1', '其它', '10', '8');
+INSERT INTO `jc_vote_item` VALUES ('8', '1', '其它', '11', '8');
 
 -- ----------------------------
 -- Table structure for `jc_vote_record`
@@ -5852,14 +5882,15 @@ CREATE TABLE `jc_vote_record` (
   PRIMARY KEY (`voterecored_id`),
   KEY `fk_jc_vote_record_topic` (`votetopic_id`),
   KEY `fk_jc_voterecord_user` (`user_id`),
-  CONSTRAINT `fk_jc_voterecord_user` FOREIGN KEY (`user_id`) REFERENCES `jc_user` (`user_id`),
+  CONSTRAINT `fk_jc_voterecord_user` FOREIGN KEY (`user_id`) REFERENCES `cms_user` (`user_id`),
   CONSTRAINT `fk_jc_vote_record_topic` FOREIGN KEY (`votetopic_id`) REFERENCES `jc_vote_topic` (`votetopic_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='CMS投票记录';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='CMS投票记录';
 
 -- ----------------------------
 -- Records of jc_vote_record
 -- ----------------------------
 INSERT INTO `jc_vote_record` VALUES ('1', null, '1', '2011-06-04 15:41:31', '127.0.0.1', '2600e4a345ba4fc289088d7abe59321c');
+INSERT INTO `jc_vote_record` VALUES ('2', null, '1', '2013-02-10 23:15:13', '0:0:0:0:0:0:0:1', '2eeb660c8e8e4f0b8ddb16bbad538e57');
 
 -- ----------------------------
 -- Table structure for `jc_vote_topic`
@@ -5888,13 +5919,13 @@ CREATE TABLE `jc_vote_topic` (
 -- ----------------------------
 -- Records of jc_vote_topic
 -- ----------------------------
-INSERT INTO `jc_vote_topic` VALUES ('1', '1', '您为什么选择jsp cms,java cms? ', '在php cms为建站主流CMS的年代，您为什么选择jsp cms,java cms？请给出您的意见吧！', null, null, null, '76', '3', '0', '0', '1', '0', '1');
+INSERT INTO `jc_vote_topic` VALUES ('1', '1', '您为什么选择jsp cms,java cms? ', '在php cms为建站主流CMS的年代，您为什么选择jsp cms,java cms？请给出您的意见吧！', null, null, null, '77', '3', '0', '0', '1', '0', '1');
 
 -- ----------------------------
--- Table structure for `jo_authentication`
+-- Table structure for `yk_authentication`
 -- ----------------------------
-DROP TABLE IF EXISTS `jo_authentication`;
-CREATE TABLE `jo_authentication` (
+DROP TABLE IF EXISTS `yk_authentication`;
+CREATE TABLE `yk_authentication` (
   `authentication_id` char(32) NOT NULL COMMENT '认证ID',
   `userid` int(11) NOT NULL COMMENT '用户ID',
   `username` varchar(100) NOT NULL COMMENT '用户名',
@@ -5906,75 +5937,80 @@ CREATE TABLE `jo_authentication` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='认证信息表';
 
 -- ----------------------------
--- Records of jo_authentication
+-- Records of yk_authentication
 -- ----------------------------
-INSERT INTO `jo_authentication` VALUES ('0b262a4f28b04e1eb29cfc93c3088e4e', '1', 'admin', 'admin@yahoo.com', '2012-11-18 16:57:09', '127.0.0.1', '2012-11-18 17:07:08');
-INSERT INTO `jo_authentication` VALUES ('18b79c81d3cd4588b5ffffd0bf484e57', '1', 'admin', 'bettersaas@163.com', '2013-02-04 21:11:50', '0:0:0:0:0:0:0:1', '2013-02-04 21:13:22');
-INSERT INTO `jo_authentication` VALUES ('1fc0a82141734855a61486d0c8e7c049', '1', 'admin', 'bettersaas@163.com', '2013-02-02 22:07:04', '0:0:0:0:0:0:0:1', '2013-02-02 23:22:54');
-INSERT INTO `jo_authentication` VALUES ('3619dd6ccc5944b3b2e27390e5186751', '1', 'admin', 'bettersaas@163.com', '2013-02-03 18:54:37', '0:0:0:0:0:0:0:1', '2013-02-03 18:56:06');
-INSERT INTO `jo_authentication` VALUES ('3937ed88c5544375934e72374a1000dc', '1', 'admin', 'bettersaas@163.com', '2013-02-03 23:26:28', '0:0:0:0:0:0:0:1', '2013-02-03 23:40:06');
-INSERT INTO `jo_authentication` VALUES ('3e72371cb2e548a7b8e03a1f06f1b7fb', '1', 'admin', 'bettersaas@163.com', '2013-01-28 23:10:46', '0:0:0:0:0:0:0:1', '2013-01-28 23:12:18');
-INSERT INTO `jo_authentication` VALUES ('4a8f48821cbc45bc948a71e94f945724', '1', 'admin', 'admin@yahoo.com', '2013-01-24 00:26:30', '0:0:0:0:0:0:0:1', '2013-01-24 00:35:57');
-INSERT INTO `jo_authentication` VALUES ('511e58ee333c4f139ff45674f6f88a58', '1', 'admin', 'admin@yahoo.com', '2013-01-23 00:19:09', '127.0.0.1', '2013-01-23 00:28:36');
-INSERT INTO `jo_authentication` VALUES ('57375b1d93804bdb900869b7bb50c1cc', '1', 'admin', 'admin@yahoo.com', '2013-01-24 00:32:23', '0:0:0:0:0:0:0:1', '2013-01-24 00:35:29');
-INSERT INTO `jo_authentication` VALUES ('58a3b2771b5a4bafb2f8865ebf32cf4a', '1', 'admin', 'bettersaas@163.com', '2013-01-24 21:19:47', '0:0:0:0:0:0:0:1', '2013-01-24 21:54:43');
-INSERT INTO `jo_authentication` VALUES ('6a86db7bd5664d4ebe0171f00b593a42', '1', 'admin', 'bettersaas@163.com', '2013-02-02 21:50:37', '0:0:0:0:0:0:0:1', '2013-02-02 22:07:04');
-INSERT INTO `jo_authentication` VALUES ('6bbf976788b54e4eb9d2d4e256e197fc', '1', 'admin', 'bettersaas@163.com', '2013-01-24 22:08:21', '0:0:0:0:0:0:0:1', '2013-01-24 22:11:46');
-INSERT INTO `jo_authentication` VALUES ('6fa1adea34fe440bac98e71c8098fc89', '1', 'admin', 'bettersaas@163.com', '2013-02-02 21:23:23', '0:0:0:0:0:0:0:1', '2013-02-02 21:43:25');
-INSERT INTO `jo_authentication` VALUES ('7babb53822884826b4d08c9ed98ab7e3', '1', 'admin', 'bettersaas@163.com', '2013-01-24 23:51:34', '0:0:0:0:0:0:0:1', '2013-01-25 00:18:33');
-INSERT INTO `jo_authentication` VALUES ('94bbc14c14df465f8aedde6ce257107d', '1', 'admin', 'bettersaas@163.com', '2013-02-06 00:31:03', '0:0:0:0:0:0:0:1', '2013-02-06 00:57:12');
-INSERT INTO `jo_authentication` VALUES ('9d6ea2189910475687ec67b6bbb8e624', '6', 'test', 'test@163.com', '2013-01-31 23:59:53', '0:0:0:0:0:0:0:1', '2013-01-31 23:59:54');
-INSERT INTO `jo_authentication` VALUES ('9ef02b517e0d464b9141ea75b98fa9b7', '1', 'admin', 'bettersaas@163.com', '2013-02-06 23:36:23', '0:0:0:0:0:0:0:1', '2013-02-06 23:36:24');
-INSERT INTO `jo_authentication` VALUES ('a211023b61794d40bc06f24ba474c546', '1', 'admin', 'bettersaas@163.com', '2013-02-06 23:45:53', '0:0:0:0:0:0:0:1', '2013-02-06 23:46:01');
-INSERT INTO `jo_authentication` VALUES ('a2f55d271a4a41ae8c650ddde22be037', '1', 'admin', 'bettersaas@163.com', '2013-01-24 21:15:47', '0:0:0:0:0:0:0:1', '2013-01-24 21:15:48');
-INSERT INTO `jo_authentication` VALUES ('a30def8e3b7844f2ad12e295d58135a9', '1', 'admin', 'admin@yahoo.com', '2013-01-24 00:07:08', '0:0:0:0:0:0:0:1', '2013-01-24 00:17:50');
-INSERT INTO `jo_authentication` VALUES ('a44cddc3dc134d17a65bedab82faf02c', '1', 'admin', 'admin@yahoo.com', '2012-11-18 16:10:25', '0:0:0:0:0:0:0:1', '2012-11-18 16:23:31');
-INSERT INTO `jo_authentication` VALUES ('a5535cf0ce18492a86e92fd855fecb97', '1', 'admin', 'bettersaas@163.com', '2013-02-05 22:35:19', '0:0:0:0:0:0:0:1', '2013-02-05 23:15:05');
-INSERT INTO `jo_authentication` VALUES ('a668ef1f3e2844069d6169e6f39b427f', '1', 'admin', 'admin@yahoo.com', '2013-01-22 23:57:37', '0:0:0:0:0:0:0:1', '2013-01-23 00:07:50');
-INSERT INTO `jo_authentication` VALUES ('a7a282cda50e48fd8d016f2fc026134c', '1', 'admin', 'bettersaas@163.com', '2013-02-02 23:49:29', '0:0:0:0:0:0:0:1', '2013-02-02 23:59:30');
-INSERT INTO `jo_authentication` VALUES ('ab0b3cb650664e93a538956117b66250', '1', 'admin', 'admin@yahoo.com', '2013-01-23 23:32:47', '0:0:0:0:0:0:0:1', '2013-01-23 23:52:54');
-INSERT INTO `jo_authentication` VALUES ('aceb2ed22e974cf48ddc4a547c821f7d', '1', 'admin', 'bettersaas@163.com', '2013-02-07 00:02:23', '0:0:0:0:0:0:0:1', '2013-02-07 00:02:28');
-INSERT INTO `jo_authentication` VALUES ('b217b3eaea3946758dd47b6490ba55d0', '1', 'admin', 'bettersaas@163.com', '2013-02-03 00:20:51', '0:0:0:0:0:0:0:1', '2013-02-03 00:34:54');
-INSERT INTO `jo_authentication` VALUES ('bcd19738ef3745d1be1b23b6d1c14c69', '1', 'admin', 'bettersaas@163.com', '2013-02-02 01:00:34', '0:0:0:0:0:0:0:1', '2013-02-02 01:42:48');
-INSERT INTO `jo_authentication` VALUES ('c57ae935ee934068b35e284b6203805b', '1', 'admin', 'bettersaas@163.com', '2013-02-03 21:25:46', '0:0:0:0:0:0:0:1', '2013-02-03 21:27:50');
-INSERT INTO `jo_authentication` VALUES ('c6c2d7e8ef5c4e2a87be73c124b2c949', '1', 'admin', 'bettersaas@163.com', '2013-01-24 23:24:37', '0:0:0:0:0:0:0:1', '2013-01-24 23:32:09');
-INSERT INTO `jo_authentication` VALUES ('d81a659facdd4536881a9262f3e29d6b', '1', 'admin', 'bettersaas@163.com', '2013-01-24 22:57:31', '0:0:0:0:0:0:0:1', '2013-01-24 23:22:41');
-INSERT INTO `jo_authentication` VALUES ('daba1226eb334e85b93b4e955e04bec8', '1', 'admin', 'admin@yahoo.com', '2013-01-24 21:08:09', '0:0:0:0:0:0:0:1', '2013-01-24 21:15:19');
-INSERT INTO `jo_authentication` VALUES ('feff26e8a712413494e2924411c6cae7', '1', 'admin', 'bettersaas@163.com', '2013-01-24 22:59:21', '0:0:0:0:0:0:0:1', '2013-01-24 22:59:49');
+INSERT INTO `yk_authentication` VALUES ('0b262a4f28b04e1eb29cfc93c3088e4e', '1', 'admin', 'admin@yahoo.com', '2012-11-18 16:57:09', '127.0.0.1', '2012-11-18 17:07:08');
+INSERT INTO `yk_authentication` VALUES ('18b79c81d3cd4588b5ffffd0bf484e57', '1', 'admin', 'bettersaas@163.com', '2013-02-04 21:11:50', '0:0:0:0:0:0:0:1', '2013-02-04 21:13:22');
+INSERT INTO `yk_authentication` VALUES ('1fc0a82141734855a61486d0c8e7c049', '1', 'admin', 'bettersaas@163.com', '2013-02-02 22:07:04', '0:0:0:0:0:0:0:1', '2013-02-02 23:22:54');
+INSERT INTO `yk_authentication` VALUES ('352776b1f5984c39aacfbd3ed6aa899e', '1', 'admin', 'bettersaas@163.com', '2013-02-12 21:14:13', '0:0:0:0:0:0:0:1', '2013-02-12 21:14:14');
+INSERT INTO `yk_authentication` VALUES ('3619dd6ccc5944b3b2e27390e5186751', '1', 'admin', 'bettersaas@163.com', '2013-02-03 18:54:37', '0:0:0:0:0:0:0:1', '2013-02-03 18:56:06');
+INSERT INTO `yk_authentication` VALUES ('3937ed88c5544375934e72374a1000dc', '1', 'admin', 'bettersaas@163.com', '2013-02-03 23:26:28', '0:0:0:0:0:0:0:1', '2013-02-03 23:40:06');
+INSERT INTO `yk_authentication` VALUES ('3e72371cb2e548a7b8e03a1f06f1b7fb', '1', 'admin', 'bettersaas@163.com', '2013-01-28 23:10:46', '0:0:0:0:0:0:0:1', '2013-01-28 23:12:18');
+INSERT INTO `yk_authentication` VALUES ('4a8f48821cbc45bc948a71e94f945724', '1', 'admin', 'admin@yahoo.com', '2013-01-24 00:26:30', '0:0:0:0:0:0:0:1', '2013-01-24 00:35:57');
+INSERT INTO `yk_authentication` VALUES ('511e58ee333c4f139ff45674f6f88a58', '1', 'admin', 'admin@yahoo.com', '2013-01-23 00:19:09', '127.0.0.1', '2013-01-23 00:28:36');
+INSERT INTO `yk_authentication` VALUES ('57375b1d93804bdb900869b7bb50c1cc', '1', 'admin', 'admin@yahoo.com', '2013-01-24 00:32:23', '0:0:0:0:0:0:0:1', '2013-01-24 00:35:29');
+INSERT INTO `yk_authentication` VALUES ('58a3b2771b5a4bafb2f8865ebf32cf4a', '1', 'admin', 'bettersaas@163.com', '2013-01-24 21:19:47', '0:0:0:0:0:0:0:1', '2013-01-24 21:54:43');
+INSERT INTO `yk_authentication` VALUES ('6a86db7bd5664d4ebe0171f00b593a42', '1', 'admin', 'bettersaas@163.com', '2013-02-02 21:50:37', '0:0:0:0:0:0:0:1', '2013-02-02 22:07:04');
+INSERT INTO `yk_authentication` VALUES ('6bbf976788b54e4eb9d2d4e256e197fc', '1', 'admin', 'bettersaas@163.com', '2013-01-24 22:08:21', '0:0:0:0:0:0:0:1', '2013-01-24 22:11:46');
+INSERT INTO `yk_authentication` VALUES ('6fa1adea34fe440bac98e71c8098fc89', '1', 'admin', 'bettersaas@163.com', '2013-02-02 21:23:23', '0:0:0:0:0:0:0:1', '2013-02-02 21:43:25');
+INSERT INTO `yk_authentication` VALUES ('7babb53822884826b4d08c9ed98ab7e3', '1', 'admin', 'bettersaas@163.com', '2013-01-24 23:51:34', '0:0:0:0:0:0:0:1', '2013-01-25 00:18:33');
+INSERT INTO `yk_authentication` VALUES ('827720530dc443d7aa4d4553eef6fb2d', '1', 'admin', 'bettersaas@163.com', '2013-02-12 21:49:40', '0:0:0:0:0:0:0:1', '2013-02-12 22:51:35');
+INSERT INTO `yk_authentication` VALUES ('8577b099560f4d84b1096cfdb7b6d454', '1', 'admin', 'bettersaas@163.com', '2013-02-12 21:36:12', '0:0:0:0:0:0:0:1', '2013-02-12 21:36:12');
+INSERT INTO `yk_authentication` VALUES ('88187040027548bc87c1ebcc26a70cbb', '1', 'admin', 'bettersaas@163.com', '2013-02-12 21:46:28', '0:0:0:0:0:0:0:1', '2013-02-12 21:46:30');
+INSERT INTO `yk_authentication` VALUES ('94bbc14c14df465f8aedde6ce257107d', '1', 'admin', 'bettersaas@163.com', '2013-02-06 00:31:03', '0:0:0:0:0:0:0:1', '2013-02-06 00:57:12');
+INSERT INTO `yk_authentication` VALUES ('9d6ea2189910475687ec67b6bbb8e624', '6', 'test', 'test@163.com', '2013-01-31 23:59:53', '0:0:0:0:0:0:0:1', '2013-01-31 23:59:54');
+INSERT INTO `yk_authentication` VALUES ('9ef02b517e0d464b9141ea75b98fa9b7', '1', 'admin', 'bettersaas@163.com', '2013-02-06 23:36:23', '0:0:0:0:0:0:0:1', '2013-02-06 23:36:24');
+INSERT INTO `yk_authentication` VALUES ('a211023b61794d40bc06f24ba474c546', '1', 'admin', 'bettersaas@163.com', '2013-02-06 23:45:53', '0:0:0:0:0:0:0:1', '2013-02-06 23:46:01');
+INSERT INTO `yk_authentication` VALUES ('a2f55d271a4a41ae8c650ddde22be037', '1', 'admin', 'bettersaas@163.com', '2013-01-24 21:15:47', '0:0:0:0:0:0:0:1', '2013-01-24 21:15:48');
+INSERT INTO `yk_authentication` VALUES ('a30def8e3b7844f2ad12e295d58135a9', '1', 'admin', 'admin@yahoo.com', '2013-01-24 00:07:08', '0:0:0:0:0:0:0:1', '2013-01-24 00:17:50');
+INSERT INTO `yk_authentication` VALUES ('a44cddc3dc134d17a65bedab82faf02c', '1', 'admin', 'admin@yahoo.com', '2012-11-18 16:10:25', '0:0:0:0:0:0:0:1', '2012-11-18 16:23:31');
+INSERT INTO `yk_authentication` VALUES ('a5535cf0ce18492a86e92fd855fecb97', '1', 'admin', 'bettersaas@163.com', '2013-02-05 22:35:19', '0:0:0:0:0:0:0:1', '2013-02-05 23:15:05');
+INSERT INTO `yk_authentication` VALUES ('a668ef1f3e2844069d6169e6f39b427f', '1', 'admin', 'admin@yahoo.com', '2013-01-22 23:57:37', '0:0:0:0:0:0:0:1', '2013-01-23 00:07:50');
+INSERT INTO `yk_authentication` VALUES ('a6e046c555584741b307d38210f6e29c', '1', 'admin', 'bettersaas@163.com', '2013-02-11 00:16:12', '0:0:0:0:0:0:0:1', '2013-02-11 00:17:29');
+INSERT INTO `yk_authentication` VALUES ('a7a282cda50e48fd8d016f2fc026134c', '1', 'admin', 'bettersaas@163.com', '2013-02-02 23:49:29', '0:0:0:0:0:0:0:1', '2013-02-02 23:59:30');
+INSERT INTO `yk_authentication` VALUES ('ab0b3cb650664e93a538956117b66250', '1', 'admin', 'admin@yahoo.com', '2013-01-23 23:32:47', '0:0:0:0:0:0:0:1', '2013-01-23 23:52:54');
+INSERT INTO `yk_authentication` VALUES ('aceb2ed22e974cf48ddc4a547c821f7d', '1', 'admin', 'bettersaas@163.com', '2013-02-07 00:02:23', '0:0:0:0:0:0:0:1', '2013-02-07 00:02:28');
+INSERT INTO `yk_authentication` VALUES ('b217b3eaea3946758dd47b6490ba55d0', '1', 'admin', 'bettersaas@163.com', '2013-02-03 00:20:51', '0:0:0:0:0:0:0:1', '2013-02-03 00:34:54');
+INSERT INTO `yk_authentication` VALUES ('bcd19738ef3745d1be1b23b6d1c14c69', '1', 'admin', 'bettersaas@163.com', '2013-02-02 01:00:34', '0:0:0:0:0:0:0:1', '2013-02-02 01:42:48');
+INSERT INTO `yk_authentication` VALUES ('c57ae935ee934068b35e284b6203805b', '1', 'admin', 'bettersaas@163.com', '2013-02-03 21:25:46', '0:0:0:0:0:0:0:1', '2013-02-03 21:27:50');
+INSERT INTO `yk_authentication` VALUES ('c6c2d7e8ef5c4e2a87be73c124b2c949', '1', 'admin', 'bettersaas@163.com', '2013-01-24 23:24:37', '0:0:0:0:0:0:0:1', '2013-01-24 23:32:09');
+INSERT INTO `yk_authentication` VALUES ('d81a659facdd4536881a9262f3e29d6b', '1', 'admin', 'bettersaas@163.com', '2013-01-24 22:57:31', '0:0:0:0:0:0:0:1', '2013-01-24 23:22:41');
+INSERT INTO `yk_authentication` VALUES ('daba1226eb334e85b93b4e955e04bec8', '1', 'admin', 'admin@yahoo.com', '2013-01-24 21:08:09', '0:0:0:0:0:0:0:1', '2013-01-24 21:15:19');
+INSERT INTO `yk_authentication` VALUES ('feff26e8a712413494e2924411c6cae7', '1', 'admin', 'bettersaas@163.com', '2013-01-24 22:59:21', '0:0:0:0:0:0:0:1', '2013-01-24 22:59:49');
 
 -- ----------------------------
--- Table structure for `jo_config`
+-- Table structure for `yk_config`
 -- ----------------------------
-DROP TABLE IF EXISTS `jo_config`;
-CREATE TABLE `jo_config` (
+DROP TABLE IF EXISTS `yk_config`;
+CREATE TABLE `yk_config` (
   `cfg_key` varchar(50) NOT NULL COMMENT '配置KEY',
   `cfg_value` varchar(255) DEFAULT NULL COMMENT '配置VALUE',
   PRIMARY KEY (`cfg_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='配置表';
 
 -- ----------------------------
--- Records of jo_config
+-- Records of yk_config
 -- ----------------------------
-INSERT INTO `jo_config` VALUES ('email_encoding', '');
-INSERT INTO `jo_config` VALUES ('email_host', 'smtp.163.com');
-INSERT INTO `jo_config` VALUES ('email_password', 'bettersaas!');
-INSERT INTO `jo_config` VALUES ('email_personal', '');
-INSERT INTO `jo_config` VALUES ('email_port', null);
-INSERT INTO `jo_config` VALUES ('email_username', 'bettersaas@163.com');
-INSERT INTO `jo_config` VALUES ('login_error_interval', '30');
-INSERT INTO `jo_config` VALUES ('login_error_times', '3');
-INSERT INTO `jo_config` VALUES ('message_forgotpassword_subject', '找回密码-yunkuo');
-INSERT INTO `jo_config` VALUES ('message_forgotpassword_text', '用户ID：${uid}，用户名：${username}，重置KEY：${resetKey}，重置密码：${resetPwd}');
-INSERT INTO `jo_config` VALUES ('message_register_subject', '欢迎注册');
-INSERT INTO `jo_config` VALUES ('message_register_text', '用户名：${username}，激活码：${activationCode}');
-INSERT INTO `jo_config` VALUES ('message_subject', 'JEECMS会员密码找回信息');
-INSERT INTO `jo_config` VALUES ('message_text', '感谢您使用JEECMS系统会员密码找回功能，请记住以下找回信息：\r\n用户ID：${uid}\r\n用户名：${username}\r\n您的新密码为：${resetPwd}\r\n请访问如下链接新密码才能生效：\r\nhttp://localhost/member/password_reset?uid=${uid}&key=${resetKey}\r\n');
+INSERT INTO `yk_config` VALUES ('email_encoding', '');
+INSERT INTO `yk_config` VALUES ('email_host', 'smtp.163.com');
+INSERT INTO `yk_config` VALUES ('email_password', 'bettersaas!');
+INSERT INTO `yk_config` VALUES ('email_personal', '');
+INSERT INTO `yk_config` VALUES ('email_port', null);
+INSERT INTO `yk_config` VALUES ('email_username', 'bettersaas@163.com');
+INSERT INTO `yk_config` VALUES ('login_error_interval', '30');
+INSERT INTO `yk_config` VALUES ('login_error_times', '3');
+INSERT INTO `yk_config` VALUES ('message_forgotpassword_subject', '找回密码-yunkuo');
+INSERT INTO `yk_config` VALUES ('message_forgotpassword_text', '用户ID：${uid}，用户名：${username}，重置KEY：${resetKey}，重置密码：${resetPwd}');
+INSERT INTO `yk_config` VALUES ('message_register_subject', '欢迎注册');
+INSERT INTO `yk_config` VALUES ('message_register_text', '用户名：${username}，激活码：${activationCode}');
+INSERT INTO `yk_config` VALUES ('message_subject', 'CMS会员密码找回信息');
+INSERT INTO `yk_config` VALUES ('message_text', '感谢您使用JEECMS系统会员密码找回功能，请记住以下找回信息：\r\n用户ID：${uid}\r\n用户名：${username}\r\n您的新密码为：${resetPwd}\r\n请访问如下链接新密码才能生效：\r\nhttp://localhost/member/password_reset.jspx?uid=${uid}&key=${resetKey}\r\n');
 
 -- ----------------------------
--- Table structure for `jo_ftp`
+-- Table structure for `yk_ftp`
 -- ----------------------------
-DROP TABLE IF EXISTS `jo_ftp`;
-CREATE TABLE `jo_ftp` (
+DROP TABLE IF EXISTS `yk_ftp`;
+CREATE TABLE `yk_ftp` (
   `ftp_id` int(11) NOT NULL AUTO_INCREMENT,
   `ftp_name` varchar(100) NOT NULL COMMENT '名称',
   `ip` varchar(50) NOT NULL COMMENT 'IP',
@@ -5989,14 +6025,14 @@ CREATE TABLE `jo_ftp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='FTP表';
 
 -- ----------------------------
--- Records of jo_ftp
+-- Records of yk_ftp
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `jo_template`
+-- Table structure for `yk_template`
 -- ----------------------------
-DROP TABLE IF EXISTS `jo_template`;
-CREATE TABLE `jo_template` (
+DROP TABLE IF EXISTS `yk_template`;
+CREATE TABLE `yk_template` (
   `tpl_name` varchar(150) NOT NULL COMMENT '模板名称',
   `tpl_source` longtext COMMENT '模板内容',
   `last_modified` bigint(20) NOT NULL COMMENT '最后修改时间',
@@ -6005,14 +6041,14 @@ CREATE TABLE `jo_template` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='模板表';
 
 -- ----------------------------
--- Records of jo_template
+-- Records of yk_template
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `jo_upload`
+-- Table structure for `yk_upload`
 -- ----------------------------
-DROP TABLE IF EXISTS `jo_upload`;
-CREATE TABLE `jo_upload` (
+DROP TABLE IF EXISTS `yk_upload`;
+CREATE TABLE `yk_upload` (
   `filename` varchar(150) NOT NULL COMMENT '文件名',
   `length` int(11) NOT NULL COMMENT '文件大小(字节)',
   `last_modified` bigint(20) NOT NULL COMMENT '最后修改时间',
@@ -6021,14 +6057,14 @@ CREATE TABLE `jo_upload` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='上传附件表';
 
 -- ----------------------------
--- Records of jo_upload
+-- Records of yk_upload
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `jo_user`
+-- Table structure for `yk_user`
 -- ----------------------------
-DROP TABLE IF EXISTS `jo_user`;
-CREATE TABLE `jo_user` (
+DROP TABLE IF EXISTS `yk_user`;
+CREATE TABLE `yk_user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
   `username` varchar(100) NOT NULL COMMENT '用户名',
   `email` varchar(100) DEFAULT NULL COMMENT '电子邮箱',
@@ -6047,13 +6083,16 @@ CREATE TABLE `jo_user` (
   `activation_code` char(32) DEFAULT NULL COMMENT '激活码',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `ak_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
--- Records of jo_user
+-- Records of yk_user
 -- ----------------------------
-INSERT INTO `jo_user` VALUES ('1', 'admin', 'bettersaas@163.com', '21232f297a57a5a743894a0e4a801fc3', '2011-01-03 00:00:00', '127.0.0.1', '2013-02-07 00:02:23', '0:0:0:0:0:0:0:1', '182', null, null, null, '0', null, '1', null);
-INSERT INTO `jo_user` VALUES ('5', 'kevon', 'kevonz@163.com', '098f6bcd4621d373cade4e832627b4f6', '2011-12-19 15:26:02', '192.168.0.173', '2011-12-19 15:26:02', '192.168.0.173', '0', null, null, null, '0', null, '1', null);
-INSERT INTO `jo_user` VALUES ('6', 'test', 'test@163.com', '098f6bcd4621d373cade4e832627b4f6', '2013-01-23 23:48:52', '0:0:0:0:0:0:0:1', '2013-01-31 23:59:53', '0:0:0:0:0:0:0:1', '1', null, null, null, '0', null, '1', null);
-INSERT INTO `jo_user` VALUES ('7', 'aaa', 'aaa@aa.com', '47bce5c74f589f4867dbd57e9ca9f808', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', '657c0a90c3dc439185c1e80769c3a397');
-INSERT INTO `jo_user` VALUES ('8', '666', '666@666.com', 'fae0b27c451c728867a567e8c1bb4e53', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', 'abe6bf79d4b84b62a103538b64d2f1ba');
+INSERT INTO `yk_user` VALUES ('1', 'admin', 'bettersaas@163.com', '21232f297a57a5a743894a0e4a801fc3', '2011-01-03 00:00:00', '127.0.0.1', '2013-02-12 21:49:40', '0:0:0:0:0:0:0:1', '187', null, null, null, '0', null, '1', null);
+INSERT INTO `yk_user` VALUES ('5', 'kevon', 'kevonz@163000.com', '098f6bcd4621d373cade4e832627b4f6', '2011-12-19 15:26:02', '192.168.0.173', '2011-12-19 15:26:02', '192.168.0.173', '0', null, null, null, '0', null, '1', null);
+INSERT INTO `yk_user` VALUES ('6', 'test', 'test@163.com', '098f6bcd4621d373cade4e832627b4f6', '2013-01-23 23:48:52', '0:0:0:0:0:0:0:1', '2013-01-31 23:59:53', '0:0:0:0:0:0:0:1', '1', null, null, null, '0', null, '1', null);
+INSERT INTO `yk_user` VALUES ('7', 'aaa', 'aaa@aa.com', '47bce5c74f589f4867dbd57e9ca9f808', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '2013-02-03 20:40:04', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', '657c0a90c3dc439185c1e80769c3a397');
+INSERT INTO `yk_user` VALUES ('8', '666', '666@666.com', 'fae0b27c451c728867a567e8c1bb4e53', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '2013-02-05 21:57:17', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', 'abe6bf79d4b84b62a103538b64d2f1ba');
+INSERT INTO `yk_user` VALUES ('9', '333', '333@333.com', '310dcbbf4cce62f762a2aaa148d556bd', '2013-02-08 01:23:14', '0:0:0:0:0:0:0:1', '2013-02-08 01:23:14', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', '29cf41960dd94cb89533f1486e22a8cb');
+INSERT INTO `yk_user` VALUES ('10', 'kevonz', 'kevonz@live.com', '08623d733a93d47948e1c491e45c29c0', '2013-02-12 11:35:40', '0:0:0:0:0:0:0:1', '2013-02-12 11:35:40', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', 'b60499f21eee48c78b7c6a440311cea6');
+INSERT INTO `yk_user` VALUES ('11', 'abcabc', 'abcabc@abc.abc', '440ac85892ca43ad26d44c7ad9d47d3e', '2013-02-12 19:13:22', '0:0:0:0:0:0:0:1', '2013-02-12 19:13:22', '0:0:0:0:0:0:0:1', '0', null, null, null, '0', null, '0', 'f6891652cc974ce9a5420fbd6540c4ec');

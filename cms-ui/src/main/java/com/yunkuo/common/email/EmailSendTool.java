@@ -182,8 +182,8 @@ public class EmailSendTool {
 
 	public static void main(String[] args) {
 		EmailSendTool sendEmail = new EmailSendTool("smtp.163.com",
-				"jeecms2012@163.com", "jeecms2012strong", "664592270@qq.com",
-				"测试", "文本内容", "我", "", "");
+				"bettersaas@163.com", "bettersaas!", "bettersaas@163.com",
+				"测试", "文本内容", "我_bettersaas", "head_saas", "head_test_value");
 		try {
 			sendEmail.send();
 		} catch (Exception ex) {
