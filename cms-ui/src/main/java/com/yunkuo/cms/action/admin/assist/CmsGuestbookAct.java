@@ -33,7 +33,7 @@ public class CmsGuestbookAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsGuestbookAct.class);
 
-	@RequestMapping("/guestbook/v_list.do")
+	@RequestMapping("/guestbook/v_list")
 	public String list(Integer queryCtgId, Boolean queryRecommend,
 			Boolean queryChecked, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -46,7 +46,7 @@ public class CmsGuestbookAct {
 		return "guestbook/list";
 	}
 
-	@RequestMapping("/guestbook/v_add.do")
+	@RequestMapping("/guestbook/v_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		List<CmsGuestbookCtg> ctgList = cmsGuestbookCtgMng
@@ -55,7 +55,7 @@ public class CmsGuestbookAct {
 		return "guestbook/add";
 	}
 
-	@RequestMapping("/guestbook/v_edit.do")
+	@RequestMapping("/guestbook/v_edit")
 	public String edit(Integer id, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -73,7 +73,7 @@ public class CmsGuestbookAct {
 		return "guestbook/edit";
 	}
 
-	@RequestMapping("/guestbook/o_save.do")
+	@RequestMapping("/guestbook/o_save")
 	public String save(CmsGuestbook bean, CmsGuestbookExt ext, Integer ctgId,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -85,10 +85,10 @@ public class CmsGuestbookAct {
 		log.info("save CmsGuestbook id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsGuestbook.log.save", "id="
 				+ bean.getId() + ";title=" + bean.getTitle());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/guestbook/o_update.do")
+	@RequestMapping("/guestbook/o_update")
 	public String update(Integer queryCtgId, Boolean queryRecommend,
 			Boolean queryChecked, String oldreply,CmsGuestbook bean, CmsGuestbookExt ext,
 			Integer ctgId, Integer pageNo, HttpServletRequest request,
@@ -116,7 +116,7 @@ public class CmsGuestbookAct {
 				model);
 	}
 
-	@RequestMapping("/guestbook/o_delete.do")
+	@RequestMapping("/guestbook/o_delete")
 	public String delete(Integer queryCtgId, Boolean queryRecommend,
 			Boolean queryChecked, Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {

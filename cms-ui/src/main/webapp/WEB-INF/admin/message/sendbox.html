@@ -18,7 +18,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function toList(box) {
@@ -45,9 +45,9 @@ function toList(box) {
 	<@p.column title="ID">${message.id}</@p.column><#t/>
 	<@p.column code="cmsMessage.title">
 		<#if message.msgStatus>
-			<a href="v_read.do?id=${message.id!}&&box=1"><@text_cut s=message.titleHtml len='15' append='...'/></a>
+			<a href="v_read?id=${message.id!}&&box=1"><@text_cut s=message.titleHtml len='15' append='...'/></a>
 		<#else>
-			<a href="v_read.do?id=${message.id!}&&box=1"><strong><@text_cut s=message.titleHtml len='15' append='...'/></strong></a>
+			<a href="v_read?id=${message.id!}&&box=1"><strong><@text_cut s=message.titleHtml len='15' append='...'/></strong></a>
 		</#if>
 	</@p.column><#t/>
 	<@p.column code="cmsMessage.receiverUser" align="center">${message.msgReceiverUser.username!}</@p.column><#t/>

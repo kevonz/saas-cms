@@ -17,7 +17,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 </script>
@@ -26,7 +26,7 @@ function optDelete() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsAdvertising.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 	</form>
 	<div class="clear"></div>
 </div>
@@ -45,8 +45,8 @@ function optDelete() {
 	<@p.column code="cmsAdvertising.count" align="center">${cmsAdvertising.clickCount}/${cmsAdvertising.displayCount}=${cmsAdvertising.percent}%</@p.column><#t/>
 	<@p.column code="cmsAdvertising.enabled" align="right"><#if cmsAdvertising.enabled><@s.m "global.true"/><#else><span style="color:red"><@s.m "global.false"/></span></#if></@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="v_edit.do?id=${cmsAdvertising.id}&pageNo=${pageNo!}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${cmsAdvertising.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		<a href="v_edit?id=${cmsAdvertising.id}&pageNo=${pageNo!}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<a href="o_delete?ids=${cmsAdvertising.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;"><input class="del-button" type="button" value="<@s.m "global.delete"/>" onclick="optDelete();"/></div>

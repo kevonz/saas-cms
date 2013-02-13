@@ -11,7 +11,7 @@ function createIndex() {
 	var value = button.val();
 	button.val("<@s.m "cmsStatic.wait"/>").attr("disabled","disabled");
 	
-	$.getJSON("o_content.do",function(data) {
+	$.getJSON("o_content",function(data) {
 		button.val(value).removeAttr("disabled");
 		if(data.success) {
 			alert("<@s.m "cmsStatic.success"/>"+data.count);
@@ -51,7 +51,7 @@ $(function() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_content.do">
+<@p.form id="jvForm" action="o_content">
 <@p.select label="cmsStatic.channel" name="channelId" list=channelList listKey="id" listValue="name" listDeep="deep" headerKey="" headerValue="cmsStatic.allChannel"/>
 <@p.text label="cmsStatic.startDate" name="startDate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate"/>
 <@p.td>

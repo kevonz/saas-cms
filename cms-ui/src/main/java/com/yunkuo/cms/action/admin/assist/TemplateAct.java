@@ -48,12 +48,12 @@ public class TemplateAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(TemplateAct.class);
 
-	@RequestMapping("/template/v_left.do")
+	@RequestMapping("/template/v_left")
 	public String left(String path, HttpServletRequest request, ModelMap model) {
 		return "template/left";
 	}
 
-	@RequestMapping(value = "/template/v_tree.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/template/v_tree", method = RequestMethod.GET)
 	public String tree(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -80,7 +80,7 @@ public class TemplateAct {
 	}
 
 	// 直接调用方法需要把root参数保存至model中
-	@RequestMapping(value = "/template/v_list.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/template/v_list", method = RequestMethod.GET)
 	public String list(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = (String) model.get("root");
@@ -105,7 +105,7 @@ public class TemplateAct {
 		return "template/list";
 	}
 
-	@RequestMapping(value = "/template/o_create_dir.do")
+	@RequestMapping(value = "/template/o_create_dir")
 	public String createDir(String root, String dirName,
 			HttpServletRequest request, ModelMap model) {
 		// TODO 检查dirName是否存在
@@ -114,7 +114,7 @@ public class TemplateAct {
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/template/v_add.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/template/v_add", method = RequestMethod.GET)
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -127,7 +127,7 @@ public class TemplateAct {
 		return "template/add_" + style;
 	}
 
-	@RequestMapping("/template/v_edit.do")
+	@RequestMapping("/template/v_edit")
 	public String edit(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -143,7 +143,7 @@ public class TemplateAct {
 		return "template/edit_" + style;
 	}
 
-	@RequestMapping("/template/o_save.do")
+	@RequestMapping("/template/o_save")
 	public String save(String root, String filename, String source,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(filename, source, request);
@@ -156,11 +156,11 @@ public class TemplateAct {
 		log.info("save Template name={}", filename);
 		cmsLogMng.operating(request, "template.log.save", "filename="
 				+ filename);
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
 	// AJAX请求，不返回页面
-	@RequestMapping("/template/o_ajaxUpdate.do")
+	@RequestMapping("/template/o_ajaxUpdate")
 	public void ajaxUpdate(String root, String name, String source,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
@@ -176,7 +176,7 @@ public class TemplateAct {
 		ResponseUtils.renderJson(response, "{success:true}");
 	}
 
-	@RequestMapping("/template/o_update.do")
+	@RequestMapping("/template/o_update")
 	public String update(String root, String name, String source,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
@@ -197,7 +197,7 @@ public class TemplateAct {
 		return "template/edit_" + EDITOR;
 	}
 
-	@RequestMapping("/template/o_delete.do")
+	@RequestMapping("/template/o_delete")
 	public String delete(String root, String[] names,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -216,7 +216,7 @@ public class TemplateAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/template/o_delete_single.do")
+	@RequestMapping("/template/o_delete_single")
 	public String deleteSingle(HttpServletRequest request, ModelMap model) {
 		// TODO 输入验证
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -234,7 +234,7 @@ public class TemplateAct {
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/template/v_rename.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/template/v_rename", method = RequestMethod.GET)
 	public String renameInput(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -245,7 +245,7 @@ public class TemplateAct {
 		return "template/rename";
 	}
 
-	@RequestMapping(value = "/template/o_rename.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/template/o_rename", method = RequestMethod.POST)
 	public String renameSubmit(String root, String origName, String distName,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -257,7 +257,7 @@ public class TemplateAct {
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/template/o_swfupload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/template/o_swfupload", method = RequestMethod.POST)
 	public void swfUpload(
 			String root,
 			@RequestParam(value = "Filedata", required = false) MultipartFile file,
@@ -270,7 +270,7 @@ public class TemplateAct {
 		ResponseUtils.renderText(response, "");
 	}
 
-	@RequestMapping(value = "/template/v_setting.do")
+	@RequestMapping(value = "/template/v_setting")
 	public String setting(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -280,7 +280,7 @@ public class TemplateAct {
 		return "template/setting";
 	}
 
-	@RequestMapping(value = "/template/o_def_template.do")
+	@RequestMapping(value = "/template/o_def_template")
 	public void defTempate(String solution, HttpServletRequest request,
 			HttpServletResponse response) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -288,7 +288,7 @@ public class TemplateAct {
 		ResponseUtils.renderJson(response, "{'success':true}");
 	}
 
-	@RequestMapping(value = "/template/o_export.do")
+	@RequestMapping(value = "/template/o_export")
 	public void exportSubmit(HttpServletRequest request,
 			HttpServletResponse response) throws UnsupportedEncodingException {
 		String solution = RequestUtils.getQueryParam(request, "solution");
@@ -305,7 +305,7 @@ public class TemplateAct {
 		}
 	}
 
-	@RequestMapping(value = "/template/o_import.do")
+	@RequestMapping(value = "/template/o_import")
 	public String importSubmit(
 			@RequestParam(value = "tplZip", required = false) MultipartFile file,
 			HttpServletRequest request, HttpServletResponse response,

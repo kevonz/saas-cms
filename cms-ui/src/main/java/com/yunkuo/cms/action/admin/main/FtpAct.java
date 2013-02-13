@@ -20,7 +20,7 @@ import com.yunkuo.core.manager.FtpMng;
 public class FtpAct {
 	private static final Logger log = LoggerFactory.getLogger(FtpAct.class);
 
-	@RequestMapping("/ftp/v_list.do")
+	@RequestMapping("/ftp/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		List<Ftp> list = manager.getList();
@@ -28,12 +28,12 @@ public class FtpAct {
 		return "ftp/list";
 	}
 
-	@RequestMapping("/ftp/v_add.do")
+	@RequestMapping("/ftp/v_add")
 	public String add(ModelMap model) {
 		return "ftp/add";
 	}
 
-	@RequestMapping("/ftp/v_edit.do")
+	@RequestMapping("/ftp/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -43,7 +43,7 @@ public class FtpAct {
 		return "ftp/edit";
 	}
 
-	@RequestMapping("/ftp/o_save.do")
+	@RequestMapping("/ftp/o_save")
 	public String save(Ftp bean, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
 		if (errors.hasErrors()) {
@@ -53,10 +53,10 @@ public class FtpAct {
 		log.info("save Ftp id={}", bean.getId());
 		cmsLogMng.operating(request, "ftp.log.save", "id=" + bean.getId()
 				+ ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/ftp/o_update.do")
+	@RequestMapping("/ftp/o_update")
 	public String update(Ftp bean, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -70,7 +70,7 @@ public class FtpAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/ftp/o_delete.do")
+	@RequestMapping("/ftp/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

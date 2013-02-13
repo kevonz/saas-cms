@@ -21,14 +21,14 @@ public class CmsSensitivityAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsSensitivityAct.class);
 
-	@RequestMapping("/sensitivity/v_list.do")
+	@RequestMapping("/sensitivity/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		List<CmsSensitivity> list = manager.getList(false);
 		model.addAttribute("list", list);
 		return "sensitivity/list";
 	}
 
-	@RequestMapping("/sensitivity/o_save.do")
+	@RequestMapping("/sensitivity/o_save")
 	public String save(CmsSensitivity bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -43,7 +43,7 @@ public class CmsSensitivityAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/sensitivity/o_update.do")
+	@RequestMapping("/sensitivity/o_update")
 	public String update(Integer[] id, String[] search, String[] replacement,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(id, search, replacement, request);
@@ -57,7 +57,7 @@ public class CmsSensitivityAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/sensitivity/o_delete.do")
+	@RequestMapping("/sensitivity/o_delete")
 	public String delete(Integer[] ids, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

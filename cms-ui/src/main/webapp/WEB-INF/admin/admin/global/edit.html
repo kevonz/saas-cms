@@ -36,7 +36,7 @@ $(function() {
 		//第一次打开，需要获取数据。	
 		if(!channels_opened_${site_index}) {
 			//获取数据
-			$.get("v_channels_edit.do",{"siteId":${site.id},"userId":${cmsAdmin.id}},function(s) {
+			$.get("v_channels_edit",{"siteId":${site.id},"userId":${cmsAdmin.id}},function(s) {
 				$(s).appendTo("#channels${site_index}");
 			});
 			channels_opened_${site_index} = true;
@@ -80,7 +80,7 @@ function disChannels(chk,i) {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do" labelWidth="12">
+<@p.form id="jvForm" action="o_update" labelWidth="12">
 <@p.td width="50" colspan="1" label="cmsUser.username">${cmsAdmin.username}</@p.td>
 <@p.text width="50" colspan="1" label="cmsUser.email" name="email" value=cmsAdmin.email rvalue=cmsAdmin.email size="30" maxlength="100" class="email"/><@p.tr/>
 <@p.password width="50" colspan="1" label="cmsUser.password" id="password" name="password" maxlength="100" help="cmsUser.password.help"/>

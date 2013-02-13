@@ -17,7 +17,7 @@ $(function() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_member_update.do" labelWidth="15">
+<@p.form id="jvForm" action="o_member_update" labelWidth="15">
 <@p.radio width="50" colspan="1" label="cmsConfig.member.memberOn" name="memberOn" value=memberConfig.memberOn list={"true":"global.true","false":"global.false"} required="true"/>
 <@p.radio width="50" colspan="1" label="cmsConfig.member.registerOn" name="registerOn" value=memberConfig.registerOn list={"true":"global.true","false":"global.false"} required="true"/><@p.tr/>
 <@p.text width="50" colspan="1" label="cmsConfig.member.usernameMinLen" name="usernameMinLen" value=memberConfig.usernameMinLen required="required" class="required digits"/>

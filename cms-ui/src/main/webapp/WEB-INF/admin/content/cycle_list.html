@@ -14,7 +14,7 @@ function optRecycle() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_recycle.do";
+	f.action="o_recycle";
 	f.submit();
 }
 function optDelete() {
@@ -26,7 +26,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 </script>
@@ -39,7 +39,7 @@ function optDelete() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<form action="v_list.do" method="post" style="padding-top:5px;">
+<form action="v_list" method="post" style="padding-top:5px;">
 <div>
 <@s.m "content.title"/>: <input type="text" name="queryTitle" value="${queryTitle!}" style="width:100px"/>
 <@s.m "content.user"/>: <input type="text" name="queryInputUsername" value="${queryInputUsername!}" style="width:70px"/>
@@ -129,8 +129,8 @@ function optDelete() {
 	</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
 		<#assign params>&cid=${cid!}&pageNo=${pageNo!}&queryTitle=${queryTitle!?url}&queryInputUsername=${queryInputUsername!?url}&queryOrderBy=${queryOrderBy!}</#assign>
-		<a href="o_recycle.do?ids=${content.id}${params}" class="pn-opt"><@s.m "contentCycle.recycle"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${content.id}${params}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		<a href="o_recycle?ids=${content.id}${params}" class="pn-opt"><@s.m "contentCycle.recycle"/></a> | <#rt/>
+		<a href="o_delete?ids=${content.id}${params}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">

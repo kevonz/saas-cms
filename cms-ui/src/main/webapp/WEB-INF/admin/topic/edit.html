@@ -21,13 +21,13 @@ $(function() {
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "cmsTopic.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
 		<input type="hidden" name="pageNo" value="${pageNo!}"/>
-		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';"/>		
+		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';"/>		
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
 <#include "/common/image_upload.html"/>
-<@p.form id="jvForm" action="o_update.do" labelWidth="12">
+<@p.form id="jvForm" action="o_update" labelWidth="12">
 <@p.text colspan="1" width="50" label="cmsTopic.name" name="name" value=cmsTopic.name required="true" class="required" maxlength="150"/>
 <@p.select colspan="1" width="50" label="cmsTopic.channel" name="channelId" value=(cmsTopic.channel.id)! list=channelList listKey="id" listValue="name" listDeep="deep" headerKey="" headerValue="cmsTopic.channel.allChannel"/><@p.tr/>
 <@p.text colspan="1" width="50" label="cmsTopic.shortName" name="shortName" value=cmsTopic.shortName  maxlength="150"/>

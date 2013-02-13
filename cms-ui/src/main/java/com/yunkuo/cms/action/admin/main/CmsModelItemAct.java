@@ -27,7 +27,7 @@ public class CmsModelItemAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsModelItemAct.class);
 
-	@RequestMapping("/item/v_list.do")
+	@RequestMapping("/item/v_list")
 	public String list(Integer modelId, Boolean isChannel,
 			HttpServletRequest request, ModelMap model) {
 		CmsModel m = cmsModelMng.findById(modelId);
@@ -44,7 +44,7 @@ public class CmsModelItemAct {
 		}
 	}
 
-	@RequestMapping("/item/v_add.do")
+	@RequestMapping("/item/v_add")
 	public String add(Integer modelId, Boolean isChannel, ModelMap model) {
 		CmsModel m = cmsModelMng.findById(modelId);
 		model.addAttribute("model", m);
@@ -53,7 +53,7 @@ public class CmsModelItemAct {
 		return "item/add";
 	}
 
-	@RequestMapping("/item/v_edit.do")
+	@RequestMapping("/item/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -64,7 +64,7 @@ public class CmsModelItemAct {
 		return "item/edit";
 	}
 
-	@RequestMapping("/item/o_priority.do")
+	@RequestMapping("/item/o_priority")
 	public String priority(Integer[] wids, Integer[] priority, String[] label,
 			Boolean[] single, Boolean[] display, Integer modelId,
 			Boolean isChannel, HttpServletRequest request, ModelMap model) {
@@ -75,7 +75,7 @@ public class CmsModelItemAct {
 		return list(modelId, isChannel, request, model);
 	}
 
-	@RequestMapping("/item/o_save_list.do")
+	@RequestMapping("/item/o_save_list")
 	public String saveList(Integer modelId, Boolean isChannel, String[] fields,
 			String[] labels, Integer[] dataTypes, Integer[] prioritys,
 			Boolean[] singles, Boolean[] displays, HttpServletRequest request,
@@ -87,10 +87,10 @@ public class CmsModelItemAct {
 		log.info("save CmsModelItem count={}", itemList.size());
 		model.addAttribute("modelId", modelId);
 		model.addAttribute("isChannel", isChannel);
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/item/o_save.do")
+	@RequestMapping("/item/o_save")
 	public String save(CmsModelItem bean, Integer modelId, Boolean isChannel,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, modelId, request);
@@ -101,10 +101,10 @@ public class CmsModelItemAct {
 		log.info("update CmsModelItem id={}.", bean.getId());
 		model.addAttribute("modelId", bean.getModel().getId());
 		model.addAttribute("isChannel", bean.getChannel());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/item/o_update.do")
+	@RequestMapping("/item/o_update")
 	public String update(CmsModelItem bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), bean, request);
@@ -115,10 +115,10 @@ public class CmsModelItemAct {
 		log.info("update CmsModelItem id={}.", bean.getId());
 		model.addAttribute("modelId", bean.getModel().getId());
 		model.addAttribute("isChannel", bean.getChannel());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/item/o_delete.do")
+	@RequestMapping("/item/o_delete")
 	public String delete(Integer[] ids, Integer modelId, Boolean isChannel,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -131,7 +131,7 @@ public class CmsModelItemAct {
 		}
 		model.addAttribute("modelId", modelId);
 		model.addAttribute("isChannel", isChannel);
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
 	private List<String> getFieldList(List<CmsModelItem> items) {

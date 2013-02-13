@@ -17,12 +17,12 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function optPriority() {
 	var f = getTableForm();
-	f.action="o_priority.do";
+	f.action="o_priority";
 	f.submit();
 }
 </script>
@@ -32,8 +32,8 @@ function optPriority() {
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "channel.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
 		<input type="hidden" name="root" value="${root!}"/>
-		<@cms_perm url="/channel/v_add.do">
-		<select name="modelId" onchange="if(this.options[this.selectedIndex].value!=''){this.form.action='v_add.do';this.form.submit();}">
+		<@cms_perm url="/channel/v_add">
+		<select name="modelId" onchange="if(this.options[this.selectedIndex].value!=''){this.form.action='v_add';this.form.submit();}">
 			<option>--<@s.m "channel.addChild"/>--</option>
 			<#list modelList as model>
 			<option value="${model.id}">${model.name}</option>
@@ -57,19 +57,19 @@ function optPriority() {
 	<@p.column code="channel.priority" align="center"><input type="text" name="priority" value="${channel.priority}" style="width:40px; border:1px solid #7e9db9"/></@p.column><#t/>
 	<@p.column code="channel.display" align="center"><#if channel.display><@s.m "global.true"/><#else><@s.m "global.false"/></#if></@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<@cms_perm url="/channel/v_edit.do">
-		<a href="v_edit.do?id=${channel.id}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<@cms_perm url="/channel/v_edit">
+		<a href="v_edit?id=${channel.id}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
 		</@cms_perm>
-		<@cms_perm url="/channel/o_delete.do">
-		<a href="o_delete.do?ids=${channel.id}&root=${root!}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
+		<@cms_perm url="/channel/o_delete">
+		<a href="o_delete?ids=${channel.id}&root=${root!}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
 		</@cms_perm>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">
-	<@cms_perm url="/channel/o_delete.do">
+	<@cms_perm url="/channel/o_delete">
 	<input type="button" value="<@s.m "global.delete"/>" onclick="optDelete();" class="del-button"/>
 	</@cms_perm>
-	<@cms_perm url="/channel/o_priority.do">
+	<@cms_perm url="/channel/o_priority">
 &nbsp; <input type="button" value="<@s.m "global.saveOrder"/>" onclick="optPriority();" class="save-order"/>
 	</@cms_perm>
 </div>

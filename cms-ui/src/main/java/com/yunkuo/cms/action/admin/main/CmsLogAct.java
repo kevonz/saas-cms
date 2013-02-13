@@ -23,7 +23,7 @@ import com.yunkuo.common.web.CookieUtils;
 public class CmsLogAct {
 	private static final Logger log = LoggerFactory.getLogger(CmsLogAct.class);
 
-	@RequestMapping("/log/v_list_operating.do")
+	@RequestMapping("/log/v_list_operating")
 	public String listOperating(String queryUsername, String queryTitle,
 			String queryIp, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -39,7 +39,7 @@ public class CmsLogAct {
 		return "log/list_operating";
 	}
 
-	@RequestMapping("/log/v_list_login_success.do")
+	@RequestMapping("/log/v_list_login_success")
 	public String listLoginSuccess(String queryUsername, String queryTitle,
 			String queryIp, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -54,7 +54,7 @@ public class CmsLogAct {
 		return "log/list_login_success";
 	}
 
-	@RequestMapping("/log/v_list_login_failure.do")
+	@RequestMapping("/log/v_list_login_failure")
 	public String listLoginFailure(String queryTitle, String queryIp,
 			Integer pageNo, HttpServletRequest request, ModelMap model) {
 		Pagination pagination = manager.getPage(CmsLog.LOGIN_FAILURE, null,
@@ -67,7 +67,7 @@ public class CmsLogAct {
 		return "log/list_login_failure";
 	}
 
-	@RequestMapping("/log/o_delete_operating.do")
+	@RequestMapping("/log/o_delete_operating")
 	public String deleteOperating(String queryUsername, String queryTitle,
 			String queryIp, Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
@@ -83,7 +83,7 @@ public class CmsLogAct {
 				request, model);
 	}
 
-	@RequestMapping("/log/o_delete_operating_batch.do")
+	@RequestMapping("/log/o_delete_operating_batch")
 	public String deleteOperatingBatch(Integer days,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -92,7 +92,7 @@ public class CmsLogAct {
 		return listOperating(null, null, null, 1, request, model);
 	}
 
-	@RequestMapping("/log/o_delete_login_success.do")
+	@RequestMapping("/log/o_delete_login_success")
 	public String deleteLoginSuccess(String queryUsername, String queryTitle,
 			String queryIp, Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
@@ -108,7 +108,7 @@ public class CmsLogAct {
 				request, model);
 	}
 
-	@RequestMapping("/log/o_delete_login_success_batch.do")
+	@RequestMapping("/log/o_delete_login_success_batch")
 	public String deleteLoginSuccessBatch(Integer days,
 			HttpServletRequest request, ModelMap model) {
 		if (days == null) {
@@ -119,7 +119,7 @@ public class CmsLogAct {
 		return listLoginSuccess(null, null, null, 1, request, model);
 	}
 
-	@RequestMapping("/log/o_delete_login_failure.do")
+	@RequestMapping("/log/o_delete_login_failure")
 	public String deleteLoginFailure(String queryTitle, String queryIp,
 			Integer[] ids, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -134,7 +134,7 @@ public class CmsLogAct {
 		return listLoginFailure(queryTitle, queryIp, pageNo, request, model);
 	}
 
-	@RequestMapping("/log/o_delete_login_failure_batch.do")
+	@RequestMapping("/log/o_delete_login_failure_batch")
 	public String deleteLoginFailureBatch(Integer days,
 			HttpServletRequest request, ModelMap model) {
 		if (days == null) {

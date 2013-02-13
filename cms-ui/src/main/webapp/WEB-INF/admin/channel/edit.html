@@ -22,19 +22,19 @@ $(function() {
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "channel.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
 		<input type="hidden" id="root" name="root" value="${channel.id}"/>
-		<select name="modelId" onchange="if(this.options[this.selectedIndex].value!=''){this.form.action='v_add.do';this.form.submit();}">
+		<select name="modelId" onchange="if(this.options[this.selectedIndex].value!=''){this.form.action='v_add';this.form.submit();}">
 			<option>--<@s.m "channel.addChild"/>--</option>
 			<#list modelList as model>
 			<option value="${model.id}">${model.name}</option>
 			</#list>
 		</select>
-&nbsp;	<input type="submit" value="<@s.m "global.backToList"/>" onclick="$('#root').val('${(channel.parent.id)!}');this.form.action='v_list.do';" class="return-button"/>
+&nbsp;	<input type="submit" value="<@s.m "global.backToList"/>" onclick="$('#root').val('${(channel.parent.id)!}');this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do" labelWidth="10">
+<@p.form id="jvForm" action="o_update" labelWidth="10">
 <@p.td colspan="1" width="50" label="channel.parent">
 	<@p.select name="parentId" list=channelList value=(channel.parent.id)! listKey="id" listValue="name" listDeep="deep" headerKey="" headerValue="channel.top"/>
 	<#--<#if channel.parent??>${channel.parent.name}<#else><@s.m "channel.top"/></#if>-->

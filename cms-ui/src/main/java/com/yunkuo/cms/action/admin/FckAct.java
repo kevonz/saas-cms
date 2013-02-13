@@ -49,12 +49,12 @@ public class FckAct {
 	private static final Logger log = LoggerFactory.getLogger(FckAct.class);
 
 	// TODO 浏览服务器文件未实现
-	// @RequestMapping(value = "/fck/connector.do")
+	// @RequestMapping(value = "/fck/connector")
 	// public String connector() {
 	// return null;
 	// }
 
-	@RequestMapping(value = "/fck/upload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/fck/upload", method = RequestMethod.POST)
 	public void upload(
 			@RequestParam(value = "Command", required = false) String commandStr,
 			@RequestParam(value = "Type", required = false) String typeStr,

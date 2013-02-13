@@ -29,7 +29,7 @@ import com.yunkuo.core.web.WebErrors;
 public class CmsSiteAct {
 	private static final Logger log = LoggerFactory.getLogger(CmsSiteAct.class);
 
-	@RequestMapping("/site/v_list.do")
+	@RequestMapping("/site/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		List<CmsSite> list = manager.getList();
@@ -37,14 +37,14 @@ public class CmsSiteAct {
 		return "site/list";
 	}
 
-	@RequestMapping("/site/v_add.do")
+	@RequestMapping("/site/v_add")
 	public String add(ModelMap model) {
 		List<Ftp> ftpList = ftpMng.getList();
 		model.addAttribute("ftpList", ftpList);
 		return "site/add";
 	}
 
-	@RequestMapping("/site/v_edit.do")
+	@RequestMapping("/site/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -56,7 +56,7 @@ public class CmsSiteAct {
 		return "site/edit";
 	}
 
-	@RequestMapping("/site/o_save.do")
+	@RequestMapping("/site/o_save")
 	public String save(CmsSite bean, Integer uploadFtpId,
 			HttpServletRequest request, ModelMap model) throws IOException {
 		CmsSite site = CmsUtils.getSite(request);
@@ -69,10 +69,10 @@ public class CmsSiteAct {
 		log.info("save CmsSite id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsSite.log.save", "id=" + bean.getId()
 				+ ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/site/o_update.do")
+	@RequestMapping("/site/o_update")
 	public String update(CmsSite bean, Integer uploadFtpId, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), uploadFtpId, request);
@@ -86,7 +86,7 @@ public class CmsSiteAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/site/o_delete.do")
+	@RequestMapping("/site/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -102,7 +102,7 @@ public class CmsSiteAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/site/v_checkDomain.do")
+	@RequestMapping("/site/v_checkDomain")
 	public void checkUserJson(String domain, HttpServletResponse response) {
 		String pass;
 		if (StringUtils.isBlank(domain)) {

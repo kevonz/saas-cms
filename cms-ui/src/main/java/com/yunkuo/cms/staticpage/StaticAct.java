@@ -26,17 +26,17 @@ import freemarker.template.TemplateException;
 public class StaticAct {
 	private static final Logger log = LoggerFactory.getLogger(StaticAct.class);
 
-	@RequestMapping(value = "/static/v_welcome.do")
+	@RequestMapping(value = "/static/v_welcome")
 	public String welcome() {
 		return "static/welcome";
 	}
 
-	@RequestMapping(value = "/static/v_index.do")
+	@RequestMapping(value = "/static/v_index")
 	public String indexInput(HttpServletRequest request, ModelMap model) {
 		return "static/index";
 	}
 
-	@RequestMapping(value = "/static/o_index.do")
+	@RequestMapping(value = "/static/o_index")
 	public void indexSubmit(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		try {
@@ -54,7 +54,7 @@ public class StaticAct {
 		}
 	}
 
-	@RequestMapping(value = "/static/o_index_remove.do")
+	@RequestMapping(value = "/static/o_index_remove")
 	public void indexRemove(HttpServletRequest request,
 			HttpServletResponse response) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -67,7 +67,7 @@ public class StaticAct {
 		ResponseUtils.renderJson(response, msg);
 	}
 
-	@RequestMapping(value = "/static/v_channel.do")
+	@RequestMapping(value = "/static/v_channel")
 	public String channelInput(HttpServletRequest request, ModelMap model) {
 		// 栏目列表
 		CmsSite site = CmsUtils.getSite(request);
@@ -78,7 +78,7 @@ public class StaticAct {
 		return "static/channel";
 	}
 
-	@RequestMapping(value = "/static/o_channel.do")
+	@RequestMapping(value = "/static/o_channel")
 	public void channelSubmit(Integer channelId, Boolean containChild,
 			HttpServletRequest request, HttpServletResponse response) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -100,7 +100,7 @@ public class StaticAct {
 		ResponseUtils.renderJson(response, msg);
 	}
 
-	@RequestMapping(value = "/static/v_content.do")
+	@RequestMapping(value = "/static/v_content")
 	public String contentInput(HttpServletRequest request, ModelMap model) {
 		// 栏目列表
 		CmsSite site = CmsUtils.getSite(request);
@@ -111,7 +111,7 @@ public class StaticAct {
 		return "static/content";
 	}
 
-	@RequestMapping(value = "/static/o_content.do")
+	@RequestMapping(value = "/static/o_content")
 	public void contentSubmit(Integer channelId, Date startDate,
 			HttpServletRequest request, HttpServletResponse response) {
 		String msg;

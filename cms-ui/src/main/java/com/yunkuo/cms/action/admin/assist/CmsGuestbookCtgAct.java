@@ -23,7 +23,7 @@ public class CmsGuestbookCtgAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsGuestbookCtgAct.class);
 
-	@RequestMapping("/guestbook_ctg/v_list.do")
+	@RequestMapping("/guestbook_ctg/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -32,12 +32,12 @@ public class CmsGuestbookCtgAct {
 		return "guestbook_ctg/list";
 	}
 
-	@RequestMapping("/guestbook_ctg/v_add.do")
+	@RequestMapping("/guestbook_ctg/v_add")
 	public String add(ModelMap model) {
 		return "guestbook_ctg/add";
 	}
 
-	@RequestMapping("/guestbook_ctg/v_edit.do")
+	@RequestMapping("/guestbook_ctg/v_edit")
 	public String edit(Integer id, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
@@ -49,7 +49,7 @@ public class CmsGuestbookCtgAct {
 		return "guestbook_ctg/edit";
 	}
 
-	@RequestMapping("/guestbook_ctg/o_save.do")
+	@RequestMapping("/guestbook_ctg/o_save")
 	public String save(CmsGuestbookCtg bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -60,10 +60,10 @@ public class CmsGuestbookCtgAct {
 		log.info("save CmsGuestbookCtg id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsGuestbookCtg.log.save", "id="
 				+ bean.getId() + ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/guestbook_ctg/o_update.do")
+	@RequestMapping("/guestbook_ctg/o_update")
 	public String update(CmsGuestbookCtg bean, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -77,7 +77,7 @@ public class CmsGuestbookCtgAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/guestbook_ctg/o_delete.do")
+	@RequestMapping("/guestbook_ctg/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

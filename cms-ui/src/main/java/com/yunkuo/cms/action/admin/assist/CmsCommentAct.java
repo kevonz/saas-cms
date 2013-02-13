@@ -29,7 +29,7 @@ public class CmsCommentAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsCommentAct.class);
 
-	@RequestMapping("/comment/v_list.do")
+	@RequestMapping("/comment/v_list")
 	public String list(Integer queryContentId, Boolean queryChecked,
 			Boolean queryRecommend, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -44,12 +44,12 @@ public class CmsCommentAct {
 		return "comment/list";
 	}
 
-	@RequestMapping("/comment/v_add.do")
+	@RequestMapping("/comment/v_add")
 	public String add(ModelMap model) {
 		return "comment/add";
 	}
 
-	@RequestMapping("/comment/v_edit.do")
+	@RequestMapping("/comment/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -59,7 +59,7 @@ public class CmsCommentAct {
 		return "comment/edit";
 	}
 
-	@RequestMapping("/comment/o_update.do")
+	@RequestMapping("/comment/o_update")
 	public String update(Integer queryContentId, Boolean queryChecked,
 			Boolean queryRecommend,String reply, CmsComment bean, CmsCommentExt ext,
 			Integer pageNo, HttpServletRequest request, ModelMap model) {
@@ -79,7 +79,7 @@ public class CmsCommentAct {
 				request, model);
 	}
 
-	@RequestMapping("/comment/o_delete.do")
+	@RequestMapping("/comment/o_delete")
 	public String delete(Integer queryContentId, Boolean queryChecked,
 			Boolean queryRecommend, Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {

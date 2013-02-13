@@ -17,12 +17,12 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function optPriority() {
 	var f = getTableForm();
-	f.action="o_priority.do";
+	f.action="o_priority";
 	f.submit();
 }
 </script>
@@ -31,7 +31,7 @@ function optPriority() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsGroup.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 	</form>
 	<div class="clear"></div>
 </div>
@@ -56,8 +56,8 @@ function optPriority() {
 	<@p.column code="cmsGroup.needCheck" align="center"><#if cmsGroup.needCheck><@s.m "global.true"/><#else><@s.m "global.false"/></#if></@p.column><#t/>
 	<@p.column code="cmsGroup.needCaptcha" align="center"><#if cmsGroup.needCaptcha><@s.m "global.true"/><#else><@s.m "global.false"/></#if></@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="v_edit.do?id=${cmsGroup.id}&pageNo=${pageNo!}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${cmsGroup.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		<a href="v_edit?id=${cmsGroup.id}&pageNo=${pageNo!}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<a href="o_delete?ids=${cmsGroup.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">

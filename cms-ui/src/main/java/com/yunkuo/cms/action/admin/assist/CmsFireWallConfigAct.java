@@ -41,11 +41,11 @@ public class CmsFireWallConfigAct {
 	String property_firewall_week = "firewall.week";
 	String property_firewall_ips = "firewall.ips";
 	
-	@RequestMapping("/config/v_login.do")
+	@RequestMapping("/config/v_login")
 	public String v_login(HttpServletRequest request, Model model) {
 		return "config/firewall_login";
 	}
-	@RequestMapping("/config/o_login.do")
+	@RequestMapping("/config/o_login")
 	public String o_login(String password,HttpServletRequest request,HttpServletResponse response,Model model)
 			throws IOException {
 		InputStream in = new FileInputStream(realPathResolver.get(Constants.FIREWALL_CONFIGPATH));
@@ -59,7 +59,7 @@ public class CmsFireWallConfigAct {
 			return "config/firewall_login_error";
 		}
 	}
-	@RequestMapping("/config/v_firewall.do")
+	@RequestMapping("/config/v_firewall")
 	public String edit(HttpServletRequest request, Model model)
 			throws IOException {
 		Boolean is_login=(Boolean) session.getAttribute(request, FIREWALL_LOGIN);
@@ -97,7 +97,7 @@ public class CmsFireWallConfigAct {
 		}
 	}
 
-	@RequestMapping("/config/o_firewall.do")
+	@RequestMapping("/config/o_firewall")
 	public String update(HttpServletRequest request, Model model, String open,String oldPassword,
 			String password, String domain, String[] week,String[] hour, String ips)
 			throws IOException {

@@ -25,7 +25,7 @@ public class UnifiedUserAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(UnifiedUserAct.class);
 
-	@RequestMapping("/unified_user/v_list.do")
+	@RequestMapping("/unified_user/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		Pagination pagination = manager.getPage(cpn(pageNo), CookieUtils
@@ -34,12 +34,12 @@ public class UnifiedUserAct {
 		return "unified_user/list";
 	}
 
-	@RequestMapping("/unified_user/v_add.do")
+	@RequestMapping("/unified_user/v_add")
 	public String add(ModelMap model) {
 		return "unified_user/add";
 	}
 
-	@RequestMapping("/unified_user/v_edit.do")
+	@RequestMapping("/unified_user/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -49,7 +49,7 @@ public class UnifiedUserAct {
 		return "unified_user/edit";
 	}
 
-	@RequestMapping("/unified_user/o_save.do")
+	@RequestMapping("/unified_user/o_save")
 	public String save(String username, String email, String password,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(username, email, password, request);
@@ -60,10 +60,10 @@ public class UnifiedUserAct {
 				.getRemoteAddr());
 		log.info("save UnifiedUser id={}, username={}", user.getId(), user
 				.getUsername());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/unified_user/o_update.do")
+	@RequestMapping("/unified_user/o_update")
 	public String update(Integer id, String email, String password,
 			Integer pageNo, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(id, email, password, request);
@@ -75,7 +75,7 @@ public class UnifiedUserAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/unified_user/o_delete.do")
+	@RequestMapping("/unified_user/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -89,7 +89,7 @@ public class UnifiedUserAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/unified_user/v_check_username.do")
+	@RequestMapping("/unified_user/v_check_username")
 	public String checkUsername(String username, HttpServletRequest request,
 			HttpServletResponse response) {
 		if (StringUtils.isBlank(username) || manager.usernameExist(username)) {
@@ -100,7 +100,7 @@ public class UnifiedUserAct {
 		return null;
 	}
 
-	@RequestMapping("/unified_user/v_check_email.do")
+	@RequestMapping("/unified_user/v_check_email")
 	public String checkEmail(String email, HttpServletRequest request,
 			HttpServletResponse response) {
 		if (StringUtils.isBlank(email) || manager.emailExist(email)) {

@@ -23,7 +23,7 @@ public class ContentTypeAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(ContentTypeAct.class);
 
-	@RequestMapping("/type/v_list.do")
+	@RequestMapping("/type/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		List<ContentType> list = manager.getList(true);
@@ -31,12 +31,12 @@ public class ContentTypeAct {
 		return "type/list";
 	}
 
-	@RequestMapping("/type/v_add.do")
+	@RequestMapping("/type/v_add")
 	public String add(ModelMap model) {
 		return "type/add";
 	}
 
-	@RequestMapping("/type/v_edit.do")
+	@RequestMapping("/type/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -46,7 +46,7 @@ public class ContentTypeAct {
 		return "type/edit";
 	}
 
-	@RequestMapping("/type/o_save.do")
+	@RequestMapping("/type/o_save")
 	public String save(ContentType bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -57,10 +57,10 @@ public class ContentTypeAct {
 		log.info("save ContentType id={}", bean.getId());
 		cmsLogMng.operating(request, "contentType.log.save", "id="
 				+ bean.getId() + ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/type/o_update.do")
+	@RequestMapping("/type/o_update")
 	public String update(ContentType bean, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -74,7 +74,7 @@ public class ContentTypeAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/type/o_delete.do")
+	@RequestMapping("/type/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

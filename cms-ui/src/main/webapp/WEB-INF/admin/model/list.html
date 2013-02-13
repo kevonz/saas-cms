@@ -17,12 +17,12 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function optPriority() {
 	var f = getTableForm();
-	f.action="o_priority.do";
+	f.action="o_priority";
 	f.submit();
 }
 </script>
@@ -34,7 +34,7 @@ function optPriority() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsModel.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 	</form>
 	<div class="clear"></div>
 </div>
@@ -60,10 +60,10 @@ function optPriority() {
 		<input type="hidden" id="disabled${i}" name="disabled" value="${cmsModel.disabled?string('true','false')}"/>
 	</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="v_edit.do?id=${cmsModel.id}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
-		<a href="../item/v_list.do?modelId=${cmsModel.id}&isChannel=true" class="pn-opt"><@s.m "cmsModel.modelChannel"/></a> | <#rt/>
-		<a<#if cmsModel.hasContent> href="../item/v_list.do?modelId=${cmsModel.id}&isChannel=false" class="pn-opt"<#else> disabled="disabled" class="disabled pn-opt"</#if>><@s.m "cmsModel.modelContent"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${cmsModel.id}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
+		<a href="v_edit?id=${cmsModel.id}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<a href="../item/v_list?modelId=${cmsModel.id}&isChannel=true" class="pn-opt"><@s.m "cmsModel.modelChannel"/></a> | <#rt/>
+		<a<#if cmsModel.hasContent> href="../item/v_list?modelId=${cmsModel.id}&isChannel=false" class="pn-opt"<#else> disabled="disabled" class="disabled pn-opt"</#if>><@s.m "cmsModel.modelContent"/></a> | <#rt/>
+		<a href="o_delete?ids=${cmsModel.id}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div>

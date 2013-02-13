@@ -44,7 +44,7 @@ import static com.yunkuo.common.page.SimplePage.cpn;
 
 @Controller
 public class CmsStatisticAct {
-	@RequestMapping("/statistic_member/v_list.do")
+	@RequestMapping("/statistic_member/v_list")
 	public String memberList(String queryModel, Integer year, Integer month,
 			Integer day, ModelMap model) {
 		CmsStatisticModel statisticModel = getStatisticModel(queryModel);
@@ -54,7 +54,7 @@ public class CmsStatisticAct {
 		return "statistic/member/list";
 	}
 
-	@RequestMapping("/statistic_content/v_list.do")
+	@RequestMapping("/statistic_content/v_list")
 	public String contentList(HttpServletRequest request, String queryModel,
 			Integer channelId, Integer year, Integer month, Integer day,
 			ModelMap model) {
@@ -88,7 +88,7 @@ public class CmsStatisticAct {
 		return "statistic/content/list";
 	}
 
-	@RequestMapping("/statistic_comment/v_list.do")
+	@RequestMapping("/statistic_comment/v_list")
 	public String commentList(HttpServletRequest request, String queryModel,
 			Integer year, Integer month, Integer day, Boolean isReplyed,
 			ModelMap model) {
@@ -104,7 +104,7 @@ public class CmsStatisticAct {
 		return "statistic/comment/list";
 	}
 
-	@RequestMapping("/statistic_guestbook/v_list.do")
+	@RequestMapping("/statistic_guestbook/v_list")
 	public String guestbookList(HttpServletRequest request, String queryModel,
 			Integer year, Integer month, Integer day, Boolean isReplyed,
 			ModelMap model) {
@@ -120,7 +120,7 @@ public class CmsStatisticAct {
 		return "statistic/guestbook/list";
 	}
 
-	@RequestMapping("/flow_pv/v_list.do")
+	@RequestMapping("/flow_pv/v_list")
 	public String pageViewList(HttpServletRequest request, ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
 		List<CmsStatistic> list = cmsStatisticSvc.flowStatistic(PV, siteId);
@@ -128,7 +128,7 @@ public class CmsStatisticAct {
 		return "statistic/pv/list";
 	}
 
-	@RequestMapping("/flow_uniqueIp/v_list.do")
+	@RequestMapping("/flow_uniqueIp/v_list")
 	public String uniqueIpList(HttpServletRequest request, ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
 		List<CmsStatistic> list = cmsStatisticSvc.flowStatistic(UNIQUEIP,
@@ -137,7 +137,7 @@ public class CmsStatisticAct {
 		return "statistic/uniqueIp/list";
 	}
 
-	@RequestMapping("/flow_uniqueVisitor/v_list.do")
+	@RequestMapping("/flow_uniqueVisitor/v_list")
 	public String uniqueVisitorList(HttpServletRequest request, ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
 		List<CmsStatistic> list = cmsStatisticSvc.flowStatistic(UNIQUEVISITOR,
@@ -146,7 +146,7 @@ public class CmsStatisticAct {
 		return "statistic/uniqueVisitor/list";
 	}
 
-	@RequestMapping("/flow_avgViews/v_list.do")
+	@RequestMapping("/flow_avgViews/v_list")
 	public String avgViewsList(HttpServletRequest request, ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
 		List<CmsStatistic> list = cmsStatisticSvc.flowStatistic(AVGVIEWS,
@@ -156,7 +156,7 @@ public class CmsStatisticAct {
 	}
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("/flow_refererWebSite/v_list.do")
+	@RequestMapping("/flow_refererWebSite/v_list")
 	public String refererWebSite(HttpServletRequest request, Integer pageNo,
 			ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
@@ -170,7 +170,7 @@ public class CmsStatisticAct {
 	}
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("/flow_refererPage/v_list.do")
+	@RequestMapping("/flow_refererPage/v_list")
 	public String refererPage(HttpServletRequest request, Integer pageNo,
 			ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
@@ -183,7 +183,7 @@ public class CmsStatisticAct {
 	}
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("/flow_accessPage/v_list.do")
+	@RequestMapping("/flow_accessPage/v_list")
 	public String accessPage(HttpServletRequest request, Integer pageNo,
 			ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
@@ -196,7 +196,7 @@ public class CmsStatisticAct {
 	}
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("/flow_area/v_list.do")
+	@RequestMapping("/flow_area/v_list")
 	public String area(HttpServletRequest request, Integer pageNo,
 			ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
@@ -209,7 +209,7 @@ public class CmsStatisticAct {
 	}
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("/flow_refererKeyword/v_list.do")
+	@RequestMapping("/flow_refererKeyword/v_list")
 	public String refererKeyword(HttpServletRequest request, Integer pageNo,
 			ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);
@@ -222,13 +222,13 @@ public class CmsStatisticAct {
 		return "statistic/refererKeyword/list";
 	}
 
-	@RequestMapping("/statistic_flow/v_init.do")
+	@RequestMapping("/statistic_flow/v_init")
 	public String flowInitView(HttpServletRequest request, Integer pageNo,
 			ModelMap model) {
 		return "statistic/init";
 	}
 
-	@RequestMapping("/statistic_flow/o_init.do")
+	@RequestMapping("/statistic_flow/o_init")
 	public String flowInit(HttpServletRequest request, Date startDate,
 			Date endDate, Integer pageNo, ModelMap model) {
 		Integer siteId = CmsUtils.getSiteId(request);

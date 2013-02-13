@@ -17,7 +17,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 
@@ -30,7 +30,7 @@ function optBatchStart() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_start.do";
+	f.action="o_start";
 	f.submit();
 }
 </script>
@@ -39,7 +39,7 @@ function optBatchStart() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsAcquisition.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 	</form>
 	<div class="clear"></div>
 </div>
@@ -59,26 +59,26 @@ function optBatchStart() {
 	<@p.column code="global.operate" align="center">
 	<#if cmsAcquisition.queue gt 0>
 			<span style="color:red"><@s.m "cmsAcquisition.wait"/> (${cmsAcquisition.queue})</span>| <#rt/>
-			<a href="o_cancel.do?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.cancel"/></a>| <#rt/>
+			<a href="o_cancel?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.cancel"/></a>| <#rt/>
 	<#else>
 		<#if cmsAcquisition.status==0 || cmsAcquisition.status==2>
-		<a href="o_start.do?ids=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.opt.start"/></a> | <#rt/>
+		<a href="o_start?ids=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.opt.start"/></a> | <#rt/>
 		<#else>
 		<@s.m "cmsAcquisition.opt.start"/> | <#rt/>
 		</#if>
 		<#if cmsAcquisition.status==1>
-		<a href="o_pause.do?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.opt.pause"/></a> | <#rt/>
+		<a href="o_pause?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.opt.pause"/></a> | <#rt/>
 		<#else>
 		<@s.m "cmsAcquisition.opt.pause"/> | <#rt/>
 		</#if>
 		<#if cmsAcquisition.status==1 || cmsAcquisition.status==1>
-		<a href="o_end.do?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.opt.end"/></a> | <#rt/>
+		<a href="o_end?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "cmsAcquisition.opt.end"/></a> | <#rt/>
 		<#else>
 		<@s.m "cmsAcquisition.opt.end"/> | <#rt/>
 		</#if>
 	</#if>
-		<a href="v_edit.do?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${cmsAcquisition.id}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
+		<a href="v_edit?id=${cmsAcquisition.id}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<a href="o_delete?ids=${cmsAcquisition.id}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;"><input class="start-acqu" type="button" value="<@s.m "cmsAcquisition.startAcquisition"/>" onclick="optBatchStart();"/><input class="del-button" type="button" value="<@s.m "global.delete"/>" onclick="optDelete();"/></div>

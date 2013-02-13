@@ -21,7 +21,7 @@ $(function() {
 <div class="body-box">
 <#assign custom=cmsModelItem.custom/>
 <#assign type=cmsModelItem.dataType/>
-<@p.form id="jvForm" action="o_update.do" labelWidth="12">
+<@p.form id="jvForm" action="o_update" labelWidth="12">
 <#if custom>
 	<@p.text colspan="1" width="50" label="cmsModelItem.field" name="field" value=cmsModelItem.field required="true" class="required" maxlength="100"/>
 <#else>

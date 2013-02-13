@@ -17,21 +17,21 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function optSave() {
 	var f = getTableForm();
-	f.action="o_save_list.do";
+	f.action="o_save_list";
 	f.submit();
 }
 function optSaveOrder() {
 	var f = getTableForm();
-	f.action="o_priority.do";
+	f.action="o_priority";
 	f.submit();
 }
 function backToList(o) {
-	o.form.action='../model/v_list.do';
+	o.form.action='../model/v_list';
 	$('#modelId').attr('disabled','disabled');
 	$('#isChannel').attr('disabled','disabled');
 }
@@ -50,7 +50,7 @@ function disInput(o) {
 	<form class="ropt">
 		<input id="modelId" type="hidden" name="modelId" value="${modelId}"/>
 		<input id="isChannel" type="hidden" name="isChannel" value="${isChannel?string("true","false")}"/>
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 &nbsp; <input type="submit" value="<@s.m "global.backToList"/>" onclick="backToList(this);" class="return-button"/>
 	</form>
 	<div class="clear"></div>
@@ -92,8 +92,8 @@ function disInput(o) {
 		<input type="hidden" id="d${item_index}" name="display" value="${item.display?string('true','false')}"/>
 	</td>
 	<td align="center">
-		<a href="v_edit.do?id=${item.id}" class="pn-opt"><@s.m "global.edit"/></a> |
-		<a href="o_delete.do?ids=${item.id}&modelId=${modelId}&isChannel=${isChannel?string('true','false')}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a>
+		<a href="v_edit?id=${item.id}" class="pn-opt"><@s.m "global.edit"/></a> |
+		<a href="o_delete?ids=${item.id}&modelId=${modelId}&isChannel=${isChannel?string('true','false')}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a>
  	</td>
 </tr>
 </#list>

@@ -44,7 +44,7 @@ public class ImageUploadAct {
 	 */
 	public static final String ERROR = "error";
 
-	@RequestMapping("/common/o_upload_image.do")
+	@RequestMapping("/common/o_upload_image")
 	public String execute(
 			String filename,
 			Integer uploadNum,

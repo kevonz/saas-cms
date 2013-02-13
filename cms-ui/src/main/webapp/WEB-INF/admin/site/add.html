@@ -14,17 +14,17 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsSite.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
 <#assign localeDefault><@s.m "cmsSite.locale.default"/></#assign>
 <#assign domainExist><@s.m "cmsSite.error.domainExist"/></#assign>
-<@p.form id="jvForm" action="o_save.do" labelWidth="12">
+<@p.form id="jvForm" action="o_save" labelWidth="12">
 <@p.text colspan="1" width="50" label="cmsSite.name" name="name" style="width:260px" required="true" class="required" maxlength="100"/>
 <@p.text colspan="1" width="50" label="cmsSite.shortName" name="shortName" required="true" class="required" maxlength="100"/><@p.tr/>
-<@p.text colspan="1" width="50" label="cmsSite.domain" name="domain" required="true" maxlength="50" vld="{required:true,remote:'v_checkDomain.do',messages:{remote:'${domainExist}'}}"/>
+<@p.text colspan="1" width="50" label="cmsSite.domain" name="domain" required="true" maxlength="50" vld="{required:true,remote:'v_checkDomain',messages:{remote:'${domainExist}'}}"/>
 <@p.text colspan="1" width="50" label="cmsSite.path" name="path" required="true" class="required" maxlength="20" help="cmsSite.path.help"/><@p.tr/>
 <@p.text colspan="1" width="50" label="cmsSite.domainAlias" name="domainAlias" style="width:200px" maxlength="255" help="cmsSite.domainAlias.help"/>
 <@p.text colspan="1" width="50" label="cmsSite.domainRedirect" name="domainRedirect" style="width:200px" maxlength="255" help="cmsSite.domainRedirect.help"/><@p.tr/>

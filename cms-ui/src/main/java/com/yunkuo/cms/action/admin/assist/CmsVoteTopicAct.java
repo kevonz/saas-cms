@@ -30,7 +30,7 @@ public class CmsVoteTopicAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsVoteTopicAct.class);
 
-	@RequestMapping("/vote_topic/v_list.do")
+	@RequestMapping("/vote_topic/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -41,12 +41,12 @@ public class CmsVoteTopicAct {
 		return "vote_topic/list";
 	}
 
-	@RequestMapping("/vote_topic/v_add.do")
+	@RequestMapping("/vote_topic/v_add")
 	public String add(ModelMap model) {
 		return "vote_topic/add";
 	}
 
-	@RequestMapping("/vote_topic/v_edit.do")
+	@RequestMapping("/vote_topic/v_edit")
 	public String edit(Integer id, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
@@ -58,7 +58,7 @@ public class CmsVoteTopicAct {
 		return "vote_topic/edit";
 	}
 
-	@RequestMapping("/vote_topic/o_save.do")
+	@RequestMapping("/vote_topic/o_save")
 	public String save(CmsVoteTopic bean, String[] itemTitle,
 			Integer[] itemVoteCount, Integer[] itemPriority,
 			HttpServletRequest request, ModelMap model) {
@@ -72,10 +72,10 @@ public class CmsVoteTopicAct {
 		log.info("save CmsVoteTopic id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsVoteTopic.log.save", "id="
 				+ bean.getId() + ";title=" + bean.getTitle());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/vote_topic/o_update.do")
+	@RequestMapping("/vote_topic/o_update")
 	public String update(CmsVoteTopic bean, Integer[] itemId,
 			String[] itemTitle, Integer[] itemVoteCount,
 			Integer[] itemPriority, Integer pageNo, HttpServletRequest request,
@@ -93,7 +93,7 @@ public class CmsVoteTopicAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/vote_topic/o_delete.do")
+	@RequestMapping("/vote_topic/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

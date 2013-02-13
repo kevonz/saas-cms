@@ -16,12 +16,12 @@ $(function() {
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsMessage.function"/> - <@s.m "cmsMessage.sendMessage"/></div>
 	<form class="ropt">
 		<input type="hidden" name="box" value="${box}"/>
-		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';"/>
+		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="v_send.do" labelWidth="15">
+<@p.form id="jvForm" action="v_send" labelWidth="15">
 
 <@p.td  label="cmsMessage.sendUser" colspan="2" width="50">
 	${message.msgSendUser.username!}

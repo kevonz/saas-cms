@@ -14,7 +14,7 @@ function optBackUp() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_backup.do";
+	f.action="o_backup";
 	f.submit();
 }
 </script>
@@ -32,10 +32,10 @@ function optBackUp() {
 		<input type='checkbox' name='tableNames' value='${table}'/><#t/>
 	</@p.column><#t/>
 	<@p.column code="db.tablename">
-		<a href="v_listfields.do?tablename=${table!}" class="pn-opt" target="_blank">${table}</a>
+		<a href="v_listfields?tablename=${table!}" class="pn-opt" target="_blank">${table}</a>
 	</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="v_listfields.do?tablename=${table!}" class="pn-opt" target="_blank"><@s.m "db.viewtable"/></a> <#rt/>
+		<a href="v_listfields?tablename=${table!}" class="pn-opt" target="_blank"><@s.m "db.viewtable"/></a> <#rt/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">

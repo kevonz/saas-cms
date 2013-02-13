@@ -27,7 +27,7 @@ function preview() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_mark_update.do" labelWidth="15">
+<@p.form id="jvForm" action="o_mark_update" labelWidth="15">
 <@p.radio label="cmsConfig.mark.on" name="on" value=markConfig.on list={"true":"global.true","false":"global.false"} required="true"/>
 <@p.td label="cmsConfig.mark.control" required="true" help="cmsConfig.mark.control.help">
 <@s.m "cmsConfig.mark.minWidth"/>: <input type="text" name="minWidth" value="${markConfig.minWidth}" style="width:70px" class="required ditigs" maxlength="5"/>

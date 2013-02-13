@@ -42,7 +42,7 @@ function HoverLi(m,n,counter){
 	g('tb_'+m+n).className='current';
 }
 function countUnreadMsg(){
-	 $.post("message/v_countUnreadMsg.do", {
+	 $.post("message/v_countUnreadMsg", {
 		}, function(data) {
 			if(data.result){
 				 $("#countDiv").html(""+data.count+"");
@@ -60,7 +60,7 @@ $(function(){
 });
 setTimeout( "countUnreadMsg() ",1000*60*10); 
 function mapDialog(){
-	var result=window.showModalDialog("map.do","","dialogHeight:600px;dialogWidth:800px;center:yes;resizable: yes;");
+	var result=window.showModalDialog("map","","dialogHeight:600px;dialogWidth:800px;center:yes;resizable: yes;");
 	if(result!=null){
 		var href=result.split(";")[0];
 		var target=result.split(";")[1];
@@ -95,11 +95,11 @@ function mapDialog(){
                                   <tr>
                                     <td width="420" height="38">
                                     <img src="${base}/static/_default/jeecms/img/admin/welconlogin-icon.png"/><span id="welcome"><@s.ma code="global.admin.welcome" args=[user.username]/></span>
-                                    <img src="${base}/static/_default/jeecms/img/admin/loginout-icon.png"/><a href="logout.do?returnUrl=index.do" target="_top" id="logout" onclick="return confirm('<@s.m "global.confirm.logout"/>');"><@s.m "global.admin.logout"/></a>　　
-                                    <img src="${base}/static/_default/jeecms/img/admin/message-unread.png"/>&nbsp;<a href="message/v_list.do" target="rightFrame">您有<span id="countDiv"></span>条信息未读</a>
+                                    <img src="${base}/static/_default/jeecms/img/admin/loginout-icon.png"/><a href="logout?returnUrl=index" target="_top" id="logout" onclick="return confirm('<@s.m "global.confirm.logout"/>');"><@s.m "global.admin.logout"/></a>　　
+                                    <img src="${base}/static/_default/jeecms/img/admin/message-unread.png"/>&nbsp;<a href="message/v_list" target="rightFrame">您有<span id="countDiv"></span>条信息未读</a>
                                     </td>
                                     <td align="right">
-                                         <form action="index.do" target="_top" method="get">
+                                         <form action="index" target="_top" method="get">
 											<select name="${siteParam}" onchange="this.form.submit();">
 											  <#list siteList as s>
 								              <option value="${s.id}"<#if s.id==site.id> selected="selected"</#if>>${s.name}</option>
@@ -123,37 +123,37 @@ function mapDialog(){
                                 <td style="background-image:url('${base}/static/_default/jeecms/img/admin/nav-left.png')" width="14" height="31"></td>
                                 <td>
                                 	<ul class="nav-menu">
-                                    	<li class="current" id="tb_11" onclick="HoverLi(1,1,10);"><a href="main.do" target="mainFrame"><@s.m "global.admin.home"/></a></li>
-										<@cms_perm url="/frame/channel_main.do">			
-										<li class="sep"></li><li class="normal" id="tb_12" onclick="HoverLi(1,2,10);"><a href="frame/channel_main.do" target="mainFrame"><@s.m "cms.function.channel"/></a></li>
+                                    	<li class="current" id="tb_11" onclick="HoverLi(1,1,10);"><a href="main" target="mainFrame"><@s.m "global.admin.home"/></a></li>
+										<@cms_perm url="/frame/channel_main">			
+										<li class="sep"></li><li class="normal" id="tb_12" onclick="HoverLi(1,2,10);"><a href="frame/channel_main" target="mainFrame"><@s.m "cms.function.channel"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/content_main.do">
-										<li class="sep"></li><li class="normal" id="tb_13" onclick="HoverLi(1,3,10);"><a href="frame/content_main.do" target="mainFrame"><@s.m "cms.function.content"/></a></li>
+										<@cms_perm url="/frame/content_main">
+										<li class="sep"></li><li class="normal" id="tb_13" onclick="HoverLi(1,3,10);"><a href="frame/content_main" target="mainFrame"><@s.m "cms.function.content"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/template_main.do">
-										<li class="sep"></li><li class="normal" id="tb_14" onclick="HoverLi(1,4,10);"><a href="frame/template_main.do" target="mainFrame"><@s.m "cms.function.template"/></a></li>
+										<@cms_perm url="/frame/template_main">
+										<li class="sep"></li><li class="normal" id="tb_14" onclick="HoverLi(1,4,10);"><a href="frame/template_main" target="mainFrame"><@s.m "cms.function.template"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/resource_main.do">
-										<li class="sep"></li><li class="normal" id="tb_15" onclick="HoverLi(1,5,10);"><a href="frame/resource_main.do" target="mainFrame"><@s.m "cms.function.resource"/></a></li>
+										<@cms_perm url="/frame/resource_main">
+										<li class="sep"></li><li class="normal" id="tb_15" onclick="HoverLi(1,5,10);"><a href="frame/resource_main" target="mainFrame"><@s.m "cms.function.resource"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/assistant_main.do">
-										<li class="sep"></li><li class="normal" id="tb_16" onclick="HoverLi(1,6,10);"><a href="frame/assistant_main.do" target="mainFrame"><@s.m "cms.function.assistant"/></a></li>
+										<@cms_perm url="/frame/assistant_main">
+										<li class="sep"></li><li class="normal" id="tb_16" onclick="HoverLi(1,6,10);"><a href="frame/assistant_main" target="mainFrame"><@s.m "cms.function.assistant"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/maintain_main.do">
-										<li class="sep"></li><li class="normal" id="tb_17" onclick="HoverLi(1,7,10);"><a href="frame/maintain_main.do" target="mainFrame"><@s.m "cms.function.maintain"/></a></li>
+										<@cms_perm url="/frame/maintain_main">
+										<li class="sep"></li><li class="normal" id="tb_17" onclick="HoverLi(1,7,10);"><a href="frame/maintain_main" target="mainFrame"><@s.m "cms.function.maintain"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/generate_main.do">
-										<li class="sep"></li><li class="normal" id="tb_18" onclick="HoverLi(1,8,10);"><a href="frame/generate_main.do" target="mainFrame"><@s.m "cms.function.generate"/></a></li>
+										<@cms_perm url="/frame/generate_main">
+										<li class="sep"></li><li class="normal" id="tb_18" onclick="HoverLi(1,8,10);"><a href="frame/generate_main" target="mainFrame"><@s.m "cms.function.generate"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/user_main.do">
-										<li class="sep"></li><li class="normal" id="tb_19" onclick="HoverLi(1,9,10);"><a href="frame/user_main.do" target="mainFrame"><@s.m "cms.function.user"/></a></li>
+										<@cms_perm url="/frame/user_main">
+										<li class="sep"></li><li class="normal" id="tb_19" onclick="HoverLi(1,9,10);"><a href="frame/user_main" target="mainFrame"><@s.m "cms.function.user"/></a></li>
 										</@cms_perm>
-										<@cms_perm url="/frame/config_main.do">
-										<li class="sep"></li><li class="normal" id="tb_110" onclick="HoverLi(1,10,10);"><a href="frame/config_main.do" target="mainFrame"><@s.m "cms.function.config"/></a></li>
+										<@cms_perm url="/frame/config_main">
+										<li class="sep"></li><li class="normal" id="tb_110" onclick="HoverLi(1,10,10);"><a href="frame/config_main" target="mainFrame"><@s.m "cms.function.config"/></a></li>
 										</@cms_perm>
 										<!-- 
-										<@cms_perm url="/frame/statistic_main.do">
-										<li class="sep"></li><li class="normal" id="tb_111" onclick="HoverLi(1,11,11);"><a href="frame/statistic_main.do" target="mainFrame"><@s.m "cms.function.statistic"/></a></li>
+										<@cms_perm url="/frame/statistic_main">
+										<li class="sep"></li><li class="normal" id="tb_111" onclick="HoverLi(1,11,11);"><a href="frame/statistic_main" target="mainFrame"><@s.m "cms.function.statistic"/></a></li>
 										</@cms_perm>
 										 -->
                                     </ul>

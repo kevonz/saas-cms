@@ -23,19 +23,19 @@ import com.yunkuo.cms.web.WebErrors;
 public class CmsRoleAct {
 	private static final Logger log = LoggerFactory.getLogger(CmsRoleAct.class);
 
-	@RequestMapping("/role/v_list.do")
+	@RequestMapping("/role/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		List<CmsRole> list = manager.getList();
 		model.addAttribute("list", list);
 		return "role/list";
 	}
 
-	@RequestMapping("/role/v_add.do")
+	@RequestMapping("/role/v_add")
 	public String add(ModelMap model) {
 		return "role/add";
 	}
 
-	@RequestMapping("/role/v_edit.do")
+	@RequestMapping("/role/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -45,7 +45,7 @@ public class CmsRoleAct {
 		return "role/edit";
 	}
 
-	@RequestMapping("/role/o_save.do")
+	@RequestMapping("/role/o_save")
 	public String save(CmsRole bean, String[] perms,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -56,10 +56,10 @@ public class CmsRoleAct {
 		log.info("save CmsRole id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsRole.log.save", "id=" + bean.getId()
 				+ ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/role/o_update.do")
+	@RequestMapping("/role/o_update")
 	public String update(CmsRole bean, String[] perms,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -73,7 +73,7 @@ public class CmsRoleAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/role/o_delete.do")
+	@RequestMapping("/role/o_delete")
 	public String delete(Integer[] ids, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

@@ -14,12 +14,12 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "contentTag.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_save.do">
+<@p.form id="jvForm" action="o_save">
 <@p.text label="contentTag.name" name="name" required="true" class="required" maxlength="100"/>
 <@p.td><@p.submit code="global.submit"/> &nbsp; <@p.reset code="global.reset"/></@p.td>
 </@p.form>

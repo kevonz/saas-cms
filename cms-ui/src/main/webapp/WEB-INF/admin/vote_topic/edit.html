@@ -17,12 +17,12 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "cmsVoteTopic.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
-		<input type="submit" class="return-button" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';"/>
+		<input type="submit" class="return-button" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do">
+<@p.form id="jvForm" action="o_update">
 
 <@p.text label="cmsVoteTopic.title" name="title" value=cmsVoteTopic.title required="true" class="required" style="width:400px" maxlength="255"/>
 <@p.textarea label="cmsVoteTopic.description" name="description" value=cmsVoteTopic.description rows="3" style="width:400px" maxlength="255"/>

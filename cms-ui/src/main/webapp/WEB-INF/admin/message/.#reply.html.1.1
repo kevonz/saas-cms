@@ -23,12 +23,12 @@ function checkReceiverUser(){
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsMessage.function"/> - <@s.m "cmsMessage.sendMessage"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do?box=1';"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list?box=1';"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="v_send.do" labelWidth="10">
+<@p.form id="jvForm" action="v_send" labelWidth="10">
 <input  name="username" id="username"  type="hidden" <#if message??>value="${message.msgSendUser.username!}"</#if> />
 <@p.text colspan="2" width="50" label="cmsMessage.title" name="msgTitle"  required="true" class="required" maxlength="100" value="${message.titleHtml!}" />
 <@p.tr/>

@@ -15,14 +15,14 @@ $(function() {
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "template.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
 		<input type="hidden" name="root" value="${root}"/>
-		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do'"/>
+		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list'"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
 <div class="editor-style">
 <div class="editor-bbg">
-<form action="v_edit.do" method="post" style="padding-top:5px;">
+<form action="v_edit" method="post" style="padding-top:5px;">
 <input type="hidden" name="root" value="${root}"/>
 <input type="hidden" name="name" value="${name!}"/>
 <input type="radio" name="style" value="textarea" onclick="this.form.submit();" style="margin-left:40px;"/><@s.m "template.textarea"/>
@@ -30,7 +30,7 @@ $(function() {
 </form>
 </div>
 </div>
-<@p.form id="jvForm" action="o_update.do" labelWidth="15">
+<@p.form id="jvForm" action="o_update" labelWidth="15">
 <@p.td label="template.filename"><input type="text" value="${template.filename}" readonly="readonly" size="40" class="disabled"/></@p.td><@p.tr/>
 <@p.td colspan="2"><@p.editor value=template.source name="source" height="500" fullPage="true"/></@p.td><@p.tr/>
 <@p.td>

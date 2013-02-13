@@ -20,10 +20,10 @@ $(function() {
 </div>
 <div class="body-box">
 <#assign domainExist><@s.m "cmsSite.error.domainExist"/></#assign>
-<@p.form id="jvForm" action="o_update.do" labelWidth="12">
+<@p.form id="jvForm" action="o_update" labelWidth="12">
 <@p.text colspan="1" width="50" label="cmsSite.name" name="name" value=cmsSite.name style="width:260px" required="true" class="required" maxlength="100"/>
 <@p.text colspan="1" width="50" label="cmsSite.shortName" name="shortName" value=cmsSite.shortName required="true" class="required" maxlength="100"/><@p.tr/>
-<@p.text colspan="1" width="50" label="cmsSite.domain" name="domain" value=cmsSite.domain rvalue=cmsSite.domain required="true" maxlength="50" vld="{required:true,remote:'v_checkDomain.do',messages:{remote:'${domainExist}'}}"/>
+<@p.text colspan="1" width="50" label="cmsSite.domain" name="domain" value=cmsSite.domain rvalue=cmsSite.domain required="true" maxlength="50" vld="{required:true,remote:'v_checkDomain',messages:{remote:'${domainExist}'}}"/>
 <@p.text colspan="1" width="50" label="cmsSite.path" name="path" value=cmsSite.path required="true" class="required" maxlength="20" help="cmsSite.path.help"/><@p.tr/>
 <@p.text colspan="1" width="50" label="cmsSite.domainAlias" name="domainAlias" value=cmsSite.domainAlias style="width:200px" maxlength="255" help="cmsSite.domainAlias.help"/>
 <@p.text colspan="1" width="50" label="cmsSite.domainRedirect" name="domainRedirect" value=cmsSite.domainRedirect style="width:200px" maxlength="255" help="cmsSite.domainRedirect.help"/><@p.tr/>

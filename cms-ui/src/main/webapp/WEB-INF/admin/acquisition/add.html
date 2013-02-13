@@ -33,12 +33,12 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsAcquisition.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_save.do" labelWidth="12">
+<@p.form id="jvForm" action="o_save" labelWidth="12">
 <@p.text colspan="1" width="50" label="cmsAcquisition.name" name="name" required="true" class="required" maxlength="50"/>
 <@p.td colspan="1" width="50" label="cmsAcquisition.info" required="true">
 <@s.m "cmsAcquisition.type"/>: <@p.select list=typeList name="typeId" listKey="id" listValue="name"/>

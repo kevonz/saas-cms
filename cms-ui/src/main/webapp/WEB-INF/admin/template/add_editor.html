@@ -15,21 +15,21 @@ $(function() {
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "template.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
 		<input type="hidden" name="root" value="${root}"/>
-		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';"/>
+		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
 <div class="editor-style">
 <div class="editor-bbg">
-<form action="v_add.do" style="padding-top:5px;">
+<form action="v_add" style="padding-top:5px;">
 <input type="hidden" name="root" value="${root}"/>
 <input type="radio" name="style" value="textarea" onclick="this.form.submit();" style="margin-left:40px;"/><@s.m "template.textarea"/>
 <input type="radio" name="style" value="editor" checked="checked" onclick="this.form.submit();" style="margin-left:95px;"/><@s.m "template.editor"/>
 </form>
 </div>
 </div>
-<@p.form id="jvForm" action="o_save.do" labelWidth="15">
+<@p.form id="jvForm" action="o_save" labelWidth="15">
 <@p.text label="template.filename" name="filename" size="30" required="true" class="required" maxlength="100" help=".html"/>
 <@p.td colspan="2"><@p.editor name="source" height="500" fullPage="true"/></@p.td><@p.tr/>
 <@p.td>

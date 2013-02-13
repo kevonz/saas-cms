@@ -32,7 +32,7 @@ public class CmsMemberAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsMemberAct.class);
 
-	@RequestMapping("/member/v_list.do")
+	@RequestMapping("/member/v_list")
 	public String list(String queryUsername, String queryEmail,
 			Integer queryGroupId, Boolean queryDisabled, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
@@ -49,14 +49,14 @@ public class CmsMemberAct {
 		return "member/list";
 	}
 
-	@RequestMapping("/member/v_add.do")
+	@RequestMapping("/member/v_add")
 	public String add(ModelMap model) {
 		List<CmsGroup> groupList = cmsGroupMng.getList();
 		model.addAttribute("groupList", groupList);
 		return "member/add";
 	}
 
-	@RequestMapping("/member/v_edit.do")
+	@RequestMapping("/member/v_edit")
 	public String edit(Integer id, Integer queryGroupId, Boolean queryDisabled,
 			HttpServletRequest request, ModelMap model) {
 		String queryUsername = RequestUtils.getQueryParam(request,
@@ -76,7 +76,7 @@ public class CmsMemberAct {
 		return "member/edit";
 	}
 
-	@RequestMapping("/member/o_save.do")
+	@RequestMapping("/member/o_save")
 	public String save(CmsUser bean, CmsUserExt ext, String username,
 			String email, String password, Integer groupId,
 			HttpServletRequest request, ModelMap model) {
@@ -90,10 +90,10 @@ public class CmsMemberAct {
 		log.info("save CmsMember id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsMember.log.save", "id=" + bean.getId()
 				+ ";username=" + bean.getUsername());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/member/o_update.do")
+	@RequestMapping("/member/o_update")
 	public String update(Integer id, String email, String password,
 			Boolean disabled, CmsUserExt ext, Integer groupId,
 			String queryUsername, String queryEmail, Integer queryGroupId,
@@ -113,7 +113,7 @@ public class CmsMemberAct {
 				pageNo, request, model);
 	}
 
-	@RequestMapping("/member/o_delete.do")
+	@RequestMapping("/member/o_delete")
 	public String delete(Integer[] ids, Integer queryGroupId,
 			Boolean queryDisabled, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -134,7 +134,7 @@ public class CmsMemberAct {
 				pageNo, request, model);
 	}
 
-	@RequestMapping(value = "/member/v_check_username.do")
+	@RequestMapping(value = "/member/v_check_username")
 	public void checkUsername(String username, HttpServletResponse response) {
 		String pass;
 		if (StringUtils.isBlank(username)) {

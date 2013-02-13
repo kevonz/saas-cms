@@ -28,7 +28,7 @@ import com.yunkuo.common.util.DateUtils;
 public class CmsWorkLoadStatisticAct {
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping("/workloadstatistic/v_list.do")
+	@RequestMapping("/workloadstatistic/v_list")
 	public String contentList(HttpServletRequest request, ModelMap model,
 			Integer channelId, Integer reviewerId, Integer authorId,
 			Date beginDate, Date endDate, String group) {

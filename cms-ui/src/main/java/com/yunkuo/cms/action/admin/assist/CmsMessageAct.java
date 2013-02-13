@@ -40,7 +40,7 @@ public class CmsMessageAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsMessageAct.class);
 
-	@RequestMapping("/message/v_list.do")
+	@RequestMapping("/message/v_list")
 	public String list(Integer pageNo, String title, Date sendBeginTime,
 			Date sendEndTime, Boolean status, Integer box,
 			HttpServletRequest request, HttpServletResponse response,
@@ -88,7 +88,7 @@ public class CmsMessageAct {
 		return returnPage;
 	}
 
-	@RequestMapping("/message/v_add.do")
+	@RequestMapping("/message/v_add")
 	public String add(ModelMap model) {
 		List<CmsGroup> groups = groupMng.getList();
 		model.addAttribute("groupList", groups);
@@ -96,7 +96,7 @@ public class CmsMessageAct {
 	}
 
 	// 直接发送
-	@RequestMapping("/message/v_send.do")
+	@RequestMapping("/message/v_send")
 	public String send(CmsMessage message, String username, Integer groupId,
 			Integer pageNo, String title, Date sendBeginTime, Date sendEndTime,
 			Boolean status, Integer box, ModelMap model,
@@ -196,7 +196,7 @@ public class CmsMessageAct {
 	}
 
 	// 存草稿
-	@RequestMapping("/message/v_save.do")
+	@RequestMapping("/message/v_save")
 	public String save(CmsMessage message, String username, Integer pageNo,
 			String title, Date sendBeginTime, Date sendEndTime, Boolean status,
 			Integer box, ModelMap model, HttpServletRequest request,
@@ -225,7 +225,7 @@ public class CmsMessageAct {
 	}
 
 	// 发送
-	@RequestMapping("/message/v_tosend.do")
+	@RequestMapping("/message/v_tosend")
 	public String message_tosend(Integer id, Integer pageNo, String title,
 			Date sendBeginTime, Date sendEndTime, Boolean status, Integer box,
 			ModelMap model, HttpServletRequest request,
@@ -253,7 +253,7 @@ public class CmsMessageAct {
 				request, response, model);
 	}
 
-	@RequestMapping("/message/v_edit.do")
+	@RequestMapping("/message/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -264,7 +264,7 @@ public class CmsMessageAct {
 		return "message/edit";
 	}
 
-	@RequestMapping("/message/o_update.do")
+	@RequestMapping("/message/o_update")
 	public String update(CmsMessage message, Integer pageNo, String title,
 			Date sendBeginTime, Date sendEndTime, Boolean status, Integer box,
 			ModelMap model, HttpServletRequest request,
@@ -291,7 +291,7 @@ public class CmsMessageAct {
 				request, response, model);
 	}
 
-	@RequestMapping("/message/v_read.do")
+	@RequestMapping("/message/v_read")
 	public String read(Integer id, Integer box, HttpServletRequest request,
 			ModelMap model) {
 
@@ -314,7 +314,7 @@ public class CmsMessageAct {
 		return "message/read";
 	}
 
-	@RequestMapping("/message/v_forward.do")
+	@RequestMapping("/message/v_forward")
 	public String forward(Integer id, HttpServletRequest request, ModelMap model) {
 		CmsReceiverMessage receiverMessage = receiverMessageMng.findById(id);
 		CmsMessage message;
@@ -329,7 +329,7 @@ public class CmsMessageAct {
 		return "message/add";
 	}
 	
-	@RequestMapping("/message/v_reply.do")
+	@RequestMapping("/message/v_reply")
 	public String reply(Integer id, HttpServletRequest request, ModelMap model) {
 		CmsReceiverMessage receiverMessage = receiverMessageMng.findById(id);
 		model.addAttribute("message", receiverMessage);
@@ -338,7 +338,7 @@ public class CmsMessageAct {
 		return "message/reply";
 	}
 
-	@RequestMapping("/message/v_trash.do")
+	@RequestMapping("/message/v_trash")
 	public void trash(Integer[] ids, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -399,7 +399,7 @@ public class CmsMessageAct {
 		ResponseUtils.renderJson(response, object.toString());
 	}
 
-	@RequestMapping("/message/v_revert.do")
+	@RequestMapping("/message/v_revert")
 	public void revert(Integer ids[], HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -426,7 +426,7 @@ public class CmsMessageAct {
 		ResponseUtils.renderJson(response, object.toString());
 	}
 
-	@RequestMapping("/message/v_empty.do")
+	@RequestMapping("/message/v_empty")
 	public void empty(Integer ids[], HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -474,7 +474,7 @@ public class CmsMessageAct {
 		ResponseUtils.renderJson(response, object.toString());
 	}
 
-	@RequestMapping("/message/v_findUser.do")
+	@RequestMapping("/message/v_findUser")
 	public void findUserByUserName(String username, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);
@@ -490,7 +490,7 @@ public class CmsMessageAct {
 	}
 
 	// 查找未读信息条数
-	@RequestMapping(value = "/message/v_countUnreadMsg.do")
+	@RequestMapping(value = "/message/v_countUnreadMsg")
 	public void findUnreadMessagesByUser(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) throws JSONException {
 		CmsUser user = CmsUtils.getUser(request);

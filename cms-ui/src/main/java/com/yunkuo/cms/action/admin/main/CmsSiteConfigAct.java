@@ -24,7 +24,7 @@ public class CmsSiteConfigAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsSiteConfigAct.class);
 
-	@RequestMapping("/site_config/v_base_edit.do")
+	@RequestMapping("/site_config/v_base_edit")
 	public String baseEdit(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		List<Ftp> ftpList = ftpMng.getList();
@@ -33,7 +33,7 @@ public class CmsSiteConfigAct {
 		return "site_config/base_edit";
 	}
 
-	@RequestMapping("/site_config/o_base_update.do")
+	@RequestMapping("/site_config/o_base_update")
 	public String baseUpdate(CmsSite bean, Integer uploadFtpId,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateBaseUpdate(bean, request);

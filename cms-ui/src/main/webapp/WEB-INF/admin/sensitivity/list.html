@@ -21,12 +21,12 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function optSaveContent() {
 	var f = getTableForm();
-	f.action="o_update.do";
+	f.action="o_update";
 	f.submit();
 }
 </script>
@@ -39,7 +39,7 @@ function optSaveContent() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<form id="jvForm" action="o_save.do" method="post" style="padding:5px 0 0 5px">
+<form id="jvForm" action="o_save" method="post" style="padding:5px 0 0 5px">
 <@s.m "cmsSensitivity.search"/>:<input type="text" name="search" class="required" maxlength="255"/>
 <@s.m "cmsSensitivity.replacement"/>:<input type="text" name="replacement" class="required" maxlength="255"/>
 <input class="add" type="submit" value="<@s.m "global.add"/>"/>
@@ -54,7 +54,7 @@ function optSaveContent() {
 	<@p.column code="cmsSensitivity.search" align="center"><input type="text" name="search" value="${cmsSensitivity.search}"/></@p.column><#t/>
 	<@p.column code="cmsSensitivity.replacement" align="center"><input type=""text" name="replacement" value="${cmsSensitivity.replacement}"/></@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="o_delete.do?ids=${cmsSensitivity.id}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		<a href="o_delete?ids=${cmsSensitivity.id}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">

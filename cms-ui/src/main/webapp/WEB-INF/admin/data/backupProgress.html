@@ -7,7 +7,7 @@
 <script type="">
 var interCall;
 function createProgress() {
-	$.post("o_backup_progress.do",{},function(data){
+	$.post("o_backup_progress",{},function(data){
 		if(data.tablename!=""){
 			$("#progressContainer").html("正在备份表"+data.tablename);
 		}else{

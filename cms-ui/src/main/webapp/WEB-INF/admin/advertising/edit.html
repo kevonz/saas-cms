@@ -45,12 +45,12 @@ function showAttr(value) {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "cmsAdvertising.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do" labelWidth="12">
+<@p.form id="jvForm" action="o_update" labelWidth="12">
 <@p.text colspan="1" width="50" label="cmsAdvertising.name" name="name" value=cmsAdvertising.name required="true" class="required" maxlength="100"/>
 <@p.select colspan="1" width="50" label="cmsAdvertising.adspace" name="adspaceId" value=cmsAdvertising.adspace.id list=adspaceList listKey="id" listValue="name" required="true"/><@p.tr/>
 <@p.radio colspan="2" label="cmsAdvertising.category" name="category" value=cmsAdvertising.category list={"image":"cmsAdvertising.category.image","flash":"cmsAdvertising.category.flash","text":"cmsAdvertising.category.text","code":"cmsAdvertising.category.code"} onclick="attrChange(this.value)" required="true"/><@p.tr/>

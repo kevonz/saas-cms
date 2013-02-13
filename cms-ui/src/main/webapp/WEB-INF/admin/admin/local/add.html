@@ -35,7 +35,7 @@ $(function() {
 		//第一次打开，需要获取数据。
 		if(!channels_opened) {
 			//获取数据
-			$.get("v_channels_add.do",{"siteId":${site.id}},function(s) {
+			$.get("v_channels_add",{"siteId":${site.id}},function(s) {
 				$(s).appendTo("#channels");
 			});
 			channels_opened = true;
@@ -59,14 +59,14 @@ function disChannels(chk) {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "cmsAdminLocal.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
 <#assign usernameExist><@s.m "error.usernameExist"/></#assign>
-<@p.form id="jvForm" action="o_save.do" labelWidth="12">
-<@p.text width="50" colspan="1" label="cmsUser.username" name="username" required="true" maxlength="100" vld="{required:true,username:true,remote:'v_check_username.do',messages:{remote:'${usernameExist}'}}"/>
+<@p.form id="jvForm" action="o_save" labelWidth="12">
+<@p.text width="50" colspan="1" label="cmsUser.username" name="username" required="true" maxlength="100" vld="{required:true,username:true,remote:'v_check_username',messages:{remote:'${usernameExist}'}}"/>
 <@p.text width="50" colspan="1" label="cmsUser.email" name="email" size="30" maxlength="100" class="email"/><@p.tr/>
 <@p.password width="50" colspan="1" label="cmsUser.password" id="password" name="password" maxlength="100" class="required" required="true"/>
 <@p.password width="50" colspan="1" label="cmsUser.pwdAgain" equalTo="#password" required="true"/><@p.tr/>

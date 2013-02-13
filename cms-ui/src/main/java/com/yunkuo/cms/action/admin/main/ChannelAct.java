@@ -40,12 +40,12 @@ import com.yunkuo.core.web.CoreUtils;
 public class ChannelAct {
 	private static final Logger log = LoggerFactory.getLogger(ChannelAct.class);
 
-	@RequestMapping("/channel/v_left.do")
+	@RequestMapping("/channel/v_left")
 	public String left() {
 		return "channel/left";
 	}
 
-	@RequestMapping(value = "/channel/v_tree.do")
+	@RequestMapping(value = "/channel/v_tree")
 	public String tree(String root, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		log.debug("tree path={}", root);
@@ -77,7 +77,7 @@ public class ChannelAct {
 		return "channel/tree";
 	}
 
-	@RequestMapping("/channel/v_list.do")
+	@RequestMapping("/channel/v_list")
 	public String list(Integer root, HttpServletRequest request, ModelMap model) {
 		List<Channel> list;
 		if (root == null) {
@@ -91,7 +91,7 @@ public class ChannelAct {
 		return "channel/list";
 	}
 
-	@RequestMapping("/channel/v_add.do")
+	@RequestMapping("/channel/v_add")
 	public String add(Integer root, Integer modelId,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -139,7 +139,7 @@ public class ChannelAct {
 		return "channel/add";
 	}
 
-	@RequestMapping("/channel/v_edit.do")
+	@RequestMapping("/channel/v_edit")
 	public String edit(Integer id, Integer root, HttpServletRequest request,
 			ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -220,7 +220,7 @@ public class ChannelAct {
 		return "channel/edit";
 	}
 
-	@RequestMapping("/channel/o_save.do")
+	@RequestMapping("/channel/o_save")
 	public String save(Integer root, Channel bean, ChannelExt ext,
 			ChannelTxt txt, Integer[] viewGroupIds, Integer[] contriGroupIds,
 			Integer[] userIds, Integer modelId, HttpServletRequest request,
@@ -245,10 +245,10 @@ public class ChannelAct {
 		cmsLogMng.operating(request, "channel.log.save", "id=" + bean.getId()
 				+ ";title=" + bean.getTitle());
 		model.addAttribute("root", root);
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/channel/o_update.do")
+	@RequestMapping("/channel/o_update")
 	public String update(Integer root, Channel bean, ChannelExt ext,
 			ChannelTxt txt, Integer[] viewGroupIds, Integer[] contriGroupIds,
 			Integer[] userIds, Integer parentId, HttpServletRequest request,
@@ -275,7 +275,7 @@ public class ChannelAct {
 		return list(root, request, model);
 	}
 
-	@RequestMapping("/channel/o_delete.do")
+	@RequestMapping("/channel/o_delete")
 	public String delete(Integer root, Integer[] ids,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -291,7 +291,7 @@ public class ChannelAct {
 		return list(root, request, model);
 	}
 
-	@RequestMapping("/channel/o_priority.do")
+	@RequestMapping("/channel/o_priority")
 	public String priority(Integer root, Integer[] wids, Integer[] priority,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validatePriority(wids, priority, request);

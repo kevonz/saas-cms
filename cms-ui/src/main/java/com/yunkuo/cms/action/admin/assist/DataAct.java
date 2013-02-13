@@ -67,7 +67,7 @@ public class DataAct {
 	private static final Logger log = LoggerFactory
 	.getLogger(ResourceAct.class);
 	
-	@RequestMapping("/data/v_list.do")
+	@RequestMapping("/data/v_list")
 	public String list(ModelMap model, HttpServletRequest request,
 			HttpServletResponse response) {
 		List<String> tables = dataBackMng.listTabels();
@@ -75,7 +75,7 @@ public class DataAct {
 		return "data/list";
 	}
 	
-	@RequestMapping("/data/v_listfields.do")
+	@RequestMapping("/data/v_listfields")
 	public String listfiled(String tablename, ModelMap model,
 			HttpServletRequest request, HttpServletResponse response) {
 		List<CmsField> list = dataBackMng.listFields(tablename);
@@ -84,7 +84,7 @@ public class DataAct {
 	}
 	
 
-	@RequestMapping("/data/v_revert.do")
+	@RequestMapping("/data/v_revert")
 	public String listDataBases(ModelMap model, HttpServletRequest request,
 			HttpServletResponse response) {
 		try {
@@ -100,7 +100,7 @@ public class DataAct {
 		return "data/databases";
 	}
 	
-	@RequestMapping("/data/o_revert.do")
+	@RequestMapping("/data/o_revert")
 	public String revert(String filename,String db,ModelMap model, HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 		String backpath = realPathResolver.get(Constants.BACKUP_PATH);
@@ -129,7 +129,7 @@ public class DataAct {
 		request.getSession().invalidate();
 		return "login";
 	}
-	@RequestMapping("/data/o_backup.do")
+	@RequestMapping("/data/o_backup")
 	public String backup(String tableNames[], ModelMap model,
 			HttpServletRequest request, HttpServletResponse response)
 			throws IOException, InterruptedException {
@@ -147,7 +147,7 @@ public class DataAct {
 		return "data/backupProgress";
 	}
 	
-	@RequestMapping("/data/v_listfiles.do")
+	@RequestMapping("/data/v_listfiles")
 	public String listBackUpFiles(ModelMap model, HttpServletRequest request,
 			HttpServletResponse response) {
 		model.addAttribute("list",resourceMng.listFile(Constants.BACKUP_PATH, false));
@@ -155,14 +155,14 @@ public class DataAct {
 	}
 	
 	
-	@RequestMapping("/data/v_selectfile.do")
+	@RequestMapping("/data/v_selectfile")
 	public String selectBackUpFiles(ModelMap model, HttpServletRequest request,
 			HttpServletResponse response) {
 		model.addAttribute("list",resourceMng.listFile(Constants.BACKUP_PATH, false));
 		return "data/selectfile";
 	}
 	
-	@RequestMapping("/data/o_delete.do")
+	@RequestMapping("/data/o_delete")
 	public String delete(String root, String[] names,
 			HttpServletRequest request, ModelMap model,HttpServletResponse response) {
 		WebErrors errors = validateDelete(names, request);
@@ -180,7 +180,7 @@ public class DataAct {
 		return listBackUpFiles( model,request,response);
 	}
 	
-	@RequestMapping("/data/o_delete_single.do")
+	@RequestMapping("/data/o_delete_single")
 	public String deleteSingle(HttpServletRequest request, ModelMap model,HttpServletResponse response) {
 		// TODO 输入验证
 		String name = RequestUtils.getQueryParam(request, "name");
@@ -190,7 +190,7 @@ public class DataAct {
 		return listBackUpFiles( model,request,response);
 	}
 
-	@RequestMapping(value = "/data/v_rename.do")
+	@RequestMapping(value = "/data/v_rename")
 	public String renameInput(HttpServletRequest request, ModelMap model) {
 		String name = RequestUtils.getQueryParam(request, "name");
 		String origName = name.substring(Constants.BACKUP_PATH.length());
@@ -198,7 +198,7 @@ public class DataAct {
 		return "data/rename";
 	}
 	
-	@RequestMapping(value = "/data/o_rename.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/data/o_rename", method = RequestMethod.POST)
 	public String renameSubmit(String root, String origName, String distName,
 			HttpServletRequest request, ModelMap model,HttpServletResponse response) {
 		String orig = Constants.BACKUP_PATH + origName;
@@ -210,7 +210,7 @@ public class DataAct {
 	}
 	
 	
-	@RequestMapping(value = "/data/o_export.do")
+	@RequestMapping(value = "/data/o_export")
 	public String exportSubmit(String[] names,ModelMap model,HttpServletRequest request,HttpServletResponse response) 
 	throws UnsupportedEncodingException {
 		if(validate(names, request)){
@@ -241,7 +241,7 @@ public class DataAct {
 
 	
 	
-	@RequestMapping("/data/o_backup_progress.do")
+	@RequestMapping("/data/o_backup_progress")
 	public void getBackupProgress(HttpServletRequest request, HttpServletResponse response) throws JSONException{
 		JSONObject json=new JSONObject();
 		json.put("tablename", backup_table);

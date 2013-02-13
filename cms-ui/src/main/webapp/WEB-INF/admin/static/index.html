@@ -9,7 +9,7 @@ function createIndex() {
 	var button = $("#createButton");
 	var value = button.val();
 	button.val("<@s.m "cmsStatic.wait"/>").attr("disabled","disabled");
-	$.getJSON("o_index.do",function(data) {
+	$.getJSON("o_index",function(data) {
 		button.val(value).removeAttr("disabled");		
 		if(data.success) {
 			alert("<@s.m "global.success"/>");
@@ -20,7 +20,7 @@ function createIndex() {
 }
 function deleteIndex() {
 	var button = $("#deleteButton");
-	$.getJSON("o_index_remove.do",function(data) {	
+	$.getJSON("o_index_remove",function(data) {	
 		if(data.success) {
 			alert("<@s.m "global.success"/>");
 		} else {

@@ -23,7 +23,7 @@ public class CmsKeywordAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsKeywordAct.class);
 
-	@RequestMapping("/keyword/v_list.do")
+	@RequestMapping("/keyword/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		List<CmsKeyword> list = manager.getListBySiteId(site.getId(), false,
@@ -32,7 +32,7 @@ public class CmsKeywordAct {
 		return "keyword/list";
 	}
 
-	@RequestMapping("/keyword/o_save.do")
+	@RequestMapping("/keyword/o_save")
 	public String save(CmsKeyword bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -47,7 +47,7 @@ public class CmsKeywordAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/keyword/o_update.do")
+	@RequestMapping("/keyword/o_update")
 	public String update(Integer[] id, String[] name, String[] url,
 			Boolean[] disabled, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(id, name, url, disabled, request);
@@ -63,7 +63,7 @@ public class CmsKeywordAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/keyword/o_delete.do")
+	@RequestMapping("/keyword/o_delete")
 	public String delete(Integer[] ids, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

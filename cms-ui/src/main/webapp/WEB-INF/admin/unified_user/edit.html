@@ -21,9 +21,9 @@ $(function() {
 <div class="body-box">
 <#assign errorUserExist><@s.m "error.usernameExist"/></#assign>
 <#assign errorEmailExist><@s.m "error.emailExist"/></#assign>
-<@p.form id="jvForm" action="o_update.do">
+<@p.form id="jvForm" action="o_update">
 <@p.td label="user.username">${user.username}</@p.td><@p.tr/>
-<@p.text label="user.email" name="email" value=user.email rvalue=user.email required="true" vld="{required:true,email:true,rangelength:[3,100],remote:'v_check_email.do',messages:{remote:'${errorEmailExist}'}}"/>
+<@p.text label="user.email" name="email" value=user.email rvalue=user.email required="true" vld="{required:true,email:true,rangelength:[3,100],remote:'v_check_email',messages:{remote:'${errorEmailExist}'}}"/>
 <@p.password label="user.password" id="password" name="password" class="required" minlength="3" maxlength="32" help="user.password.help"/>
 <@p.password label="user.pwdAgain" id="pwdAgain" name="pwdAgain" equalTo="#password"/>
 <@p.td><@p.hidden name="id" value=user.id/><@p.submit code="global.submit"/> &nbsp; <@p.reset code="global.reset"/></@p.td>

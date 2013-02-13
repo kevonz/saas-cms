@@ -14,12 +14,12 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "cmsAdvertisingSpace.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do">
+<@p.form id="jvForm" action="o_update">
 <@p.text label="cmsAdvertisingSpace.name" name="name" value=cmsAdvertisingSpace.name required="true" class="required" maxlength="100"/>
 <@p.textarea label="cmsAdvertisingSpace.description" name="description" value=cmsAdvertisingSpace.description cols="50" rows="3" maxlength="255"/>
 <@p.radio label="cmsAdvertisingSpace.enabled" name="enabled" value=cmsAdvertisingSpace.enabled list={"true":"global.true","false":"global.false"} required="true" class="required"/>

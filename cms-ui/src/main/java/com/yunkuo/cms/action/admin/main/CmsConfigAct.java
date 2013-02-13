@@ -25,13 +25,13 @@ public class CmsConfigAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsConfigAct.class);
 
-	@RequestMapping("/config/v_system_edit.do")
+	@RequestMapping("/config/v_system_edit")
 	public String systemEdit(HttpServletRequest request, ModelMap model) {
 		model.addAttribute("cmsConfig", manager.get());
 		return "config/system_edit";
 	}
 
-	@RequestMapping("/config/o_system_update.do")
+	@RequestMapping("/config/o_system_update")
 	public String systemUpdate(CmsConfig bean, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSystemUpdate(bean, request);
@@ -45,13 +45,13 @@ public class CmsConfigAct {
 		return systemEdit(request, model);
 	}
 
-	@RequestMapping("/config/v_mark_edit.do")
+	@RequestMapping("/config/v_mark_edit")
 	public String markEdit(HttpServletRequest request, ModelMap model) {
 		model.addAttribute("markConfig", manager.get().getMarkConfig());
 		return "config/mark_edit";
 	}
 
-	@RequestMapping("/config/o_mark_update.do")
+	@RequestMapping("/config/o_mark_update")
 	public String markUpdate(MarkConfig bean, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateMarkUpdate(bean, request);
@@ -65,13 +65,13 @@ public class CmsConfigAct {
 		return markEdit(request, model);
 	}
 
-	@RequestMapping("/config/v_member_edit.do")
+	@RequestMapping("/config/v_member_edit")
 	public String memberEdit(HttpServletRequest request, ModelMap model) {
 		model.addAttribute("memberConfig", manager.get().getMemberConfig());
 		return "config/member_edit";
 	}
 
-	@RequestMapping("/config/o_member_update.do")
+	@RequestMapping("/config/o_member_update")
 	public String memberUpdate(MemberConfig bean, ConfigLogin configLogin,
 			ConfigEmailSender emailSender, ConfigMessageTemplate msgTpl,
 			HttpServletRequest request, ModelMap model) {
@@ -86,7 +86,7 @@ public class CmsConfigAct {
 		return memberEdit(request, model);
 	}
 
-	@RequestMapping("/config/v_login_edit.do")
+	@RequestMapping("/config/v_login_edit")
 	public String loginEdit(HttpServletRequest request, ModelMap model) {
 		model.addAttribute("configLogin", configMng.getConfigLogin());
 		model.addAttribute("emailSender", configMng.getEmailSender());
@@ -95,7 +95,7 @@ public class CmsConfigAct {
 		return "config/login_edit";
 	}
 
-	@RequestMapping("/config/o_login_update.do")
+	@RequestMapping("/config/o_login_update")
 	public String loginUpdate(ConfigLogin configLogin,
 			ConfigEmailSender emailSender, ConfigMessageTemplate msgTpl,
 			HttpServletRequest request, ModelMap model) {

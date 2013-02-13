@@ -42,7 +42,7 @@ public class CmsTopicAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsTopicAct.class);
 
-	@RequestMapping("/topic/v_list.do")
+	@RequestMapping("/topic/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		Pagination pagination = manager.getPage(cpn(pageNo), CookieUtils
@@ -51,7 +51,7 @@ public class CmsTopicAct {
 		return "topic/list";
 	}
 
-	@RequestMapping("/topic/v_add.do")
+	@RequestMapping("/topic/v_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		// 模板
@@ -65,7 +65,7 @@ public class CmsTopicAct {
 		return "topic/add";
 	}
 
-	@RequestMapping("/topic/v_edit.do")
+	@RequestMapping("/topic/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -92,7 +92,7 @@ public class CmsTopicAct {
 		return "topic/edit";
 	}
 
-	@RequestMapping("/topic/o_save.do")
+	@RequestMapping("/topic/o_save")
 	public String save(CmsTopic bean, Integer channelId,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -109,10 +109,10 @@ public class CmsTopicAct {
 		log.info("save CmsTopic id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsTopic.log.save", "id=" + bean.getId()
 				+ ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/topic/o_update.do")
+	@RequestMapping("/topic/o_update")
 	public String update(CmsTopic bean, Integer channelId, 
 			String oldTitleImg,String oldContentImg,
 			Integer pageNo,HttpServletRequest request, ModelMap model) {
@@ -137,7 +137,7 @@ public class CmsTopicAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/topic/o_delete.do")
+	@RequestMapping("/topic/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -155,7 +155,7 @@ public class CmsTopicAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/topic/o_priority.do")
+	@RequestMapping("/topic/o_priority")
 	public String priority(Integer[] wids, Integer[] priority, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validatePriority(wids, priority, request);
@@ -167,7 +167,7 @@ public class CmsTopicAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/topic/by_channel.do")
+	@RequestMapping("/topic/by_channel")
 	public void topicsByChannel(Integer channelId, HttpServletResponse response)
 			throws JSONException {
 		JSONArray arr = new JSONArray();

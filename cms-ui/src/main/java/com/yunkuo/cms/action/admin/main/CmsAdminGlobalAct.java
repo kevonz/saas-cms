@@ -34,7 +34,7 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsAdminGlobalAct.class);
 
-	@RequestMapping("/admin_global/v_list.do")
+	@RequestMapping("/admin_global/v_list")
 	public String list(String queryUsername, String queryEmail,
 			Integer queryGroupId, Boolean queryDisabled, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
@@ -52,7 +52,7 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 		return "admin/global/list";
 	}
 
-	@RequestMapping("/admin_global/v_add.do")
+	@RequestMapping("/admin_global/v_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsUser currUser = CmsUtils.getUser(request);
 		List<CmsGroup> groupList = cmsGroupMng.getList();
@@ -65,7 +65,7 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 		return "admin/global/add";
 	}
 
-	@RequestMapping("/admin_global/v_edit.do")
+	@RequestMapping("/admin_global/v_edit")
 	public String edit(Integer id, Integer queryGroupId, Boolean queryDisabled,
 			HttpServletRequest request, ModelMap model) {
 		String queryUsername = RequestUtils.getQueryParam(request,
@@ -97,7 +97,7 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 		return "admin/global/edit";
 	}
 
-	@RequestMapping("/admin_global/o_save.do")
+	@RequestMapping("/admin_global/o_save")
 	public String save(CmsUser bean, CmsUserExt ext, String username,
 			String email, String password, Boolean viewonlyAdmin,
 			Boolean selfAdmin, Integer rank, Integer groupId,
@@ -116,10 +116,10 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 		log.info("save CmsAdmin id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsUser.log.save", "id=" + bean.getId()
 				+ ";username=" + bean.getUsername());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/admin_global/o_update.do")
+	@RequestMapping("/admin_global/o_update")
 	public String update(CmsUser bean, CmsUserExt ext, String password,
 			Integer groupId, Integer[] roleIds, Integer[] channelIds,
 			Integer[] siteIds, Byte[] steps, Boolean[] allChannels,
@@ -139,7 +139,7 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 				pageNo, request, model);
 	}
 
-	@RequestMapping("/admin_global/o_delete.do")
+	@RequestMapping("/admin_global/o_delete")
 	public String delete(Integer[] ids, Integer queryGroupId,
 			Boolean queryDisabled, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -160,25 +160,25 @@ public class CmsAdminGlobalAct extends CmsAdminAbstract {
 				pageNo, request, model);
 	}
 
-	@RequestMapping(value = "/admin_global/v_channels_add.do")
+	@RequestMapping(value = "/admin_global/v_channels_add")
 	public String channelsAdd(Integer siteId, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		return channelsAddJson(siteId, request, response, model);
 	}
 
-	@RequestMapping(value = "/admin_global/v_channels_edit.do")
+	@RequestMapping(value = "/admin_global/v_channels_edit")
 	public String channelsEdit(Integer userId, Integer siteId,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
 		return channelsEditJson(userId, siteId, request, response, model);
 	}
 
-	@RequestMapping(value = "/admin_global/v_check_username.do")
+	@RequestMapping(value = "/admin_global/v_check_username")
 	public void checkUsername(String username, HttpServletResponse response) {
 		checkUserJson(username, response);
 	}
 
-	@RequestMapping(value = "/admin_global/v_check_email.do")
+	@RequestMapping(value = "/admin_global/v_check_email")
 	public void checkEmail(String email, HttpServletResponse response) {
 		checkEmailJson(email, response);
 	}

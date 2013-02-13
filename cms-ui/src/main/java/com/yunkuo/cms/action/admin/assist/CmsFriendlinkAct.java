@@ -26,7 +26,7 @@ public class CmsFriendlinkAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsFriendlinkAct.class);
 
-	@RequestMapping("/friendlink/v_list.do")
+	@RequestMapping("/friendlink/v_list")
 	public String list(Integer queryCtgId, HttpServletRequest request,
 			ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -42,7 +42,7 @@ public class CmsFriendlinkAct {
 		return "friendlink/list";
 	}
 
-	@RequestMapping("/friendlink/v_add.do")
+	@RequestMapping("/friendlink/v_add")
 	public String add(ModelMap model, HttpServletRequest request) {
 		CmsSite site = CmsUtils.getSite(request);
 		WebErrors errors = validateAdd(request);
@@ -55,7 +55,7 @@ public class CmsFriendlinkAct {
 		return "friendlink/add";
 	}
 
-	@RequestMapping("/friendlink/v_edit.do")
+	@RequestMapping("/friendlink/v_edit")
 	public String edit(Integer id, Integer queryCtgId,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -73,7 +73,7 @@ public class CmsFriendlinkAct {
 		return "friendlink/edit";
 	}
 
-	@RequestMapping("/friendlink/o_save.do")
+	@RequestMapping("/friendlink/o_save")
 	public String save(CmsFriendlink bean, Integer ctgId,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -85,10 +85,10 @@ public class CmsFriendlinkAct {
 		log.info("save CmsFriendlink id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsFriendlink.log.save", "id="
 				+ bean.getId() + ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/friendlink/o_update.do")
+	@RequestMapping("/friendlink/o_update")
 	public String update(CmsFriendlink bean, Integer ctgId, Integer queryCtgId,
 			String oldLog,
 			HttpServletRequest request, ModelMap model) {
@@ -105,7 +105,7 @@ public class CmsFriendlinkAct {
 		return list(queryCtgId, request, model);
 	}
 
-	@RequestMapping("/friendlink/o_priority.do")
+	@RequestMapping("/friendlink/o_priority")
 	public String priority(Integer[] wids, Integer[] priority,
 			Integer queryCtgId, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validatePriority(wids, priority, request);
@@ -117,7 +117,7 @@ public class CmsFriendlinkAct {
 		return list(queryCtgId, request, model);
 	}
 
-	@RequestMapping("/friendlink/o_delete.do")
+	@RequestMapping("/friendlink/o_delete")
 	public String delete(Integer[] ids, Integer queryCtgId,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

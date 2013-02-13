@@ -24,12 +24,12 @@ public class WelcomeAct {
 		return "index";
 	}
 	
-	@RequestMapping("/map.do")
+	@RequestMapping("/map")
 	public String map() {
 		return "map";
 	}
 
-	@RequestMapping("/top.do")
+	@RequestMapping("/top")
 	public String top(HttpServletRequest request, ModelMap model) {
 		// 需要获得站点列表
 		List<CmsSite> siteList = cmsSiteMng.getList();
@@ -42,17 +42,17 @@ public class WelcomeAct {
 		return "top";
 	}
 
-	@RequestMapping("/main.do")
+	@RequestMapping("/main")
 	public String main() {
 		return "main";
 	}
 
-	@RequestMapping("/left.do")
+	@RequestMapping("/left")
 	public String left() {
 		return "left";
 	}
 
-	@RequestMapping("/right.do")
+	@RequestMapping("/right")
 	public String right(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		CmsUser user = CmsUtils.getUser(request);

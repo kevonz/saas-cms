@@ -30,7 +30,7 @@ public class LuceneContentAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(LuceneContentAct.class);
 
-	@RequestMapping(value = "/lucene/v_index.do")
+	@RequestMapping(value = "/lucene/v_index")
 	public String index(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 
@@ -42,7 +42,7 @@ public class LuceneContentAct {
 		return "lucene/index";
 	}
 
-	@RequestMapping(value = "/lucene/o_create.do")
+	@RequestMapping(value = "/lucene/o_create")
 	public void create(Integer siteId, Integer channelId, Date startDate,
 			Date endDate, Integer startId, Integer max,
 			HttpServletRequest request, HttpServletResponse response,

@@ -58,7 +58,7 @@ $(function() {
 		//第一次打开，需要获取数据。
 		if(!channels_opened_${site_index}) {
 			//获取数据
-			$.get("v_channels_edit.do",{"siteId":${site.id},"groupId":${cmsGroup.id},"type":1},function(s) {
+			$.get("v_channels_edit",{"siteId":${site.id},"groupId":${cmsGroup.id},"type":1},function(s) {
 				$(s).appendTo("#channels${site_index}");
 			});
 			channels_opened_${site_index} = true;
@@ -71,7 +71,7 @@ $(function() {
 		//第一次打开，需要获取数据。
 		if(!channels_contri_opened_${site_index}) {
 			//获取数据
-			$.get("v_channels_edit.do",{"siteId":${site.id},"groupId":${cmsGroup.id},"type":0},function(s) {
+			$.get("v_channels_edit",{"siteId":${site.id},"groupId":${cmsGroup.id},"type":0},function(s) {
 				$(s).appendTo("#channelsContri${site_index}");
 			});
 			channels_contri_opened_${site_index} = true;
@@ -106,7 +106,7 @@ function allChannelsContri(chk,i) {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do" labelWidth="15">
+<@p.form id="jvForm" action="o_update" labelWidth="15">
 <@p.text colspan="1" width="50" label="cmsGroup.name" name="name" value=cmsGroup.name required="true" class="required" maxlength="100"/>
 <@p.text colspan="1" width="50" label="cmsGroup.priority" name="priority" value=cmsGroup.priority required="true" class="required digits" maxlength="10"/><@p.tr/>
 <@p.text colspan="1" width="50" label="cmsGroup.allowPerDay" name="allowPerDay" value=cmsGroup.allowPerDay style="width:70px" required="true" class="required digits" maxlength="10" help="cmsGroup.allowPerDay.help"/>

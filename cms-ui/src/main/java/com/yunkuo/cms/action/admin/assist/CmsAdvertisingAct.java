@@ -43,7 +43,7 @@ public class CmsAdvertisingAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsAdvertisingAct.class);
 
-	@RequestMapping("/advertising/v_list.do")
+	@RequestMapping("/advertising/v_list")
 	public String list(Integer queryAdspaceId, Boolean queryEnabled,
 			Integer pageNo, HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -63,7 +63,7 @@ public class CmsAdvertisingAct {
 		return "advertising/list";
 	}
 
-	@RequestMapping("/advertising/v_add.do")
+	@RequestMapping("/advertising/v_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		List<CmsAdvertisingSpace> adspaceList = cmsAdvertisingSpaceMng
@@ -72,7 +72,7 @@ public class CmsAdvertisingAct {
 		return "advertising/add";
 	}
 
-	@RequestMapping("/advertising/v_edit.do")
+	@RequestMapping("/advertising/v_edit")
 	public String edit(Integer id, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -89,7 +89,7 @@ public class CmsAdvertisingAct {
 		return "advertising/edit";
 	}
 
-	@RequestMapping("/advertising/o_save.do")
+	@RequestMapping("/advertising/o_save")
 	public String save(CmsAdvertising bean, Integer adspaceId,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -111,10 +111,10 @@ public class CmsAdvertisingAct {
 		log.info("save CmsAdvertising id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsAdvertising.log.save", "id="
 				+ bean.getId() + ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/advertising/o_update.do")
+	@RequestMapping("/advertising/o_update")
 	public String update(Integer queryAdspaceId, Boolean queryEnabled,
 			CmsAdvertising bean, Integer adspaceId, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
@@ -140,7 +140,7 @@ public class CmsAdvertisingAct {
 		return list(queryAdspaceId, queryEnabled, pageNo, request, model);
 	}
 
-	@RequestMapping("/advertising/o_delete.do")
+	@RequestMapping("/advertising/o_delete")
 	public String delete(Integer[] ids, Integer queryAdspaceId,
 			Boolean queryEnabled, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -157,7 +157,7 @@ public class CmsAdvertisingAct {
 		return list(queryAdspaceId, queryEnabled, pageNo, request, model);
 	}
 
-	@RequestMapping("/advertising/o_upload_flash.do")
+	@RequestMapping("/advertising/o_upload_flash")
 	public String uploadFlash(
 			@RequestParam(value = "flashFile", required = false) MultipartFile file,
 			String flashNum, HttpServletRequest request, ModelMap model) {

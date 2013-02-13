@@ -28,21 +28,21 @@ public class CmsGroupAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsGroupAct.class);
 
-	@RequestMapping("/group/v_list.do")
+	@RequestMapping("/group/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		List<CmsGroup> list = manager.getList();
 		model.addAttribute("list", list);
 		return "group/list";
 	}
 
-	@RequestMapping("/group/v_add.do")
+	@RequestMapping("/group/v_add")
 	public String add(HttpServletRequest request,ModelMap model) {
 		List<CmsSite> siteList = cmsSiteMng.getList();
 		model.addAttribute("siteList", siteList);
 		return "group/add";
 	}
 
-	@RequestMapping("/group/v_edit.do")
+	@RequestMapping("/group/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -54,7 +54,7 @@ public class CmsGroupAct {
 		return "group/edit";
 	}
 
-	@RequestMapping("/group/o_save.do")
+	@RequestMapping("/group/o_save")
 	public String save(CmsGroup bean,  Integer[] viewGroupIds, Integer[] contriGroupIds,
 		HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -65,10 +65,10 @@ public class CmsGroupAct {
 		log.info("save CmsGroup id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsGroup.log.save", "id=" + bean.getId()
 				+ ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/group/o_update.do")
+	@RequestMapping("/group/o_update")
 	public String update(CmsGroup bean, Integer[] viewGroupIds, Integer[] contriGroupIds,
 			HttpServletRequest request,ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -82,7 +82,7 @@ public class CmsGroupAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/group/o_delete.do")
+	@RequestMapping("/group/o_delete")
 	public String delete(Integer[] ids, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -98,7 +98,7 @@ public class CmsGroupAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/group/o_priority.do")
+	@RequestMapping("/group/o_priority")
 	public String priority(Integer[] wids, Integer[] priority,
 			Integer regDefId, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validatePriority(wids, priority, request);
@@ -111,13 +111,13 @@ public class CmsGroupAct {
 		return list(request, model);
 	}
 	
-	@RequestMapping(value = "/group/v_channels_add.do")
+	@RequestMapping(value = "/group/v_channels_add")
 	public String channelsAdd(Integer siteId, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		return channelsAddJson(siteId, request, response, model);
 	}
 
-	@RequestMapping(value = "/group/v_channels_edit.do")
+	@RequestMapping(value = "/group/v_channels_edit")
 	public String channelsEdit(Integer groupId, Integer siteId,Integer type,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {

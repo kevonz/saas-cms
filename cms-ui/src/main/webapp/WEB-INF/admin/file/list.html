@@ -22,7 +22,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function delFreeFiles() {
@@ -30,12 +30,12 @@ function delFreeFiles() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delfreefiles.do";
+	f.action="o_delfreefiles";
 	f.submit();
 }
 var swfu;
 window.onload=function() {
-	var uploadUrl = "o_swfupload.do";
+	var uploadUrl = "o_swfupload";
 	//在firefox、chrome下，上传不能保留登录信息，所以必须加上jsessionid。
 	var jsessionid = $.cookie("JSESSIONID");
 	if(jsessionid) {
@@ -77,7 +77,7 @@ window.onload=function() {
 };
 function queueComplete2(numFilesUploaded) {
 	//刷新页面
-	location.href="v_list.do?root=${root}";
+	location.href="v_list?root=${root}";
 }
 var max=300;
 function showImage(a) {
@@ -118,23 +118,23 @@ function hideImage(a) {
 </div>
 <div class="body-box">
 
-<form method="post" enctype="multipart/form-data"  action="v_list.do">
+<form method="post" enctype="multipart/form-data"  action="v_list">
 <input type="hidden" name="root" value="${root}"/>
 <table border="0" style="padding-top:3px">
 <tr>
 	<td><@s.m "resource.currentDir"/>: ${root}</td>
-	<@cms_perm url="/file/o_swfupload.do">
+	<@cms_perm url="/file/o_swfupload">
 	<td width="70" align="center"><span id="spanButtonPlaceHolder"></span></td>
 	<td><input class="cancel" id="btnCancel" type="button" value="<@s.m "global.cancel"/>" onclick="swfu.cancelQueue();" disabled="disabled" /></td>
 	</@cms_perm>
-	<@cms_perm url="/file/o_list.do">
+	<@cms_perm url="/file/o_list">
 	<td>
 		<input name="valid" type="radio" value="1" <#if valid??><#if valid>checked="checked"</#if></#if>/><@s.m "cms.attachment.valid.true"/>
 		<input name="valid" type="radio" value="0" <#if valid??><#if !valid>checked="checked"</#if></#if>/><@s.m "cms.attachment.valid.false"/>
 		<input class="query" type="submit" value="<@s.m "global.query"/>" > 
 	</td>
 	</@cms_perm>
-	<@cms_perm url="/file/o_delfreefiles.do">
+	<@cms_perm url="/file/o_delfreefiles">
 	<td><input type="button" class="delete-all-failure-attachment" value="<@s.m "cms.attachment.delete.all.failure"/>" onclick="delFreeFiles()" /> </td>
 	</@cms_perm>
 </tr>
@@ -150,7 +150,7 @@ function hideImage(a) {
 	<@p.column title=" " width="20" align="center"><img src="${base}/static/_default/common/img/file/${resource.ico}.gif"/></@p.column><#t/>
 	<@p.column code="resource.filename">
 		<#if resource.directory>
-		<a href="v_list.do?root=${resource.name}">${resource.filename}</a>
+		<a href="v_list?root=${resource.name}">${resource.filename}</a>
 		<#else>
 		<a href="${base+resource.name}"<#if resource.image> onmouseover="showImage(this)" onmouseout="hideImage(this)"</#if> target="_blank">${resource.filename}</a>
 		</#if>
@@ -159,13 +159,13 @@ function hideImage(a) {
 	<@p.column code="cms.attachment.valid" align="right"><#if resource.valid><@s.m "cms.attachment.valid.true"/><#else><@s.m "cms.attachment.valid.false"/></#if> </@p.column><#t/>
 	<@p.column code="resource.lastModified" align="center">${resource.lastModifiedDate?string('yyyy-MM-dd HH:mm:ss')}</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<@cms_perm url="/resource/o_delete_single.do">
-		<a href="o_delete_single.do?root=${root?url}&name=${resource.name?url}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		<@cms_perm url="/resource/o_delete_single">
+		<a href="o_delete_single?root=${root?url}&name=${resource.name?url}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
 		</@cms_perm>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">
-	<@cms_perm url="/file/o_delete.do">
+	<@cms_perm url="/file/o_delete">
 	<input type="button" value="<@s.m "global.delete"/>" onclick="optDelete();" class="del-button"/>
 	</@cms_perm>
 </div>

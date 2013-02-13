@@ -17,7 +17,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 </script>
@@ -40,7 +40,7 @@ function optDelete() {
 	<@p.column code="cmsComment.text">
 		<#if !cmsComment.checked><span style="color:red">[<@s.m "cmsComment.uncheck"/>]</span><br/></#if>
 		<#if cmsComment.recommend>[<span style="color:red"><@s.m "cmsComment.recommend"/></span>]</#if>
-		<a href="v_list.do?contentId=${cmsComment.content.id}">${cmsComment.text?html}</a>
+		<a href="v_list?contentId=${cmsComment.content.id}">${cmsComment.text?html}</a>
 		<#if cmsComment.reply??><br/><span style="color:red">${cmsComment.reply?html}</span></#if>
 	</@p.column><#t/>
 	<@p.column code="cmsComment.doc">
@@ -51,8 +51,8 @@ function optDelete() {
 		${cmsComment.ip}<br/>${cmsComment.createTime}
 	</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="v_edit.do?id=${cmsComment.id}&pageNo=${pageNo!}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${cmsComment.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
+		<a href="v_edit?id=${cmsComment.id}&pageNo=${pageNo!}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<a href="o_delete?ids=${cmsComment.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;"><input class="del-button" type="button" value="<@s.m "global.delete"/>" onclick="optDelete();"/></div>

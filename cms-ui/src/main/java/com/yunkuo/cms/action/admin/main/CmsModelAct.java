@@ -21,19 +21,19 @@ public class CmsModelAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsModelAct.class);
 
-	@RequestMapping("/model/v_list.do")
+	@RequestMapping("/model/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		List<CmsModel> list = manager.getList(true);
 		model.addAttribute("list", list);
 		return "model/list";
 	}
 
-	@RequestMapping("/model/v_add.do")
+	@RequestMapping("/model/v_add")
 	public String add(ModelMap model) {
 		return "model/add";
 	}
 
-	@RequestMapping("/model/v_edit.do")
+	@RequestMapping("/model/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -43,7 +43,7 @@ public class CmsModelAct {
 		return "model/edit";
 	}
 
-	@RequestMapping("/model/o_save.do")
+	@RequestMapping("/model/o_save")
 	public String save(CmsModel bean, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
 		if (errors.hasErrors()) {
@@ -53,10 +53,10 @@ public class CmsModelAct {
 		log.info("save CmsModel id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsModel.log.save", "id=" + bean.getId()
 				+ ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/model/o_update.do")
+	@RequestMapping("/model/o_update")
 	public String update(CmsModel bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -70,7 +70,7 @@ public class CmsModelAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/model/o_delete.do")
+	@RequestMapping("/model/o_delete")
 	public String delete(Integer[] ids, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);
@@ -86,7 +86,7 @@ public class CmsModelAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/model/o_priority.do")
+	@RequestMapping("/model/o_priority")
 	public String priority(Integer[] wids, Integer[] priority,
 			Boolean[] disabled, Integer defId, HttpServletRequest request,
 			ModelMap model) {

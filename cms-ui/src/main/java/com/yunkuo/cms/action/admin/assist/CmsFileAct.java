@@ -41,7 +41,7 @@ public class CmsFileAct {
 
 
 	// 直接调用方法需要把root参数保存至model中
-	@RequestMapping(value = "/file/v_list.do")
+	@RequestMapping(value = "/file/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = (String) model.get("root");
@@ -72,7 +72,7 @@ public class CmsFileAct {
 		return "file/list";
 	}
 	
-	@RequestMapping("/file/o_delfreefiles.do")
+	@RequestMapping("/file/o_delfreefiles")
 	public String deleteUnValid(String root,
 			HttpServletRequest request, ModelMap model) {
 		List<CmsFile>fileList=fileMng.getList(false);
@@ -104,7 +104,7 @@ public class CmsFileAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/file/o_delete.do")
+	@RequestMapping("/file/o_delete")
 	public String delete(String root, String[] names,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(root, names, request);
@@ -123,7 +123,7 @@ public class CmsFileAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/file/o_delete_single.do")
+	@RequestMapping("/file/o_delete_single")
 	public String deleteSingle(HttpServletRequest request, ModelMap model) {
 		// TODO 输入验证
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -137,21 +137,21 @@ public class CmsFileAct {
 	}
 
 
-	@RequestMapping(value = "/file/v_upload.do")
+	@RequestMapping(value = "/file/v_upload")
 	public String uploadInput(HttpServletRequest request, ModelMap model) {
 		String root = RequestUtils.getQueryParam(request, "root");
 		model.addAttribute("root", root);
 		return "file/upload";
 	}
 
-	@RequestMapping(value = "/file/o_upload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/file/o_upload", method = RequestMethod.POST)
 	public String uploadSubmit(String root, HttpServletRequest request,
 			ModelMap model) {
 		model.addAttribute("root", root);
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/file/o_swfupload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/file/o_swfupload", method = RequestMethod.POST)
 	public void swfUpload(
 			String root,
 			@RequestParam(value = "Filedata", required = false) MultipartFile file,

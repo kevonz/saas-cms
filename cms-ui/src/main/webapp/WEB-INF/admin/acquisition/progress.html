@@ -19,12 +19,12 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 
 function checkComplete(){
-	$.post("v_check_complete.do",{},function(data){
+	$.post("v_check_complete",{},function(data){
 		if(!data.completed){
 			createProgress();
 		}
@@ -38,7 +38,7 @@ function setBar(percent,infor, message) {
 }
 
 function createProgress() {
-	$.post("v_progress_data.do",{},function(data){
+	$.post("v_progress_data",{},function(data){
 		$("#progressContainer").html(data);
 		messageBox = $("#messageBox");
 		if (percent >= 100){

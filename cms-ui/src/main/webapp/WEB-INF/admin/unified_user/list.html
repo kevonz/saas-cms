@@ -17,7 +17,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 </script>
@@ -26,7 +26,7 @@ function optDelete() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "user.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 	</form>
 	<div class="clear"></div>
 </div>
@@ -46,8 +46,8 @@ function optDelete() {
 	<@p.column code="user.currentLoginTime" align="center">${user.currentLoginTime}</@p.column><#t/>
 	<@p.column code="user.currentLoginIp" align="center">${user.currentLoginIp}</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="v_edit.do?id=${user.id}&pageNo=${pageNo!}"><@s.m "global.edit"/></a> | <#rt/>
-		<a href="o_delete.do?ids=${user.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
+		<a href="v_edit?id=${user.id}&pageNo=${pageNo!}"><@s.m "global.edit"/></a> | <#rt/>
+		<a href="o_delete?ids=${user.id}&pageNo=${pageNo!}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div><input type="button" value="<@s.m "global.delete"/>" onclick="optDelete();"/></div>

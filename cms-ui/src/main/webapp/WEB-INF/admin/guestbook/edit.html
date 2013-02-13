@@ -14,12 +14,12 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>:  <@s.m "cmsGuestbook.function"/> - <@s.m "global.edit"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_update.do"labelWidth="12">
+<@p.form id="jvForm" action="o_update"labelWidth="12">
 <@p.select colspan="2" label="cmsGuestbook.ctg" name="ctgId" value=cmsGuestbook.ctg.id list=ctgList listKey="id" listValue="name" required="true"/><@p.tr/>
 <@p.text colspan="2" label="cmsGuestbook.title" name="title" value=cmsGuestbook.title size="70" maxlength="255"/><@p.tr/>
 <@p.textarea colspan="2" label="cmsGuestbook.content" name="content" value=cmsGuestbook.content rows="5" cols="70" maxlength="255"/><@p.tr/>

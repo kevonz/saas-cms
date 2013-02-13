@@ -37,12 +37,12 @@ public class ResourceAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(ResourceAct.class);
 
-	@RequestMapping("/resource/v_left.do")
+	@RequestMapping("/resource/v_left")
 	public String left(String path, HttpServletRequest request, ModelMap model) {
 		return "resource/left";
 	}
 
-	@RequestMapping(value = "/resource/v_tree.do")
+	@RequestMapping(value = "/resource/v_tree")
 	public String tree(HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -69,7 +69,7 @@ public class ResourceAct {
 	}
 
 	// 直接调用方法需要把root参数保存至model中
-	@RequestMapping(value = "/resource/v_list.do")
+	@RequestMapping(value = "/resource/v_list")
 	public String list(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = (String) model.get("root");
@@ -90,7 +90,7 @@ public class ResourceAct {
 		return "resource/list";
 	}
 
-	@RequestMapping(value = "/resource/o_create_dir.do")
+	@RequestMapping(value = "/resource/o_create_dir")
 	public String createDir(String root, String dirName,
 			HttpServletRequest request, ModelMap model) {
 		// TODO 检查dirName是否存在
@@ -99,14 +99,14 @@ public class ResourceAct {
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/resource/v_add.do")
+	@RequestMapping(value = "/resource/v_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		String root = RequestUtils.getQueryParam(request, "root");
 		model.addAttribute("root", root);
 		return "resource/add";
 	}
 
-	@RequestMapping("/resource/v_edit.do")
+	@RequestMapping("/resource/v_edit")
 	public String edit(HttpServletRequest request, ModelMap model)
 			throws IOException {
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -123,7 +123,7 @@ public class ResourceAct {
 		return "resource/edit";
 	}
 
-	@RequestMapping("/resource/o_save.do")
+	@RequestMapping("/resource/o_save")
 	public String save(String root, String filename, String source,
 			HttpServletRequest request, ModelMap model) throws IOException {
 		WebErrors errors = validateSave(filename, source, request);
@@ -135,11 +135,11 @@ public class ResourceAct {
 		log.info("save Resource name={}", filename);
 		cmsLogMng.operating(request, "resource.log.save", "filename="
 				+ filename);
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
 	// AJAX请求，不返回页面
-	@RequestMapping("/resource/o_update.do")
+	@RequestMapping("/resource/o_update")
 	public void update(String root, String name, String source,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) throws IOException {
@@ -155,7 +155,7 @@ public class ResourceAct {
 		ResponseUtils.renderJson(response, "{success:true}");
 	}
 
-	@RequestMapping("/resource/o_delete.do")
+	@RequestMapping("/resource/o_delete")
 	public String delete(String root, String[] names,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(root, names, request);
@@ -173,7 +173,7 @@ public class ResourceAct {
 		return list(request, model);
 	}
 
-	@RequestMapping("/resource/o_delete_single.do")
+	@RequestMapping("/resource/o_delete_single")
 	public String deleteSingle(HttpServletRequest request, ModelMap model) {
 		// TODO 输入验证
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -185,7 +185,7 @@ public class ResourceAct {
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/resource/v_rename.do")
+	@RequestMapping(value = "/resource/v_rename")
 	public String renameInput(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		String root = RequestUtils.getQueryParam(request, "root");
@@ -196,7 +196,7 @@ public class ResourceAct {
 		return "resource/rename";
 	}
 
-	@RequestMapping(value = "/resource/o_rename.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/resource/o_rename", method = RequestMethod.POST)
 	public String renameSubmit(String root, String origName, String distName,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -208,21 +208,21 @@ public class ResourceAct {
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/resource/v_upload.do")
+	@RequestMapping(value = "/resource/v_upload")
 	public String uploadInput(HttpServletRequest request, ModelMap model) {
 		String root = RequestUtils.getQueryParam(request, "root");
 		model.addAttribute("root", root);
 		return "resource/upload";
 	}
 
-	@RequestMapping(value = "/resource/o_upload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/resource/o_upload", method = RequestMethod.POST)
 	public String uploadSubmit(String root, HttpServletRequest request,
 			ModelMap model) {
 		model.addAttribute("root", root);
 		return list(request, model);
 	}
 
-	@RequestMapping(value = "/resource/o_swfupload.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/resource/o_swfupload", method = RequestMethod.POST)
 	public void swfUpload(
 			String root,
 			@RequestParam(value = "Filedata", required = false) MultipartFile file,

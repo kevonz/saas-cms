@@ -10,7 +10,7 @@ function createIndex() {
 	var button = $("#createButton");
 	var value = button.val();
 	button.val("<@s.m "cmsStatic.wait"/>").attr("disabled","disabled");
-	$.getJSON("o_channel.do",function(data) {
+	$.getJSON("o_channel",function(data) {
 		button.val(value).removeAttr("disabled");
 		if(data.success) {
 			alert("<@s.m "global.success"/>");
@@ -50,7 +50,7 @@ $(function() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_channel.do">
+<@p.form id="jvForm" action="o_channel">
 <@p.select label="cmsStatic.channel" name="channelId" list=channelList listKey="id" listValue="name" listDeep="deep" headerKey="" headerValue="cmsStatic.allChannel"/>
 <@p.radio label="cmsStatic.containChild" name="containChild" value="true" list={"true":"global.true","false":"global.false"}/>
 <@p.td>

@@ -31,7 +31,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete.do";
+	f.action="o_delete";
 	f.submit();
 }
 function optCheck() {
@@ -40,7 +40,7 @@ function optCheck() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_check.do";
+	f.action="o_check";
 	f.submit();
 }
 function optStatic() {
@@ -49,7 +49,7 @@ function optStatic() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_static.do";
+	f.action="o_static";
 	f.submit();
 }
 function optReject() {
@@ -64,12 +64,12 @@ function rejectSubmit() {
 	$("input[name=rejectStep]").val($("#rejectStep").val());
 	$("#rejectDialog").dialog("close");
 	var f = getTableForm();
-	f.action="o_reject.do";
+	f.action="o_reject";
 	f.submit();
 }
 function chgStatus() {
 	var queryStatus = $("input[name=queryStatus]:checked").val();
-	location.href="v_list.do?cid=${cid!}&queryStatus=" + queryStatus;
+	location.href="v_list?cid=${cid!}&queryStatus=" + queryStatus;
 }
 </script>
 </head>
@@ -77,8 +77,8 @@ function chgStatus() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "content.function"/> - <@s.m "global.list"/></div>
 	<form class="ropt">
-		<@cms_perm url="/content/v_add.do">
-		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add.do';"/>
+		<@cms_perm url="/content/v_add">
+		<input class="add" type="submit" value="<@s.m "global.add"/>" onclick="this.form.action='v_add';"/>
 		</@cms_perm>
 		<input type="hidden" name="cid" value="${cid!}"/>
 	</form>
@@ -87,7 +87,7 @@ function chgStatus() {
 
 
 <div class="body-box">
-<form action="v_list.do" method="post" style="padding-top:5px;">
+<form action="v_list" method="post" style="padding-top:5px;">
 <div>
 <@s.m "content.title"/>: <input type="text" name="queryTitle" value="${queryTitle!}" style="width:100px"/>
 <@s.m "content.user"/>: <input type="text" name="queryInputUsername" value="${queryInputUsername!}" style="width:70px"/>
@@ -196,30 +196,30 @@ function chgStatus() {
 	</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
 		<#assign params>&cid=${cid!}&pageNo=${pageNo!}&queryTitle=${queryTitle!?url}&queryInputUsername=${queryInputUsername!?url}&queryTopLevel=${(queryTopLevel!false)?string}&queryRecommend=${(queryRecommend!false)?string}&queryTypeId=${queryTypeId!}&queryStatus=${queryStatus!}&queryOrderBy=${queryOrderBy!}</#assign>
-		<@cms_perm url="/content/v_view.do">
-		<a href="v_view.do?id=${content.id}${params}" class="pn-opt"><@s.m "content.opt.view"/></a> | <#rt/>
+		<@cms_perm url="/content/v_view">
+		<a href="v_view?id=${content.id}${params}" class="pn-opt"><@s.m "content.opt.view"/></a> | <#rt/>
 		</@cms_perm>
-		<@cms_perm url="/content/v_edit.do">
-		<a href="v_edit.do?id=${content.id}${params}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
+		<@cms_perm url="/content/v_edit">
+		<a href="v_edit?id=${content.id}${params}" class="pn-opt"><@s.m "global.edit"/></a> | <#rt/>
 		</@cms_perm>
-		<@cms_perm url="/content/o_delete.do">
-		<#if content.hasDeleteRight><a href="o_delete.do?ids=${content.id}${params}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a>
+		<@cms_perm url="/content/o_delete">
+		<#if content.hasDeleteRight><a href="o_delete?ids=${content.id}${params}" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}" class="pn-opt"><@s.m "global.delete"/></a>
 		<#else><span class="disabled"><@s.m "global.delete"/></span>
 		</#if>
 		</@cms_perm><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;">
-	<@cms_perm url="/content/o_delete.do">
+	<@cms_perm url="/content/o_delete">
 	<input type="button" value="<@s.m "global.delete"/>" onclick="optDelete();" class="del-button"/>
 	</@cms_perm>
-	<@cms_perm url="/content/o_check.do">
+	<@cms_perm url="/content/o_check">
 	<input type="button" value="<@s.m "content.opt.check"/>" onclick="optCheck();" class="check"/>
 	</@cms_perm>
-	<@cms_perm url="/content/o_reject.do">
+	<@cms_perm url="/content/o_reject">
 	<input id="rejectButton" type="button" value="<@s.m "content.opt.reject"/>" onclick="optReject();" class="reject"/>
 	</@cms_perm>
-	<@cms_perm url="/content/o_static.do">
+	<@cms_perm url="/content/o_static">
 	<input type="button" value="<@s.m "content.opt.static"/>" onclick="optStatic();" class="generate-static"/>
 	</@cms_perm>
 </div>

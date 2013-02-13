@@ -35,7 +35,7 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 	private static final Logger log = LoggerFactory
 			.getLogger(CmsAdminLocalAct.class);
 
-	@RequestMapping("/admin_local/v_list.do")
+	@RequestMapping("/admin_local/v_list")
 	public String list(String queryUsername, String queryEmail,
 			Integer queryGroupId, Boolean queryDisabled, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
@@ -55,7 +55,7 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 		return "admin/local/list";
 	}
 
-	@RequestMapping("/admin_local/v_add.do")
+	@RequestMapping("/admin_local/v_add")
 	public String add(HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
 		CmsUser currUser = CmsUtils.getUser(request);
@@ -68,7 +68,7 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 		return "admin/local/add";
 	}
 
-	@RequestMapping("/admin_local/v_edit.do")
+	@RequestMapping("/admin_local/v_edit")
 	public String edit(Integer id, Integer queryGroupId, Boolean queryDisabled,
 			HttpServletRequest request, ModelMap model) {
 		CmsSite site = CmsUtils.getSite(request);
@@ -101,7 +101,7 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 		return "admin/local/edit";
 	}
 
-	@RequestMapping("/admin_local/o_save.do")
+	@RequestMapping("/admin_local/o_save")
 	public String save(CmsUser bean, CmsUserExt ext, String username,
 			String email, String password, Boolean viewonlyAdmin,
 			Boolean selfAdmin, Integer rank, Integer groupId,
@@ -120,10 +120,10 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 		log.info("save CmsAdmin id={}", bean.getId());
 		cmsLogMng.operating(request, "cmsUser.log.save", "id=" + bean.getId()
 				+ ";username=" + bean.getUsername());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/admin_local/o_update.do")
+	@RequestMapping("/admin_local/o_update")
 	public String update(CmsUser bean, CmsUserExt ext, String password,
 			Integer groupId, Integer[] roleIds, Integer[] channelIds,
 			Byte step, Boolean allChannel, String queryUsername,
@@ -143,7 +143,7 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 				pageNo, request, model);
 	}
 
-	@RequestMapping("/admin_local/o_delete.do")
+	@RequestMapping("/admin_local/o_delete")
 	public String delete(Integer[] ids, Integer queryGroupId,
 			Boolean queryDisabled, Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
@@ -164,25 +164,25 @@ public class CmsAdminLocalAct extends CmsAdminAbstract {
 				pageNo, request, model);
 	}
 
-	@RequestMapping(value = "/admin_local/v_channels_add.do")
+	@RequestMapping(value = "/admin_local/v_channels_add")
 	public String channelsAdd(Integer siteId, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		return channelsAddJson(siteId, request, response, model);
 	}
 
-	@RequestMapping(value = "/admin_local/v_channels_edit.do")
+	@RequestMapping(value = "/admin_local/v_channels_edit")
 	public String channelsEdit(Integer userId, Integer siteId,
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
 		return channelsEditJson(userId, siteId, request, response, model);
 	}
 
-	@RequestMapping(value = "/admin_local/v_check_username.do")
+	@RequestMapping(value = "/admin_local/v_check_username")
 	public void checkUsername(String username, HttpServletResponse response) {
 		checkUserJson(username, response);
 	}
 
-	@RequestMapping(value = "/admin_local/v_check_email.do")
+	@RequestMapping(value = "/admin_local/v_check_email")
 	public void checkEmail(String email, HttpServletResponse response) {
 		checkEmailJson(email, response);
 	}

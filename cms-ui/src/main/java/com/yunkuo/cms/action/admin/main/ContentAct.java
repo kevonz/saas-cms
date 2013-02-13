@@ -69,7 +69,7 @@ import com.yunkuo.core.web.CoreUtils;
 public class ContentAct {
 	private static final Logger log = LoggerFactory.getLogger(ContentAct.class);
 
-	@RequestMapping("/content/v_left.do")
+	@RequestMapping("/content/v_left")
 	public String left() {
 		return "content/left";
 	}
@@ -83,7 +83,7 @@ public class ContentAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/content/v_tree.do")
+	@RequestMapping(value = "/content/v_tree")
 	public String tree(String root, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		log.debug("tree path={}", root);
@@ -125,14 +125,14 @@ public class ContentAct {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/content/v_tree_channels.do")
+	@RequestMapping(value = "/content/v_tree_channels")
 	public String treeChannels(String root, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
 		tree(root, request, response, model);
 		return "content/tree_channels";
 	}
 
-	@RequestMapping("/content/v_list.do")
+	@RequestMapping("/content/v_list")
 	public String list(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer cid, Integer pageNo,
@@ -189,7 +189,7 @@ public class ContentAct {
 		return "content/list";
 	}
 
-	@RequestMapping("/content/v_add.do")
+	@RequestMapping("/content/v_add")
 	public String add(Integer cid, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateAdd(cid, request);
 		if (errors.hasErrors()) {
@@ -267,7 +267,7 @@ public class ContentAct {
 		return "content/add";
 	}
 
-	@RequestMapping("/content/v_view.do")
+	@RequestMapping("/content/v_view")
 	public String view(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer pageNo, Integer cid, Integer id,
@@ -296,7 +296,7 @@ public class ContentAct {
 		return "content/view";
 	}
 
-	@RequestMapping("/content/v_edit.do")
+	@RequestMapping("/content/v_edit")
 	public String edit(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer pageNo, Integer cid, Integer id,
@@ -380,7 +380,7 @@ public class ContentAct {
 		return "content/edit";
 	}
 
-	@RequestMapping("/content/o_save.do")
+	@RequestMapping("/content/o_save")
 	public String save(Content bean, ContentExt ext, ContentTxt txt,
 			Integer[] channelIds, Integer[] topicIds, Integer[] viewGroupIds,
 			String[] attachmentPaths, String[] attachmentNames,
@@ -416,7 +416,7 @@ public class ContentAct {
 		return add(cid, request, model);
 	}
 
-	@RequestMapping("/content/o_update.do")
+	@RequestMapping("/content/o_update")
 	public String update(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Content bean, ContentExt ext, ContentTxt txt,
@@ -457,7 +457,7 @@ public class ContentAct {
 				queryOrderBy, cid, pageNo, request, model);
 	}
 
-	@RequestMapping("/content/o_delete.do")
+	@RequestMapping("/content/o_delete")
 	public String delete(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer[] ids, Integer cid, Integer pageNo,
@@ -491,7 +491,7 @@ public class ContentAct {
 				queryOrderBy, cid, pageNo, request, model);
 	}
 
-	@RequestMapping("/content/o_check.do")
+	@RequestMapping("/content/o_check")
 	public String check(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer[] ids, Integer cid, Integer pageNo,
@@ -509,7 +509,7 @@ public class ContentAct {
 				queryOrderBy, cid, pageNo, request, model);
 	}
 
-	@RequestMapping("/content/o_static.do")
+	@RequestMapping("/content/o_static")
 	public String contentStatic(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer[] ids, Integer cid, Integer pageNo,
@@ -545,7 +545,7 @@ public class ContentAct {
 				queryOrderBy, cid, pageNo, request, model);
 	}
 
-	@RequestMapping("/content/o_reject.do")
+	@RequestMapping("/content/o_reject")
 	public String reject(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer[] ids, Integer cid, Byte rejectStep,
@@ -564,7 +564,7 @@ public class ContentAct {
 				queryOrderBy, cid, pageNo, request, model);
 	}
 
-	@RequestMapping("/content/o_upload_attachment.do")
+	@RequestMapping("/content/o_upload_attachment")
 	public String uploadAttachment(
 			@RequestParam(value = "attachmentFile", required = false) MultipartFile file,
 			String attachmentNum, HttpServletRequest request, ModelMap model) {
@@ -614,7 +614,7 @@ public class ContentAct {
 		return "content/attachment_iframe";
 	}
 
-	@RequestMapping("/content/o_upload_media.do")
+	@RequestMapping("/content/o_upload_media")
 	public String uploadMedia(
 			@RequestParam(value = "mediaFile", required = false) MultipartFile file,
 			String filename, HttpServletRequest request, ModelMap model) {
@@ -683,7 +683,7 @@ public class ContentAct {
 		return "content/media_iframe";
 	}
 
-	@RequestMapping("/content_cycle/v_list.do")
+	@RequestMapping("/content_cycle/v_list")
 	public String cycleList(Integer queryTypeId, Boolean queryTopLevel,
 			Boolean queryRecommend, Integer queryOrderBy, Integer cid,
 			Integer pageNo, HttpServletRequest request, ModelMap model) {
@@ -692,7 +692,7 @@ public class ContentAct {
 		return "content/cycle_list";
 	}
 
-	@RequestMapping("/content_cycle/o_recycle.do")
+	@RequestMapping("/content_cycle/o_recycle")
 	public String cycleRecycle(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer[] ids, Integer cid, Integer pageNo,
@@ -709,7 +709,7 @@ public class ContentAct {
 				queryOrderBy, cid, pageNo, request, model);
 	}
 
-	@RequestMapping("/content_cycle/o_delete.do")
+	@RequestMapping("/content_cycle/o_delete")
 	public String cycleDelete(String queryStatus, Integer queryTypeId,
 			Boolean queryTopLevel, Boolean queryRecommend,
 			Integer queryOrderBy, Integer[] ids, Integer cid, Integer pageNo,

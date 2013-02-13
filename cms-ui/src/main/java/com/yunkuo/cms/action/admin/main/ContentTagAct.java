@@ -27,7 +27,7 @@ public class ContentTagAct {
 	private static final Logger log = LoggerFactory
 			.getLogger(ContentTagAct.class);
 
-	@RequestMapping("/tag/v_list.do")
+	@RequestMapping("/tag/v_list")
 	public String list(Integer pageNo, HttpServletRequest request,
 			ModelMap model) {
 		String queryName = RequestUtils.getQueryParam(request, "queryName");
@@ -40,12 +40,12 @@ public class ContentTagAct {
 		return "tag/list";
 	}
 
-	@RequestMapping("/tag/v_add.do")
+	@RequestMapping("/tag/v_add")
 	public String add(ModelMap model) {
 		return "tag/add";
 	}
 
-	@RequestMapping("/tag/v_edit.do")
+	@RequestMapping("/tag/v_edit")
 	public String edit(Integer id, HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateEdit(id, request);
 		if (errors.hasErrors()) {
@@ -59,7 +59,7 @@ public class ContentTagAct {
 		return "tag/edit";
 	}
 
-	@RequestMapping("/tag/o_save.do")
+	@RequestMapping("/tag/o_save")
 	public String save(ContentTag bean, HttpServletRequest request,
 			ModelMap model) {
 		WebErrors errors = validateSave(bean, request);
@@ -70,10 +70,10 @@ public class ContentTagAct {
 		log.info("save ContentTag id={}", bean.getId());
 		cmsLogMng.operating(request, "contentTag.log.save", "id="
 				+ bean.getId() + ";name=" + bean.getName());
-		return "redirect:v_list.do";
+		return "redirect:v_list";
 	}
 
-	@RequestMapping("/tag/o_update.do")
+	@RequestMapping("/tag/o_update")
 	public String update(ContentTag bean, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateUpdate(bean.getId(), request);
@@ -87,7 +87,7 @@ public class ContentTagAct {
 		return list(pageNo, request, model);
 	}
 
-	@RequestMapping("/tag/o_delete.do")
+	@RequestMapping("/tag/o_delete")
 	public String delete(Integer[] ids, Integer pageNo,
 			HttpServletRequest request, ModelMap model) {
 		WebErrors errors = validateDelete(ids, request);

@@ -18,14 +18,14 @@ import com.yunkuo.common.web.ResponseUtils;
 
 @Controller
 public class PersonalAct {
-	@RequestMapping("/personal/v_profile.do")
+	@RequestMapping("/personal/v_profile")
 	public String profileEdit(HttpServletRequest request, ModelMap model) {
 		CmsUser user = CmsUtils.getUser(request);
 		model.addAttribute("user", user);
 		return "personal/profile";
 	}
 
-	@RequestMapping("/personal/o_profile.do")
+	@RequestMapping("/personal/o_profile")
 	public String profileUpdate(String origPwd, String newPwd, String email,
 			String realname, HttpServletRequest request, ModelMap model) {
 		CmsUser user = CmsUtils.getUser(request);
@@ -53,7 +53,7 @@ public class PersonalAct {
 	 * @param request
 	 * @param response
 	 */
-	@RequestMapping("/personal/v_checkPwd.do")
+	@RequestMapping("/personal/v_checkPwd")
 	public void checkPwd(String origPwd, HttpServletRequest request,
 			HttpServletResponse response) {
 		CmsUser user = CmsUtils.getUser(request);

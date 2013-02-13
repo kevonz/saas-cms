@@ -14,16 +14,16 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "user.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
-		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';"/>
+		<input class="return-button" type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';"/>
 	</form>
 	<div class="clear"></div>
 </div>
 <div class="body-box">
 <#assign errorUserExist><@s.m "error.usernameExist"/></#assign>
 <#assign errorEmailExist><@s.m "error.emailExist"/></#assign>
-<@p.form id="jvForm" action="o_save.do">
-<@p.text label="user.username" name="username" required="true" vld="{required:true,rangelength:[3,100],remote:'v_check_username.do',messages:{remote:'${errorUserExist}'}}"/>
-<@p.text label="user.email" name="email" required="true" vld="{required:true,email:true,rangelength:[3,100],remote:'v_check_email.do',messages:{remote:'${errorEmailExist}'}}"/>
+<@p.form id="jvForm" action="o_save">
+<@p.text label="user.username" name="username" required="true" vld="{required:true,rangelength:[3,100],remote:'v_check_username',messages:{remote:'${errorUserExist}'}}"/>
+<@p.text label="user.email" name="email" required="true" vld="{required:true,email:true,rangelength:[3,100],remote:'v_check_email',messages:{remote:'${errorEmailExist}'}}"/>
 <@p.password label="user.password" id="password" name="password" required="true" class="required" minlength="3" maxlength="32"/>
 <@p.password label="user.pwdAgain" id="pwdAgain" name="pwdAgain" equalTo="#password" required="true"/>
 <@p.td><@p.submit code="global.submit"/> &nbsp; <@p.reset code="global.reset"/></@p.td>

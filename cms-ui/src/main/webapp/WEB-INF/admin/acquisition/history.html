@@ -17,7 +17,7 @@ function optDelete() {
 		return;
 	}
 	var f = getTableForm();
-	f.action="o_delete_history.do";
+	f.action="o_delete_history";
 	f.submit();
 }
 </script>
@@ -30,7 +30,7 @@ function optDelete() {
 <div class="body-box">
 <form id="tableForm" method="post">
 <input type="hidden" name="pageNo" value="${pageNo!}"/>
-<@p.table value=pagination listAction="v_history.do";history,i,has_next><#rt/>
+<@p.table value=pagination listAction="v_history";history,i,has_next><#rt/>
 	<@p.column title="<input type='checkbox' onclick='Pn.checkbox(\"ids\",this.checked)'/>" width="20">
 		<input type='checkbox' name='ids' value='${history.id}'/><#t/>
 	</@p.column><#t/>
@@ -64,7 +64,7 @@ function optDelete() {
 	</#switch>
 	</@p.column><#t/>
 	<@p.column code="global.operate" align="center">
-		<a href="o_delete_history.do?ids=${history.id}&pageNo=${pageNo!}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
+		<a href="o_delete_history?ids=${history.id}&pageNo=${pageNo!}" class="pn-opt" onclick="if(!confirm('<@s.m "global.confirm.delete"/>')) {return false;}"><@s.m "global.delete"/></a><#t/>
 	</@p.column><#t/>
 </@p.table>
 <div style="margin-top:15px;"><input class="del-button" type="button" value="<@s.m "global.delete"/>" onclick="optDelete();"/></div>

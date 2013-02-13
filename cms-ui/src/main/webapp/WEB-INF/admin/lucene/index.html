@@ -6,7 +6,7 @@
 <#include "/admin/head.html"/>
 <script type="text/javascript">
 function luceneSubmit() {
-	$.post("o_create.do", {
+	$.post("o_create", {
 		"startDate" : $("#startDate").val(),
 		"endDate" : $("#endDate").val(),
 		"max" : $("#max").val(),
@@ -54,7 +54,7 @@ $(function() {
 	<div class="clear"></div>
 </div>
 <div class="body-box">
-<@p.form id="jvForm" action="o_create.do">
+<@p.form id="jvForm" action="o_create">
 <@p.select label="cmsLucene.channelId" id="channelId" name="channelId" list=channelList listKey="id" listValue="name" listDeep="deep" headerKey="" headerValue="cmsLucene.allChannel"/>
 <@p.text label="cmsLucene.startDate" id="startDate" name="startDate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate"/>
 <@p.text label="cmsLucene.endDate" id="endDate" name="endDate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate"/>

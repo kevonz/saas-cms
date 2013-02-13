@@ -15,13 +15,13 @@ $(function() {
 <div class="box-positon">
 	<div class="rpos"><@s.m "global.position"/>: <@s.m "channel.function"/> - <@s.m "global.add"/></div>
 	<form class="ropt">
-		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list.do';" class="return-button"/>
+		<input type="submit" value="<@s.m "global.backToList"/>" onclick="this.form.action='v_list';" class="return-button"/>
 	</form>
 	<div class="clear"></div>
 </div>
 
 <div class="body-box">
-<@p.form id="jvForm" action="o_save.do" labelWidth="10">
+<@p.form id="jvForm" action="o_save" labelWidth="10">
 <@p.td colspan="1" width="50" label="channel.parent"><#if parent??>${parent.name}<#else><@s.m "channel.top"/></#if></@p.td>
 <@p.td colspan="1" width="50" label="channel.model">${model.name}</@p.td><@p.tr/>
 <#assign count=0/>

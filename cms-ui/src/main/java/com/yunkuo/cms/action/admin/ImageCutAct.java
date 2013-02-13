@@ -35,7 +35,7 @@ public class ImageCutAct {
 	 */
 	public static final String ERROR = "error";
 
-	@RequestMapping("/common/v_image_area_select.do")
+	@RequestMapping("/common/v_image_area_select")
 	public String imageAreaSelect(String uploadBase, String imgSrcPath,
 			Integer zoomWidth, Integer zoomHeight, Integer uploadNum,
 			HttpServletRequest request, ModelMap model) {
@@ -47,7 +47,7 @@ public class ImageCutAct {
 		return IMAGE_SELECT_RESULT;
 	}
 
-	@RequestMapping("/common/o_image_cut.do")
+	@RequestMapping("/common/o_image_cut")
 	public String imageCut(String imgSrcPath, Integer imgTop, Integer imgLeft,
 			Integer imgWidth, Integer imgHeight, Integer reMinWidth,
 			Integer reMinHeight, Float imgScale, Integer uploadNum,
