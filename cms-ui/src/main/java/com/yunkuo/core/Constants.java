@@ -1,7 +1,7 @@
 package com.yunkuo.core;
 
 /**
- * jeecore 常量
+ * core 常量
  * 
 *
  * 

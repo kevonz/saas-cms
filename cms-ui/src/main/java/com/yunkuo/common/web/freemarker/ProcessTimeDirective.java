@@ -21,7 +21,7 @@ import freemarker.template.TemplateNumberModel;
 /**
  * 执行时间标签
  * 
- * 需要拦截器com.jeecms.common.web.ProcessTimeFilter支持
+ * 需要拦截器com.yunkuo.common.web.ProcessTimeFilter支持
  * 
  * 
  */

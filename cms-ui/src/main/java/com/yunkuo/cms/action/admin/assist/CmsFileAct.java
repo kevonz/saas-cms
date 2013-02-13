@@ -28,7 +28,7 @@ import com.yunkuo.common.web.RequestUtils;
 import com.yunkuo.common.web.ResponseUtils;
 
 /**
- * JEECMS附件（包括文章图片多媒体）的Action
+ * CMS附件（包括文章图片多媒体）的Action
  * 
  * @author TOM
  * 

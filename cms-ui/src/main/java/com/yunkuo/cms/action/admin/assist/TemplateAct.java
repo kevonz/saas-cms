@@ -34,7 +34,7 @@ import com.yunkuo.core.tpl.Tpl;
 import com.yunkuo.core.tpl.TplManager;
 
 /**
- * JEECMS模板的Action
+ * CMS模板的Action
  * 
  * 
  */

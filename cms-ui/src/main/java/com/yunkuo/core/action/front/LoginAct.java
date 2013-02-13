@@ -41,8 +41,8 @@ public class LoginAct {
 	public static final String RETURN_URL = "returnUrl";
 	public static final String MESSAGE = "message";
 
-	public static final String LOGIN_INPUT = "/WEB-INF/t/jeecore/login.html";
-	public static final String LOGIN_SUCCESS = "/WEB-INF/t/jeecore/login_success.html";
+	public static final String LOGIN_INPUT = "/WEB-INF/t/core/login.html";
+	public static final String LOGIN_SUCCESS = "/WEB-INF/t/core/login_success.html";
 
 	/**
 	 * 统一登录入口

@@ -19,7 +19,7 @@ import com.yunkuo.cms.web.CmsUtils;
 
 @Controller
 public class WelcomeAct {
-	@RequestMapping("/index.do")
+	@RequestMapping("/index")
 	public String index() {
 		return "index";
 	}

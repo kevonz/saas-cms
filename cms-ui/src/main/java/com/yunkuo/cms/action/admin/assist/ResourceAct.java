@@ -27,7 +27,7 @@ import com.yunkuo.common.web.RequestUtils;
 import com.yunkuo.common.web.ResponseUtils;
 
 /**
- * JEECMS资源的Action
+ * CMS资源的Action
  * 
  * 
  */

@@ -7,7 +7,7 @@ import com.yunkuo.cms.entity.assist.CmsReceiverMessage;
 import com.yunkuo.common.page.Pagination;
 
 /**
- *江西金磊科技发展有限公司jeecms研发
+ *
  */
 public interface CmsReceiverMessageDao {
 

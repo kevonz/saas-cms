@@ -15,7 +15,7 @@ import freemarker.template.TemplateModel;
 /**
  * HTML文本提取并截断
  * 
- * 需要拦截器com.jeecms.common.web.ProcessTimeFilter支持
+ * 需要拦截器com.yunkuo.common.web.ProcessTimeFilter支持
  * 
  * 
  */

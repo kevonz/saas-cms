@@ -13,7 +13,7 @@ import com.yunkuo.common.hibernate3.Updater;
 import com.yunkuo.common.page.Pagination;
 
 /**
- *江西金磊科技发展有限公司jeecms研发
+ *
  */
 @Service
 @Transactional
