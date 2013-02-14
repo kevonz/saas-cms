@@ -840,16 +840,16 @@ CREATE TABLE `cms_advertising_attr` (
 -- ----------------------------
 -- Records of cms_advertising_attr
 -- ----------------------------
-INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_title', '查看JEECMS官方网站');
+INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_title', '查看CMS官方网站');
 INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_url', '/r/cms/www/red/img/banner.gif');
 INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_target', '_blank');
-INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_link', 'http://www.jeecms.com');
+INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_link', 'http://www.yunkuo.com');
 INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_width', '735');
 INSERT INTO `cms_advertising_attr` VALUES ('1', 'image_height', '70');
-INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_title', 'JEECMS官方网站');
+INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_title', 'CMS官方网站');
 INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_url', '/r/cms/www/red/img/banner1.jpg');
 INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_target', '_blank');
-INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_link', 'http://www.jeecms.com');
+INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_link', 'http://www.yunkuo.com');
 INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_width', '960');
 INSERT INTO `cms_advertising_attr` VALUES ('2', 'image_height', '60');
 INSERT INTO `cms_advertising_attr` VALUES ('3', 'image_height', '89');
@@ -863,7 +863,7 @@ INSERT INTO `cms_advertising_attr` VALUES ('4', 'image_target', '_blank');
 INSERT INTO `cms_advertising_attr` VALUES ('4', 'image_url', '/u/cms/www/201112/17145028j3bj.jpg');
 INSERT INTO `cms_advertising_attr` VALUES ('4', 'image_width', '980');
 INSERT INTO `cms_advertising_attr` VALUES ('5', 'image_height', '109');
-INSERT INTO `cms_advertising_attr` VALUES ('5', 'image_link', 'http://3x.jeecms.com');
+INSERT INTO `cms_advertising_attr` VALUES ('5', 'image_link', 'http://3x.yunkuo.com');
 INSERT INTO `cms_advertising_attr` VALUES ('5', 'image_target', '_blank');
 INSERT INTO `cms_advertising_attr` VALUES ('5', 'image_url', '/u/cms/www/201112/18155751wi1k.gif');
 INSERT INTO `cms_advertising_attr` VALUES ('5', 'image_width', '215');
@@ -1068,7 +1068,7 @@ CREATE TABLE `cms_channel_txt` (
 -- ----------------------------
 -- Records of cms_channel_txt
 -- ----------------------------
-INSERT INTO `cms_channel_txt` VALUES ('10', '<p><font size=\"2\">&nbsp;&nbsp;&nbsp; JEECMS是JavaEE版网站管理系统（Java Enterprise Edition Content Manage System）的简称。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;Java凭借其强大、稳定、安全、高效等多方面的优势，一直是企业级应用的首选。在国外基于JavaEE技术的CMS已经发展的相当成熟，但授权费昂贵，一般需几十万一套；而国内在这方面一直比较薄弱，至今没有一款基于JavaEE技术的开源免费CMS产品。这次我们本着&quot;大气开源，诚信图强&quot;的原则将我们开发的这套JEECMS系统源码完全公布，希望能为国内JavaEE技术的发展尽自己的一份力量。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;JEECMS使用目前java主流技术架构：hibernate3+spring3+freemarker。AJAX使用jquery和json实现。视图层并没有使用传统的 JSP技术，而是使用更为专业、灵活、高效freemarker。 数据库使用MYSQL，并可支持orcale、DB2、SQLServer等主流数据库。应用服务器使用tomcat，并支持其他weblogic、 websphere等应用服务器。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;JEECMS并不是一个只追求技术之先进，而不考虑用户实际使用的象牙塔CMS。系统的设计宗旨就是从用户的需求出发，提供最便利、合理的使用方式，懂html就能建站，从设计上满足搜索引擎优化，最小性能消耗满足小网站要求、可扩展群集满足大网站需要。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;很多人觉得java、jsp难掌握，技术门槛高。jeecms具有强大的模板机制。所有前台页面均由模板生成，通过在线编辑模板轻松调整页面显示。模板内容不涉及任何java和jsp技术，只需掌握html语法和jeecms标签即可完成动态网页制作。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;强大、灵活的标签。提供两种风格的标签，一种风格的标签封装了大量互联网上常见的显示样式，通过调整参数就可实现文章列表、图文混排、图文滚动、跑马灯、焦点图等效果。这种标签的优势在于页面制作简单、效率高，对js、css、html不够精通和希望快速建站的用户非常适用。并且各种效果的内容不使用js生成，对搜索引擎非常友好。另一种风格的标签只负责读取数据，由用户自己控制显示内容和显示方式，想到什么就能做到什么，对于技术能力高和追求个性化的用户，可谓如鱼得水。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;采用完全生成静态页面技术，加快页面访问速度，提升搜索引擎友好性；采用扁平的、可自定义的路径结构。对于有特别需求者，可自定义页面后缀，如.php,.asp,.aspx等。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;站群设计，对于大型的网站，往往需要通过次级域名建立子站群，各个子站后台管理权限可以分离，程序和附件分离，前台用户实现单点登录，大规模网站轻松建设。</font></p>', null, null, null);
+INSERT INTO `cms_channel_txt` VALUES ('10', '<p><font size=\"2\">&nbsp;&nbsp;&nbsp; CMS是JavaEE版网站管理系统（Java Enterprise Edition Content Manage System）的简称。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;Java凭借其强大、稳定、安全、高效等多方面的优势，一直是企业级应用的首选。在国外基于JavaEE技术的CMS已经发展的相当成熟，但授权费昂贵，一般需几十万一套；而国内在这方面一直比较薄弱，至今没有一款基于JavaEE技术的开源免费CMS产品。这次我们本着&quot;大气开源，诚信图强&quot;的原则将我们开发的这套CMS系统源码完全公布，希望能为国内JavaEE技术的发展尽自己的一份力量。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;CMS使用目前java主流技术架构：hibernate3+spring3+freemarker。AJAX使用jquery和json实现。视图层并没有使用传统的 JSP技术，而是使用更为专业、灵活、高效freemarker。 数据库使用MYSQL，并可支持orcale、DB2、SQLServer等主流数据库。应用服务器使用tomcat，并支持其他weblogic、 websphere等应用服务器。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;CMS并不是一个只追求技术之先进，而不考虑用户实际使用的象牙塔CMS。系统的设计宗旨就是从用户的需求出发，提供最便利、合理的使用方式，懂html就能建站，从设计上满足搜索引擎优化，最小性能消耗满足小网站要求、可扩展群集满足大网站需要。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;很多人觉得java、jsp难掌握，技术门槛高。cms具有强大的模板机制。所有前台页面均由模板生成，通过在线编辑模板轻松调整页面显示。模板内容不涉及任何java和jsp技术，只需掌握html语法和cms标签即可完成动态网页制作。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;强大、灵活的标签。提供两种风格的标签，一种风格的标签封装了大量互联网上常见的显示样式，通过调整参数就可实现文章列表、图文混排、图文滚动、跑马灯、焦点图等效果。这种标签的优势在于页面制作简单、效率高，对js、css、html不够精通和希望快速建站的用户非常适用。并且各种效果的内容不使用js生成，对搜索引擎非常友好。另一种风格的标签只负责读取数据，由用户自己控制显示内容和显示方式，想到什么就能做到什么，对于技术能力高和追求个性化的用户，可谓如鱼得水。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;采用完全生成静态页面技术，加快页面访问速度，提升搜索引擎友好性；采用扁平的、可自定义的路径结构。对于有特别需求者，可自定义页面后缀，如.php,.asp,.aspx等。</font></p>\r\n<p><font size=\"2\">&nbsp;&nbsp;&nbsp;&nbsp;站群设计，对于大型的网站，往往需要通过次级域名建立子站群，各个子站后台管理权限可以分离，程序和附件分离，前台用户实现单点登录，大规模网站轻松建设。</font></p>', null, null, null);
 
 -- ----------------------------
 -- Table structure for `cms_channel_user`
@@ -1235,19 +1235,19 @@ INSERT INTO `cms_comment_ext` VALUES ('11', '0:0:0:0:0:0:0:1', 'rthdrh', null);
 DROP TABLE IF EXISTS `cms_config`;
 CREATE TABLE `cms_config` (
   `config_id` int(11) NOT NULL,
-  `context_path` varchar(20) DEFAULT '/JeeCms' COMMENT '部署路径',
+  `context_path` varchar(20) DEFAULT '/Cms' COMMENT '部署路径',
   `servlet_point` varchar(20) DEFAULT NULL COMMENT 'Servlet挂载点',
   `port` int(11) DEFAULT NULL COMMENT '端口',
   `db_file_uri` varchar(50) NOT NULL DEFAULT '/dbfile.svl?n=' COMMENT '数据库附件访问地址',
   `is_upload_to_db` tinyint(1) NOT NULL DEFAULT '0' COMMENT '上传附件至数据库',
-  `def_img` varchar(255) NOT NULL DEFAULT '/JeeCms/r/cms/www/default/no_picture.gif' COMMENT '图片不存在时默认图片',
+  `def_img` varchar(255) NOT NULL DEFAULT '/Cms/r/cms/www/default/no_picture.gif' COMMENT '图片不存在时默认图片',
   `login_url` varchar(255) NOT NULL DEFAULT '/login.jspx' COMMENT '登录地址',
   `process_url` varchar(255) DEFAULT NULL COMMENT '登录后处理地址',
   `mark_on` tinyint(1) NOT NULL DEFAULT '1' COMMENT '开启图片水印',
   `mark_width` int(11) NOT NULL DEFAULT '120' COMMENT '图片最小宽度',
   `mark_height` int(11) NOT NULL DEFAULT '120' COMMENT '图片最小高度',
   `mark_image` varchar(100) DEFAULT '/r/cms/www/watermark.png' COMMENT '图片水印',
-  `mark_content` varchar(100) NOT NULL DEFAULT 'www.jeecms.com' COMMENT '文字水印内容',
+  `mark_content` varchar(100) NOT NULL DEFAULT 'www.yunkuo.com' COMMENT '文字水印内容',
   `mark_size` int(11) NOT NULL DEFAULT '20' COMMENT '文字水印大小',
   `mark_color` varchar(10) NOT NULL DEFAULT '#FF0000' COMMENT '文字水印颜色',
   `mark_alpha` int(11) NOT NULL DEFAULT '50' COMMENT '水印透明度（0-100）',
@@ -1256,7 +1256,7 @@ CREATE TABLE `cms_config` (
   `mark_offset_y` int(11) NOT NULL DEFAULT '0' COMMENT 'y坐标偏移量',
   `count_clear_time` date NOT NULL COMMENT '计数器清除时间',
   `count_copy_time` datetime NOT NULL COMMENT '计数器拷贝时间',
-  `download_code` varchar(32) NOT NULL DEFAULT 'jeecms' COMMENT '下载防盗链md5混淆码',
+  `download_code` varchar(32) NOT NULL DEFAULT 'cms' COMMENT '下载防盗链md5混淆码',
   `download_time` int(11) NOT NULL DEFAULT '12' COMMENT '下载有效时间（小时）',
   `email_host` varchar(50) DEFAULT NULL COMMENT '邮件发送服务器',
   `email_encoding` varchar(20) DEFAULT NULL COMMENT '邮件发送编码',
@@ -1270,7 +1270,7 @@ CREATE TABLE `cms_config` (
 -- ----------------------------
 -- Records of cms_config
 -- ----------------------------
-INSERT INTO `cms_config` VALUES ('1', '/cms-ui', null, '8080', '/dbfile.svl?n=', '0', '/r/cms/www/no_picture.gif', '/login.jspx', null, '1', '120', '120', '/r/cms/www/watermark.png', 'www.yunkuo.com', '20', '#FF0000', '50', '1', '0', '0', '2013-02-10', '2013-02-10 23:14:05', 'jeecms', '12', null, null, null, null, null, '1');
+INSERT INTO `cms_config` VALUES ('1', '/cms-ui', null, '8080', '/dbfile.svl?n=', '0', '/r/cms/www/no_picture.gif', '/login.jspx', null, '1', '120', '120', '/r/cms/www/watermark.png', 'www.yunkuo.com', '20', '#FF0000', '50', '1', '0', '0', '2013-02-10', '2013-02-10 23:14:05', 'cms', '12', null, null, null, null, null, '1');
 
 -- ----------------------------
 -- Table structure for `cms_config_attr`
@@ -3507,17 +3507,17 @@ INSERT INTO `cms_content_ext` VALUES ('196', '婚礼上最倒霉十大新郎', n
 INSERT INTO `cms_content_ext` VALUES ('197', '婚礼上最倒霉十大新郎', null, null, null, null, '婚礼上最倒霉十大新郎', '2011-12-17 16:12:55', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/171612535rhr.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('198', '婚礼上最倒霉十大新郎', null, null, null, null, null, '2011-12-17 16:13:26', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('209', '好搞笑的视频', null, null, null, null, null, '2011-12-17 16:56:26', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
-INSERT INTO `cms_content_ext` VALUES ('210', 'jeecms视频教程', null, null, null, null, 'jeecms视频教程', '2011-12-17 16:59:57', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
-INSERT INTO `cms_content_ext` VALUES ('211', 'jeecms要发视频教程了', null, null, null, null, 'jeecms要发视频教程了', '2011-12-17 17:00:14', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
+INSERT INTO `cms_content_ext` VALUES ('210', 'cms视频教程', null, null, null, null, 'cms视频教程', '2011-12-17 16:59:57', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
+INSERT INTO `cms_content_ext` VALUES ('211', 'cms要发视频教程了', null, null, null, null, 'cms要发视频教程了', '2011-12-17 17:00:14', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('212', '超级火爆的恶搞视频', null, null, null, null, '超级火爆的恶搞视频', '2011-12-17 17:01:18', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('213', '视频功能很强大啊', null, null, null, null, '视频功能很强大啊', '2011-12-17 17:01:50', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('214', '测试一下视频功能', null, null, null, null, '测试一下视频功能', '2011-12-17 17:02:03', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('215', '果然很有才', null, null, null, null, '果然很有才', '2011-12-17 17:02:20', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
-INSERT INTO `cms_content_ext` VALUES ('216', '我爱jeecms', null, null, null, null, null, '2011-12-17 17:05:34', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
+INSERT INTO `cms_content_ext` VALUES ('216', '我爱cms', null, null, null, null, null, '2011-12-17 17:05:34', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('217', 'hold不住了', null, null, null, null, 'hold不住了', '2011-12-17 17:07:05', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/17161324z8jn.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('218', '视频功能多好啊', null, null, null, null, '视频功能多好啊', '2011-12-17 17:08:21', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/171612286b6w.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('219', '玩的很开心啊', null, null, null, null, '玩的很开心啊', '2011-12-17 17:09:29', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/171612286b6w.jpg', null, null, '1');
-INSERT INTO `cms_content_ext` VALUES ('220', 'jeecms2012来啦', null, null, null, null, 'jeecms2012来啦', '2011-12-17 17:10:57', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/171612286b6w.jpg', null, null, '1');
+INSERT INTO `cms_content_ext` VALUES ('220', 'cms2012来啦', null, null, null, null, 'cms2012来啦', '2011-12-17 17:10:57', '/u/cms/www/201112/17165616uvy4.swf', 'FLASH', null, '0', null, null, '/u/cms/www/201112/171612286b6w.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('223', '冬日的温暖', '冬日的温暖', null, null, null, '冬日的温暖', '2011-12-17 17:21:16', null, null, null, '0', null, null, '/u/cms/www/201112/171415447op5.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('224', '冬日写真', null, null, null, null, null, '2011-12-17 17:25:18', null, null, null, '0', null, null, '/u/cms/www/201112/171415447op5.jpg', null, null, '1');
 INSERT INTO `cms_content_ext` VALUES ('225', '演史上最长贺岁大片', null, null, null, null, '故事以两个好朋友在寻找多年不见的好兄弟兰彻的过程中展开的回忆.讲述十年前兰彻顶替他人来到皇家工程学院读书...', '2011-12-17 17:27:30', null, null, null, '0', '/u/cms/www/201112/17141604lrhh.jpg', null, '/u/cms/www/201112/171415447op5.jpg', null, null, '1');
@@ -4926,8 +4926,8 @@ CREATE TABLE `cms_friendlink` (
 -- ----------------------------
 -- Records of cms_friendlink
 -- ----------------------------
-INSERT INTO `cms_friendlink` VALUES ('1', '1', '1', 'JEECMS官网', 'http://www.jeecms.com', null, 'jeecms@163.com', 'JEECMS是JavaEE版网站管理系统（Java Enterprise Edition Content Manage System）的简称。Java凭借其强大、稳定、安全、高效等多方面的优势，一直是企业级应用的首选。', '3', '1', '1');
-INSERT INTO `cms_friendlink` VALUES ('2', '1', '1', 'JEEBBS论坛', 'http://bbs.jeecms.com', null, 'jeecms@163.com', 'JEEBBS论坛', '2', '1', '10');
+INSERT INTO `cms_friendlink` VALUES ('1', '1', '1', 'CMS官网', 'http://www.yunkuo.com', null, 'bettersaas@163.com', 'CMS是JavaEE版网站管理系统（Java Enterprise Edition Content Manage System）的简称。Java凭借其强大、稳定、安全、高效等多方面的优势，一直是企业级应用的首选。', '3', '1', '1');
+INSERT INTO `cms_friendlink` VALUES ('2', '1', '1', 'BBS论坛', 'http://bbs.yunkuo.com', null, 'bettersaas@163.com', 'BBS论坛', '2', '1', '10');
 INSERT INTO `cms_friendlink` VALUES ('3', '1', '2', '京东商城', 'http://www.360buy.com/', '/u/cms/www/201112/1910271036lr.gif', '', '', '1', '1', '10');
 INSERT INTO `cms_friendlink` VALUES ('4', '1', '2', '当当网', 'http://www.dangdang.com/', '/u/cms/www/201112/191408344rwj.gif', '', '', '0', '1', '10');
 INSERT INTO `cms_friendlink` VALUES ('5', '1', '2', '亚马逊', 'http://www.amazon.cn/', '/u/cms/www/201112/19141012lh2q.gif', '', '', '0', '1', '10');
@@ -5051,7 +5051,7 @@ CREATE TABLE `cms_guestbook_ext` (
 -- ----------------------------
 INSERT INTO `cms_guestbook_ext` VALUES ('1', '湖南未来一周仍维持低温雨雪天气', '湖南未来一周仍维持低温雨雪天气', null, null, null, null);
 INSERT INTO `cms_guestbook_ext` VALUES ('2', '范冰冰退出娱乐圈', '范冰冰退出娱乐圈', null, null, null, null);
-INSERT INTO `cms_guestbook_ext` VALUES ('3', 'JEECMS v3.0.2正式版发布', '终于发布了', null, null, null, null);
+INSERT INTO `cms_guestbook_ext` VALUES ('3', 'CMS v3.0.2正式版发布', '终于发布了', null, null, null, null);
 INSERT INTO `cms_guestbook_ext` VALUES ('4', '多重压力将影响整体衣柜发展', '据悉，2010年下半年以来，衣柜企业整体销售形势不容乐观。不少企业下滑幅度高达60%，在一些主流卖场里，即使排名前十名的企业也未必能盈利。在这种情况下，企业纷纷打出了涨价牌，实属无奈之举。', '1111111111', null, null, null);
 INSERT INTO `cms_guestbook_ext` VALUES ('5', '1111111111111111111111111111111', '11111111111111111111111111111111111111111111111111111111111111111111111', null, null, null, null);
 INSERT INTO `cms_guestbook_ext` VALUES ('6', '11111111111111111111', '1111111111111111111111111111111', null, null, '1111111111', null);
@@ -5076,7 +5076,7 @@ CREATE TABLE `cms_keyword` (
 -- ----------------------------
 -- Records of cms_keyword
 -- ----------------------------
-INSERT INTO `cms_keyword` VALUES ('1', null, '内容管理系统', '<a href=\"http://www.jeecms.com/\" target=\"_blank\">内容管理系统</a>', '0');
+INSERT INTO `cms_keyword` VALUES ('1', null, '内容管理系统', '<a href=\"http://www.yunkuo.com/\" target=\"_blank\">内容管理系统</a>', '0');
 
 -- ----------------------------
 -- Table structure for `cms_log`
@@ -5102,33 +5102,33 @@ CREATE TABLE `cms_log` (
 -- ----------------------------
 -- Records of cms_log
 -- ----------------------------
-INSERT INTO `cms_log` VALUES ('1', '1', null, '1', '2012-11-18 16:09:28', '0:0:0:0:0:0:0:1', '/jeecms/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('2', '1', null, '1', '2012-11-18 16:10:25', '0:0:0:0:0:0:0:1', '/jeecms/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('3', '1', '1', '3', '2012-11-18 16:17:53', '0:0:0:0:0:0:0:1', '/jeecms/jeeadmin/jeecms/acquisition/o_update', '修改采集', 'id=1;name=新浪国内新闻');
-INSERT INTO `cms_log` VALUES ('4', '1', null, '1', '2012-11-18 16:57:09', '127.0.0.1', '/jeecms/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('5', '1', '1', '3', '2012-11-18 16:57:53', '127.0.0.1', '/jeecms/jeeadmin/jeecms/acquisition/o_update', '修改采集', 'id=1;name=新浪国内新闻');
-INSERT INTO `cms_log` VALUES ('6', null, null, '2', '2013-01-22 23:57:29', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/login', '登录失败', 'username=admin;password=password');
-INSERT INTO `cms_log` VALUES ('7', null, null, '2', '2013-01-22 23:57:34', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/login', '登录失败', 'username=admin;password=password');
-INSERT INTO `cms_log` VALUES ('8', '1', null, '1', '2013-01-22 23:57:37', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('9', '1', null, '1', '2013-01-23 00:19:09', '127.0.0.1', '/cms-ui/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('10', '1', null, '1', '2013-01-23 23:32:47', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('11', '1', '1', '3', '2013-01-23 23:33:48', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/site/o_update', '修改站点', 'id=1;name=YunKuoCMS');
-INSERT INTO `cms_log` VALUES ('12', '1', '1', '3', '2013-01-23 23:39:28', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/config/o_mark_update', '修改水印设置', null);
-INSERT INTO `cms_log` VALUES ('13', '1', '1', '3', '2013-01-23 23:45:03', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/config/o_login_update', '修改登录设置', null);
-INSERT INTO `cms_log` VALUES ('14', '1', '1', '3', '2013-01-23 23:50:04', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/config/o_login_update', '修改登录设置', null);
-INSERT INTO `cms_log` VALUES ('15', '1', '1', '3', '2013-01-23 23:51:06', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/config/o_login_update', '修改登录设置', null);
-INSERT INTO `cms_log` VALUES ('16', '1', '1', '3', '2013-01-23 23:51:18', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/config/o_system_update', '修改系统设置', null);
-INSERT INTO `cms_log` VALUES ('17', '1', null, '1', '2013-01-24 00:07:08', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('18', '1', '1', '3', '2013-01-24 00:08:25', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/config/o_system_update', '修改系统设置', null);
-INSERT INTO `cms_log` VALUES ('19', '1', '1', '3', '2013-01-24 00:10:53', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/message/v_send', '发送站内信', 'id=1;title=test');
-INSERT INTO `cms_log` VALUES ('20', '1', '1', '3', '2013-01-24 00:10:53', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/message/v_send', '发送站内信', 'id=2;title=test');
-INSERT INTO `cms_log` VALUES ('21', '1', '1', '3', '2013-01-24 00:10:53', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/message/v_send', '发送站内信', 'id=3;title=test');
-INSERT INTO `cms_log` VALUES ('22', '1', null, '1', '2013-01-24 00:26:30', '0:0:0:0:0:0:0:1', '/cms-ui/admin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('23', '1', null, '1', '2013-01-24 00:32:24', '0:0:0:0:0:0:0:1', '/cms-ui/admin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('24', '1', null, '1', '2013-01-24 21:08:09', '0:0:0:0:0:0:0:1', '/cms-ui/jeeadmin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('25', '1', null, '1', '2013-01-24 21:15:47', '0:0:0:0:0:0:0:1', '/cms-ui/admin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('26', '1', null, '1', '2013-01-24 21:16:42', '0:0:0:0:0:0:0:1', '/cms-ui/admin/jeecms/login', '登录成功', null);
-INSERT INTO `cms_log` VALUES ('27', '1', null, '1', '2013-01-24 21:19:47', '0:0:0:0:0:0:0:1', '/cms-ui/admin/jeecms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('1', '1', null, '1', '2012-11-18 16:09:28', '0:0:0:0:0:0:0:1', '/cms/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('2', '1', null, '1', '2012-11-18 16:10:25', '0:0:0:0:0:0:0:1', '/cms/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('3', '1', '1', '3', '2012-11-18 16:17:53', '0:0:0:0:0:0:0:1', '/cms/admin/cms/acquisition/o_update', '修改采集', 'id=1;name=新浪国内新闻');
+INSERT INTO `cms_log` VALUES ('4', '1', null, '1', '2012-11-18 16:57:09', '127.0.0.1', '/cms/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('5', '1', '1', '3', '2012-11-18 16:57:53', '127.0.0.1', '/cms/admin/cms/acquisition/o_update', '修改采集', 'id=1;name=新浪国内新闻');
+INSERT INTO `cms_log` VALUES ('6', null, null, '2', '2013-01-22 23:57:29', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录失败', 'username=admin;password=password');
+INSERT INTO `cms_log` VALUES ('7', null, null, '2', '2013-01-22 23:57:34', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录失败', 'username=admin;password=password');
+INSERT INTO `cms_log` VALUES ('8', '1', null, '1', '2013-01-22 23:57:37', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('9', '1', null, '1', '2013-01-23 00:19:09', '127.0.0.1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('10', '1', null, '1', '2013-01-23 23:32:47', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('11', '1', '1', '3', '2013-01-23 23:33:48', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/site/o_update', '修改站点', 'id=1;name=YunKuoCMS');
+INSERT INTO `cms_log` VALUES ('12', '1', '1', '3', '2013-01-23 23:39:28', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/config/o_mark_update', '修改水印设置', null);
+INSERT INTO `cms_log` VALUES ('13', '1', '1', '3', '2013-01-23 23:45:03', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/config/o_login_update', '修改登录设置', null);
+INSERT INTO `cms_log` VALUES ('14', '1', '1', '3', '2013-01-23 23:50:04', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/config/o_login_update', '修改登录设置', null);
+INSERT INTO `cms_log` VALUES ('15', '1', '1', '3', '2013-01-23 23:51:06', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/config/o_login_update', '修改登录设置', null);
+INSERT INTO `cms_log` VALUES ('16', '1', '1', '3', '2013-01-23 23:51:18', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/config/o_system_update', '修改系统设置', null);
+INSERT INTO `cms_log` VALUES ('17', '1', null, '1', '2013-01-24 00:07:08', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('18', '1', '1', '3', '2013-01-24 00:08:25', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/config/o_system_update', '修改系统设置', null);
+INSERT INTO `cms_log` VALUES ('19', '1', '1', '3', '2013-01-24 00:10:53', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/message/v_send', '发送站内信', 'id=1;title=test');
+INSERT INTO `cms_log` VALUES ('20', '1', '1', '3', '2013-01-24 00:10:53', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/message/v_send', '发送站内信', 'id=2;title=test');
+INSERT INTO `cms_log` VALUES ('21', '1', '1', '3', '2013-01-24 00:10:53', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/message/v_send', '发送站内信', 'id=3;title=test');
+INSERT INTO `cms_log` VALUES ('22', '1', null, '1', '2013-01-24 00:26:30', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('23', '1', null, '1', '2013-01-24 00:32:24', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('24', '1', null, '1', '2013-01-24 21:08:09', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('25', '1', null, '1', '2013-01-24 21:15:47', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('26', '1', null, '1', '2013-01-24 21:16:42', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
+INSERT INTO `cms_log` VALUES ('27', '1', null, '1', '2013-01-24 21:19:47', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
 INSERT INTO `cms_log` VALUES ('28', '1', '1', '3', '2013-01-24 21:23:57', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/content/o_update', '修改文章', 'id=604;title=8888中国国家深海基地预计将于明年5月底前开工|国家深海基地|开工');
 INSERT INTO `cms_log` VALUES ('29', '1', null, '1', '2013-01-24 22:08:21', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
 INSERT INTO `cms_log` VALUES ('30', '1', null, '1', '2013-01-24 22:57:32', '0:0:0:0:0:0:0:1', '/cms-ui/admin/cms/login', '登录成功', null);
@@ -5665,28 +5665,28 @@ CREATE TABLE `cms_site_flow` (
 -- ----------------------------
 -- Records of cms_site_flow
 -- ----------------------------
-INSERT INTO `cms_site_flow` VALUES ('1', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:19:49', 'http://localhost:8080/jeecms/news/index.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('2', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:23:36', 'http://localhost:8080/jeecms/', 'http://localhost:8080', 'http://localhost:8080/jeecms/news/index.jhtml', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('3', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:23:59', 'http://localhost:8080/jeecms/world/238.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/news/index.jhtml', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('4', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:12', 'http://localhost:8080/jeecms/wyty/index.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/world/338.jhtml', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('5', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:06', 'http://localhost:8080/jeecms/world/338.htm', '', '', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('6', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:27', 'http://localhost:8080/jeecms/world/438.htm', '', '', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('7', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:43', 'http://localhost:8080/jeecms/world/508.htm', '', '', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
-INSERT INTO `cms_site_flow` VALUES ('8', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:40', 'http://localhost:8080/jeecms/system/516.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/system/index_2.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
-INSERT INTO `cms_site_flow` VALUES ('9', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:30', 'http://localhost:8080/jeecms/system/index_2.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/system/index.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
-INSERT INTO `cms_site_flow` VALUES ('10', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:24', 'http://localhost:8080/jeecms/system/index.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/system/529.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
-INSERT INTO `cms_site_flow` VALUES ('11', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:51', 'http://localhost:8080/jeecms/download/index.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/system/516.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
-INSERT INTO `cms_site_flow` VALUES ('12', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:58:07', 'http://localhost:8080/jeecms/', 'http://localhost:8080', 'http://localhost:8080/jeecms/download/index.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
-INSERT INTO `cms_site_flow` VALUES ('13', '1', '127.0.0.1', '2012-11-18', '2012-11-18 17:00:39', 'http://localhost:8080/jeecms/', 'http://localhost:8080', 'http://localhost:8080/jeecms/jeeadmin/jeecms/top', '', '本机地址', '2F8C1DC0046DEF5CDCCCB1C0B5C1705D');
-INSERT INTO `cms_site_flow` VALUES ('14', '1', '127.0.0.1', '2012-11-18', '2012-11-18 17:00:55', 'http://localhost:8080/jeecms/news/index.htm', 'http://localhost:8080', 'http://localhost:8080/jeecms/', '', '本机地址', '2F8C1DC0046DEF5CDCCCB1C0B5C1705D');
-INSERT INTO `cms_site_flow` VALUES ('15', '1', '127.0.0.1', '2012-11-18', '2012-11-18 17:01:20', 'http://localhost:8080/jeecms/gnxw/606.jhtml', 'http://localhost:8080', 'http://localhost:8080/jeecms/news/index.jhtml', '', '本机地址', '2F8C1DC0046DEF5CDCCCB1C0B5C1705D');
-INSERT INTO `cms_site_flow` VALUES ('16', '1', '0:0:0:0:0:0:0:1', '2013-1-22', '2013-01-22 23:58:08', 'http://localhost:8080/cms-ui/gnxw/607.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/jeeadmin/jeecms/content/v_list', '', '', '6D86D08359A2B3D68D980F5A8976BC16');
-INSERT INTO `cms_site_flow` VALUES ('17', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 00:00:43', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/jeeadmin/jeecms/top', '', '', '6D86D08359A2B3D68D980F5A8976BC16');
+INSERT INTO `cms_site_flow` VALUES ('1', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:19:49', 'http://localhost:8080/cms/news/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms/', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('2', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:23:36', 'http://localhost:8080/cms/', 'http://localhost:8080', 'http://localhost:8080/cms/news/index.jhtml', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('3', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:23:59', 'http://localhost:8080/cms/world/238.htm', 'http://localhost:8080', 'http://localhost:8080/cms/news/index.jhtml', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('4', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:12', 'http://localhost:8080/cms/wyty/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms/world/338.jhtml', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('5', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:06', 'http://localhost:8080/cms/world/338.htm', '', '', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('6', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:27', 'http://localhost:8080/cms/world/438.htm', '', '', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('7', '1', '0:0:0:0:0:0:0:1', '2012-11-18', '2012-11-18 16:24:43', 'http://localhost:8080/cms/world/508.htm', '', '', '', '', '8D35F7B0A90E4F1A7B07B8968DF18DC1');
+INSERT INTO `cms_site_flow` VALUES ('8', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:40', 'http://localhost:8080/cms/system/516.htm', 'http://localhost:8080', 'http://localhost:8080/cms/system/index_2.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
+INSERT INTO `cms_site_flow` VALUES ('9', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:30', 'http://localhost:8080/cms/system/index_2.htm', 'http://localhost:8080', 'http://localhost:8080/cms/system/index.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
+INSERT INTO `cms_site_flow` VALUES ('10', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:24', 'http://localhost:8080/cms/system/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms/system/529.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
+INSERT INTO `cms_site_flow` VALUES ('11', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:56:51', 'http://localhost:8080/cms/download/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms/system/516.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
+INSERT INTO `cms_site_flow` VALUES ('12', '1', '127.0.0.1', '2012-11-18', '2012-11-18 16:58:07', 'http://localhost:8080/cms/', 'http://localhost:8080', 'http://localhost:8080/cms/download/index.jhtml', '', '本机地址', '5E6CFE3939C749C1F874F96616FBCFD0');
+INSERT INTO `cms_site_flow` VALUES ('13', '1', '127.0.0.1', '2012-11-18', '2012-11-18 17:00:39', 'http://localhost:8080/cms/', 'http://localhost:8080', 'http://localhost:8080/cms/admin/cms/top', '', '本机地址', '2F8C1DC0046DEF5CDCCCB1C0B5C1705D');
+INSERT INTO `cms_site_flow` VALUES ('14', '1', '127.0.0.1', '2012-11-18', '2012-11-18 17:00:55', 'http://localhost:8080/cms/news/index.htm', 'http://localhost:8080', 'http://localhost:8080/cms/', '', '本机地址', '2F8C1DC0046DEF5CDCCCB1C0B5C1705D');
+INSERT INTO `cms_site_flow` VALUES ('15', '1', '127.0.0.1', '2012-11-18', '2012-11-18 17:01:20', 'http://localhost:8080/cms/gnxw/606.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms/news/index.jhtml', '', '本机地址', '2F8C1DC0046DEF5CDCCCB1C0B5C1705D');
+INSERT INTO `cms_site_flow` VALUES ('16', '1', '0:0:0:0:0:0:0:1', '2013-1-22', '2013-01-22 23:58:08', 'http://localhost:8080/cms-ui/gnxw/607.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/content/v_list', '', '', '6D86D08359A2B3D68D980F5A8976BC16');
+INSERT INTO `cms_site_flow` VALUES ('17', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 00:00:43', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/top', '', '', '6D86D08359A2B3D68D980F5A8976BC16');
 INSERT INTO `cms_site_flow` VALUES ('18', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 00:00:45', 'http://localhost:8080/cms-ui/gnxw/39.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '', '6D86D08359A2B3D68D980F5A8976BC16');
 INSERT INTO `cms_site_flow` VALUES ('19', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:18:47', 'http://localhost:8080/cms-ui/', '', '', '', '本机地址', '57E968DDF8FD1C9FE0D819B3767FA6A5');
-INSERT INTO `cms_site_flow` VALUES ('20', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:20:24', 'http://localhost:8080/cms-ui/gnxw/607.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/jeeadmin/jeecms/content/v_list', '', '本机地址', '57E968DDF8FD1C9FE0D819B3767FA6A5');
+INSERT INTO `cms_site_flow` VALUES ('20', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:20:24', 'http://localhost:8080/cms-ui/gnxw/607.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/content/v_list', '', '本机地址', '57E968DDF8FD1C9FE0D819B3767FA6A5');
 INSERT INTO `cms_site_flow` VALUES ('21', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:18:49', 'http://localhost:8080/cms-ui/shehui/248.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/', '', '本机地址', '57E968DDF8FD1C9FE0D819B3767FA6A5');
-INSERT INTO `cms_site_flow` VALUES ('22', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:33:44', 'http://localhost:8080/jeecms/', '', '', '', '本机地址', '9BC6DACF6B24490869D685630B055B7E');
+INSERT INTO `cms_site_flow` VALUES ('22', '1', '127.0.0.1', '2013-1-23', '2013-01-23 00:33:44', 'http://localhost:8080/cms/', '', '', '', '本机地址', '9BC6DACF6B24490869D685630B055B7E');
 INSERT INTO `cms_site_flow` VALUES ('23', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 23:34:38', 'http://localhost:8080/cms-ui/gnxw/605.jhtml', 'http://localhost:8080', 'http://localhost:8080/cms-ui/member/contribute_list.jspx', '', '', 'AD8CD3F1B55656A01CEE20A7F188F2BB');
 INSERT INTO `cms_site_flow` VALUES ('24', '1', '0:0:0:0:0:0:0:1', '2013-1-23', '2013-01-23 23:34:04', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/search.jspx?q=%E8%AF%B7%E8%BE%93%E5%85%A5%E5%85%B3%E9%94%AE%E8%AF%8D&channelId=', '', '', 'AD8CD3F1B55656A01CEE20A7F188F2BB');
 INSERT INTO `cms_site_flow` VALUES ('25', '1', '0:0:0:0:0:0:0:1', '2013-1-24', '2013-01-24 21:24:13', 'http://localhost:8080/cms-ui/', 'http://localhost:8080', 'http://localhost:8080/cms-ui/admin/cms/top', '', '', 'B88C3A7E5C4BA9790399B0B38F276075');
@@ -6004,7 +6004,7 @@ INSERT INTO `yk_config` VALUES ('message_forgotpassword_text', '用户ID：${uid
 INSERT INTO `yk_config` VALUES ('message_register_subject', '欢迎注册');
 INSERT INTO `yk_config` VALUES ('message_register_text', '用户名：${username}，激活码：${activationCode}');
 INSERT INTO `yk_config` VALUES ('message_subject', 'CMS会员密码找回信息');
-INSERT INTO `yk_config` VALUES ('message_text', '感谢您使用JEECMS系统会员密码找回功能，请记住以下找回信息：\r\n用户ID：${uid}\r\n用户名：${username}\r\n您的新密码为：${resetPwd}\r\n请访问如下链接新密码才能生效：\r\nhttp://localhost/member/password_reset.jspx?uid=${uid}&key=${resetKey}\r\n');
+INSERT INTO `yk_config` VALUES ('message_text', '感谢您使用CMS系统会员密码找回功能，请记住以下找回信息：\r\n用户ID：${uid}\r\n用户名：${username}\r\n您的新密码为：${resetPwd}\r\n请访问如下链接新密码才能生效：\r\nhttp://localhost/member/password_reset.jspx?uid=${uid}&key=${resetKey}\r\n');
 
 -- ----------------------------
 -- Table structure for `yk_ftp`
