@@ -296,7 +296,7 @@ public class AdminContextInterceptor extends HandlerInterceptorAdapter {
 		}
 		if (start <= 0) {
 			throw new IllegalStateException(
-					"admin access path not like '/jeeadmin/jspgou/...' pattern: "
+					"admin access path not like '/admin/jspgou/...' pattern: "
 							+ uri);
 		}
 		return uri.substring(start);

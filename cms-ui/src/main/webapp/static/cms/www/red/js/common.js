@@ -1,5 +1,5 @@
 //导航切换
-function jeeNav(o,n){
+/*function nav(o,n){
 	 o.className="selected";
 	 var t;
 	 var id;
@@ -16,7 +16,7 @@ function jeeNav(o,n){
 			s.style.display = "block";
 	   }
 	 }
-}
+}*/
 
 //投票验证
 function check_votes(allowCount) {
@@ -43,7 +43,7 @@ var voteItems=document.getElementsByName('itemIds');
   }
   if(count==0){
 	  alert("对不起，请至少选择一个投票项！");
-	  return false;0
+	  return false;
   }
   return true;
 }
