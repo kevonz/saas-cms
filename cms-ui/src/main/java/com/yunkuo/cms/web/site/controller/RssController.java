@@ -1,4 +1,4 @@
-package com.yunkuo.cms.action.front;
+package com.yunkuo.cms.web.site.controller;
 
 import static com.yunkuo.cms.Constants.TPLDIR_SPECIAL;
 
@@ -15,7 +15,7 @@ import com.yunkuo.cms.web.CmsUtils;
 import com.yunkuo.cms.web.FrontUtils;
 
 @Controller
-public class RssAct {
+public class RssController {
 	public static final String RSS_TPL = "tpl.rss";
 
 	@RequestMapping(value = "/rss", method = RequestMethod.GET)

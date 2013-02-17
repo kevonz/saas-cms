@@ -1,4 +1,4 @@
-package com.yunkuo.cms.action.front;
+package com.yunkuo.cms.web.site.controller;
 
 import static com.yunkuo.cms.Constants.TPLDIR_SPECIAL;
 
@@ -20,7 +20,7 @@ import com.yunkuo.cms.web.CmsUtils;
 import com.yunkuo.cms.web.FrontUtils;
 
 @Controller
-public class TagAct {
+public class TagController {
 
 	public static final String TAGS_INDEX = "tpl.tagIndex";
 	public static final String TAGS_DETAIL = "tpl.tagDetail";
