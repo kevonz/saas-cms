@@ -1,4 +1,4 @@
-package com.yunkuo.cms.action.admin;
+package com.yunkuo.cms.web.admin.controller;
 
 import static com.yunkuo.core.action.front.LoginAct.MESSAGE;
 import static com.yunkuo.core.action.front.LoginAct.PROCESS_URL;
@@ -38,9 +38,9 @@ import com.yunkuo.core.manager.UnifiedUserMng;
 import com.yunkuo.core.web.WebErrors;
 
 @Controller
-public class CmsLoginAct {
+public class AdminLoginController {
 	private static final Logger log = LoggerFactory
-			.getLogger(CmsLoginAct.class);
+			.getLogger(AdminLoginController.class);
 
 	public static final String COOKIE_ERROR_REMAINING = "_error_remaining";
 
