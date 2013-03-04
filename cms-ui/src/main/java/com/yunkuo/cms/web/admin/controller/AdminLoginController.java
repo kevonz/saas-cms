@@ -38,7 +38,7 @@ import com.yunkuo.core.manager.UnifiedUserMng;
 import com.yunkuo.core.web.WebErrors;
 
 @Controller
-@RequestMapping(value="/admin")
+//@RequestMapping(value="/admin/cms")
 public class AdminLoginController {
 	private static final Logger log = LoggerFactory
 			.getLogger(AdminLoginController.class);
